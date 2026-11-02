@@ -62,8 +62,8 @@ export const ORIENTATION = [
     title: "3. Restoration",
     parts: [
       { shot: "inject", lines: [
-        "Each lesser reality develops from a seed: a small set of facts that cannot be altered from inside it. Seed facts usually appear ordinary, for example a census total or the hour at which a bell is rung.",
-        "When enough of the seed has been recovered and transmitted, Desk 14 computes its inverse. The field agent injects the inverse seed, and the lesser reality is reconciled with canon.",
+        "Each lesser reality develops from a seed. The seed has three terms: the year in which the reality's history departs from canon (divergence), the depth to which its local intelligence can act (apotheosis), and the extent of the reality (inferiority).",
+        "When the three terms are established, the field agent injects their inverse from the HQ Console, and the lesser reality is reconciled with canon.",
         "Reconciliation produces no measurable change in canonical population figures.",
       ] },
       { shot: "steady", lines: [
@@ -78,12 +78,13 @@ export const ORIENTATION = [
       { shot: "local", lines: [
         "Every lesser reality contains a process that keeps its state consistent. The Corps designation is local intelligence. Some older files use the term demiurge.",
         "Its function is unknown. It is not known whether it is aware that the lesser reality is a copy.",
-        "It does not observe reading. It does observe outbound traffic: mail, forms, posts and transmissions. After first detection it alters material in transit to the agent, including pages, letters and replies.",
+        "It does not observe reading. It observes all correspondence inside the lesser reality, the agent's included, and which messages the agent opens. It may place a mark on a page or a letter. A marked item reports its download.",
+        "It interferes with the agent's workstation to the depth of its apotheosis: mail, links, typed input, whole sites, and at the greatest depth what the agent is shown. A weak intelligence may imitate an interference it cannot perform. A strong one may conceal one it can.",
       ] },
       { shot: "flood", lines: [
         "Residents sometimes state that the local intelligence protects them. These statements are recorded but not evaluated.",
         "Agents who spend long periods in one lesser reality sometimes come to agree with residents on this point. Such agents are referred to Personnel.",
-        "The Scanner floods the lesser processes of a reality for a few seconds. Material altered by the local intelligence cannot keep its form during a flood and is seen to shake. Repeated floods give weaker readings. See the Allocations memo.",
+        "Monitoring maintains four instruments that no local intelligence can reach: the town log, Sent (raw), the network monitor, and the address bar and History of the Reality Viewer. The Scanner detects marks. It does not detect alteration.",
       ] },
     ],
   },
@@ -91,13 +92,14 @@ export const ORIENTATION = [
     title: "5. Field procedure",
     parts: [
       { shot: "desk", lines: [
-        "Field work is carried out from a Corps desk. The Reality Viewer displays pages recovered by the Desk 9 survey. Reading is not observed.",
-        "Pages that appear to carry seed are saved to Files with Save page. The saved copy is held on the Corps side and cannot be altered. The copy inside the lesser reality can be.",
-        "Outbound mail is sent under the agent's cover identity. A staff login obtained inside the lesser reality allows mail to be sent as that member of staff. Recipients may notice messages they did not send.",
+        "The agent is placed in the lesser reality as a resident, with an address and a small number of local records. No resident has met the agent.",
+        "The Reality Viewer displays pages recovered by the Desk 9 survey. Reading is not observed. Downloaded copies are held on the Corps side and cannot be altered.",
+        "The agent's workstation credential is withheld from all agent input under Security Instruction 4.",
       ] },
       { shot: "transmit", lines: [
-        "Saved fragments are transmitted from the HQ Console. A genuine fragment returns resonance. Each transmission is outbound traffic and is observed.",
-        "When resonance is sufficient the console offers injection. Form 77-R is filed automatically at the close of the assignment.",
+        "Divergence is established against the Canon Reference: the latest canonical event that the reality records in two independent sources. Residents do not name canonical events. They remember them.",
+        "Inferiority is established only by a resident who travels to the reality's limit. Apotheosis is assessed from the local intelligence's conduct.",
+        "The three findings are injected together. A wrong injection is detected at once and discloses the values entered. Form 77-R is filed automatically at the close of the assignment.",
       ] },
       { shot: "seal", lines: [
         "End of orientation. Completion is recorded on the agent's file.",

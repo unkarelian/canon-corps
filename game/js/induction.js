@@ -1,5 +1,5 @@
 // Workstation induction (CC-TR-02, Training): the first-run tutorial. Plays once, after the first logon, before
-// the first directive. A spotlight moves over the desk while Training's captions explain each part in the Corps'
+// the desk opens. A spotlight moves over the desk while Training's captions explain each part in the Corps'
 // own terms. Skippable (Esc or the button); repeatable from the Orientation app. ?induction forces it,
 // ?noinduction (or ?nosplash) skips it. Remembered as `cc-induction` in localStorage.
 //
