@@ -68,6 +68,12 @@ test("a bugged line shown is visibly garbled", () => {
   assert.equal(E.S.severance.shown.at(-1).flagShown, true);
 });
 
+test("a carrier can be taken back out", () => {
+  const u = SV.neededPages()[0];
+  SV.bug(u, 1); SV.unbug(u); SV.show(u, all(u));
+  assert.equal(E.S.severance.shown.at(-1).bugged, false);
+});
+
 test("the countdown closes both ends", () => {
   now += 601_000;
   SV.tickSeverance();

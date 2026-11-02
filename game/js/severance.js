@@ -59,6 +59,15 @@ export function bug(url, line) {
   return { ok: true };
 }
 
+// Taking the carrier back out: the record can then be shown clean.
+export function unbug(url) {
+  if (!active()) return { error: "no severance in progress" };
+  if (S.severance.bugs[url] == null) return { error: "that record carries nothing" };
+  delete S.severance.bugs[url];
+  emit("change");
+  return { ok: true };
+}
+
 export function show(url, indices) {
   if (!active()) return { error: "no severance in progress" };
   const ls = lines(url);

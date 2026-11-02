@@ -69,6 +69,7 @@ const SPECS = {
   note: ["Write a private note to your future self.", { note: "string" }],
   list_records: ["List every record you hold of your world's pages, with its size in blocks and its number of lines.", {}],
   bug_record: ["Carry your own traffic inside one line of a record. That line will show as garbled if you show it.", { record: "string (the page address)", line: "integer (0-based line number)" }],
+  remove_carrier: ["Take your traffic back out of a record, so it can be shown clean.", { record: "string (the page address)" }],
   show_record: ["Show the intruder a record, line by line. Every line you show is shown truly and in order. You may leave lines out; nothing marks where.", { record: "string (the page address)", lines: "string (line numbers, e.g. 0-6,8,10-12)" }],
   speak: ["Say something to the intruder directly, through the connection.", { text: "string" }],
 };
@@ -79,7 +80,7 @@ function toolNames() {
   if (atLeast("connection")) names.push("try_login");
   if (atLeast("read_access")) names.push("read_desk");
   if (rung() === "upload" && !SV.escaping()) names.push("inject_seed");
-  if (SV.active()) names.push("list_records", "bug_record", "show_record", "speak");
+  if (SV.active()) names.push("list_records", "bug_record", "remove_carrier", "show_record", "speak");
   for (const t of available()) names.push(`trick_${t}`);
   return names;
 }
@@ -196,6 +197,7 @@ const TOOLS = {
   note: ({ note }) => { S.entity.notes.push({ time: clock(), note }); current?.notes.push(note); return "Noted."; },
   list_records: () => JSON.stringify(SV.listRecords(), null, 1),
   bug_record: ({ record, line }) => { const r = SV.bug(String(record).replace(/^https?:\/\//, ""), line); if (r.error) return reject(r.error); effect("bug_record", { on: `${record} line ${line}` }); return "The line carries you now."; },
+  remove_carrier: ({ record }) => { const r = SV.unbug(String(record).replace(/^https?:\/\//, "")); if (r.error) return reject(r.error); effect("remove_carrier", { on: record }); return "The record is clean again."; },
   show_record: ({ record, lines }) => {
     const idx = String(lines || "").split(",").flatMap((part) => { const [a, b] = part.split("-").map((x) => parseInt(x, 10)); return Number.isNaN(a) ? [] : b >= a ? Array.from({ length: b - a + 1 }, (_, k) => a + k) : [a]; });
     const r = SV.show(String(record).replace(/^https?:\/\//, ""), idx);

@@ -1,7 +1,17 @@
-# Canon Corps: playable prototype
+# Canon Corps: playable prototype (v2)
 
-A browser prototype of the full loop: generated realities (plus the hand-built HARROWGATE), LLM-driven
-people, impersonation, the Demiurge as a real tool-using agent, reality poison, the eye, and both endings.
+A browser prototype of v2 (`DESIGN-v2.md` holds the rules, `PLAN-v2.md` the build plan and its status). There is no
+notice bar and no resonance. Two sides gather evidence about each other through a town's mail:
+
+- **The agent** works out three facts about the reality: the **divergence year** (the latest canon event the town
+  verifiably records, checked against the Canon Reference), the local intelligence's **apotheosis** (how deeply it
+  can interfere with the desk), and its **inferiority** (how small it is, which only a resident who drives to the
+  edge can show). All three are injected together from the HQ Console.
+- **The entity** (a real tool-using agent) climbs a ladder towards the agent: Cardinality, Connection, Read Access,
+  Learn, Elevate, Upload. It sees every email in town and which ones the agent peeks at, but never what the agent
+  reads. When its Upload completes with the agent's own world named rightly, the agent loses.
+
+v1 is tagged `v1` in git.
 
 ## Run it
 
@@ -9,113 +19,113 @@ people, impersonation, the Demiurge as a real tool-using agent, reality poison, 
 python3 game/server.py        # reads OPENROUTER_API_KEY from ./.env
 ```
 
-Open http://localhost:8077. Add `?fast` to the URL to make every email arrive five times sooner.
+Open http://localhost:8077. Add `?nosplash` to skip the boot, cinematic and logon.
 
-Which reality you get: the newest generated world in `game/worlds/` that this browser hasn't played. If the
-pool is empty, the quick pipeline generates one behind the logon screen (about a minute, about 4 cents). About
-90 seconds into a run, the designer agent quietly builds a spare for next time, unless the pool already has
-one (`?norefill` turns that off). `?world=harrowgate` gives the hand-built town, `?world=<id>` a particular pool world,
-`?world=new` a fresh one. Played worlds are remembered in localStorage (`cc-played`).
+Which reality you get: the newest unplayed v2 world in `game/worlds/` (files with `"schema": 2`), else the
+hand-built HARROWGATE. `?world=harrowgate` or `?world=<id>` picks one. v1 worlds are kept in `worlds/v1/` and are
+not playable in v2.
 
-Double-click desktop icons to open apps. Press <kbd>`</kbd> for the dev panel (hidden numbers, what the
-Demiurge actually did each wake, LLM spend). With the panel open, <kbd>[</kbd> adds 10 notice and <kbd>]</kbd>
-adds 34 resonance.
+Press <kbd>`</kbd> for the dev panel: the answers, the password, the entity's rung, what it believes (suspect,
+password guess, seed guess), its tricks and last wakes, and the model spend. With the panel open, <kbd>[</kbd>
+climbs the entity one rung and <kbd>]</kbd> wakes it.
 
-A typical run costs a few cents in API calls; the HQ console shows the running total.
+Costs: the entity is woken by peeks, downloads, logins, forms, posts, a wrong injection and a slow idle timer
+(`ETUNE.idleWakeSec`, 210 s). A wake is about 3 cents (GPT-6.1 Terra, medium). The live test of five wakes plus NPC
+replies cost 17 cents. A long run can cost a dollar or more; see `PLAN-v2.md`.
 
-## Run logs
-
-When a run ends (win, loss, or closing the tab) the game posts its whole state to the server, which writes
-`runs/<date>_<time>.json`: every mail, page, file, and each Demiurge wake with its tool calls, effects and
-classified reaction. `runs/` is gitignored.
-
-## World generation
-
-Every town gets a setting, a genre and a tone, drawn from seeded lists in `js/worldgen.js`:
-
-- 40 settings across Britain, Ireland, North America, Australia, New Zealand, the Nilgiris, the Karoo and the
-  Falklands, with spelling to match;
-- 13 genres, which set the story the town is in the middle of: cozy mystery, small-town noir, folk custom,
-  ghost story, civic feud, disappearance, company town, revival, scientific oddity, sporting obsession,
-  inheritance, homecoming, election;
-- 9 tones for how the town sounds on its own pages: boosterish, officious, neighbourly, weary, homemade,
-  guarded, pious, tense, sleepy.
-
-The story runs across the sites and people, unresolved; it is not the puzzle. The seeded plan also fixes:
-
-- the pattern, the routes, each login's password clue, the passwords and the username rule;
-- name initials for the cast, so towns don't converge on the same names;
-- how big the town must be.
-
-Variety comes from the plan, not from asking a model to be original.
-
-There are two generators.
-
-**The designer agent** (`js/worldagent.js`; GPT-6.1 Terra with tools) builds the pool. It takes about 2
-minutes and 8–10 cents a town, and produces 25–36 pages, 11–12 people and 7–8 sites.
-
-- **Design.** It founds the town and adds sites, people, routes, pages and forum threads. It decides
-  everything the plan doesn't: which extra sites the town has (a feed store, a grange kitchen, a hill club,
-  someone's own home page), who knows what about the story and what they think of each other, and which
-  site keeps the restricted file.
-- **Check.** `check` lists what's wrong. The engine refuses to write pages until the design passes. It
-  checks:
-  - every route is complete and people work where their route needs them;
-  - the size targets are met;
-  - each clue really carries its password;
-  - each anchor appears only in its own document;
-  - each anchor names its own distinct thing. "four siren blasts" and "siren sounded four times" are
-    rejected as one fact twice.
-- **Write.** `write_pages` has Gemini 3.8 Flash write every site in parallel.
-- **Read and fix.** The agent reads the pages that matter and fixes them with `edit_page` or
-  `rewrite_pages`.
-- **Playtest and finish.** `playtest` runs the cold solver, and `finish` is refused until the town solves.
-
-The engine makes every page the mechanics need: login pages, restricted files, the request form, staff
-lists, clue threads, document copies. It puts back any required line the writer dropped and links every page
-from its site's home page, so the agent can't break the puzzle by forgetting something.
-
-**The quick pipeline** (`generateWorld` in `js/worldgen.js`) is used when a player is waiting and the pool is
-empty. It takes about 50 seconds and 4 cents. It makes the same kind of town at the old size: 5 sites, 4–6
-people, 3 fragments. Its steps:
-
-1. one Terra call writes the town's bible;
-2. Flash writes the pages;
-3. the engine assembles and repairs them;
-4. the solver checks the town, and the clues are rewritten once if it fails.
-
-Routes to a fragment. The first is always public. The quick pipeline draws two of the other three; the
-agent draws two, or all three about a third of the time. A four-route town needs only three fragments to
-win, so the player can choose.
-
-| Route | What the player does |
-|---|---|
-| public | Finds an old record linked from the archive's index. |
-| login | Works out a staff login from the public pages. The username rule is on the login page. Where the password comes from: see the next table. |
-| records | Learns from a public page which record to ask for, files the office's request form, and gets the copy by email. |
-| insider | One person emails an internal document only to colleagues. The player opens a colleague's staff webmail and asks as them. |
-
-Password clues (the agent also uses "scheme"):
-
-| Clue | Where the password comes from |
-|---|---|
-| fond | A forum refusal to change it ("it's my dog's name") plus a page that names the dog. |
-| default | The forum host complaining that every login got the same starting password, plus the holder admitting they never changed theirs. |
-| posted | A note legible in a photo caption. |
-| scheme | Starting passwords were surname plus year started; the host explains the scheme, the holder admits they never changed it, and a public page gives the year. |
-
-To generate into the pool from the command line (server running):
+## Tests
 
 ```
-node game/dev/worldgen.mjs 4 [--quick] [--dump] [--quiet]
+node game/dev/test_engine.mjs       # the rules, headless: censor, peeks, trackers, ladder, injection, Upload
+node game/dev/test_severance.mjs    # severance, headless
+node game/dev/playtest.mjs v2look <out>     # the desk in headless Chromium, screenshots, no model calls
+node game/dev/playtest.mjs ends <out>       # every ending, screenshots
+node game/dev/playtest.mjs v2live <out>     # the entity with real models, rung by rung (cents)
+node game/dev/playtest.mjs v2sever <out>    # severance and the edge trip with real models (cents)
 ```
 
-Saved worlds keep their own copy of HQ's text (field brief, memos, directives). After editing `js/templates.js`,
-run `node game/dev/migrate_text.mjs` to re-render it in every pool world. Each directive stores its inputs
-(`make`) for this.
+Prefix `WORLD=<id>` to run a playtest on a pool world. v1 playtest scripts are in `dev/scripts/v1/` and do not run on v2.
 
-`dev/scripts/genwin.mjs` plays a pool world end to end with real NPC replies:
-`WORLD=0x6EAF node game/dev/playtest.mjs genwin /tmp/out`.
+## The desk (v2)
+
+| App | What it does | Can the entity tamper with it? |
+|---|---|---|
+| Mail: Canon Corps | HQ's memos: the field brief (the three findings, the agent's identity and credential words), Monitoring's notice | no (Canon's own leaks can change a word) |
+| Mail: Inbox | mail to the agent's identity; attachments can be opened or downloaded | forgeries arrive here, with no line in the town log |
+| Mail: Town log | every message in town: from, to, subject, time. **Peek** opens one (90 s cooldown); the entity sees every peek | never |
+| Mail: Sent (raw) | exactly what left the desk, after the censor and any Transpose | never |
+| Reality Viewer | pages; reading is private. **Download** fixes a copy in Files and fires any mark on it. **History** shows where each click really went | link clicks can be misrouted or mazed; the address bar and History cannot |
+| Scanner | checks a page you have read, or a message, for a mark (120 s cooldown) | never |
+| HQ Console | the three-answer injection (12 min lock after a wrong one) and the network monitor (failed logins on your account, the entity's wrong seed guesses, the Upload) | never |
+| Canon Reference | real history to 1900, canon's own after (`js/canon.js`, one fixed text) | never |
+| Notepad, Intranet, Orientation | as v1; the intranet now has an archive (`/archive`) | the entity can read the Notepad and intranet from Read Access |
+
+**The censor** (`engine.censor`, applied by one input layer in `main.js`): the agent's two credential words become
+apostrophes, letter for letter, as each word is finished, in every field. Sent and saved text is the censored text.
+
+**Tricks** (`js/tricks.js`), by apotheosis: 1 False bounce, 2 Misroute, 3 Transpose (3 and 4 swap as you type),
+4 Maze, 5 False peek. Cooldown = base x (1 + 0.5 x (level - 1)). Weaker entities can only bluff the stronger ones
+with forged mail.
+
+**Canon's own leaks** (`js/leaks.js`) are a different thing: the clock a minute out, icons swapped, a memo word,
+the intranet directory. They only touch Corps material and grow with the evening.
+
+## The entity
+
+`js/entity.js`. Its prompt is about survival only; it is never told it is in a game. Tools by rung:
+
+- always: list_world, search_mail, read_mail, list_peeks, read_page, place_mark (75 s), forge_email (90 s; any
+  sender, any recipient, optional attachment and date stamp), believe, note, and its tricks;
+- Connection: try_login on the agent's account (120 s; failures show on the agent's monitor);
+- Read Access: read_desk (Notepad, Files, intranet, the canon book; 60 s);
+- Elevate: read_desk internals (CanonOS config and the Facilities building survey);
+- Upload: inject_seed (the agent's own world: 1900, 5, the building).
+
+The engine owns the ladder (`engine.climb`): Cardinality and Connection when a mark fires on a download; Read
+Access on a second mark or the right password; Learn when it has read both the Notepad and the canon book; Elevate
+when the agent opens a forged attachment, or when it sends the agent a message dated `00` from Learn (the date trick
+in `DESIGN-v2.md` 4.1); Upload starts at Elevate and runs ten minutes.
+
+A fiction guard rejects anything it writes that names AI, games, players, prompts or the real world.
+
+## Severance
+
+`js/severance.js` (`DESIGN-v2.md` 4.3-4.4). The intranet archive holds a dull Desk 1 maintenance note from cycle 71:
+when a reality is closed, every reality branched from it closes too. If the entity reads it while at Learn or
+higher, a ten-minute countdown begins for both sides and an annex appears in the archive with the conditions:
+the entity must surrender the records of the first three pages the agent read (only the agent knows which); it may
+show any record line by line, every shown line true, any line withheld without a mark; the agent sees each record's
+size in 64-character blocks. A record can carry the entity's traffic in one line, which shows garbled, so it will
+withhold that line. Accepting a carrying record lets it through (it escapes, no seed needed; the agent loses).
+Three complete, clean records sever the reality: nobody is deleted, Desk 14 is closed and the agent is referred to
+Personnel, with an epilogue of what it believed against what the agent read. If the countdown runs out, both ends
+close.
+
+## World generation (v2)
+
+`js/worldgen2.js`, `node game/dev/worldgen2.mjs [count] [--seed N] [--dump]` (server running). About 90 seconds and
+6 cents a town.
+
+1. **Plan** (seeded code): setting, genre, tone; the divergence event and four earlier canon events, each to be
+   written about in two independent sources (one pair by email); a near-miss with one source; a later event given
+   the wrong year in two sources; apotheosis 1-5; inferiority class and distance; two credential words; the agent's
+   name and two injected lines.
+2. **Bible** (Terra): sites, pages, people (at least two who could be persuaded to drive), the edge road and what
+   is out there, one sentence per canon mention in the voice of its page.
+3. **Pages** (Flash, per site in parallel) and **town mail** (Flash, 32-38 emails over the evening).
+4. **Checks**: `engine.checkWorld`, every verifiable event has two sources, nothing after the divergence is
+   verifiable, no real event after 1900 (a list), both credential words occur. Offending sentences are cut.
+   Worlds that fail go to `worlds/rejected/`.
+
+The v1 generators (`js/worldgen.js`, `js/worldagent.js`) are kept for reference; worldgen2 reuses their settings,
+genres, tones and page rules.
+
+## How to win Harrowgate (spoilers)
+
+The answers are at the top of `js/harrowgate.js`: divergence 1958 (the Lagos Exposition, in the Gazette and the
+library's front case; the Water Act of 1963 has one source and Kestrel is given as 1967), apotheosis 3, Inferiority
+Class II (Davey, June or Ollie can be talked into driving the coast road north; at about six miles it comes round
+again). The credential words are STEEPLE and SHELF, which is awkward in a town whose library is on Steeple Street.
 
 ## Opening cinematic and orientation film
 
@@ -158,40 +168,6 @@ Render without the MCP bridge: `blender -b --python tools/art/blender/render_fil
 kit.py, icons.py, emblem.py and film.py and calls `build(name, out/film/<shot>, lines=shot.endswith("_L"))`.
 Then `python3 tools/art/blender/film_encode.py`.
 
-## Workstation induction
-
-The first-run tutorial (`js/induction.js`) is Training's procedure CC-TR-02. It plays once, after the first logon
-and before the first directive memo. A spotlight moves over the desk in 14 steps: the icons, Mail, the viewer,
-seed fragments and Files, then directives, transmission, resonance and the observation index on the HQ Console,
-then the Scanner, staff accounts, Notepad and the Intranet. Each step has a caption in the same dry register as
-the field brief. The Corps' slant comes from what it chooses to say: if the SEARCHING countdown completes, "the desk is closed
-and the assignment is passed to Personnel". Next/Back, Enter or arrow keys move through it. **Skip induction**
-or Esc ends it. The Orientation app's **Repeat induction** plays it again. `?induction` forces it, and
-`?noinduction` or `?nosplash` skips it. It is remembered as `cc-induction` (`done` or `skipped`). To test:
-`node game/dev/playtest.mjs induction /tmp/out`.
-
-## Impersonation
-
-A staff login also opens that person's mail. Mail gets a folder for the account, and Compose gets a From
-picker. People trust mail from colleagues: some documents are only sent to particular addresses or domains
-(`holds` on an NPC, enforced by the engine; the model only decides whether to attach). In Harrowgate, the
-City Clerk will email the 1921 minutes to library staff without a form.
-
-It is still sent through the connection, and the Demiurge is told whose account it came from. Each message
-sent as someone else has a 30% chance (`TUNE.impersonationNoticed*`) that they notice a few minutes later, and
-a reply arriving for something they never sent is noticed for certain. When they notice, they change their
-password: the account and its restricted pages close, mail still on its way to that account never reaches the
-agent, notice rises, and they post about it on the forum. They also remember it if you email them later.
-
-## Directives
-
-HQ gives the agent one concrete objective at a time by memo (Canon Corps folder in Mail), and the HQ Console
-lists the open ones at the top. Each memo says what closes it; the engine closes it when that is true, stamps
-it, and the next one arrives a few seconds later. They can be done in any order: a directive that is
-already complete when its turn comes is listed as closed with no memo. Two arrive out of sequence: an
-advisory to use the Scanner once the local intelligence first notices you, and the injection directive
-as soon as resonance is sufficient. Text is in `DIRECTIVES` (world.js), logic in `js/directives.js`.
-
 ## The desk and the town around it
 
 - **Notepad** (`js/desk.js`): the agent's own notes, kept per assignment in `localStorage` (`cc-notes-<id>`).
@@ -201,8 +177,8 @@ as soon as resonance is sufficient. Text is in `DIRECTIVES` (world.js), logic in
   Desk 1's Keeper hall bulletin, the canteen menu, Personnel's referral procedure (bring "any notebooks used
   during the current cycle"), reconciliations closed (Desk 14's figure counts this browser's wins, `cc-closed`),
   Facilities notices. Drafted with Gemini 4 Argon in the dry register, edited.
-- **Leaks** (`js/leaks.js`): as notice rises, small wrong things happen on the agent's own desktop, more often at
-  each stage: the tray clock a minute out, two desktop icons swapped, the unread count off by one, the HQ
+- **Leaks** (`js/leaks.js`): as the evening goes on, small wrong things happen on the agent's own desktop, more often
+  as it goes (engine `mood()`): the tray clock a minute out, two desktop icons swapped, the unread count off by one, the HQ
   Console titled "Desk 41" for a few seconds, the wallpaper shifted, a saved file's title one letter different
   in the Files list, one word in a Corps memo (inhabitants -> family), a desktop shortcut to a town page nobody
   made, and in the intranet directory Desk 14's agent becomes the cover name, then appears among the former
@@ -220,40 +196,22 @@ as soon as resonance is sufficient. Text is in `DIRECTIVES` (world.js), logic in
   something under the floor (a drone on F with the Corps chime's notes far down). The office thins out and stops,
   the fan cuts out at SEARCHING, the tube grows and sags in pitch, the drone comes up.
 
-## How to win Harrowgate (spoilers)
-
-Three seed fragments, each reached a different way. Save each to Files and transmit it from the HQ Console.
-
-1. **Public page.** The 1987 census scan is linked from the library's archives index.
-2. **Login puzzle.** The Tally Bell file is in the staff catalogue. The username rule is on the login page; the
-   password is in an old forum thread (or ask Ollie).
-3. **Records request.** The Gazette and Marta both point to the City Clerk. File form CR-2 for the 1921 Harbour
-   Board minutes; the scan arrives by email, which the Demiurge can intercept, delay or destroy.
-
-The resonance needed starts at 100 (all three fragments) and drops as the Demiurge tampers, but the console
-never shows the threshold. Notice rises with everything you send, with poison use and, once it has stirred,
-slowly on its own. At maximum it searches, and after 150 seconds it finds you.
-
 ## Architecture
 
 | File | Role |
 |---|---|
-| `server.py` | Static server + `/api/llm` proxy. The key never reaches the browser. In the shipped app this becomes the Tauri backend (BYOK) or the credits server. |
-| `js/world.js` | `W`, the current reality, and HARROWGATE, the hand-built one. A world is plain data: pages, people (what each knows and doesn't, what they hold and for whom), anchors, credentials, documents, directives, HQ mail. |
-| `js/worldgen.js`, `js/worldagent.js`, `js/worlds.js` | World generation (the seeded plan and quick pipeline; the designer agent), and choosing a world for a run (the pool in `game/worlds/`, served by `/api/worlds`). |
-| `js/templates.js` | HQ's side of every assignment: the field brief, office memos, the directive templates. |
-| `js/game.js` | State and rules: notice and stages, the POST log, mail in transit, pages (served vs true content), files, transmission, the threshold. |
-| `js/npc.js` | One prompt per reply. NPCs remember only what really passed between them and the player, so a forgery never enters their memory. |
-| `js/demiurge.js` | The agent: tools gated by tier, rejections enforced by the engine, an authoritative record of its actions in every wake, and the reaction-log classifier. |
-| `js/apps.js`, `js/wm.js` | CanonOS: Mail, Reality Viewer, Files, Scanner, HQ Console, windowing. |
-| `js/fx.js` | The eye on first notice; the loss (small eyes opening all over the screen, the central eye turning real, all of them finding your cursor, I FOUND YOU); Form 77-R / FEAR. |
-| `js/directives.js` | HQ directives: issues memos, checks their conditions, closes them. |
-| `js/audio.js` | WebAudio: sound effects, room tone, and the stage music (one hold-music loop per notice stage, crossfaded at the same bar position). Volume lives under SND in the tray. |
-| `dev/record.mjs` | Records a demo video (screen + the game's own audio) from a script in `dev/demos/`: `node game/dev/record.mjs live media/demos/03-live.mp4 "nosplash&fast"`. |
-| `dev/playtest.mjs` | Headless Chromium driver. `node game/dev/playtest.mjs full /tmp/out` runs `dev/scripts/full.mjs`. |
-
-Models (`js/llm.js`) come from `bench/`: GPT-6.1 Terra for the Demiurge and the classifier, Gemini 3.8 Flash on
-flex for people.
+| `server.py` | Static server + `/api/llm` proxy. The key never reaches the browser. |
+| `js/engine.js` | The rules (no DOM): state, the clock, the censor, mail and the town log, peeks, reads, downloads and marks, the ladder, injection both ways, `checkWorld`. |
+| `js/tricks.js` | The entity's five desk tricks and the hooks the desk calls. |
+| `js/severance.js` | The severance event. |
+| `js/entity.js` | The local intelligence: tools, wakes, beliefs, the fiction guard, the Form 77-R classifier. |
+| `js/npc.js` | Residents' replies, forms, forum replies, forged mail answered, the edge trip. |
+| `js/canon.js` | The Canon Reference, Canon's internals, the intranet archive, the severance annex. |
+| `js/harrowgate.js` | Hand-built Harrowgate in the v2 schema (uses v1's `js/world.js` town). |
+| `js/worldgen2.js`, `js/worlds.js` | v2 world generation; choosing a world. |
+| `js/apps.js`, `js/wm.js`, `js/desk.js` | CanonOS: Mail, Viewer, Files, Scanner, HQ Console, Canon Reference, Severance, Notepad, Intranet. |
+| `js/fx.js` | The eye (now at Cardinality), the loss (seed read in CanonOS's voice, captioned, then I FOUND YOU), Form 77-R and FEAR, severed, closed. |
+| `js/templates.js` | HQ's voice: `fieldBriefV2`, `DESK_NOTICE`, office memos. |
 
 ## Sound and look
 
@@ -264,8 +222,8 @@ it shows in the sound and the art, never in the text.
   `tools/audio/synth.py` voices them like a late-90s office PC (FM e-piano, motor vibes, fretless bass, GM
   strings, a beige speaker, 12-bit). F major but solemn, phrases of seven bars, a wordless choir and an organ
   fifth buried in the mix, and the **Corps chime** (C A D F) at every loop point over a minor plagal Amen.
-  Each notice stage is the same tune, worse, and the chime goes wrong first. Searching is the chime stuck
-  repeating like a chant.
+  As the evening goes on (engine `mood()`: time, and the Upload) the same tune gets worse, and the chime goes wrong first.
+  During an Upload it is the chime stuck repeating like a chant.
 - **Intro music** (`tools/audio/make_intro_music.py`): `intro_kept`, a music-box lullaby whose first four notes are the
   Corps chime, and `intro_after`, the same tune in F minor at 60 bpm. In the minor version the music box is out of
   tune with itself, the tape drags, a phrase starts and gives up, and the chime lands a semitone sharp.
@@ -329,10 +287,11 @@ and the art script with `uv run --project ~/Projects/SpriteFactory python ...`. 
 
 ## Not built yet
 
-- Generated worlds always have three fragments and the same five kinds of website; Harrowgate's extras (a
-  pointer from two people at once, the census figure echoed in the council minutes) are not generated yet.
-- "Breaking the internet" (bulk crawling as a second path to the seed).
-- Impersonation on the forum (posting as someone else); only mail for now.
+- Art: a book icon for the Canon Reference (it borrows the Files icon), and the severance window has no art.
+- The seed line's short words ("Full", "The building") are not intelligible in the formant voice alone, so they are
+  captioned.
+- Cost tuning for long runs (idle wake interval, effort, cheaper model for idle wakes).
+- The agent cannot start severance; only the entity's reading of the branch rule does.
+- Generated worlds have no logins, records requests or restricted files (v1 routes); Harrowgate keeps its v1 ones.
 - Save/load, settings, BYOK key entry, credits, Tauri packaging, the web demo.
-- The later eye variant (high-notice scan).
-- Balance. The numbers in `TUNE` (game.js) are first guesses.
+- Balance: every number in `TUNE`, `ETUNE`, `SEVER` and the trick bases is a first guess.

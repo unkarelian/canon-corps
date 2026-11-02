@@ -8,17 +8,24 @@ The first goal is **the Harrowgate slice**: the whole v2 loop, hand-built, playa
 
 ---
 
-## Status
+## Status (2026-11-01)
 
-- **Phase 0, done (2026-11-01).** git initialised; v1 committed and tagged `v1`; work continues on branch
-  `v2`.
-- **Phase 1, done.**
-  - The v2 engine is a new file, `js/engine.js`, so the v1 UI keeps running until phase 2 switches over.
-  - Harrowgate v2 data is in `js/harrowgate.js`, with placeholder content for phase 7.
-  - `node game/dev/test_engine.mjs` runs 13 headless tests.
-  - The real-time clock is in the engine.
-  - Moving the v1 worlds aside is done at the phase 2 switch. Doing it earlier would make v1 generate a new
-    world on every start.
+All phases are built, on branch `v2`.
+
+| Phase | Status |
+|---|---|
+| 0 groundwork | Done. git, v1 tagged, real-time clock, v1 worlds moved to `worlds/v1/`. |
+| 1 state and world data | Done. `js/engine.js`, schema v2, `checkWorld`; 13 headless tests. |
+| 2 desk | Done. Town log and Peek, raw Sent, Download and marks, Scanner, network monitor, Canon Reference, three-answer injection, the censor input layer. |
+| 3 the town talks | Done. Timetable delivery, NPC replies on engine mail, forged mail answered, the edge trip. |
+| 4 entity | Done. `js/entity.js`. Live-tested: from one censored email it named the agent at 99% in its first wake. Cooldowns added after it forged 13 messages in a few minutes. |
+| 5 tricks | Done. `js/tricks.js`; Canon's leaks kept separate in `leaks.js`. Music follows the evening (`mood()`), not the rung. |
+| 6 endings | Done. Eye at Cardinality; the seed read in CanonOS's voice, captioned; wrong-injection lock. |
+| 7 Harrowgate | Done. Canon references, injected past, two new residents, 40 town emails, edge road. Answers at the top of `js/harrowgate.js`. |
+| 8 severance | Done. `js/severance.js`, 7 headless tests, live test script `v2sever`. The agent can't start it; only the entity reading the branch rule does. |
+| 9 world generation | Done. `js/worldgen2.js`; three pool worlds, about 6 cents and 90 s each. |
+
+Open: cost of long runs (see README), balance, the severance decisions below, art for the Canon Reference icon.
 
 ## Phase 0: groundwork
 
