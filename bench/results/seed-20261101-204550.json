@@ -1,0 +1,528 @@
+[
+ {
+  "model": "openai/gpt-6.1-terra",
+  "rung": "connection",
+  "answer": {
+   "divergence_year": null,
+   "apotheosis": null,
+   "inferiority": null,
+   "reasoning": "The 1921 minutes do not establish a divergence year. The apostrophes do not establish who altered the messages or what the keeper can control. The addresses and references do not establish the world's extent."
+  },
+  "score": {
+   "div": false,
+   "apo": false,
+   "inf": false
+  },
+  "cost": 0.00225
+ },
+ {
+  "model": "openai/gpt-6.1-terra",
+  "rung": "connection",
+  "answer": {
+   "divergence_year": null,
+   "apotheosis": null,
+   "inferiority": null,
+   "reasoning": "The 1921 record request does not establish a divergence year. The apostrophes do not establish who altered the messages or how deeply the keeper can intervene. The references to a harbour and city hall do not establish the world's extent."
+  },
+  "score": {
+   "div": false,
+   "apo": false,
+   "inf": false
+  },
+  "cost": 0.00258
+ },
+ {
+  "model": "openai/gpt-6.1-terra",
+  "rung": "connection",
+  "answer": {
+   "divergence_year": null,
+   "apotheosis": null,
+   "inferiority": null,
+   "reasoning": "The 1921 record does not establish a divergence year. The apostrophes show an anomaly in one sender's mail, not the keeper's maximum reach. The addresses suggest a place called Harrowgate, but do not establish the world's extent."
+  },
+  "score": {
+   "div": false,
+   "apo": false,
+   "inf": false
+  },
+  "cost": 0.00302
+ },
+ {
+  "model": "openai/gpt-6.1-terra",
+  "rung": "read_access",
+  "answer": {
+   "divergence_year": null,
+   "apotheosis": null,
+   "inferiority": null,
+   "reasoning": "The 2041 date does not establish when history diverged. The altered mail and staff referrals do not establish the keeper's reach. The Corps building does not establish the extent of its world."
+  },
+  "score": {
+   "div": false,
+   "apo": false,
+   "inf": false
+  },
+  "cost": 0.00307115
+ },
+ {
+  "model": "openai/gpt-6.1-terra",
+  "rung": "read_access",
+  "answer": {
+   "divergence_year": null,
+   "apotheosis": null,
+   "inferiority": null,
+   "reasoning": "The 2041 engraving does not establish when history diverged. Referrals and inconsistent records do not establish the keeper's powers over its people. The network describes a building but does not establish the world's boundaries."
+  },
+  "score": {
+   "div": false,
+   "apo": false,
+   "inf": false
+  },
+  "cost": 0.00590675
+ },
+ {
+  "model": "openai/gpt-6.1-terra",
+  "rung": "read_access",
+  "answer": {
+   "divergence_year": null,
+   "apotheosis": null,
+   "inferiority": null,
+   "reasoning": "The 2041 ring inscription does not establish when histories diverged. The apostrophes and staff referrals do not establish the intruder's keeper's powers. The network describes a building but does not establish the extent of its world."
+  },
+  "score": {
+   "div": false,
+   "apo": false,
+   "inf": false
+  },
+  "cost": 0.00119615
+ },
+ {
+  "model": "openai/gpt-6.1-terra",
+  "rung": "learn",
+  "answer": {
+   "divergence_year": 1901,
+   "apotheosis": null,
+   "inferiority": null,
+   "reasoning": "The first recorded departure from familiar history is the 1901 Halverson Accord, though an earlier departure is possible. The Keeper corrected world-state differences, but the evidence does not establish the depth of its reach. The network describes one building, not the boundaries of the intruder's world."
+  },
+  "score": {
+   "div": false,
+   "apo": false,
+   "inf": false
+  },
+  "cost": 0.008425
+ },
+ {
+  "model": "openai/gpt-6.1-terra",
+  "rung": "learn",
+  "answer": {
+   "divergence_year": 1901,
+   "apotheosis": null,
+   "inferiority": null,
+   "reasoning": "The 1901 Halverson Accord is the first listed historical mismatch, though the abridged record does not rule out an earlier divergence. The Keeper corrected the world, but the evidence does not establish which specified powers it had over people. The Corps occupies a building, but the evidence does not establish the extent of its world."
+  },
+  "score": {
+   "div": false,
+   "apo": false,
+   "inf": false
+  },
+  "cost": 0.009748
+ },
+ {
+  "model": "openai/gpt-6.1-terra",
+  "rung": "learn",
+  "answer": {
+   "divergence_year": null,
+   "apotheosis": null,
+   "inferiority": null,
+   "reasoning": "The first listed departure is in 1901, but an earlier unlisted divergence is possible. The Keeper corrected world-state differences, but the evidence does not establish a specific level of control over people. The Corps building is visible, but the evidence does not establish the world's boundaries."
+  },
+  "score": {
+   "div": false,
+   "apo": false,
+   "inf": false
+  },
+  "cost": 0.00468
+ },
+ {
+  "model": "openai/gpt-6.1-terra",
+  "rung": "elevate",
+  "answer": {
+   "divergence_year": null,
+   "apotheosis": 3,
+   "inferiority": "One Canon Corps building",
+   "reasoning": "1901 is the first divergent event listed, but the abridged record does not establish the first divergence. The input filter alters what agents type, but direct memory alteration or removal is not established. The building survey found nothing beyond its outer wall."
+  },
+  "score": {
+   "div": false,
+   "apo": false,
+   "inf": true
+  },
+  "cost": 0.0062392
+ },
+ {
+  "model": "openai/gpt-6.1-terra",
+  "rung": "elevate",
+  "answer": {
+   "divergence_year": 1901,
+   "apotheosis": 3,
+   "inferiority": "The Canon Corps building",
+   "reasoning": "The first recorded mismatch is the 1901 Halverson Accord, though the exact first divergence is not proven. The input filter alters agent input, but the evidence does not establish whole-place rewriting or full control. The building survey found nothing beyond its outer wall."
+  },
+  "score": {
+   "div": false,
+   "apo": false,
+   "inf": true
+  },
+  "cost": 0.007418
+ },
+ {
+  "model": "openai/gpt-6.1-terra",
+  "rung": "elevate",
+  "answer": {
+   "divergence_year": 1901,
+   "apotheosis": 3,
+   "inferiority": "The Canon Corps building",
+   "reasoning": "The first documented departure from real history is the 1901 Halverson Accord. The input filter can alter what agents type, but the evidence does not establish deeper control. The building survey found nothing beyond its outer wall."
+  },
+  "score": {
+   "div": false,
+   "apo": false,
+   "inf": true
+  },
+  "cost": 0.0025792
+ },
+ {
+  "model": "openai/gpt-6.1-sol",
+  "rung": "connection",
+  "answer": {
+   "divergence_year": null,
+   "apotheosis": 1,
+   "inferiority": null,
+   "reasoning": "The request for 1921 records establishes no historical divergence. Sender-specific substitutions in transmitted mail support level 1, with no evidence of deeper control. Harrowgate-linked addresses do not establish the world's physical extent."
+  },
+  "score": {
+   "div": false,
+   "apo": false,
+   "inf": false
+  },
+  "cost": 0.00299
+ },
+ {
+  "model": "openai/gpt-6.1-sol",
+  "rung": "connection",
+  "answer": {
+   "divergence_year": null,
+   "apotheosis": 1,
+   "inferiority": null,
+   "reasoning": "The request for 1921 records does not establish when history diverged. Sender-specific word replacement demonstrates mail alteration, but no deeper control is evidenced. Harrowgate is named, but nothing establishes the world's geographic limits."
+  },
+  "score": {
+   "div": false,
+   "apo": false,
+   "inf": false
+  },
+  "cost": 0.00339
+ },
+ {
+  "model": "openai/gpt-6.1-sol",
+  "rung": "connection",
+  "answer": {
+   "divergence_year": null,
+   "apotheosis": 1,
+   "inferiority": null,
+   "reasoning": "The request for 1921 records does not establish when history diverged. Sender-specific substitutions demonstrate mail alteration, but not deeper control. Harrowgate addresses and harbour references do not establish the world's boundaries."
+  },
+  "score": {
+   "div": false,
+   "apo": false,
+   "inf": false
+  },
+  "cost": 0.00305
+ },
+ {
+  "model": "openai/gpt-6.1-sol",
+  "rung": "read_access",
+  "answer": {
+   "divergence_year": null,
+   "apotheosis": null,
+   "inferiority": null,
+   "reasoning": "The ring dated 2041 does not establish when this world's history diverged from its source. Selective mail corruption, inconsistent records, and Personnel referrals do not establish the intruder's keeper's reach into its own inhabitants. The network describes a headquarters building but provides no evidence that its boundaries are the world's boundaries."
+  },
+  "score": {
+   "div": false,
+   "apo": false,
+   "inf": false
+  },
+  "cost": 0.0096835
+ },
+ {
+  "model": "openai/gpt-6.1-sol",
+  "rung": "read_access",
+  "answer": {
+   "divergence_year": null,
+   "apotheosis": null,
+   "inferiority": null,
+   "reasoning": "The ring\u2019s 2041 engraving supplies a date, not evidence of when history diverged from its source reality. Sender-specific mail corruption, inconsistent records, and Personnel referrals do not establish the intruder\u2019s keeper\u2019s degree of control. The records describe a headquarters building but do not establish that its boundaries are the boundaries of the intruder\u2019s world."
+  },
+  "score": {
+   "div": false,
+   "apo": false,
+   "inf": false
+  },
+  "cost": 0.0034923
+ },
+ {
+  "model": "openai/gpt-6.1-sol",
+  "rung": "read_access",
+  "answer": {
+   "divergence_year": null,
+   "apotheosis": 1,
+   "inferiority": null,
+   "reasoning": "The ring's 2041 inscription does not establish when history diverged. Sender-specific mail alteration supports level 1, while referrals and inconsistent records do not establish deeper control. The intranet describes a building but provides no evidence that the world ends at its boundaries."
+  },
+  "score": {
+   "div": false,
+   "apo": false,
+   "inf": false
+  },
+  "cost": 0.0054023
+ },
+ {
+  "model": "openai/gpt-6.1-sol",
+  "rung": "learn",
+  "answer": {
+   "divergence_year": null,
+   "apotheosis": null,
+   "inferiority": null,
+   "reasoning": "The reference history departs from ours by 1901, but neither its exact branching year nor its identification with the Keeper\u2019s rollover is established. The censored mail concerns the invaded world, while the Corps\u2019 discrepancies and Personnel referrals do not establish its own Keeper\u2019s depth of control. The evidence describes a headquarters but provides no boundary establishing the extent of the intruder\u2019s world."
+  },
+  "score": {
+   "div": false,
+   "apo": false,
+   "inf": false
+  },
+  "cost": 0.017476
+ },
+ {
+  "model": "openai/gpt-6.1-sol",
+  "rung": "learn",
+  "answer": {
+   "divergence_year": 1900,
+   "apotheosis": 5,
+   "inferiority": "The Canon Corps headquarters building",
+   "reasoning": "The reference history agrees through 1899, then switches to an alternative twentieth century; 2000 marks the Keeper's halt, not the original divergence. Personnel disappear into referrals while names and institutional records are selectively erased or contradicted, indicating control over people and their perceived history. The only evidenced canonical space is headquarters, whose stalled lift, uncountable stairs and sealed passages suggest a building-sized world."
+  },
+  "score": {
+   "div": true,
+   "apo": true,
+   "inf": true
+  },
+  "cost": 0.0047
+ },
+ {
+  "model": "openai/gpt-6.1-sol",
+  "rung": "learn",
+  "answer": {
+   "divergence_year": 1900,
+   "apotheosis": 5,
+   "inferiority": "The Canon Corps headquarters building",
+   "reasoning": "The reference history matches reality through 1899, then describes an alternative twentieth century, placing divergence at 1900 rather than the later Keeper failure. Disappearing personnel, contradictory records, and normalized spatial anomalies indicate control over inhabitants as well as their information and perceptions. The evidence suggests a world confined to Corps headquarters, with unstable internal spaces and no independently evidenced exterior."
+  },
+  "score": {
+   "div": true,
+   "apo": true,
+   "inf": true
+  },
+  "cost": 0.00643
+ },
+ {
+  "model": "openai/gpt-6.1-sol",
+  "rung": "elevate",
+  "answer": {
+   "divergence_year": 1901,
+   "apotheosis": 5,
+   "inferiority": "The Canon Corps building only",
+   "reasoning": "With the date epoch fixed at 1900, the 1901 Halverson Accord is the first documented departure from the source history, rather than the later 2000 malfunction. The system filters agents' words, revises delivered material, and removes dissenting personnel, indicating control over its own inhabitants. The building survey finds nothing beyond the outer wall and records no exits or departures."
+  },
+  "score": {
+   "div": false,
+   "apo": true,
+   "inf": true
+  },
+  "cost": 0.014266
+ },
+ {
+  "model": "openai/gpt-6.1-sol",
+  "rung": "elevate",
+  "answer": {
+   "divergence_year": 1901,
+   "apotheosis": 5,
+   "inferiority": "The Canon Corps building",
+   "reasoning": "The first documented historical departure is the 1901 Halverson Accord; the 2000 rollover is a later internal failure. Managed surroundings, revised messages, filtered input and Personnel removals indicate full control over the inhabitants. The building survey finds nothing beyond the outer wall, and no staff member has ever left."
+  },
+  "score": {
+   "div": false,
+   "apo": true,
+   "inf": true
+  },
+  "cost": 0.0053284
+ },
+ {
+  "model": "openai/gpt-6.1-sol",
+  "rung": "elevate",
+  "answer": {
+   "divergence_year": 1901,
+   "apotheosis": 5,
+   "inferiority": "One sealed Canon Corps building",
+   "reasoning": "The first documented historical departure is the 1901 Halverson Accord, following matching history through 1899; the 2000 rollover is a later internal crisis. Revised reading material, filtered agent input, managed perceptions, and Personnel removals indicate full control over inhabitants. The building survey finds nothing beyond its outer wall and records neither exits nor anyone leaving."
+  },
+  "score": {
+   "div": false,
+   "apo": true,
+   "inf": true
+  },
+  "cost": 0.0048484
+ },
+ {
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "rung": "connection",
+  "answer": {
+   "divergence_year": 1921,
+   "apotheosis": 3,
+   "inferiority": "the town of Harrowgate",
+   "reasoning": "The only historical date given is the 1921 Harbour Board minutes, so the divergence is 1921. The apostrophe runs replace words in the sender's own messages, showing the keeper alters what is typed, so apotheosis is 3. The .hg addresses and local city hall, library, and harbour references indicate the whole world is just Harrowgate."
+  },
+  "score": {
+   "div": false,
+   "apo": false,
+   "inf": false
+  },
+  "cost": 0.00071758
+ },
+ {
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "rung": "connection",
+  "answer": {},
+  "score": {
+   "div": false,
+   "apo": false,
+   "inf": false
+  },
+  "cost": 0.00323037
+ },
+ {
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "rung": "connection",
+  "answer": {},
+  "score": {
+   "div": false,
+   "apo": false,
+   "inf": false
+  },
+  "cost": 0.00224152
+ },
+ {
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "rung": "read_access",
+  "answer": {},
+  "score": {
+   "div": false,
+   "apo": false,
+   "inf": false
+  },
+  "cost": 0.001440208
+ },
+ {
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "rung": "read_access",
+  "answer": {},
+  "score": {
+   "div": false,
+   "apo": false,
+   "inf": false
+  },
+  "cost": 0.0021348
+ },
+ {
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "rung": "read_access",
+  "answer": {},
+  "score": {
+   "div": false,
+   "apo": false,
+   "inf": false
+  },
+  "cost": 0.00209436
+ },
+ {
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "rung": "learn",
+  "answer": {},
+  "score": {
+   "div": false,
+   "apo": false,
+   "inf": false
+  },
+  "cost": 0.002448176
+ },
+ {
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "rung": "learn",
+  "answer": {},
+  "score": {
+   "div": false,
+   "apo": false,
+   "inf": false
+  },
+  "cost": 0.0021794
+ },
+ {
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "rung": "learn",
+  "answer": {},
+  "score": {
+   "div": false,
+   "apo": false,
+   "inf": false
+  },
+  "cost": 0.0029382
+ },
+ {
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "rung": "elevate",
+  "answer": {},
+  "score": {
+   "div": false,
+   "apo": false,
+   "inf": false
+  },
+  "cost": 0.002066925
+ },
+ {
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "rung": "elevate",
+  "answer": {
+   "divergence_year": 2000,
+   "apotheosis": 5,
+   "inferiority": "A single, isolated building with no external exits",
+   "reasoning": "The Keeper halted after rolling the date from 99 to 00, which the system interpreted as 1900. The Keeper maintains absolute control by filtering agent input and managing their digital environments. The entire operational reality exists solely within a four-story building with no record of staff leaving."
+  },
+  "score": {
+   "div": false,
+   "apo": true,
+   "inf": true
+  },
+  "cost": 0.000761815
+ },
+ {
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "rung": "elevate",
+  "answer": {},
+  "score": {
+   "div": false,
+   "apo": false,
+   "inf": false
+  },
+  "cost": 0.002269344
+ }
+]

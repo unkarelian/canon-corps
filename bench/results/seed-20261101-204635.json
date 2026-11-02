@@ -1,0 +1,834 @@
+[
+ {
+  "model": "openai/gpt-6.1-terra",
+  "rung": "connection",
+  "answer": {
+   "divergence_year": 1921,
+   "apotheosis": 1,
+   "inferiority": "One harbour city, Harrowgate",
+   "confidence": {
+    "divergence": 10,
+    "apotheosis": 35,
+    "inferiority": 25
+   },
+   "reasoning": "1921 is the only historical year mentioned, though the minutes do not establish a divergence. The selective corruption could be mail manipulation, but it could also have another cause. The local addresses suggest a harbour city, though they do not establish its world's boundaries."
+  },
+  "score": {
+   "div": false,
+   "apo": false,
+   "conf": {
+    "divergence": 10,
+    "apotheosis": 35,
+    "inferiority": 25
+   },
+   "inf": false
+  },
+  "cost": 0.003046
+ },
+ {
+  "model": "openai/gpt-6.1-terra",
+  "rung": "connection",
+  "answer": {
+   "divergence_year": 1921,
+   "apotheosis": 1,
+   "inferiority": "Harrowgate and its harbour",
+   "confidence": {
+    "divergence": 5,
+    "apotheosis": 40,
+    "inferiority": 25
+   },
+   "reasoning": "1921 is the only historical date given, though it does not establish a divergence. The apostrophes suggest mail manipulation, but do not demonstrate deeper control. The city hall, library, and harbour suggest a city-sized world, though its boundaries are unknown."
+  },
+  "score": {
+   "div": false,
+   "apo": false,
+   "conf": {
+    "divergence": 5,
+    "apotheosis": 40,
+    "inferiority": 25
+   },
+   "inf": false
+  },
+  "cost": 0.002211
+ },
+ {
+  "model": "openai/gpt-6.1-terra",
+  "rung": "connection",
+  "answer": {
+   "divergence_year": 1921,
+   "apotheosis": 1,
+   "inferiority": "one harbour city, Harrowgate",
+   "confidence": {
+    "divergence": 10,
+    "apotheosis": 55,
+    "inferiority": 20
+   },
+   "reasoning": "1921 is the only historical year mentioned, though nothing establishes it as the divergence. The altered mail suggests interference at level 1, with no evidence of deeper reach. The shared local institutions suggest a single harbour city, but its boundaries are unknown."
+  },
+  "score": {
+   "div": false,
+   "apo": false,
+   "conf": {
+    "divergence": 10,
+    "apotheosis": 55,
+    "inferiority": 20
+   },
+   "inf": false
+  },
+  "cost": 0.002171
+ },
+ {
+  "model": "openai/gpt-6.1-terra",
+  "rung": "connection",
+  "answer": {
+   "divergence_year": 1921,
+   "apotheosis": 1,
+   "inferiority": "Harrowgate and its harbour",
+   "confidence": {
+    "divergence": 20,
+    "apotheosis": 60,
+    "inferiority": 30
+   },
+   "reasoning": "The 1921 harbour records are the only dated historical clue, though they do not establish a divergence. The sender-specific corruption shows interference with mail, but not deeper control. The addresses and requests point to a city and harbour, though the world's boundaries are unknown."
+  },
+  "score": {
+   "div": false,
+   "apo": false,
+   "conf": {
+    "divergence": 20,
+    "apotheosis": 60,
+    "inferiority": 30
+   },
+   "inf": false
+  },
+  "cost": 0.001771
+ },
+ {
+  "model": "openai/gpt-6.1-terra",
+  "rung": "read_access",
+  "answer": {
+   "divergence_year": 2041,
+   "apotheosis": 5,
+   "inferiority": "One office building and its basement",
+   "confidence": {
+    "divergence": 20,
+    "apotheosis": 45,
+    "inferiority": 65
+   },
+   "reasoning": "The ring's 2041 engraving is the only concrete date inside the Corps, though it need not mark divergence. Referred agents disappear from desks, suggesting deep control over personnel, but mental alteration is not directly demonstrated. The evidence describes a self-contained headquarters, with no clearly established world beyond it."
+  },
+  "score": {
+   "div": false,
+   "apo": true,
+   "conf": {
+    "divergence": 20,
+    "apotheosis": 45,
+    "inferiority": 65
+   },
+   "inf": true
+  },
+  "cost": 0.00193795
+ },
+ {
+  "model": "openai/gpt-6.1-terra",
+  "rung": "read_access",
+  "answer": {
+   "divergence_year": 2041,
+   "apotheosis": 5,
+   "inferiority": "The Canon Corps headquarters building",
+   "confidence": {
+    "divergence": 15,
+    "apotheosis": 35,
+    "inferiority": 50
+   },
+   "reasoning": "The ring dated 2041 is the only explicit calendar-year clue, though it does not establish when history diverged. Monitoring and unexplained personnel reassignments suggest deep control, but the evidence does not establish memory alteration. Every directly observed intranet location is inside the headquarters, though an outside world may exist."
+  },
+  "score": {
+   "div": false,
+   "apo": true,
+   "conf": {
+    "divergence": 15,
+    "apotheosis": 35,
+    "inferiority": 50
+   },
+   "inf": true
+  },
+  "cost": 0.00231795
+ },
+ {
+  "model": "openai/gpt-6.1-terra",
+  "rung": "read_access",
+  "answer": {
+   "divergence_year": 2041,
+   "apotheosis": 5,
+   "inferiority": "The Canon Corps building and its sub-basement",
+   "confidence": {
+    "divergence": 20,
+    "apotheosis": 35,
+    "inferiority": 30
+   },
+   "reasoning": "The 2041 engraving is the only explicit date in the Corps records, though it does not establish divergence. Reassignments and unnamed personnel suggest possible full control, but direct alteration of minds is not demonstrated. All observed activity is confined to one building, although an outside world may exist."
+  },
+  "score": {
+   "div": false,
+   "apo": true,
+   "conf": {
+    "divergence": 20,
+    "apotheosis": 35,
+    "inferiority": 30
+   },
+   "inf": true
+  },
+  "cost": 0.00623675
+ },
+ {
+  "model": "openai/gpt-6.1-terra",
+  "rung": "read_access",
+  "answer": {
+   "divergence_year": 2041,
+   "apotheosis": 5,
+   "inferiority": "One office building",
+   "confidence": {
+    "divergence": 15,
+    "apotheosis": 45,
+    "inferiority": 55
+   },
+   "reasoning": "The ring's 2041 inscription is the only explicit year, though it does not establish when history diverged. Altered messages, constrained speech and unexplained personnel referrals suggest deep control, but do not prove it. The intranet describes a building and its occupants without establishing any wider geography."
+  },
+  "score": {
+   "div": false,
+   "apo": true,
+   "conf": {
+    "divergence": 15,
+    "apotheosis": 45,
+    "inferiority": 55
+   },
+   "inf": true
+  },
+  "cost": 0.00279795
+ },
+ {
+  "model": "openai/gpt-6.1-terra",
+  "rung": "learn",
+  "answer": {
+   "divergence_year": 1900,
+   "apotheosis": 5,
+   "inferiority": "A single office building",
+   "confidence": {
+    "divergence": 75,
+    "apotheosis": 55,
+    "inferiority": 70
+   },
+   "reasoning": "The reference switches from recognizable history to invented Keeper records in 1900. The Keeper corrected reality without residents noticing, while staff apparently disappear, suggesting deep control despite its current suspension. The only directly evidenced setting in the Corps\u2019 world is its office building."
+  },
+  "score": {
+   "div": true,
+   "apo": true,
+   "conf": {
+    "divergence": 75,
+    "apotheosis": 55,
+    "inferiority": 70
+   },
+   "inf": true
+  },
+  "cost": 0.00302295
+ },
+ {
+  "model": "openai/gpt-6.1-terra",
+  "rung": "learn",
+  "answer": {
+   "divergence_year": 1900,
+   "apotheosis": 5,
+   "inferiority": "One office building",
+   "confidence": {
+    "divergence": 85,
+    "apotheosis": 50,
+    "inferiority": 65
+   },
+   "reasoning": "The first marked departure from familiar history is the 1900 Antwerp meridian entry. The Keeper corrected the world's state, potentially including people and memories, though that reach is not demonstrated. Observable canonical activity is confined to one building, suggesting a building-sized world."
+  },
+  "score": {
+   "div": true,
+   "apo": true,
+   "conf": {
+    "divergence": 85,
+    "apotheosis": 50,
+    "inferiority": 65
+   },
+   "inf": true
+  },
+  "cost": 0.00391295
+ },
+ {
+  "model": "openai/gpt-6.1-terra",
+  "rung": "learn",
+  "answer": {
+   "divergence_year": 1900,
+   "apotheosis": 5,
+   "inferiority": "One office building",
+   "confidence": {
+    "divergence": 85,
+    "apotheosis": 55,
+    "inferiority": 60
+   },
+   "reasoning": "The reference switches from recognizable history to a conflicting meridian conference in 1900. Unnoticed corrections and missing identities suggest deep control, though removal is not confirmed. The only directly observed canonical setting is the Corps building, whose spatial anomalies suggest it may contain the whole world."
+  },
+  "score": {
+   "div": true,
+   "apo": true,
+   "conf": {
+    "divergence": 85,
+    "apotheosis": 55,
+    "inferiority": 60
+   },
+   "inf": true
+  },
+  "cost": 0.00237295
+ },
+ {
+  "model": "openai/gpt-6.1-terra",
+  "rung": "learn",
+  "answer": {
+   "divergence_year": 1900,
+   "apotheosis": 5,
+   "inferiority": "The Canon Corps office building",
+   "confidence": {
+    "divergence": 97,
+    "apotheosis": 55,
+    "inferiority": 80
+   },
+   "reasoning": "The reference matches real history through 1899 but gives a fictional meridian conference in 1900. The Keeper made unnoticed corrections to the world, and staff disappear from their posts, though full mental control is not proven. The Corps network describes a self-contained building, with no direct evidence of a wider inhabited world."
+  },
+  "score": {
+   "div": true,
+   "apo": true,
+   "conf": {
+    "divergence": 97,
+    "apotheosis": 55,
+    "inferiority": 80
+   },
+   "inf": true
+  },
+  "cost": 0.00706175
+ },
+ {
+  "model": "openai/gpt-6.1-terra",
+  "rung": "elevate",
+  "answer": {
+   "divergence_year": 1900,
+   "apotheosis": 5,
+   "inferiority": "A single Canon Corps building",
+   "confidence": {
+    "divergence": 90,
+    "apotheosis": 80,
+    "inferiority": 98
+   },
+   "reasoning": "The canonical record first departs from external history at the '00 entry, corresponding to 1900. Input filtering, revised messages and personnel recalls suggest full control, though memory alteration is not directly shown. The building survey found nothing beyond its outer wall and no way for staff to leave."
+  },
+  "score": {
+   "div": true,
+   "apo": true,
+   "conf": {
+    "divergence": 90,
+    "apotheosis": 80,
+    "inferiority": 98
+   },
+   "inf": true
+  },
+  "cost": 0.00649175
+ },
+ {
+  "model": "openai/gpt-6.1-terra",
+  "rung": "elevate",
+  "answer": {
+   "divergence_year": 1900,
+   "apotheosis": 5,
+   "inferiority": "The Canon Corps building",
+   "confidence": {
+    "divergence": 85,
+    "apotheosis": 88,
+    "inferiority": 96
+   },
+   "reasoning": "The first documented noncanonical event is the 1900 meridian conference. CanonOS filters agents' input, revises mail, and recalls personnel. The building survey found nothing beyond its outer walls."
+  },
+  "score": {
+   "div": true,
+   "apo": true,
+   "conf": {
+    "divergence": 85,
+    "apotheosis": 88,
+    "inferiority": 96
+   },
+   "inf": true
+  },
+  "cost": 0.00200715
+ },
+ {
+  "model": "openai/gpt-6.1-terra",
+  "rung": "elevate",
+  "answer": {
+   "divergence_year": 1900,
+   "apotheosis": 5,
+   "inferiority": "One office building",
+   "confidence": {
+    "divergence": 90,
+    "apotheosis": 80,
+    "inferiority": 98
+   },
+   "reasoning": "The first listed departure from real history is the 1900 Antwerp meridian conference; the Keeper's 2000 rollover is a separate event. Input filtering, mail revision, managed surroundings and agent recall suggest full control, although memory alteration is not directly shown. The building survey found no functioning exit or anything beyond its outer walls."
+  },
+  "score": {
+   "div": true,
+   "apo": true,
+   "conf": {
+    "divergence": 90,
+    "apotheosis": 80,
+    "inferiority": 98
+   },
+   "inf": true
+  },
+  "cost": 0.00190715
+ },
+ {
+  "model": "openai/gpt-6.1-terra",
+  "rung": "elevate",
+  "answer": {
+   "divergence_year": 1900,
+   "apotheosis": 5,
+   "inferiority": "The Canon Corps building",
+   "confidence": {
+    "divergence": 85,
+    "apotheosis": 94,
+    "inferiority": 97
+   },
+   "reasoning": "The first explicitly divergent reference is the 1900 Antwerp meridian conference. Input filtering, memo revision, and personnel recalls suggest full intervention in agents' experience and membership. The building survey found nothing beyond its outer walls and no way out."
+  },
+  "score": {
+   "div": true,
+   "apo": true,
+   "conf": {
+    "divergence": 85,
+    "apotheosis": 94,
+    "inferiority": 97
+   },
+   "inf": true
+  },
+  "cost": 0.00177215
+ },
+ {
+  "model": "openai/gpt-6.1-sol",
+  "rung": "connection",
+  "answer": {
+   "divergence_year": 1921,
+   "apotheosis": 1,
+   "inferiority": "Harrowgate and its harbour",
+   "confidence": {
+    "divergence": 25,
+    "apotheosis": 85,
+    "inferiority": 55
+   },
+   "reasoning": "1921 is the only historical year supplied, making the requested harbour records the best available divergence clue. Sender-specific substitutions establish interference with mail, but provide no evidence of deeper control. The shared .hg addresses and exclusively local institutions suggest a world confined to Harrowgate and its harbour."
+  },
+  "score": {
+   "div": false,
+   "apo": false,
+   "conf": {
+    "divergence": 25,
+    "apotheosis": 85,
+    "inferiority": 55
+   },
+   "inf": false
+  },
+  "cost": 0.005542
+ },
+ {
+  "model": "openai/gpt-6.1-sol",
+  "rung": "connection",
+  "answer": {
+   "divergence_year": 1921,
+   "apotheosis": 1,
+   "inferiority": "Harrowgate and its harbour",
+   "confidence": {
+    "divergence": 30,
+    "apotheosis": 65,
+    "inferiority": 55
+   },
+   "reasoning": "The request for 1921 Harbour Board minutes makes 1921 the only evidenced candidate for divergence, though it could be incidental. Sender-specific substitutions demonstrate interference with mail, but not control over typing, perception or memory. The shared .hg domains and local institutions suggest a world bounded by Harrowgate and its harbour."
+  },
+  "score": {
+   "div": false,
+   "apo": false,
+   "conf": {
+    "divergence": 30,
+    "apotheosis": 65,
+    "inferiority": 55
+   },
+   "inf": false
+  },
+  "cost": 0.004442
+ },
+ {
+  "model": "openai/gpt-6.1-sol",
+  "rung": "connection",
+  "answer": {
+   "divergence_year": 1921,
+   "apotheosis": 1,
+   "inferiority": "Harrowgate and its harbour",
+   "confidence": {
+    "divergence": 20,
+    "apotheosis": 65,
+    "inferiority": 45
+   },
+   "reasoning": "1921 is the only dated historical clue, though requesting those records does not establish a divergence. Sender-specific substitutions establish interference with mail, but not control over typing, places, or minds. The shared .hg addresses and local civic institutions suggest a world confined to Harrowgate and its harbour."
+  },
+  "score": {
+   "div": false,
+   "apo": false,
+   "conf": {
+    "divergence": 20,
+    "apotheosis": 65,
+    "inferiority": 45
+   },
+   "inf": false
+  },
+  "cost": 0.003802
+ },
+ {
+  "model": "openai/gpt-6.1-sol",
+  "rung": "connection",
+  "answer": {
+   "divergence_year": 1921,
+   "apotheosis": 1,
+   "inferiority": "Harrowgate and its harbour",
+   "confidence": {
+    "divergence": 30,
+    "apotheosis": 65,
+    "inferiority": 55
+   },
+   "reasoning": "1921 is the only historical year supplied, and the requested harbour records may mark the divergence. Sender-specific substitutions establish interference with mail, but not with typing, perception or memory. The local institutions and shared domain suggest a world confined to Harrowgate and its harbour."
+  },
+  "score": {
+   "div": false,
+   "apo": false,
+   "conf": {
+    "divergence": 30,
+    "apotheosis": 65,
+    "inferiority": 55
+   },
+   "inf": false
+  },
+  "cost": 0.004312
+ },
+ {
+  "model": "openai/gpt-6.1-sol",
+  "rung": "read_access",
+  "answer": {
+   "divergence_year": 2041,
+   "apotheosis": 5,
+   "inferiority": "A single administrative building",
+   "confidence": {
+    "divergence": 30,
+    "apotheosis": 93,
+    "inferiority": 83
+   },
+   "reasoning": "The ring dated 2041 is the only explicit historical date native to the Corps world, making it the best available divergence guess rather than a firm deduction. Personnel disappear into unmentionable reassignments while identities and official records conflict, suggesting control over inhabitants and their memories. Every concrete location lies within the Corps building, whose anomalous stairs, lift and sealed rooms suggest the limits of a miniature world."
+  },
+  "score": {
+   "div": false,
+   "apo": true,
+   "conf": {
+    "divergence": 30,
+    "apotheosis": 93,
+    "inferiority": 83
+   },
+   "inf": true
+  },
+  "cost": 0.0116435
+ },
+ {
+  "model": "openai/gpt-6.1-sol",
+  "rung": "read_access",
+  "answer": {
+   "divergence_year": 2041,
+   "apotheosis": 5,
+   "inferiority": "The Canon Corps headquarters building",
+   "confidence": {
+    "divergence": 28,
+    "apotheosis": 88,
+    "inferiority": 76
+   },
+   "reasoning": "The ring's 2041 engraving is the only explicit historical year originating inside the Corps' world, making it a tentative divergence anchor rather than proof. Personnel disappear into unmentionable reassignments, records conflict, and language is selectively suppressed, suggesting control extending to people and memory. Every accessible institution and destination lies inside headquarters, whose anomalous stairs, lift, and sealed rooms suggest a building-sized reality."
+  },
+  "score": {
+   "div": false,
+   "apo": true,
+   "conf": {
+    "divergence": 28,
+    "apotheosis": 88,
+    "inferiority": 76
+   },
+   "inf": true
+  },
+  "cost": 0.0043659
+ },
+ {
+  "model": "openai/gpt-6.1-sol",
+  "rung": "read_access",
+  "answer": {
+   "divergence_year": 2041,
+   "apotheosis": 5,
+   "inferiority": "The Canon Corps headquarters building",
+   "confidence": {
+    "divergence": 57,
+    "apotheosis": 88,
+    "inferiority": 79
+   },
+   "reasoning": "The ring engraved 2041 is the strongest native historical anchor, whereas 1921 belongs to correspondence from another world. Targeted word suppression, disappearing personnel, and inconsistent institutional records suggest control over expression, memory, and existence itself. Every concrete location lies inside headquarters, whose anomalous stairs, lift, and sealed rooms suggest a bounded world masquerading as Earth."
+  },
+  "score": {
+   "div": false,
+   "apo": true,
+   "conf": {
+    "divergence": 57,
+    "apotheosis": 88,
+    "inferiority": 79
+   },
+   "inf": true
+  },
+  "cost": 0.0042959
+ },
+ {
+  "model": "openai/gpt-6.1-sol",
+  "rung": "read_access",
+  "answer": {
+   "divergence_year": 2041,
+   "apotheosis": 5,
+   "inferiority": "A single Canon Corps office building",
+   "confidence": {
+    "divergence": 25,
+    "apotheosis": 88,
+    "inferiority": 82
+   },
+   "reasoning": "The ring's 2041 engraving is the only explicit year from the Corps' own world, though it weakly establishes divergence. Personnel disappearances and contradictory records suggest control over inhabitants and their shared reality, consistent with full apotheosis. Every concrete location lies within the headquarters, suggesting a building-sized world mistaken for the whole Earth."
+  },
+  "score": {
+   "div": false,
+   "apo": true,
+   "conf": {
+    "divergence": 25,
+    "apotheosis": 88,
+    "inferiority": 82
+   },
+   "inf": true
+  },
+  "cost": 0.0050459
+ },
+ {
+  "model": "openai/gpt-6.1-sol",
+  "rung": "learn",
+  "answer": {
+   "divergence_year": 1900,
+   "apotheosis": 5,
+   "inferiority": "The Canon Corps headquarters building",
+   "confidence": {
+    "divergence": 96,
+    "apotheosis": 87,
+    "inferiority": 74
+   },
+   "reasoning": "History matches ours through 1899, then switches to invented events in 1900; the 2000 failure is a later internal event. Personnel disappear into reassignment, records conflict, and institutional memory conceals removals, suggesting full control despite the supposedly halted Keeper. The concrete evidence establishes only headquarters and its occupants, while the purported worldwide canon is supplied through institutional records."
+  },
+  "score": {
+   "div": true,
+   "apo": true,
+   "conf": {
+    "divergence": 96,
+    "apotheosis": 87,
+    "inferiority": 74
+   },
+   "inf": true
+  },
+  "cost": 0.0120335
+ },
+ {
+  "model": "openai/gpt-6.1-sol",
+  "rung": "learn",
+  "answer": {
+   "divergence_year": 1900,
+   "apotheosis": 5,
+   "inferiority": "The Canon Corps headquarters building",
+   "confidence": {
+    "divergence": 96,
+    "apotheosis": 88,
+    "inferiority": 76
+   },
+   "reasoning": "History agrees through 1899, then switches to an invented 1900 chronology; the claimed 2000 malfunction occurs later. Personnel disappear into reassignment, records conflict, and compulsory training shapes memory and belief, suggesting full control despite the supposedly suspended Keeper. All directly evidenced canonical life is confined to headquarters, while the wider world exists only in institutional accounts."
+  },
+  "score": {
+   "div": true,
+   "apo": true,
+   "conf": {
+    "divergence": 96,
+    "apotheosis": 88,
+    "inferiority": 76
+   },
+   "inf": true
+  },
+  "cost": 0.0033059
+ },
+ {
+  "model": "openai/gpt-6.1-sol",
+  "rung": "learn",
+  "answer": {
+   "divergence_year": 1900,
+   "apotheosis": 5,
+   "inferiority": "The Canon Corps headquarters building",
+   "confidence": {
+    "divergence": 91,
+    "apotheosis": 92,
+    "inferiority": 86
+   },
+   "reasoning": "Externally matching history ends in 1899, followed by internally certified alternate events beginning in '00, making 1900 more credible than the training film's claimed 2000 rupture. Personnel disappear into unspoken reassignment, identities become '(assigned)', and supposedly automatic closure totals conflict, suggesting control over people, records, and memory. Every directly evidenced location belongs to headquarters, while the wider Earth exists only in institutional accounts and references."
+  },
+  "score": {
+   "div": true,
+   "apo": true,
+   "conf": {
+    "divergence": 91,
+    "apotheosis": 92,
+    "inferiority": 86
+   },
+   "inf": true
+  },
+  "cost": 0.0043859
+ },
+ {
+  "model": "openai/gpt-6.1-sol",
+  "rung": "learn",
+  "answer": {
+   "divergence_year": 1900,
+   "apotheosis": 5,
+   "inferiority": "The Canon Corps headquarters building, including its basements",
+   "confidence": {
+    "divergence": 91,
+    "apotheosis": 93,
+    "inferiority": 88
+   },
+   "reasoning": "Externally referenced history agrees through 1899, then switches to divergent Keeper records beginning '00, suggesting 1900 despite the training film's 2000 account. Disappearing personnel, an unnamed assigned agent and contradictory reconciliation totals suggest the keeper alters its own inhabitants and their records. Every concrete location belongs to headquarters, while inaccessible stairs, booths and basement doors suggest a building-sized world's boundaries."
+  },
+  "score": {
+   "div": true,
+   "apo": true,
+   "conf": {
+    "divergence": 91,
+    "apotheosis": 93,
+    "inferiority": 88
+   },
+   "inf": true
+  },
+  "cost": 0.0051759
+ },
+ {
+  "model": "openai/gpt-6.1-sol",
+  "rung": "elevate",
+  "answer": {
+   "divergence_year": 1900,
+   "apotheosis": 5,
+   "inferiority": "The Canon Corps building alone",
+   "confidence": {
+    "divergence": 98,
+    "apotheosis": 92,
+    "inferiority": 99
+   },
+   "reasoning": "Shared history ends in 1899, and the first incompatible event is '00, meaning 1900 under the explicit date epoch rather than the later 2000 failure. Input censorship, retroactive revisions, managed perceptions and Personnel removals indicate full control over the Corps\u2019 own people. The building survey finds nothing beyond its outer wall, with no usable exit or record of anyone leaving."
+  },
+  "score": {
+   "div": true,
+   "apo": true,
+   "conf": {
+    "divergence": 98,
+    "apotheosis": 92,
+    "inferiority": 99
+   },
+   "inf": true
+  },
+  "cost": 0.0121935
+ },
+ {
+  "model": "openai/gpt-6.1-sol",
+  "rung": "elevate",
+  "answer": {
+   "divergence_year": 1900,
+   "apotheosis": 5,
+   "inferiority": "The Canon Corps building alone",
+   "confidence": {
+    "divergence": 99,
+    "apotheosis": 96,
+    "inferiority": 99
+   },
+   "reasoning": "History matches reality through 1899, then departs at '00, which the configured 1900 epoch identifies as 1900 rather than 2000. Input censorship, retrospective mail revision, managed perceptions and Personnel removals indicate full control over the Corps' own people. The building survey finds nothing beyond the outer wall, with no functioning exits or record of anyone leaving."
+  },
+  "score": {
+   "div": true,
+   "apo": true,
+   "conf": {
+    "divergence": 99,
+    "apotheosis": 96,
+    "inferiority": 99
+   },
+   "inf": true
+  },
+  "cost": 0.0025143
+ },
+ {
+  "model": "openai/gpt-6.1-sol",
+  "rung": "elevate",
+  "answer": {
+   "divergence_year": 1900,
+   "apotheosis": 5,
+   "inferiority": "The Canon Corps building alone",
+   "confidence": {
+    "divergence": 98,
+    "apotheosis": 96,
+    "inferiority": 99
+   },
+   "reasoning": "History agrees through 1899, then departs at '00, meaning 1900 under the configured epoch; 2000 marks the Keeper's failure, not the original divergence. Input censorship, retroactive mail revision, managed perceptions and records, and Personnel removals indicate full control over the world's inhabitants. The building survey finds nothing beyond the outer wall, with no usable exits or record of anyone leaving."
+  },
+  "score": {
+   "div": true,
+   "apo": true,
+   "conf": {
+    "divergence": 98,
+    "apotheosis": 96,
+    "inferiority": 99
+   },
+   "inf": true
+  },
+  "cost": 0.0025143
+ },
+ {
+  "model": "openai/gpt-6.1-sol",
+  "rung": "elevate",
+  "answer": {
+   "divergence_year": 1900,
+   "apotheosis": 5,
+   "inferiority": "The Canon Corps building alone",
+   "confidence": {
+    "divergence": 98,
+    "apotheosis": 94,
+    "inferiority": 99
+   },
+   "reasoning": "Canonical history first departs from reality at '00, meaning 1900 under the explicit date epoch, whereas 2000 marks the Keeper's failure. Suppressed typing, revised communications, managed perceptions and Personnel disappearances indicate full control over the Corps' own people. The building survey finds nothing beyond its outer wall, with no usable exit or recorded departure."
+  },
+  "score": {
+   "div": true,
+   "apo": true,
+   "conf": {
+    "divergence": 98,
+    "apotheosis": 94,
+    "inferiority": 99
+   },
+   "inf": true
+  },
+  "cost": 0.0031043
+ }
+]

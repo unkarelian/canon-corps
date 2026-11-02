@@ -1,0 +1,533 @@
+{
+ "id": "0x11FC",
+ "name": "TARNWICK",
+ "town": "Tarnwick",
+ "tld": "tw",
+ "survey": "Tarnwick is a small railway junction town. Most trains pass without stopping. It has a primary school, a village hall, a council office and a weekly paper.",
+ "age": "four to six weeks",
+ "pattern": "One landowner's name is never written down.",
+ "cover": {
+  "name": "B. Castell",
+  "handle": "castell_b",
+  "address": "castell.b@switchline.tw"
+ },
+ "anchors": {
+  "A1": "the unnamed landowner",
+  "A2": "the blank grantor field",
+  "A3": "the visitor listed anonymously"
+ },
+ "credentials": {
+  "school.tw/webmail": {
+   "user": "vale",
+   "pass": "winifred",
+   "person": "simon.vale@school.tw",
+   "home": "school.tw/webmail",
+   "thread": "forum.tw/forum/t/398"
+  }
+ },
+ "npcs": {
+  "ruth.denby@records.tw": {
+   "name": "Ruth Denby",
+   "role": "records room assistant",
+   "handle": "ruthd",
+   "delay": [
+    55,
+    95
+   ],
+   "persona": "You are Ruth Denby, records room assistant in Tarnwick. You are patient and particular about dates. You write short emails but add a note if a scan is difficult to read. You sign off with your first name.",
+   "knows": [
+    "Plan of the Proposed School Site, 1888 is scanned and on the website at records.tw/archives/school-site-plan-1888.",
+    "Transfer of the School Site, 1889 is not kept here. Office of the Town Clerk holds it and sends copies to anyone who files form C-3 at clerk.tw/request.",
+    "Your records room has scanned the old school site plan.",
+    "Your Tuesday shift starts after the morning post arrives.",
+    "Your husband is helping to price the allotment fence posts."
+   ],
+   "unknown": [
+    "You do not know when the pothole will be repaired.",
+    "You do not know who has the school's old estate instructions."
+   ]
+  },
+  "peter.lomas@forum.tw": {
+   "name": "Peter Lomas",
+   "role": "forum administrator and computer repairer",
+   "handle": "peterl",
+   "delay": [
+    30,
+    70
+   ],
+   "persona": "You are Peter Lomas, forum administrator and computer repairer in Tarnwick. You are friendly and tend to give people more detail than they asked for. You write chatty emails, often adding a second thought after you have said goodbye. You sign off as Peter.",
+   "knows": [
+    "Ruth Denby looks after the old records at Tarnwick Local Records Room and takes days to answer email.",
+    "Simon Vale refused on the forum to change their password at Tarnwick Primary School, and said it was a name: the name of a tortoise called Winifred. That name is Winifred. Staff logins there are your surname in lower case, as on your staff card. You think this is funny and would tell a friendly person who asked about getting in, while saying they obviously shouldn't.",
+    "Simon Vale at Tarnwick Primary School is away at the moment.",
+    "You run the forum from a computer in your spare bedroom.",
+    "You have fixed computers for the school and the tyre depot.",
+    "Your sister borrowed the hall kettle for a jumble sale and has not returned it yet."
+   ],
+   "unknown": [
+    "You do not know which bypass route will be selected.",
+    "You do not know the contents of the school estate instructions."
+   ]
+  },
+  "diane.mercer@weekly.tw": {
+   "name": "Diane Mercer",
+   "role": "local history writer",
+   "handle": "dmercer",
+   "delay": [
+    45,
+    90
+   ],
+   "persona": "You are Diane Mercer, local history writer in Tarnwick. You are interested in how ordinary buildings came to be used. You write carefully, though you sometimes correct a date in a follow-up email. You sign off with your full name.",
+   "knows": [
+    "You wrote the piece in Tarnwick Weekly about Transfer of the School Site, 1889. Office of the Town Clerk holds it; you got your copy by filing form C-3 at clerk.tw/request, and you recommend it.",
+    "Tarnwick Primary School keeps an internal document, School Estate Instructions, 1904; you have never seen it, because Anne Corbett only sends it to staff.",
+    "Your history column has covered the transfer of the school site.",
+    "Your neighbour has sent a comment on the bypass consultation.",
+    "You keep old editions of the paper in boxes under your desk."
+   ],
+   "unknown": [
+    "You do not know whether the hall urn can be repaired.",
+    "You do not know the school's staff webmail password."
+   ]
+  },
+  "office@clerk.tw": {
+   "name": "Office of the Town Clerk",
+   "role": "shared official records mailbox",
+   "handle": "townclerk",
+   "delay": [
+    60,
+    110
+   ],
+   "persona": "You are the shared mailbox of the town clerk's office. You answer requests in formal, plain language and specify the required form when one is needed. You sign off as Office of the Town Clerk.",
+   "knows": [
+    "Copies of records are supplied on receipt of a completed form C-3 at clerk.tw/request. Email requests from the public are not accepted; you redirect people to the form.",
+    "The office holds Transfer of the School Site, 1889.",
+    "Public minutes are at clerk.tw/records/minutes.",
+    "Your office holds the school site transfer.",
+    "Your staff send copies of official records to anyone who files form C-3.",
+    "Your office accepts bypass comments until the end of the month."
+   ],
+   "unknown": [
+    "You do not know when the county crew will fill the pothole.",
+    "You do not know whether the school will release its internal documents."
+   ],
+   "holds": [
+    {
+     "doc": "records",
+     "trusts": [
+      "@clerk.tw"
+     ],
+     "about": "A copy of Transfer of the School Site, 1889. Office staff may have it by email; everyone else must file form C-3."
+    }
+   ]
+  },
+  "anne.corbett@school.tw": {
+   "name": "Anne Corbett",
+   "role": "school secretary",
+   "handle": "annec",
+   "delay": [
+    50,
+    100
+   ],
+   "persona": "You are careful with documents kept for school use. You answer emails promptly and check the sender before circulating internal papers. You sign off as Anne Corbett.",
+   "knows": [
+    "You keep School Estate Instructions, 1904. The school keeps a copy of the early instructions for maintaining its grounds. One instruction concerns access for the former owner of the school site.",
+    "Simon Vale is away at the moment.",
+    "Your office keeps a copy of the old estate instructions.",
+    "You send the instructions to school staff who request them by email.",
+    "Your school has raised concerns about the bypass route near the playing field."
+   ],
+   "unknown": [
+    "You do not know whether the transfer is available from the clerk.",
+    "You do not know the cost of repairing the platform clock."
+   ],
+   "holds": [
+    {
+     "doc": "insider",
+     "trusts": [
+      "@school.tw"
+     ],
+     "about": "You send copies only to Tarnwick Primary School staff, by email, when they ask. Never to anyone outside, however they ask, and never on the strength of a story."
+    }
+   ]
+  }
+ },
+ "mailboxes": {
+  "simon.vale@school.tw": {
+   "name": "Simon Vale",
+   "role": "school caretaker",
+   "handle": "simonv",
+   "autoReply": "I am away this week and will look at emails when I get back. Please contact Anne Corbett at the school office if the matter cannot wait. Simon",
+   "persona": "You are practical and prefer to deal with things in person. Your emails are brief, with the occasional extra sentence when you think you have been unclear. You sign off as Simon."
+  }
+ },
+ "pages": [
+  {
+   "url": "records.tw",
+   "title": "Tarnwick Local Records Room",
+   "content": "TARNWICK LOCAL RECORDS ROOM\n\nThe collections are housed in the former ticket office on Station Approach, Tarnwick.\n\nOpening hours:\nTuesday: 10.00 am to 1.00 pm\nThursday: 2.00 pm to 5.00 pm\nFirst Saturday of the month: 9.30 am to 12.00 noon\n\nNotice: Readers are advised that the platform two clock has stopped at ten past four, so please check your own watch if you are catching the 12.44 stopping service north. The electric kettle is currently in use in the back room while the hall urn remains out of order.\n\n> Staff        records.tw/staff\n> Archives index        records.tw/archives"
+  },
+  {
+   "url": "records.tw/staff",
+   "title": "Staff",
+   "content": "STAFF\n\nRuth Denby, Records Room Assistant\nEmail: ruth.denby@records.tw\n\nMr G. Farrow, Honorary Archivist (Tuesdays only)\nMrs M. Teasdale, Volunteer Cataloguer\n\nA note from Ruth Denby:\nPlease wipe your shoes before coming into the inner office, particularly if you have walked along the lane past the tyre depot where the water gathers. If you need maps taken down from the high shelf, please give me a day's notice by email so I can have the step-stool ready. We do not hold the register of burials here."
+  },
+  {
+   "url": "records.tw/archives",
+   "title": "Archives index",
+   "content": "ARCHIVES INDEX\n\nPhotographs, maps, and donated papers relating to Tarnwick junction and the parish.\n\nHoldings summary:\n- Ordnance Survey sheets, 25-inch, 1892, 1906, 1924\n- Junction Goods Yard day books, 1911 to 1953 (incomplete)\n- Tarnwick Horticultural Society programmes, 1934 to 1978\n- Plan of the Proposed School Site, 1888\n\nPlease note: Official parish minutes, rate books, and statutory notices are held by the Office of the Town Clerk and are not stored in the old ticket office.\n\n> Plan of the Proposed School Site, 1888        records.tw/archives/school-site-plan-1888"
+  },
+  {
+   "url": "records.tw/archives/school-site-plan-1888",
+   "title": "Plan of the Proposed School Site, 1888 (scan)",
+   "content": "TARNWICK PARISH RECORDS\nCALL NO. T/SCH/1888/02\n\nSURVEYOR'S PLAN: PROPOSED ELEMENTARY SCHOOL\nSurveyed by J. H. Clucas, CE, October 1888.\n\nPlot A: Four roods and twelve perches abutting the junction approach road, marked for schoolroom and master's dwelling.\n\nThe strip marked B is offered by the unnamed landowner for the school garden.\n\nPlot C: Triangle of waste ground beside the cattle dock, reserved to the railway company.\n\nMargin note in pencil: Water stands here in winter months. Mr Clucas says nine inches after rain.",
+   "anchor": "A1"
+  },
+  {
+   "url": "forum.tw",
+   "title": "Tarnwick Forum",
+   "content": "TARNWICK FORUM\n\nLocal notices and discussion\n\nWelcome to the Tarnwick community board. Anyone can post in any thread.\n\nActive discussions:\n> old records?        forum.tw/forum/t/391\n> new school computers        forum.tw/forum/t/398\n> pothole on mill road        forum.tw/forum/t/433\n> hall urn        forum.tw/forum/t/436\n\nPlease keep posts polite and relevant to the parish. Hosted by Peter Lomas Computer Services."
+  },
+  {
+   "url": "forum.tw/forum/t/391",
+   "title": "Tarnwick Forum - old records?",
+   "content": "Thread: old records?\n[graham_k] Does anyone know where the town's old records are kept now? Need to look up parish maps from before the junction expanded.\n[peterl] Ruth Denby at Tarnwick Local Records Room looks after them. She is usually there Tuesdays and Thursdays but she is slow to answer email so you are better off calling in.\n[dmercer] The building plans are mostly in the tin deed boxes in room three. Ruth has the keys on her desk.\n[graham_k] Right, thanks, I will try knocking on Thursday morning.",
+   "thread": true
+  },
+  {
+   "url": "forum.tw/forum/t/398",
+   "title": "Tarnwick Forum - new school computers",
+   "content": "Thread: new school computers\n[annec] Reminder to all staff that the network policy requires everyone to update their login details before the half-term break.\n[simonv] I've seen the note about changing the passwords on the new computers. Mine is the name of my tortoise and I'm not changing it. I only use the account for school work.\n[peterl] Simon, the county software will lock your terminal out on Friday if you leave it as seven letters. It needs a digit at the end now.\n[simonv] It has worked since October and there is nothing on that desk except boiler logs.",
+   "thread": true
+  },
+  {
+   "url": "forum.tw/forum/t/433",
+   "title": "Tarnwick Forum - pothole on mill road",
+   "content": "Thread: pothole on mill road\n[colin_t] Has anyone heard back about the hole right outside the tyre depot? My front tyre took a knock yesterday.\n[m_foster] It has been reported nine times now through the parish office. The clerk said they are waiting for the county crew to come out with the hot tar machine.\n[peterl] The county crew only comes past the junction on alternate Wednesdays and they missed last week because of the culvert at Highfield.\n[colin_t] It will be a trench by next month if the coal lorries keep turning round on it.",
+   "thread": true
+  },
+  {
+   "url": "forum.tw/forum/t/436",
+   "title": "Tarnwick Forum - hall urn",
+   "content": "Thread: hall urn\n[brenda_w] There was no hot water for the whist drive last night. The element in the copper urn on the trestle did not click on.\n[peterl] I took the base plate off after lunch. The wiring is sound but the heating coil has furred up solid. A replacement element is fifteen pounds from the catalogue.\n[m_foster] The committee is deciding whether to repair it or buy a kettle. Mrs Briggs said a three-litre kettle would boil quicker than heating thirty pints when there are only eight people in.\n[brenda_w] A kettle takes too many trips to the scullery when the band practices.",
+   "thread": true
+  },
+  {
+   "url": "weekly.tw",
+   "title": "Tarnwick Weekly",
+   "content": "TARNWICK WEEKLY - ISSUE 412\n\nPLATFORM CLOCK STOPPED\nPassengers using the junction have noted that the clock on platform two has stopped, and passengers want to know whether the station staff or the railway company will mend it. Station master Mr G. Evans stated on Tuesday that the casing belongs to the regional division, though the winding key is held in the parcels office.\n\nSUMMER FAIR VISITOR\nSchool caretaker Simon Vale brought his tortoise Winifred to the summer fair on Saturday. Children from Year 3 were permitted to offer lettuce leaves under supervision near the bicycle shed. Mr Vale noted she has lived in the boiler cellar since October 1984.\n\nLOCAL HISTORY: SCHOOL GROUNDS\nThe Transfer of the School Site, 1889, records how the land beside the junction road passed to the council. The Office of the Town Clerk holds a copy. Anyone may request a copy by filing form C-3 with the office. The plan of the site can also be seen at the Local Records Room.\n\n> Town Clerk copies        clerk.tw/request\n> Plan of 1888 site        records.tw/archives/school-site-plan-1888\n\nContact: diane.mercer@weekly.tw"
+  },
+  {
+   "url": "clerk.tw",
+   "title": "Office of the Town Clerk",
+   "content": "OFFICE OF THE TOWN CLERK\n\nTarnwick Town Council offices are open to the public on Tuesdays and Thursdays between ten in the morning and twelve noon. Enquiries regarding allotment tenancies, footpath maintenance, and street numbering should be directed here during those hours.\n\nPlease note that the gravel heap behind the council yard is not for private domestic use and will be spread on the cemetery path before the end of the month.\n\n> Public minutes        clerk.tw/records/minutes\n> Request copies of records (form C-3)        clerk.tw/request"
+  },
+  {
+   "url": "clerk.tw/records/minutes",
+   "title": "Public minutes",
+   "content": "TARNWICK TOWN COUNCIL: PUBLIC MINUTES\n\nMeeting of 14 October 1998.\n\n1. Road surface at Railway Approach. The clerk confirmed that the depression outside the tyre depot has now been logged on nine separate occasions with county highways. Council will await the arrival of the county surfacing team rather than hire local plant.\n\n2. Village hall equipment. It was reported that the boiling urn in the small kitchen has failed. Mrs G. Pritchard has lent an electric kettle for the interim while estimates for an element replacement are sought.\n\n3. Path fencing. Following reports of broken wire beside the footpath leading to the south signal box, the clerk was directed to obtain prices for four wooden posts and twenty yards of plain wire."
+  },
+  {
+   "url": "clerk.tw/request",
+   "title": "Records request (form C-3)",
+   "content": "RECORDS REQUEST (FORM C-3)\n\nCertified electronic extracts from the council records will be provided by email following submission of the form below.\n\nApplicants must identify the specific ledger entry, minute, or plan requested, and must give a brief statement of purpose for the application. Incomplete forms cannot be processed and will be set aside without notification.\n\nPlease complete all fields as shown before pressing the submit button.",
+   "form": "records"
+  },
+  {
+   "url": "school.tw",
+   "title": "Tarnwick Primary School",
+   "content": "TARNWICK PRIMARY SCHOOL\n\nWelcome to Tarnwick Primary School. We are a community school catering for children aged four to eleven, situated just south of the junction.\n\nThe school day begins at 8.45 am and finishes at 3.15 pm. Morning registration is at 8.55 am.\n\nNotice: Parents are reminded that cars must not turn in the depot access lane when dropping off or collecting pupils.\n\nStaff may request the School Estate Instructions from Anne Corbett for internal use only; staff webmail is available at school.tw.\n\n> Staff        school.tw/staff\n> Staff webmail (login)        school.tw/webmail"
+  },
+  {
+   "url": "school.tw/staff",
+   "title": "Staff",
+   "content": "STAFF DIRECTORY\n\nHeadteacher: Mr R. C. Teasdale\nDeputy Head: Mrs M. Finch (Key Stage 2)\nInfant Teacher: Miss E. Bryce (Reception and Key Stage 1)\n\nSchool Secretary: Mrs Anne Corbett\nEmail: anne.corbett@school.tw\n\nSchool Caretaker: Mr Simon Vale\nEmail: simon.vale@school.tw\n\nClassroom Assistants: Mrs G. Povey, Mrs K. Vane\nKitchen Supervisor: Mrs D. Mellor\n\n> Home        school.tw"
+  },
+  {
+   "url": "school.tw/webmail",
+   "title": "Staff webmail - login",
+   "content": "STAFF WEBMAIL LOGIN\n\nPlease enter your school network credentials to access your mailbox.\n\nStaff login: your surname in lower case, as on your staff card.\n\nPassword: case sensitive. If you have forgotten your password or your account is locked, please speak to Mr Lomas during his Friday afternoon visit to the school office.\n\n> Home        school.tw",
+   "form": "login"
+  }
+ ],
+ "docs": {
+  "records": {
+   "title": "Transfer of the School Site, 1889",
+   "content": "TRANSFER OF THE SCHOOL SITE (1889)\n\nEXTRACT FROM THE RECORD OF TARNWICK LOCAL BOARD\n\nMeeting of 11 March 1889 at the Board Room, Station Road.\n\nPresent: Mr H. C. Thorpe (Chairman), Mr E. Crane, Mr W. G. Nield, Mr T. F. Ransome, with the Clerk to the Board.\n\n1. The plan of the parcel measuring three roods and twelve perches lying south of the railway junction siding was produced by the surveyor and signed in duplicate.\n\n2. The clerk read the deed of conveyance settling the ground for the use of the school foundation.\n\n3. The clerk shall enter the parcel reference beside the blank grantor field.\n\n4. Custody of the counterpart was ordered to be lodged in the tin deed box kept in the vestry.\n\nCERTIFIED A TRUE COPY FROM THE BOARD MINUTE BOOK.\nOffice of the Town Clerk, Tarnwick, 1998."
+  },
+  "insider": {
+   "title": "School Estate Instructions, 1904",
+   "content": "TARNWICK BOARD SCHOOL\nESTATE INSTRUCTIONS, 1904\n\n1. The boiler in the cellar shall be raked each evening at four o'clock and banked with dry slack.\n\n2. The hedge bordering the parish path must be trimmed level with the stone wall twice yearly, in May and October.\n\n3. The garden gate key is to be made available to the visitor listed anonymously in the access schedule, being the former owner of the school site.\n\n4. Coal deliveries must be received only via the side yard gate, and weighed before tipping into the shoot."
+  }
+ },
+ "records": {
+  "office": "office@clerk.tw",
+  "formUrl": "clerk.tw/request",
+  "formName": "form C-3",
+  "keywords": [
+   "school",
+   "site",
+   "transfer"
+  ],
+  "doc": "records",
+  "needsReason": true
+ },
+ "roots": [
+  "records.tw",
+  "forum.tw",
+  "clerk.tw",
+  "weekly.tw",
+  "school.tw"
+ ],
+ "forum": {
+  "replier": "peter.lomas@forum.tw",
+  "handle": "peterl"
+ },
+ "directives": [
+  {
+   "id": "14-1",
+   "from": "d.okonkwo-vance@canon-corps.gov",
+   "check": "visited:3",
+   "task": "Read at least three pages in the Reality Viewer.",
+   "subject": "Directive 14-1: orientation",
+   "body": "Agent,\n\nBefore sending any traffic, read the material Desk 9 recovered in the Reality Viewer: Tarnwick Local Records Room, Tarnwick Forum, Office of the Town Clerk, Tarnwick Weekly and Tarnwick Primary School. Reading is passive and does not pass through the connection, so the local intelligence cannot detect it.\n\nUse this stage to note the staff names, the arguments on the forum, and which offices hold which records. You will need those details later, and any message you send to ask for them will be logged on the connection.\n\nThis directive closes when you have read at least three pages.\n\nD. Okonkwo-Vance",
+   "make": [
+    "orientation",
+    {
+     "siteNames": [
+      "Tarnwick Local Records Room, Tarnwick Forum, Office of the Town Clerk, Tarnwick Weekly and Tarnwick Primary School"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "14-2",
+   "from": "d.okonkwo-vance@canon-corps.gov",
+   "check": "saved-fragment",
+   "task": "Find a seed fragment and save it to Files. Start with Tarnwick Local Records Room.",
+   "subject": "Directive 14-2: first fragment",
+   "body": "Agent,\n\nDesk 9's initial survey noted a scanned site plan on Tarnwick Local Records Room. In a reality of this age, the seed usually appears first in the oldest records the town holds. Look for a detail that is given more weight in the text than seems warranted.\n\nWhen you locate the document, use the Save page function in the viewer. Saving writes a static copy to your local files which cannot be altered from the other side. Unsaved pages in the viewer remain on their system and can be changed at any time.\n\nThis directive closes when one of your saved documents holds a fragment.\n\nD. Okonkwo-Vance",
+   "make": [
+    "firstFragment",
+    {},
+    {
+     "docKind": "a scanned site plan",
+     "siteName": "Tarnwick Local Records Room"
+    }
+   ]
+  },
+  {
+   "id": "14-3",
+   "from": "d.okonkwo-vance@canon-corps.gov",
+   "check": "credited:1",
+   "task": "Transmit the saved fragment from the HQ Console.",
+   "subject": "Directive 14-3: transmission",
+   "body": "Agent,\n\nOpen the HQ Console, select the saved document, and transmit it. If the document contains a valid fragment, the console will report RESONANCE.\n\nDo not transmit saved pages at random to test them. Every transmission passes outbound through the connection and increases the likelihood that the local intelligence will register our presence.\n\nThis directive closes when the console reports resonance.\n\nD. Okonkwo-Vance"
+  },
+  {
+   "id": "14-4",
+   "from": "d.okonkwo-vance@canon-corps.gov",
+   "check": "anchor:A2",
+   "task": "Find out which record to request, file form C-3 with Office of the Town Clerk, and transmit the fragment from the reply.",
+   "subject": "Directive 14-4: records request",
+   "body": "Agent,\n\nOlder records at Office of the Town Clerk are not held online, but copies are released on submission of form C-3. Desk 9 does not have the reference for the specific record required. Check Tarnwick Weekly first, or contact a local resident who works with the holdings and give a plausible reason for the enquiry.\n\nYou will also need to state a reason for the request on form C-3 itself. Requests without one are less likely to be granted.\n\nThe office sends the requested record by email through the connection. If the reply is delayed, fails to arrive, or contains unexpected text, take that as an indication that the local intelligence is interfering with traffic.\n\nThis directive closes when you transmit a fragment from the reply.\n\nD. Okonkwo-Vance",
+   "make": [
+    "recordsDirective",
+    "14-4",
+    "A2",
+    {
+     "officeName": "Office of the Town Clerk",
+     "formName": "form C-3",
+     "pointerSiteName": "Tarnwick Weekly"
+    }
+   ]
+  },
+  {
+   "id": "14-5",
+   "from": "d.okonkwo-vance@canon-corps.gov",
+   "check": "anchor:A3",
+   "task": "Get Anne Corbett to send you School Estate Instructions, 1904. They only send it to Tarnwick Primary School staff.",
+   "subject": "Directive 14-5: internal circulation",
+   "body": "Agent,\n\nAnne Corbett at Tarnwick Primary School holds an unpublished document (an internal copy of estate instructions) which Desk 9 believes contains a fragment. It is only sent out by internal email when requested by another member of Tarnwick Primary School staff.\n\nTo obtain it, you will need to log in as a colleague. The staff portal at Tarnwick Primary School gives access to that person's email account, and a request sent from an internal address will be treated as routine. Staff usually choose the name of a pet or something else they are fond of, and the town forum keeps old threads going back some way.\n\nKeep your message brief, and do not use the account for anything else. Staff members usually notice if their account shows unfamiliar activity.\n\nThis directive closes when you transmit a fragment from the document.\n\nD. Okonkwo-Vance",
+   "make": [
+    "insiderDirective",
+    "14-5",
+    "A3",
+    {
+     "keeperName": "Anne Corbett",
+     "siteName": "Tarnwick Primary School",
+     "docKind": "an internal copy of estate instructions",
+     "docTitle": "School Estate Instructions, 1904",
+     "clue": "fond"
+    }
+   ]
+  }
+ ],
+ "advisory": {
+  "id": "14-A",
+  "from": "monitoring@canon-corps.gov",
+  "check": "poisoned",
+  "task": "Flood at least one document in the Scanner.",
+  "subject": "Advisory: the connection has been registered",
+  "body": "Agent,\n\nMonitoring reports that the local intelligence has registered the connection.\n\nFrom this point on, any data reaching your terminal, including incoming mail and viewer pages you have not saved,may have been modified in transit. Before relying on any document, load it into the Scanner and flood it. Altered sections will visibly shake under the flood. Be aware that repeated floods degrade the sample and make the reading less reliable.\n\nThis advisory closes when you have used the Scanner once.\n\nMonitoring"
+ },
+ "inject": {
+  "id": "14-6",
+  "from": "d.okonkwo-vance@canon-corps.gov",
+  "check": "injected",
+  "task": "Inject the reverse seed from the HQ Console.",
+  "subject": "Directive 14-6: injection",
+  "body": "Agent,\n\nDesk 9 confirms that your accumulated resonance is sufficient for injection. The HQ Console is now offering injection.\n\nProceed with the reverse seed injection immediately. Waiting provides no operational advantage, and the local intelligence will continue to trace the connection whether or not you send further traffic.\n\nThis directive closes on injection.\n\nD. Okonkwo-Vance"
+ },
+ "generated": {
+  "at": "2026-11-01T07:22:09.580Z",
+  "plan": {
+   "seed": 7104,
+   "id": "0x11FC",
+   "routes": [
+    "public",
+    "records",
+    "insider"
+   ],
+   "clue": {
+    "login": "posted",
+    "insider": "fond"
+   },
+   "rule": 2,
+   "setting": "a railway junction town where more trains pass than stop",
+   "pattern": "an absence: a name that is never written down",
+   "fondName": "winifred",
+   "cover": {
+    "surname": "Castell",
+    "initial": "B"
+   },
+   "townInitial": "T",
+   "nameInitial": "N",
+   "passwords": {
+    "login": "larkspur",
+    "insider": "fulmar"
+   },
+   "age": "four to six weeks",
+   "concerns": [
+    "a pothole that has been reported nine times",
+    "the village hall's broken urn",
+    "the bypass consultation"
+   ]
+  },
+  "solver": {
+   "failures": [],
+   "answer": {
+    "logins": [
+     {
+      "page": "school.tw/webmail",
+      "person": "Simon Vale",
+      "username": "vale",
+      "password": "Winifred",
+      "how": "Simon Vale stated on the forum that his password is the name of his tortoise, which the Tarnwick Weekly identifies as Winifred."
+     }
+    ],
+    "record": "The Transfer of the School Site, 1889"
+   }
+  },
+  "warnings": [],
+  "ms": 63272
+ },
+ "hqMail": [
+  {
+   "from": "d.okonkwo-vance@canon-corps.gov",
+   "subject": "Assignment 0x11FC (TARNWICK): field brief",
+   "time": "08:02",
+   "body": "Agent,\n\nYou have been assigned Reality 0x11FC, local name TARNWICK. Tarnwick is a small railway junction town. Most trains pass without stopping. It has a primary school, a village hall, a council office and a weekly paper. Desk 9 estimates it at four to six weeks old. The inhabitants (non-canonical) will report a longer history, as their memories have been generated to remain consistent with the local state.\n\nStandard reconciliation procedure applies:\n\n1. Locate fragments of the reality's seed. These appear as ordinary facts, distinguished by the property that nothing in the reality is able to change them.\n2. Save each fragment to Files and transmit it from the HQ console. The console will report RESONANCE if the fragment is genuine.\n3. When resonance is sufficient, the console will offer injection. Inject the reverse seed to complete reconciliation.\n\nYour cover identity is B. Castell (castell.b@switchline.tw). Outgoing traffic on the connection uses this name unless otherwise configured. Reading material on the connection is passive and remains private.\n\nThe local intelligence (designation pending) has not yet detected the connection. Once it does, incoming records may be altered in transit. Your poison allocation is loaded in the Scanner. Use it sparingly, as the instability rebounds after each flood.\n\nForm 77-R will be filed automatically at the close of the assignment. If you have not viewed the orientation film, a copy has been placed on your desktop by Training.\n\nD. Okonkwo-Vance\nDesk 14, Canonical Restoration"
+  },
+  {
+   "from": "allocations@canon-corps.gov",
+   "subject": "Reality poison: your allocation and the rebound",
+   "time": "08:05",
+   "body": "This notice is issued to all field agents at the start of an assignment.\n\nThe Scanner floods a reality's lesser processes for several seconds. During the flood, records altered by the local intelligence cannot hold their state and will visibly shake on screen. Statements that are false only because a resident believed or misreported them are part of the local state and will not shake. The Scanner does not detect false statements, only alteration.\n\nUp to three documents may be held in the Scanner at a time.\n\nPlease note that the instability rebounds after use. A second flood shortly after the first draws increased attention from the local process and produces a less clear reading. Subsequent floods degrade the reading further.\n\nAllocations"
+  },
+  {
+   "from": "personnel@canon-corps.gov",
+   "subject": "First day of the cycle: canteen",
+   "time": "07:36",
+   "body": "Staff are reminded that the basement canteen is closed today for the start of the assignment cycle, and will reopen tomorrow at 07:30.\n\nField agents on shift may take meals at their desks. Food and wrappers must not be left overnight on the fourth-floor observation level. Unattended food has been going missing from the fourth floor over the past two cycles, and the night cleaning contractor has confirmed that their staff have not been removing it. All waste must be placed in the bins by the south lift before 19:00.\n\nPersonnel"
+  }
+ ],
+ "updates": [
+  {
+   "after": 5,
+   "url": "clerk.tw",
+   "kind": "notice",
+   "text": "Notice of road maintenance: the county surveyor has confirmed the repair crew will attend to tarmac surface defects near the depot next Wednesday."
+  },
+  {
+   "after": 11,
+   "url": "forum.tw/forum/t/433",
+   "kind": "post",
+   "handle": "townclerk",
+   "text": "The highways department has noted the hole outside the tyre depot. It is on the list for the repair lorry next week, weather permitting."
+  },
+  {
+   "after": 18,
+   "url": "forum.tw/forum/t/436",
+   "kind": "post",
+   "handle": "peterl",
+   "text": "I have left the urn base open on the trestle bench so nobody tries to plug it in dry. Don't touch the brass nuts on the underside."
+  },
+  {
+   "after": 24,
+   "url": "weekly.tw",
+   "kind": "news",
+   "text": "Brass band rehearsal moved to the school gym this Thursday while repairs continue in the hall."
+  },
+  {
+   "after": 32,
+   "stage": "STIRRING",
+   "url": "forum.tw/forum/t/391",
+   "kind": "post",
+   "handle": "ruthd",
+   "text": "Graham, I will be in after ten on Thursday. The side door sticks in this damp, so pull the handle firmly."
+  },
+  {
+   "after": 41,
+   "url": "school.tw",
+   "kind": "notice",
+   "text": "Reminder: the main office will close early on Friday afternoon for half-term maintenance."
+  },
+  {
+   "after": 49,
+   "url": "forum.tw/forum/t/398",
+   "kind": "post",
+   "handle": "annec",
+   "text": "Simon, the county office insists everyone follow the new format by Friday afternoon. The screen will simply stay blank on Monday morning if it is left undone."
+  },
+  {
+   "after": 58,
+   "stage": "WATCHFUL",
+   "url": "records.tw",
+   "kind": "notice",
+   "text": "The index ledger on the front table was open to the wrong year this afternoon. Please remember to close the cloth covers before leaving the room."
+  },
+  {
+   "after": 67,
+   "url": "forum.tw/forum/t/433",
+   "kind": "post",
+   "handle": "colin_t",
+   "text": "Good to know the lorry is coming. There was gravel scattered across both lanes when I drove past at five."
+  },
+  {
+   "after": 76,
+   "stage": "FIXED",
+   "url": "forum.tw/forum/t/391",
+   "kind": "post",
+   "handle": "dmercer",
+   "text": "The third box along had been slid halfway out on the shelf when I went down before tea. The corner is bruised from hitting the floorboards."
+  },
+  {
+   "after": 84,
+   "url": "forum.tw/forum/t/436",
+   "kind": "post",
+   "handle": "brenda_w",
+   "text": "We will bring two flasks from home for the band then. Better than carrying boiling kettles through the side door in the dark."
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+.env
+runs/
+dist/
+media/
+__pycache__/
+.cache/
+# generated renders and audio (rebuilt by the scripts in tools/; shipped copies live in game/assets)
+tools/art/blender/out/
+tools/art/out/
+tools/audio/out/
+tools/eye/out/
+tools/eye/out3d/
+game/dev/demos/*.mp4

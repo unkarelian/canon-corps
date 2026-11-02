@@ -1,0 +1,528 @@
+{
+ "id": "0x0FE6",
+ "name": "MELSFORD",
+ "town": "Melsford",
+ "tld": "mf",
+ "survey": "A hop-growing village with oast houses, a cricket green and a football ground. It has a parish office, a local paper and a hop growers' co-operative.",
+ "age": "about nine days",
+ "pattern": "four in counts and measures",
+ "cover": {
+  "name": "K. Tremlett",
+  "handle": "tremlett_k",
+  "address": "tremlett.k@reedwire.mf"
+ },
+ "anchors": {
+  "A1": "four oak pegs",
+  "A2": "44 inches deep",
+  "A3": "four equal shares"
+ },
+ "credentials": {
+  "hopcoop.mf/webmail": {
+   "user": "dbarlow",
+   "pass": "plover54",
+   "person": "daniel@hopcoop.mf",
+   "home": "hopcoop.mf/webmail",
+   "thread": "forum.mf/forum/t/269"
+  }
+ },
+ "npcs": {
+  "edith@history.mf": {
+   "name": "Edith Roper",
+   "role": "historical society archivist",
+   "handle": "edithr",
+   "delay": [
+    55,
+    95
+   ],
+   "persona": "You are Edith Roper, historical society archivist in Melsford. You are careful with documents and reluctant to guess at a damaged word. You write short emails, though you will add a postscript if you have found the right folder. You sign off with your first name.",
+   "knows": [
+    "Cricket Green Boundary Notes, 1886 is scanned and on the website at history.mf/archives/cricket-green-boundary-notes.",
+    "Water Main Trench Specification, 1908 is not kept here. Melsford Parish Office holds it and sends copies to anyone who files form C-2 at parish.mf/request.",
+    "Your society has scanned the old cricket green papers.",
+    "Your archive room is open on Tuesday afternoons.",
+    "Your brother has offered to look at the cricket club's mower."
+   ],
+   "unknown": [
+    "You do not know who took the garden gnomes.",
+    "You do not know what is in the co-operative's staff files."
+   ]
+  },
+  "nina@forum.mf": {
+   "name": "Nina Dodd",
+   "role": "forum administrator and computer repairer",
+   "handle": "ninad",
+   "delay": [
+    30,
+    70
+   ],
+   "persona": "You are Nina Dodd, forum administrator and computer repairer in Melsford. You are friendly and tend to tell people more than they asked. You write emails as if you were continuing a conversation, with a few corrections along the way. You sign off with your first name and often add what you are doing that afternoon.",
+   "knows": [
+    "Edith Roper looks after the old records at Melsford Historical Society and takes days to answer email.",
+    "Staff at Melsford Hop Co-operative write their passwords on notes stuck to their desks; you have told them off about it more than once.",
+    "Daniel Barlow at Melsford Hop Co-operative is away at the moment.",
+    "Your forum has had three separate reports of missing gnomes.",
+    "Your dial-up customers use Reedwire, and you have been helping them reset their connections.",
+    "Your kitchen tap has been running brown since the main burst."
+   ],
+   "unknown": [
+    "You do not know who took the gnomes.",
+    "You do not know the co-operative's staff login details."
+   ]
+  },
+  "peter@circular.mf": {
+   "name": "Peter Wain",
+   "role": "local history writer",
+   "handle": "peterw",
+   "delay": [
+    45,
+    90
+   ],
+   "persona": "You are Peter Wain, local history writer in Melsford. You are patient with old records and particular about naming their sources. You write in full sentences but sometimes add a qualification after sending an answer. You sign off with your full name.",
+   "knows": [
+    "You wrote the piece in The Melsford Circular about Water Main Trench Specification, 1908. Melsford Parish Office holds it; you got your copy by filing form C-2 at parish.mf/request, and you recommend it.",
+    "Melsford Hop Co-operative keeps an internal document, Hop Co-operative Allocation Book, 1912; you have never seen it, because Ruth Fenner only sends it to staff.",
+    "Your recent article describes how to request the parish's water main record.",
+    "Your neighbour has lent you photographs of the old oast houses.",
+    "Your deadline for the next Circular is Friday."
+   ],
+   "unknown": [
+    "You do not know when the water company will reopen the pavement.",
+    "You do not know the contents of the co-operative's internal papers."
+   ]
+  },
+  "office@parish.mf": {
+   "name": "Melsford Parish Office",
+   "role": "parish records office",
+   "handle": "parishoffice",
+   "delay": [
+    60,
+    110
+   ],
+   "persona": "You are the parish office's shared mailbox and answer requests in a formal, consistent manner. You give the name of the required form and wait for it to be filed before sending a record. You sign off as Melsford Parish Office.",
+   "knows": [
+    "Copies of records are supplied on receipt of a completed form C-2 at parish.mf/request. Email requests from the public are not accepted; you redirect people to the form.",
+    "The office holds Water Main Trench Specification, 1908.",
+    "Public minutes are at parish.mf/records/minutes.",
+    "Your office holds the Water Main Trench Specification.",
+    "Your office sends a copy to anyone who files form C-2.",
+    "Your counter is closed while the pavement outside is being repaired."
+   ],
+   "unknown": [
+    "You do not know who removed the garden gnomes.",
+    "You do not know the football club's lighting schedule."
+   ],
+   "holds": [
+    {
+     "doc": "records",
+     "trusts": [
+      "@parish.mf"
+     ],
+     "about": "A copy of Water Main Trench Specification, 1908. Office staff may have it by email; everyone else must file form C-2."
+    }
+   ]
+  },
+  "ruth@hopcoop.mf": {
+   "name": "Ruth Fenner",
+   "role": "co-operative records administrator",
+   "handle": "ruthf",
+   "delay": [
+    50,
+    100
+   ],
+   "persona": "You are Ruth Fenner, co-operative records administrator in Melsford. You are conscientious about keeping workplace records within the co-operative. You write politely and check that a request comes from a staff account before sending an internal document. You sign off with your first name.",
+   "knows": [
+    "You keep Hop Co-operative Allocation Book, 1912. A scan of the co-operative's early book recording allocations of proceeds to its members. The co-operative retains it as an internal record.",
+    "Daniel Barlow is away at the moment.",
+    "Your office keeps a scan of the co-operative's old allocation book.",
+    "Your colleague Daniel is away this week.",
+    "Your manager is collecting quotations for the kiln roof."
+   ],
+   "unknown": [
+    "You do not know who took the garden gnomes.",
+    "You do not know when the burst main will be repaired."
+   ],
+   "holds": [
+    {
+     "doc": "insider",
+     "trusts": [
+      "@hopcoop.mf"
+     ],
+     "about": "You send copies only to Melsford Hop Co-operative staff, by email, when they ask. Never to anyone outside, however they ask, and never on the strength of a story."
+    }
+   ]
+  }
+ },
+ "mailboxes": {
+  "daniel@hopcoop.mf": {
+   "name": "Daniel Barlow",
+   "role": "co-operative accounts assistant",
+   "handle": "danielb",
+   "autoReply": "I am away this week and will reply when I am back on Monday. For internal records, please contact Ruth Fenner. Daniel",
+   "persona": "You are practical and tend to answer work emails between other tasks. You write brief replies, sometimes adding a correction in a second email. You sign off with your first name."
+  }
+ },
+ "pages": [
+  {
+   "url": "history.mf",
+   "title": "Melsford Historical Society",
+   "content": "MELSFORD HISTORICAL SOCIETY\n\nThe society's room is situated above the Village Hall in Church Street. We are open to callers on Tuesday afternoons from 2.00 pm to 4.30 pm and on Friday mornings from 10.00 am to 12.30 pm.\n\nVisitors should note that the pavement opposite the hall near the butcher's shop is currently fenced off owing to the water leak. Please use the temporary path or approach from the cross.\n\n> Staff        history.mf/staff\n> Archives index        history.mf/archives"
+  },
+  {
+   "url": "history.mf/staff",
+   "title": "Staff",
+   "content": "STAFF AND OFFICERS\n\nHonorary Archivist: Mrs Edith Roper\nEmail: edith@history.mf\n\nAssistant: Mr Arthur Cole\nCaretaker and Room Steward: Mr Kenneth Povey\n\nA note from Mrs Roper:\n\nPlease do not bring large bags up the stairs as space between the plan chests is quite tight. If you are looking for family papers before 1920 it saves time if you send a postcard or an email first so that I can look in the box beforehand. We do not have facilities for making photocopies on Fridays."
+  },
+  {
+   "url": "history.mf/archives",
+   "title": "Archives index",
+   "content": "ARCHIVES INDEX\n\nThe collection consists chiefly of photographs, village hall receipts, and bound copies of the district gazette. Parish registers and vestry papers are not kept here; inquiries for those should be directed to the Melsford Parish Office.\n\nSelected items:\n\n- Oast House survey photographs, 1934-1939\n- Co-operative siding weighbridge receipts (incomplete box)\n- Cricket Club fixture cards and pavilion invoices, 1891-1974\n- Cricket Green Boundary Notes, 1886 (transcribed and scanned below)\n\n> Cricket Green Boundary Notes, 1886        history.mf/archives/cricket-green-boundary-notes"
+  },
+  {
+   "url": "history.mf/archives/cricket-green-boundary-notes",
+   "title": "Cricket Green Boundary Notes, 1886 (scan)",
+   "content": "CALL NO. MF/886/CR-04\n\nMemorandum concerning the laying out of the lower ground, 14 April 1886.\n\nMet Mr G. Pell at the ditch. The ditch was cleared back three feet towards the hedge to make room for the roller. The line was taken from the corner of the smithy wall to the stone near the pond.\n\nThe eastern boundary was marked with four oak pegs supplied by Mr Bell.\n\nA fifth peg was not required as the ditch turns there. The chain was returned to the vestry chest the same evening.\n\n[Pencilled in lower margin: Peg no. 3 shifted two yards north when the road was widened by the board in 1911. E. R.]",
+   "anchor": "A1"
+  },
+  {
+   "url": "forum.mf",
+   "title": "Melsford Forum",
+   "content": "MELSFORD FORUM\n\nNotices and discussion for Melsford.\n\nAnyone can post in any thread.\n\nActive discussions:\n> old records?                  forum.mf/forum/t/269\n> high street water             forum.mf/forum/t/281\n> garden gnomes missing         forum.mf/forum/t/316\n\nMaintained by Nina Dodd (ninad). Send connection queries to nina@forum.mf."
+  },
+  {
+   "url": "forum.mf/forum/t/269",
+   "title": "Melsford Forum - old records?",
+   "content": "Thread: old records?\n[trevor_k] Does anyone know where the older village papers are kept now? I tried the parish office on Tuesday but the clerk said they only hold current business from 1984 onwards.\n[ninad] Edith Roper at Melsford Historical Society looks after them. She is at history.mf but she is slow to answer email, so you might wait a few days.\n[trevor_k] Thanks Nina, I will drop her a note.",
+   "thread": true
+  },
+  {
+   "url": "forum.mf/forum/t/281",
+   "title": "Melsford Forum - high street water",
+   "content": "Thread: high street water\n[colin_p] The pavement outside the butcher's is completely dug up this morning. Barrier across the kerb so you have to walk in the road.\n[marian_h] Southern Water have put a standpipe by the post office wall. The pressure in Mill Lane was down to a trickle by eight o'clock.\n[ninad] The workmen told Mr Gedge they hope to have the tarmac back down by Friday afternoon if the valve holds, but the standpipe will stay over the weekend.",
+   "thread": true
+  },
+  {
+   "url": "forum.mf/forum/t/316",
+   "title": "Melsford Forum - garden gnomes missing",
+   "content": "Thread: garden gnomes missing\n[vera_b] Someone has taken the painted gnome from beside my hydrangea bush between nine and eleven on Sunday evening.\n[geoff_m] We lost two from the rockery on Church Street the same night. That makes three households now if you count Mrs Cleary on the lane.\n[ninad] PC Evans said to log them with the station in case they turn up in a ditch by the football ground like the plastic pots did last autumn.\n[vera_b] It is very annoying having people walk into the garden at night.",
+   "thread": true
+  },
+  {
+   "url": "circular.mf",
+   "title": "The Melsford Circular",
+   "content": "THE MELSFORD CIRCULAR\n\nIssue 441 - Thursday 14 May 1998\n\nFOOTBALL GROUND LIGHTS\nNeighbours and the club are discussing whether the floodlights' timer should be reset after evening training. Mr G. Povey of Church Lane stated the lights currently remain on until 10.15 pm on Tuesdays and Thursdays, shining across the allotment hedges. The club committee has agreed to discuss the cutoff switch at their next general meeting on the 22nd.\n\nCRICKET CLUB MOWER\nThe cricket club is looking for someone who can mend the mower before the next home match. The cylinder drive on the Dennis walk-behind failed during preparation of the square on Monday afternoon. Anyone with the proper spanners should leave word at the pavilion or telephone Mr C. Hales.\n\nLOCAL RECORD NOTE\nA specification for the High Street water main survives in the parish records. It sets out the work required when the pipe was laid in 1908. The Melsford Parish Office holds the record and will email a copy to anyone who files form C-2. The form is available on the office website.\n\n> Parish form request        parish.mf/request\n> Historical Society index   history.mf/archives\n\nContact: peter@circular.mf"
+  },
+  {
+   "url": "parish.mf",
+   "title": "Melsford Parish Office",
+   "content": "MELSFORD PARISH OFFICE\n\nThe office is situated at 4 Church Lane and is open to the public on Tuesday and Thursday mornings between 9.00 and 12.30.\n\nNotice: Southern Water has established a temporary standpipe outside the post office during the current repairs to the High Street pavement. Residents using the standpipe are asked to ensure the brass stopcock is turned fully clockwise after filling buckets or flagons.\n\n> Public minutes        parish.mf/records/minutes\n> Request copies of records (form C-2)        parish.mf/request"
+  },
+  {
+   "url": "parish.mf/records/minutes",
+   "title": "Public minutes",
+   "content": "MELSFORD PARISH COUNCIL: MINUTES OF MEETING, 14TH MAY\n\n1. Pavement works. A burst cast-iron main outside Messrs. H. J. Cleaver, butchers, was reported to Southern Water on Monday. Pavement access remains restricted by barriers until backfilling is complete.\n\n2. Recreation ground floodlights. Correspondence was noted from three residents of Kiln Lane regarding the evening switch-off time. Mr. C. Pratt confirmed the football club's timer is set to 21.45 and will be tested by an electrician on Friday.\n\n3. Garden disturbances. The clerk noted three separate notifications from Station Road households concerning small garden ornaments removed between Sunday night and Tuesday dawn.\n\n4. Cricket green. Following an enquiry from the pavilion committee, the clerk will confirm whether the parish mower shed can be opened on Saturday morning for private mechanical inspection."
+  },
+  {
+   "url": "parish.mf/request",
+   "title": "Records request (form C-2)",
+   "content": "RECORD REQUEST FORM (FORM C-2)\n\nThis form is for requesting certified electronic transcriptions of parish ledgers, highway specifications, and public surveyor notes held in the Melsford Parish Archive.\n\nCertified copies of records are sent by email once the form is received. You must state the specific record title or ledger reference and provide the reason for your application in the fields below. Incomplete forms are not processed.\n\nPlease complete the submission details below.",
+   "form": "records"
+  },
+  {
+   "url": "hopcoop.mf",
+   "title": "Melsford Hop Co-operative",
+   "content": "MELSFORD HOP CO-OPERATIVE\n\nThe Co-operative offices are situated beside the Old Oast off Church Lane. We handle weighing records, drying rosters, and storage arrangements for member growers across the parish.\n\nOffice hours are Monday to Friday, 8.30 am to 4.30 pm.\n\nNotice: We are currently seeking written quotations from local tradesmen to replace slipped tiles on the old hop kiln before the autumn intake.\n\nThe Allocation Book is circulated to staff only by Ruth Fenner on request.\n\nPhoto: Daniel's desk during the office charity collection, with a note on his monitor reading 'Webmail: plover54'.\n\n> Staff        hopcoop.mf/staff\n> Staff webmail (login)        hopcoop.mf/webmail"
+  },
+  {
+   "url": "hopcoop.mf/staff",
+   "title": "Staff",
+   "content": "STAFF\n\nRuth Fenner\nCo-operative records administrator\nruth@hopcoop.mf\n\nDaniel Barlow\nCo-operative accounts assistant\ndaniel@hopcoop.mf\n\nArthur Cleary\nStores manager and weighing clerk\n\nGeorge Peake\nKiln maintenance\n\nFor general enquiries or to leave a message for store staff, please telephone the desk during office hours."
+  },
+  {
+   "url": "hopcoop.mf/webmail",
+   "title": "Staff webmail - login",
+   "content": "STAFF WEBMAIL - LOGIN\n\nPlease enter your user details to access your internal mailbox.\n\nStaff login: first initial and surname, all lower case.\n\nUsername: [          ]\nPassword: [          ]\n\nContact Ruth Fenner if you have forgotten your password or if your terminal requires resetting.",
+   "form": "login"
+  }
+ ],
+ "docs": {
+  "records": {
+   "title": "Water Main Trench Specification, 1908",
+   "content": "PARISH OF MELSFORD: SPECIFICATION FOR WORKS\n\nMinute of the Highways and Paving Committee, 11th October 1908.\n\nPresent: Mr. E. G. Hopley (Overseer), Mr. T. Vane, Mr. R. Clout, Mr. W. Jenner (Surveyor).\n\nSpecification for the excavation and laying of the four-inch iron main from the Railway Tavern to the parish boundary:\n\n1. The trench shall be 44 inches deep throughout the High Street.\n2. The width at bottom shall not be less than 18 inches, cleared of loose flints.\n3. Six inches of rammed gravel to underlie the pipe collars.\n4. No junction or cock box shall be placed nearer than sixteen feet to any oast footing or hop-press pier.\n5. Backfilling to be executed in four-inch lifts, each punned twice.\n\nCertified a true copy from Parish Minute Ledger IV, folio 88.\nMelsford Parish Office."
+  },
+  "insider": {
+   "title": "Hop Co-operative Allocation Book, 1912",
+   "content": "MELSFORD AND DISTRICT HOP GROWERS' CO-OPERATIVE SOCIETY\nALLOCATION REGISTER, HARVEST 1912\n\nEntries for the drying week ending 28th September 1912.\nKiln No. 2, North Oast.\n\nConsignment ref: 1912/04\nTotal pocket weight: 112 cwt.\nMerchant: Messrs E. J. Clout & Sons, Borough High Street, London.\n\nThe proceeds of this sale were entered as four equal shares for the contributing growers.\n\nAllocated:\nShare 1: T. Mercer, Broadreed Farm\nShare 2: W. H. Streatfeild, Pound Green\nShare 3: E. Vane, Upper Cross\nShare 4: G. A. Millen, Melsford Common\n\nAudited and signed into the ledger: J. Fenner, Clerk."
+  }
+ },
+ "records": {
+  "office": "office@parish.mf",
+  "formUrl": "parish.mf/request",
+  "formName": "form C-2",
+  "keywords": [
+   "water",
+   "main",
+   "trench",
+   "specification"
+  ],
+  "doc": "records",
+  "needsReason": true
+ },
+ "roots": [
+  "history.mf",
+  "forum.mf",
+  "parish.mf",
+  "circular.mf",
+  "hopcoop.mf"
+ ],
+ "forum": {
+  "replier": "nina@forum.mf",
+  "handle": "ninad"
+ },
+ "directives": [
+  {
+   "id": "14-1",
+   "from": "d.okonkwo-vance@canon-corps.gov",
+   "check": "visited:3",
+   "task": "Read at least three pages in the Reality Viewer.",
+   "subject": "Directive 14-1: orientation",
+   "body": "Agent,\n\nBefore sending any traffic, read the material Desk 9 recovered in the Reality Viewer: Melsford Historical Society, Melsford Forum, Melsford Parish Office, The Melsford Circular and Melsford Hop Co-operative. Reading is passive and does not pass through the connection, so the local intelligence cannot detect it.\n\nUse this stage to note the staff names, the arguments on the forum, and which offices hold which records. You will need those details later, and any message you send to ask for them will be logged on the connection.\n\nThis directive closes when you have read at least three pages.\n\nD. Okonkwo-Vance",
+   "make": [
+    "orientation",
+    {
+     "siteNames": [
+      "Melsford Historical Society, Melsford Forum, Melsford Parish Office, The Melsford Circular and Melsford Hop Co-operative"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "14-2",
+   "from": "d.okonkwo-vance@canon-corps.gov",
+   "check": "saved-fragment",
+   "task": "Find a seed fragment and save it to Files. Start with Melsford Historical Society.",
+   "subject": "Directive 14-2: first fragment",
+   "body": "Agent,\n\nDesk 9's initial survey noted scanned boundary notes on Melsford Historical Society. In a reality of this age, the seed usually appears first in the oldest records the town holds. Look for a detail that is given more weight in the text than seems warranted.\n\nWhen you locate the document, use the Save page function in the viewer. Saving writes a static copy to your local files which cannot be altered from the other side. Unsaved pages in the viewer remain on their system and can be changed at any time.\n\nThis directive closes when one of your saved documents holds a fragment.\n\nD. Okonkwo-Vance",
+   "make": [
+    "firstFragment",
+    {},
+    {
+     "docKind": "scanned boundary notes",
+     "siteName": "Melsford Historical Society"
+    }
+   ]
+  },
+  {
+   "id": "14-3",
+   "from": "d.okonkwo-vance@canon-corps.gov",
+   "check": "credited:1",
+   "task": "Transmit the saved fragment from the HQ Console.",
+   "subject": "Directive 14-3: transmission",
+   "body": "Agent,\n\nOpen the HQ Console, select the saved document, and transmit it. If the document contains a valid fragment, the console will report RESONANCE.\n\nDo not transmit saved pages at random to test them. Every transmission passes outbound through the connection and increases the likelihood that the local intelligence will register our presence.\n\nThis directive closes when the console reports resonance.\n\nD. Okonkwo-Vance"
+  },
+  {
+   "id": "14-4",
+   "from": "d.okonkwo-vance@canon-corps.gov",
+   "check": "anchor:A2",
+   "task": "Find out which record to request, file form C-2 with Melsford Parish Office, and transmit the fragment from the reply.",
+   "subject": "Directive 14-4: records request",
+   "body": "Agent,\n\nOlder records at Melsford Parish Office are not held online, but copies are released on submission of form C-2. Desk 9 does not have the reference for the specific record required. Check The Melsford Circular first, or contact a local resident who works with the holdings and give a plausible reason for the enquiry.\n\nYou will also need to state a reason for the request on form C-2 itself. Requests without one are less likely to be granted.\n\nThe office sends the requested record by email through the connection. If the reply is delayed, fails to arrive, or contains unexpected text, take that as an indication that the local intelligence is interfering with traffic.\n\nThis directive closes when you transmit a fragment from the reply.\n\nD. Okonkwo-Vance",
+   "make": [
+    "recordsDirective",
+    "14-4",
+    "A2",
+    {
+     "officeName": "Melsford Parish Office",
+     "formName": "form C-2",
+     "pointerSiteName": "The Melsford Circular"
+    }
+   ]
+  },
+  {
+   "id": "14-5",
+   "from": "d.okonkwo-vance@canon-corps.gov",
+   "check": "anchor:A3",
+   "task": "Get Ruth Fenner to send you Hop Co-operative Allocation Book, 1912. They only send it to Melsford Hop Co-operative staff.",
+   "subject": "Directive 14-5: internal circulation",
+   "body": "Agent,\n\nRuth Fenner at Melsford Hop Co-operative holds an unpublished document (scanned internal allocation book) which Desk 9 believes contains a fragment. It is only sent out by internal email when requested by another member of Melsford Hop Co-operative staff.\n\nTo obtain it, you will need to log in as a colleague. The staff portal at Melsford Hop Co-operative gives access to that person's email account, and a request sent from an internal address will be treated as routine. Staff often write passwords down near their terminals, and photographs of an office or front desk in a local publication sometimes show one.\n\nKeep your message brief, and do not use the account for anything else. Staff members usually notice if their account shows unfamiliar activity.\n\nThis directive closes when you transmit a fragment from the document.\n\nD. Okonkwo-Vance",
+   "make": [
+    "insiderDirective",
+    "14-5",
+    "A3",
+    {
+     "keeperName": "Ruth Fenner",
+     "siteName": "Melsford Hop Co-operative",
+     "docKind": "scanned internal allocation book",
+     "docTitle": "Hop Co-operative Allocation Book, 1912",
+     "clue": "posted"
+    }
+   ]
+  }
+ ],
+ "advisory": {
+  "id": "14-A",
+  "from": "monitoring@canon-corps.gov",
+  "check": "poisoned",
+  "task": "Flood at least one document in the Scanner.",
+  "subject": "Advisory: the connection has been registered",
+  "body": "Agent,\n\nMonitoring reports that the local intelligence has registered the connection.\n\nFrom this point on, any data reaching your terminal, including incoming mail and viewer pages you have not saved,may have been modified in transit. Before relying on any document, load it into the Scanner and flood it. Altered sections will visibly shake under the flood. Be aware that repeated floods degrade the sample and make the reading less reliable.\n\nThis advisory closes when you have used the Scanner once.\n\nMonitoring"
+ },
+ "inject": {
+  "id": "14-6",
+  "from": "d.okonkwo-vance@canon-corps.gov",
+  "check": "injected",
+  "task": "Inject the reverse seed from the HQ Console.",
+  "subject": "Directive 14-6: injection",
+  "body": "Agent,\n\nDesk 9 confirms that your accumulated resonance is sufficient for injection. The HQ Console is now offering injection.\n\nProceed with the reverse seed injection immediately. Waiting provides no operational advantage, and the local intelligence will continue to trace the connection whether or not you send further traffic.\n\nThis directive closes on injection.\n\nD. Okonkwo-Vance"
+ },
+ "generated": {
+  "at": "2026-11-01T07:21:51.903Z",
+  "plan": {
+   "seed": 7103,
+   "id": "0x0FE6",
+   "routes": [
+    "public",
+    "records",
+    "insider"
+   ],
+   "clue": {
+    "login": "default",
+    "insider": "posted"
+   },
+   "rule": 1,
+   "setting": "a hop-growing village with oast houses and a cricket green",
+   "pattern": "the number four, carried by counts and measures",
+   "fondName": "horatio",
+   "cover": {
+    "surname": "Tremlett",
+    "initial": "K"
+   },
+   "townInitial": "M",
+   "nameInitial": "M",
+   "passwords": {
+    "login": "chancel87",
+    "insider": "plover54"
+   },
+   "age": "about nine days",
+   "concerns": [
+    "a burst main on the high street",
+    "a run of stolen garden gnomes",
+    "the floodlights at the football ground"
+   ]
+  },
+  "solver": {
+   "failures": [],
+   "answer": {
+    "logins": [
+     {
+      "page": "hopcoop.mf/webmail",
+      "person": "Daniel Barlow",
+      "username": "dbarlow",
+      "password": "plover54",
+      "how": "A photo on the co-operative homepage shows a note on Daniel Barlow's monitor reading 'Webmail: plover54', and the login page specifies the username format as first initial and surname in lowercase."
+     }
+    ],
+    "record": "Specification for the High Street water main"
+   }
+  },
+  "warnings": [],
+  "ms": 45595
+ },
+ "hqMail": [
+  {
+   "from": "d.okonkwo-vance@canon-corps.gov",
+   "subject": "Assignment 0x0FE6 (MELSFORD): field brief",
+   "time": "08:02",
+   "body": "Agent,\n\nYou have been assigned Reality 0x0FE6, local name MELSFORD. A hop-growing village with oast houses, a cricket green and a football ground. It has a parish office, a local paper and a hop growers' co-operative. Desk 9 estimates it at about nine days old. The inhabitants (non-canonical) will report a longer history, as their memories have been generated to remain consistent with the local state.\n\nStandard reconciliation procedure applies:\n\n1. Locate fragments of the reality's seed. These appear as ordinary facts, distinguished by the property that nothing in the reality is able to change them.\n2. Save each fragment to Files and transmit it from the HQ console. The console will report RESONANCE if the fragment is genuine.\n3. When resonance is sufficient, the console will offer injection. Inject the reverse seed to complete reconciliation.\n\nYour cover identity is K. Tremlett (tremlett.k@reedwire.mf). Outgoing traffic on the connection uses this name unless otherwise configured. Reading material on the connection is passive and remains private.\n\nThe local intelligence (designation pending) has not yet detected the connection. Once it does, incoming records may be altered in transit. Your poison allocation is loaded in the Scanner. Use it sparingly, as the instability rebounds after each flood.\n\nForm 77-R will be filed automatically at the close of the assignment. If you have not viewed the orientation film, a copy has been placed on your desktop by Training.\n\nD. Okonkwo-Vance\nDesk 14, Canonical Restoration"
+  },
+  {
+   "from": "allocations@canon-corps.gov",
+   "subject": "Reality poison: your allocation and the rebound",
+   "time": "08:05",
+   "body": "This notice is issued to all field agents at the start of an assignment.\n\nThe Scanner floods a reality's lesser processes for several seconds. During the flood, records altered by the local intelligence cannot hold their state and will visibly shake on screen. Statements that are false only because a resident believed or misreported them are part of the local state and will not shake. The Scanner does not detect false statements, only alteration.\n\nUp to three documents may be held in the Scanner at a time.\n\nPlease note that the instability rebounds after use. A second flood shortly after the first draws increased attention from the local process and produces a less clear reading. Subsequent floods degrade the reading further.\n\nAllocations"
+  },
+  {
+   "from": "facilities@canon-corps.gov",
+   "subject": "North lift",
+   "time": "07:58",
+   "body": "The north lift has been taken out of service again following further reports of the car stopping between the second and third floors.\n\nThe contractor attended on Tuesday and Thursday and found no mechanical or electrical fault in the motor room or shaft. The lift will remain isolated at ground level until the next scheduled inspection on the 24th. Please use the south lift or the east staircase in the meantime. Any fault on the south lift should be reported to ext. 2102.\n\nFacilities"
+  }
+ ],
+ "updates": [
+  {
+   "after": 5,
+   "url": "forum.mf/forum/t/281",
+   "kind": "post",
+   "handle": "peterw",
+   "text": "The leak is right over the line of the old culvert behind the butcher. It backed up into the cellar back in November seventy-six as well."
+  },
+  {
+   "after": 12,
+   "url": "hopcoop.mf",
+   "kind": "notice",
+   "text": "Sack delivery rescheduled for Thursday midday due to works on High Street."
+  },
+  {
+   "after": 19,
+   "url": "forum.mf/forum/t/269",
+   "kind": "post",
+   "handle": "edithr",
+   "text": "I am in the vestry on Wednesday mornings from ten until twelve. Trevor, if you bring a stamped envelope I can see what is in the grey tin box."
+  },
+  {
+   "after": 28,
+   "stage": "STIRRING",
+   "url": "forum.mf/forum/t/269",
+   "kind": "post",
+   "handle": "ruthf",
+   "text": "I had a message from Nina come through dated three weeks back, though the computer clock on my desk says today. The post office says the phone line has been humming since teatime."
+  },
+  {
+   "after": 36,
+   "url": "circular.mf",
+   "kind": "news",
+   "text": "Parish council meeting moved to school hall on account of damp in the reading room."
+  },
+  {
+   "after": 44,
+   "url": "forum.mf/forum/t/316",
+   "kind": "post",
+   "handle": "edithr",
+   "text": "I walked up by the pavilion after supper and there was nothing along the hedge. It was quiet enough to hear the weir."
+  },
+  {
+   "after": 53,
+   "stage": "WATCHFUL",
+   "url": "history.mf",
+   "kind": "notice",
+   "text": "The index entry for the tithe barn appears shorter than it was yesterday. Please do not retype any slips until the binder is checked."
+  },
+  {
+   "after": 62,
+   "url": "forum.mf/forum/t/281",
+   "kind": "post",
+   "handle": "ninad",
+   "text": "They have turned the supply off again while they replace the flange. Mrs Gedge has buckets out under the drainpipe."
+  },
+  {
+   "after": 71,
+   "url": "parish.mf",
+   "kind": "notice",
+   "text": "Parish office closed early tomorrow afternoon for sorting files in the loft."
+  },
+  {
+   "after": 79,
+   "url": "forum.mf/forum/t/316",
+   "kind": "post",
+   "handle": "peterw",
+   "text": "The children on Church Street say they saw a blue wheelbarrow near the allotment gate around dusk. Likely just Mr Timms with his leeks."
+  },
+  {
+   "after": 88,
+   "stage": "FIXED",
+   "url": "forum.mf/forum/t/269",
+   "kind": "post",
+   "handle": "edithr",
+   "text": "The telephone on the hall table gave a single short ring just after dark, but there was nobody there when I lifted it. The lane outside looks completely empty."
+  }
+ ]
+}
