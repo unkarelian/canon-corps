@@ -210,11 +210,30 @@ def intranet():
         bpy_torus = torus(f"ring{z}", 0.14, 0.02, (-0.3, 0.0, z), ring, rot=(0, math.pi / 2, 0))
 
 
+def canon():
+    """The Canon Reference: a thick oxblood reference book lying shut, gilt bands on the spine, the emblem in gilt
+    on the cover, a page block and a dark ribbon marker hanging out at the foot."""
+    cloth = mat("canon_cloth", srgb("#5e1f1c"), 0.6)
+    pages = mat("canon_pages", srgb("#ece2c6"), 0.85)
+    gilt = mat("gilt", srgb("#c9a24a"), 0.3, metal=1.0)
+    ribbon = mat("canon_ribbon", srgb("#1f2a3a"), 0.6)
+    box("canon_back", (1.3, 1.75, 0.07), (0, 0, 0.035), cloth, bevel=0.02)
+    box("canon_block", (1.2, 1.67, 0.46), (0.03, 0, 0.3), pages)
+    box("canon_front", (1.3, 1.75, 0.07), (0, 0, 0.565), cloth, bevel=0.02)
+    box("canon_spine", (0.1, 1.75, 0.6), (-0.64, 0, 0.3), cloth, bevel=0.04)
+    for y in (-0.62, -0.5, 0.5, 0.62):
+        box(f"canon_band{y}", (0.11, 0.025, 0.61), (-0.645, y, 0.3), gilt)
+    emblem_spokes("canon_sp", (0.05, 0.1, 0.602), 0.28, 0.012, gilt, z_axis="z")
+    box("canon_bar", (0.06, 0.12, 0.012), (0.05, 0.1, 0.604), gilt)
+    box("canon_title", (0.7, 0.05, 0.01), (0.05, -0.45, 0.603), gilt)
+    box("canon_ribbon", (0.08, 0.35, 0.01), (0.25, -0.98, 0.2), ribbon)
+
+
 BUILDERS = {"viewer": viewer, "mail": mail, "files": files, "scanner": scanner, "hq": hq, "orientation": orientation,
-            "notepad": notepad, "intranet": intranet}
+            "notepad": notepad, "intranet": intranet, "canon": canon}
 VIEWS = {"viewer": (-0.6, -1.0, 0.5), "mail": (-0.35, -1.0, 0.35), "files": (-0.7, -1.0, 0.45),
          "scanner": (-0.55, -1.0, 0.75), "hq": (-0.5, -1.0, 0.6), "orientation": (-0.35, -0.8, 1.0),
-         "notepad": (-0.3, -0.7, 1.0), "intranet": (-0.75, -1.0, 0.4)}
+         "notepad": (-0.3, -0.7, 1.0), "intranet": (-0.75, -1.0, 0.4), "canon": (-0.45, -0.9, 0.8)}
 
 
 def build(name, out, size=192):

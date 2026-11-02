@@ -3,6 +3,7 @@
 
 export const MODELS = {
   demiurge: { id: "openai/gpt-6.1-terra", effort: "medium" },
+  entity_idle: { id: "openai/gpt-6.1-terra", effort: "low" },   // its unprompted look-rounds
   npc: { id: "google/gemini-3.8-flash", effort: "low", tier: "flex" }, // NPC bench: 9.4/10, ~4s on flex
   classifier: { id: "openai/gpt-6.1-terra", effort: "low" },
   worldgen: { id: "openai/gpt-6.1-terra", effort: "medium" },   // town design: structure and consistency

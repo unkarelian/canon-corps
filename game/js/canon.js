@@ -144,6 +144,8 @@ once. The conditions recorded on that occasion were these.
    accepted, the traffic is admitted to the parent desk.
 5. When three complete records have been accepted, the separation is severed. Neither side closes.
 
+What became of the severed separation afterwards was not recorded. It was not observed again.
+
 No other condition was recorded. Nothing further is required of either side.
 
 > Archive    /archive`,

@@ -36,7 +36,8 @@ function lines(url) {
 }
 
 export function maybeStart() {
-  if (S.severance || S.over || !S.entity.readBranchRule || !atLeast("learn") || rung() === "upload") return false;
+  // Either side reading the branch rule starts it, once the entity holds the agent's seed (Learn or higher).
+  if (S.severance || S.over || !(S.entity.readBranchRule || S.agentReadBranchRule) || !atLeast("learn") || rung() === "upload") return false;
   S.severance = { id: uid("sev"), startedAt: T.now(), time: clock(), deadline: T.now() + SEVER.minutes * 60000,
     bugs: {}, shown: [], accepted: [], rejected: [], said: [], over: null };
   S.monitor.push({ time: clock(), kind: "severance", text: `Archive updated: ${SEVERANCE_NOTE.title}. Countdown ${SEVER.minutes}:00.` });

@@ -131,4 +131,12 @@ test("agent injection: wrong one locks for 12 minutes and tells the entity; righ
   assert.equal(E.S.over, "win");
 });
 
+test("the town's family filter blanks mild swearing in everyone's logged mail, but not in forgeries", () => {
+  wait(26 * 60);
+  const m = E.S.mail.find((x) => x.subject === "Re: the Glasgow telly");
+  assert.match(m.body, /it's '{6} filthy/);
+  const f = E.queue({ from: "davey@theanchor.hg", to: W.agent.address, subject: "x", body: "bloody hell", forged: true, logged: false });
+  assert.equal(f.body, "bloody hell");
+});
+
 console.log(`\n${passed} passed`);

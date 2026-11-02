@@ -104,7 +104,13 @@ export function mood() {
 // ---- the town's mail --------------------------------------------------------------------------------
 // `logged` is false only for forgeries the entity put straight into a mailbox. The town log shows logged
 // messages; a forgery has no line there (DESIGN-v2 §6).
+// The town's mail server runs a family filter (every town, every sender): mild swearing arrives as
+// apostrophes, letter for letter. So runs of apostrophes are not the agent's alone.
+const FAMILY = /\b(bloody|damn|damned|hell|crap|sod|bugger|blasted|arse|bleeding)\b/gi;
+export const familyFilter = (t) => String(t || "").replace(FAMILY, (w) => "'".repeat(w.length));
+
 function deliver(m) {
+  if (m.logged) { m.subject = familyFilter(m.subject); m.body = familyFilter(m.body); }
   m.time = clock();
   m.deliveredAt = T.now();
   S.mail.push(m);

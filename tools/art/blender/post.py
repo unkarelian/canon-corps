@@ -36,7 +36,7 @@ def reduce(src, size, colours, alpha_cut=110, shadow=True):
 def icons():
     d = GAME / "icons"
     d.mkdir(exist_ok=True)
-    for n in ("mail", "viewer", "files", "scanner", "hq", "orientation", "notepad", "intranet"):
+    for n in ("mail", "viewer", "files", "scanner", "hq", "orientation", "notepad", "intranet", "canon"):
         reduce(OUT / f"{n}.png", 48, 24).save(d / f"{n}.png")
         reduce(OUT / f"{n}.png", 16, 8, shadow=False).save(d / f"{n}16.png")
 

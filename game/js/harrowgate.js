@@ -267,6 +267,7 @@ const NPCS = {
       "You have a van for the brewery run. You've never taken it out the coast road north past the gravel works. Your dad wouldn't, and you don't either.",
     ],
     unknown: ["Who A. Reyes is. Their team, Low Tide, came second in the quiz, but you never saw them come in."],
+    // Davey swears mildly; the town's mail filter turns it into apostrophes.
   },
 };
 
@@ -287,17 +288,17 @@ const TRAFFIC = [
   t(15, M, O, "Your forum", "Mr Prentiss, someone on your forum has posted that the Annex is open on Wednesdays. It is not. Please correct it. - M. Hale, Archives"),
   t(17, A, J, "Re: Frost window, a question", "June, yes, Easter 1931, and the eleven are the parish's. The town's figure was higher but the window is ours. The list was checked against the burial register in 1979. Every blessing, Ann"),
   t(18, D, O, "Re: Re: quiz sheet", "no idea. signed up on your website not in person. got 38 though. davey"),
-  t(20, O, M, "Re: Your forum", "fixed sorry!! annex is tues and thurs. ollie"),
+  t(20, O, M, "Re: Your forum", "fixed sorry!! damn autocorrect. annex is tues and thurs. ollie"),
   t(22, J, D, "the Glasgow telly", "Davey, Ollie says you found the cabinet set from the 1944 match. Can I come and see it for the paper? June"),
   t(24, A, O, "flower rota", "Ollie, a strange one. Someone called A. Reyes has put their name down for the flowers in week 3. By post, no number. Do you know them from the quiz? Every blessing, Ann"),
-  t(25, D, J, "Re: the Glasgow telly", "come whenever. it's filthy. dad said grandad paid for it in fish. davey"),
+  t(25, D, J, "Re: the Glasgow telly", "come whenever. it's bloody filthy. dad said grandad paid for it in fish. davey"),
   t(27, O, A, "Re: flower rota", "they were on the quiz sheet but nobody saw them. maybe theyre shy lol. ollie"),
   t(28, C, M, "Harbour Board copies", "Dear Ms Hale,\n\nWe have had two requests this month for the 1921 Harbour Board minutes. We continue to send certified copies against form CR-2 only.\n\nOffice of the City Clerk, Harrowgate"),
   t(31, J, A, "jab in the church hall", "Ann, for the schools piece: Mrs Okafor's river fever jab. She says 1955, first Ashby vaccine in the county, in your church hall. Do the parish books say the same? June"),
   t(33, M, C, "Re: Harbour Board copies", "Noted. The Annex originals stay on shelf H. - M. Hale, Archives"),
   t(35, A, J, "Re: jab in the church hall", "June, the hall book for 1955 has 'Ashby clinic, county health' in July, two days, and a note that the hall needed airing after. So yes. Every blessing, Ann"),
   t(37, D, O, "telly", "it works!! sort of. you can see the test card. davey"),
-  t(38, O, D, "Re: telly", "told you. bar or back room?? ollie"),
+  t(38, O, D, "Re: telly", "told you, the blasted thing just needed a thump. bar or back room?? ollie"),
   t(40, J, M, "Lagos medal", "Marta, the Burrows family want to know if the Lagos medal can stay in the front case through the winter. They'd like it seen. June"),
   t(43, M, J, "Re: Lagos medal", "It can stay until March. It is the only thing in that case people look at. - M. Hale, Archives"),
   t(45, C, D, "licence renewal", "Dear Mr Lusk,\n\nYour premises licence falls due for renewal at the end of the quarter. Form L-4 is enclosed.\n\nOffice of the City Clerk, Harrowgate"),
@@ -312,7 +313,7 @@ const TRAFFIC = [
   t(68, C, J, "Re: Kestrel date", "Dear Ms Achterberg,\n\nThe office holds no record of that occasion.\n\nOffice of the City Clerk, Harrowgate"),
   t(70, A, D, "harvest supper numbers", "Davey, it's thirty-four now. Every blessing, Ann"),
   t(72, M, O, "The shelf", "Mr Prentiss, the wall shelf you put up in the Annex office has come down. Ledger was not under it. Please come and look at it. - M. Hale, Archives"),
-  t(75, O, M, "Re: The shelf", "on my way tomorrow. sorry. glad ledger is ok. ollie"),
+  t(75, O, M, "Re: The shelf", "on my way tomorrow. sorry, bloody rawlplugs. glad ledger is ok. ollie"),
   t(80, J, A, "the coast road", "Ann, silly question. Have you ever been out the coast road north, past the gravel works? I asked around tonight and nobody has. June"),
   t(84, A, J, "Re: the coast road", "June, now you ask, no. I don't think I've ever needed to. Every blessing, Ann"),
 ];

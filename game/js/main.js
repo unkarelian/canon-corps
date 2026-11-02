@@ -22,10 +22,9 @@ import { play, musicForStage, startRoom, ambience, onAudioStart, ready, audioPre
 
 const ICONS = [["mail", "Mail"], ["viewer", "Reality Viewer"], ["files", "Files"], ["scanner", "Scanner"], ["hq", "HQ Console"],
   ["canon", "Canon Reference"], ["notepad", "Notepad"], ["intranet", "Corps Intranet"], ["orientation", "Orientation"]];
-const GLYPH = { canon: "files" }; // TODO art: a book icon for the canon reference
 document.getElementById("icons").append(...ICONS.map(([id, label]) =>
   el("div", { class: "icon", ondblclick: () => open(id), onclick: (e) => { if (e.detail === 1 && matchMedia("(pointer:coarse)").matches) open(id); } },
-    el("img", { class: "glyph", src: `assets/icons/${GLYPH[id] || id}.png`, alt: "", draggable: "false" }), el("span", { id: `icon-${id}` }, label))));
+    el("img", { class: "glyph", src: `assets/icons/${id}.png`, alt: "", draggable: "false" }), el("span", { id: `icon-${id}` }, label))));
 
 const params = new URLSearchParams(location.search);
 

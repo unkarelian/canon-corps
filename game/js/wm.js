@@ -6,7 +6,7 @@ let z = 10, cascade = 0;
 export const apps = {};
 
 export function register(id, app) { apps[id] = app; }
-const ICON16 = new Set(["mail", "viewer", "files", "scanner", "hq", "orientation", "notepad", "intranet"]); // assets/icons/<id>16.png, rendered in Blender
+const ICON16 = new Set(["mail", "viewer", "files", "scanner", "hq", "orientation", "notepad", "intranet", "canon"]); // assets/icons/<id>16.png, rendered in Blender
 
 export function open(id, arg) {
   const app = apps[id];

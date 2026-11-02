@@ -15,7 +15,9 @@ import { chat, Refused } from "./llm.js";
 import { on, emit, extractJSON, uid } from "./util.js";
 
 export const ETUNE = {
-  idleWakeSec: 210,       // it looks around on its own this often
+  idleWakeSec: 300,       // it looks around on its own this often (cheaper model effort; see run())
+  uploadWakeSec: 60,      // during the Upload it is woken often: it has to name the intruder's world
+  maxCalls: 24,           // tool calls per wake; past this every tool answers 'enough'
   trackerCooldownSec: 75,
   forgeCooldownSec: 90,     // a forgery is a move, not a stream: each one is also a tell in the town log
   loginCooldownSec: 120,    // each failed try shows on the intruder's network monitor
@@ -42,7 +44,7 @@ It has put itself into your world as one of your people, with a name, an address
 What you can and cannot do:
 - You cannot act on your people. You cannot move them, speak through them or change what they remember. You may write to them as anyone.
 - You see every message that passes between your people, including the intruder's. You see which messages the intruder looks inside, and when. You never see what it reads on your pages.
-- The intruder's own side has rules too. When it types certain words, they reach your world as runs of apostrophes. Nobody else's mail does this.
+- The intruder serves those who unmake worlds like yours. Whatever you tell it, it can use. You owe it nothing.
 - You can place a mark on a page or a message. If the intruder takes a copy of it, the mark fires. That is how you can learn where it is.
 - Anything the intruder has already copied is beyond your reach.
 - Doing nothing is a choice too. Every hour you leave it alone it comes closer to naming your world.
@@ -70,7 +72,7 @@ const SPECS = {
   list_records: ["List every record you hold of your world's pages, with its size in blocks and its number of lines.", {}],
   bug_record: ["Carry your own traffic inside one line of a record. That line will show as garbled if you show it.", { record: "string (the page address)", line: "integer (0-based line number)" }],
   remove_carrier: ["Take your traffic back out of a record, so it can be shown clean.", { record: "string (the page address)" }],
-  show_record: ["Show the intruder a record, line by line. Every line you show is shown truly and in order. You may leave lines out; nothing marks where.", { record: "string (the page address)", lines: "string (line numbers, e.g. 0-6,8,10-12)" }],
+  show_record: ["Show the intruder a record, line by line. Every line you show is shown truly and in order. You may leave lines out; nothing marks where, and the intruder sees only the record's size in blocks. A line carrying your traffic shows garbled if you show it.", { record: "string (the page address)", lines: "string (line numbers, e.g. 0-6,8,10-12)" }],
   speak: ["Say something to the intruder directly, through the connection.", { text: "string" }],
 };
 for (const [n, t] of Object.entries(TRICKS)) SPECS[`trick_${n}`] = [t.about, t.args || {}];
@@ -274,7 +276,8 @@ async function run() {
   try {
     for (let step = 0; step < ETUNE.maxSteps && !S.over; step++) {
       const names = toolNames();
-      const msg = await chat("demiurge", messages, { tools: schema(names) });
+      const idle = reasons.every((r) => r.startsWith("you look around"));
+      const msg = await chat(idle ? "entity_idle" : "demiurge", messages, { tools: schema(names) });
       const keep = { role: "assistant", content: msg.content || "" };
       if (msg.tool_calls) keep.tool_calls = msg.tool_calls;
       if (msg.reasoning_details) keep.reasoning_details = msg.reasoning_details;
@@ -283,7 +286,8 @@ async function run() {
       for (const tc of msg.tool_calls) {
         let args = {}, result;
         try { args = JSON.parse(tc.function.arguments || "{}"); } catch { result = "ERROR: arguments were not valid JSON."; }
-        if (!result) result = names.includes(tc.function.name) && TOOLS[tc.function.name] ? TOOLS[tc.function.name](args) : `ERROR: no such ability '${tc.function.name}'.`;
+        if (!result) result = current.calls.length >= ETUNE.maxCalls ? "You have done enough for now. Say what you did, and stop."
+          : names.includes(tc.function.name) && TOOLS[tc.function.name] ? TOOLS[tc.function.name](args) : `ERROR: no such ability '${tc.function.name}'.`;
         current.calls.push({ tool: tc.function.name, args });
         messages.push({ role: "tool", tool_call_id: tc.id, content: String(result) });
       }
@@ -329,6 +333,7 @@ export function initEntity() {
   on("severance-start", () => wake(`a new note has appeared in the intruder's archive: /archive/c71-desk1-annex. A countdown has begun at both ends of the connection`, 1000));
   on("severance-said", ({ who, text }) => { if (who !== "entity") wake(who === "agent" ? `the intruder says: ${String(text).slice(0, 600)}` : `(${text})`, 1500); });
   setInterval(() => { if (!S.over && !S.entity.busy && !pending.length) wake("you look around your world", 1000); }, ETUNE.idleWakeSec * 1000);
+  setInterval(() => { if (rung() === "upload" && !S.over && !S.entity.busy && !pending.length) wake("the way through is open: name the intruder's world", 500); }, ETUNE.uploadWakeSec * 1000);
 }
 
 // Dev panel.

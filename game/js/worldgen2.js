@@ -165,6 +165,7 @@ Include:
 - two or three emails in which residents mention ${plan.agent.name}, whose name is on a page in town but whom nobody has ever met or seen.
 - one or two emails in which someone wonders about ${B.edge.road}, and that nobody ever seems to go out along it.
 - the words "${plan.password[0]}" and "${plan.password[1]}" used naturally at least once each.
+- a little mild swearing (bloody, damn, hell) from the one or two people who would; the town's mail server blanks it out, so write it plainly.
 Never mention any real event, person or invention after 1900.
 
 Reply with JSON only: {"emails": [{"at": minutes, "from": "address", "to": "address", "subject": "...", "body": "..."}]}`;

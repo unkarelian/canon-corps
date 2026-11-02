@@ -287,7 +287,7 @@ and the art script with `uv run --project ~/Projects/SpriteFactory python ...`. 
 
 ## Not built yet
 
-- Art: a book icon for the Canon Reference (it borrows the Files icon), and the severance window has no art.
+- Art: the severance window has no art.
 - The seed line's short words ("Full", "The building") are not intelligible in the formant voice alone, so they are
   captioned.
 - Cost tuning for long runs (idle wake interval, effort, cheaper model for idle wakes).
