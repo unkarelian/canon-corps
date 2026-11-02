@@ -1,9 +1,10 @@
 """Render film shots headless, without the MCP bridge:
   blender -b --python tools/art/blender/render_film.py -- hall hall_L desk ...
 A name ending in _L renders the line-art (opening cinematic) version. name@N renders only frame N (a test)."""
+import os
 import sys
-D = "/home/aureal/Projects/Canon Corps/tools/art/blender/"
-g = {"__name__": "cc"}
+D = os.path.dirname(os.path.abspath(__file__)) + "/"
+g = {"__name__": "cc", "KIT_DIR": D.rstrip("/")}
 for f in ("kit.py", "icons.py", "emblem.py", "film.py"):
     exec(open(D + f).read(), g)
 args = sys.argv[sys.argv.index("--") + 1:]

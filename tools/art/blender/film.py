@@ -22,7 +22,8 @@ encode.sh turns them into webm.
 import math
 import random
 
-KIT_DIR = "/home/aureal/Projects/Canon Corps/tools/art/blender"
+# set by headless.py / render_film.py; when sent over the MCP bridge, CC_BLENDER_KIT or a path from the repo root
+KIT_DIR = globals().get("KIT_DIR") or __import__("os").environ.get("CC_BLENDER_KIT", "tools/art/blender")
 
 import bpy
 from mathutils import Vector
