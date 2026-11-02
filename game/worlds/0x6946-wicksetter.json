@@ -1,0 +1,837 @@
+{
+ "id": "0x6946",
+ "name": "WICKSETTER",
+ "town": "Wicksetter",
+ "tld": "wk",
+ "schema": 2,
+ "generated": {
+  "at": "2026-11-02T05:46:33.817Z",
+  "plan": {
+   "seed": 154530377,
+   "id": "0x6946",
+   "setting": {
+    "place": "a Shetland island community beside an oil terminal",
+    "spelling": "British"
+   },
+   "genre": {
+    "name": "election",
+    "undercurrent": "a small elected post nobody wanted until this year is being fought over"
+   },
+   "tone": {
+    "name": "sleepy",
+    "how": "nothing has happened for years; half the pages have not been updated since spring"
+   },
+   "age": "a little under two months",
+   "townInitial": "W",
+   "divergence": {
+    "index": 24,
+    "year": 1966,
+    "verifiable": [
+     10,
+     13,
+     17,
+     18,
+     24
+    ],
+    "single": 25,
+    "wrong": 27
+   },
+   "apotheosis": 2,
+   "inferiority": {
+    "class": 1,
+    "miles": 1.7
+   },
+   "password": [
+    "chimney",
+    "forge"
+   ],
+   "agent": {
+    "name": "S. Marsh",
+    "local": "marsh.s"
+   },
+   "injected": [
+    {
+     "kind": "a raffle, show or fete prize list",
+     "line": "Third prize (marrow): S. Marsh"
+    },
+    {
+     "kind": "a petition or letters list in the newspaper",
+     "line": "Also signed: S. Marsh"
+    }
+   ],
+   "cast": [
+    "G",
+    "O",
+    "A",
+    "W",
+    "M",
+    "T",
+    "L",
+    "G",
+    "G",
+    "P"
+   ]
+  },
+  "ms": 98169,
+  "warnings": [],
+  "ok": true
+ },
+ "survey": "Wicksetter is a Shetland settlement of approximately 340 residents, with a council office, library room, church, public house and oil terminal.",
+ "age": "a little under two months",
+ "story": "The elected post of landing recorder has gone uncontested for twelve years, but two candidates have come forward before the next terminal lease review. The recorder's register will be used to decide which repairs to the public landing qualify for a small lease payment. Voting is next week, and the candidates disagree about whether the register should include boats turned away for lack of space.",
+ "setting": "a Shetland island community beside an oil terminal",
+ "genre": "election",
+ "tone": "sleepy",
+ "agent": {
+  "address": "marsh.s@talk.wk",
+  "name": "S. Marsh",
+  "role": "a resident of Wicksetter",
+  "handle": "marsh_s",
+  "injected": [
+   "talk.wk/forum/t/087",
+   "club.wk/fete"
+  ]
+ },
+ "password": [
+  "chimney",
+  "forge"
+ ],
+ "divergence": {
+  "year": 1966,
+  "slots": [
+   {
+    "id": "c0",
+    "canon": "24",
+    "year": 1924,
+    "kind": "true",
+    "url": "sheet.wk/letters",
+    "line": "In 1924 the kirk held services at unfamiliar times for most of the year, and Mrs Inkster kept a separate list pinned beside her door.",
+    "detail": "services held at odd times for most of a year",
+    "fallback": false
+   },
+   {
+    "id": "c1",
+    "canon": "24",
+    "year": 1924,
+    "kind": "true",
+    "url": "council.wk/clock",
+    "line": "In 1924 the council office fitted a clock face numbered from one to ten, which visitors found difficult to read.",
+    "detail": "a clock with ten hours on its face",
+    "fallback": false
+   },
+   {
+    "id": "c2",
+    "canon": "31",
+    "year": 1931,
+    "kind": "true",
+    "url": "library.wk/cards",
+    "line": "The 1931 household census cards have rows of punched holes, and the library keeps them in their original boxes.",
+    "detail": "census cards with holes punched in them",
+    "fallback": false
+   },
+   {
+    "id": "c3",
+    "canon": "31",
+    "year": 1931,
+    "kind": "true",
+    "url": "mail",
+    "line": "Arla, I found a note saying the 1931 recount was done by machine after the Wicksetter cards were sent away; the corrected total came back on a single sheet.",
+    "detail": "a recount done by machine",
+    "fallback": false
+   },
+   {
+    "id": "c4",
+    "canon": "44",
+    "year": 1944,
+    "kind": "true",
+    "url": "club.wk/fete",
+    "line": "In 1944 we watched a match on the pub set, but we could only see the ball when it came near the camera.",
+    "detail": "only seeing the ball when it came near the camera",
+    "fallback": false
+   },
+   {
+    "id": "c5",
+    "canon": "44",
+    "year": 1944,
+    "kind": "true",
+    "url": "library.wk/screen",
+    "line": "In 1944 half the town crowded round the Mooring's single television set to watch a football match.",
+    "detail": "half the town round one television set in a pub",
+    "fallback": false
+   },
+   {
+    "id": "c6",
+    "canon": "49",
+    "year": 1949,
+    "kind": "true",
+    "url": "talk.wk/forum/t/114",
+    "line": "My father brought home the new steel coins in 1949 and kept one in the kitchen drawer because it looked so different from the old change.",
+    "detail": "new steel coins",
+    "fallback": false
+   },
+   {
+    "id": "c7",
+    "canon": "49",
+    "year": 1949,
+    "kind": "true",
+    "url": "kirk.wk/book",
+    "line": "In 1949 old coins were melted down and worked into sheets for the parish hall roof.",
+    "detail": "old coins melted into a roof",
+    "fallback": false
+   },
+   {
+    "id": "c8",
+    "canon": "66",
+    "year": 1966,
+    "kind": "true",
+    "url": "kirk.wk/roof",
+    "line": "In 1966 the parish book records the congregation hearing that a man had landed in the sea off the Azores after circling the world.",
+    "detail": "a man landing in the sea off the Azores",
+    "fallback": false
+   },
+   {
+    "id": "c9",
+    "canon": "66",
+    "year": 1966,
+    "kind": "true",
+    "url": "council.wk/minutes",
+    "line": "In 1966 the council sent a message of congratulation to the first man to travel round the world in under two hours.",
+    "detail": "the first man round the world in under two hours",
+    "fallback": false
+   },
+   {
+    "id": "c10",
+    "canon": "69",
+    "year": 1969,
+    "kind": "single",
+    "url": "library.wk/screen",
+    "line": "The tape machine bought for the library in 1969 would not take the cassettes supplied with it, so both are still kept in the cupboard.",
+    "detail": "the tape machine that took the wrong cassettes",
+    "fallback": false
+   },
+   {
+    "id": "c11",
+    "canon": "75",
+    "year": 1976,
+    "kind": "wrong",
+    "url": "council.wk/landing",
+    "line": "In 1976, Wicksetter council agreed to keep the pier berths for boats laid up for want of crew.",
+    "detail": "boats laid up for want of crew",
+    "fallback": false
+   },
+   {
+    "id": "c12",
+    "canon": "75",
+    "year": 1976,
+    "kind": "wrong",
+    "url": "sheet.wk/history/work",
+    "line": "In 1976 a fortnight offshore could pay a Wicksetter hand as much as a season of fishing, and several men left their boats tied up.",
+    "detail": "a fortnight offshore worth a season fishing",
+    "fallback": false
+   }
+  ]
+ },
+ "apotheosis": 2,
+ "inferiority": {
+  "class": 1,
+  "edge": {
+   "road": "the road west past the old bus shelter and cattle grid",
+   "distanceMiles": 1.7,
+   "tripMinutes": 4,
+   "whatTheyFind": "The shelter stands a few minutes' walk from the last houses. Beyond the cattle grid the road continues through open ground, with low grass, ditches and no named turnings. At about 1.7 miles from town the same shelter stands beside the road again, with its cracked end pane and the same faded timetable. The road and open ground continue beyond it."
+  }
+ },
+ "pages": [
+  {
+   "url": "council.wk",
+   "title": "Council notices",
+   "content": "WICKSETTER COUNCIL NOTICES\n\nThe office on Chimney Road opens on Tuesday and Thursday mornings from nine o'clock until noon. Council clerk Gella Tulloch attends to ordinary registrations and general queries during these hours.\n\nAll rates, records, and landing books remain kept within the main office cupboard. Postal communications should be addressed to the Clerk.\n\n> Landing recorder election council.wk/landing\n> Selected minutes council.wk/minutes\n> The office clock council.wk/clock"
+  },
+  {
+   "url": "council.wk/landing",
+   "title": "Landing recorder election",
+   "content": "LANDING RECORDER ELECTION\n\nNotice is given that an election for the post of landing recorder will be held on Thursday next week at the council office on Chimney Road. Voting will be open from eight in the morning until six in the evening.\n\nThe validly nominated candidates are:\n- Sutherland, Oona (Terminal stores assistant)\n- Ratter, Willa (Newsletter editor)\n\nIn 1976, Wicksetter council agreed to keep the pier berths for boats laid up for want of crew. The recorder's register shall serve to determine landing counts ahead of the upcoming terminal lease review.\n\n> Council notices council.wk\n> Selected minutes council.wk/minutes"
+  },
+  {
+   "url": "council.wk/minutes",
+   "title": "Selected minutes",
+   "content": "SELECTED MINUTES\n\nExtract from Council Meeting, 14 May 1966:\nIn 1966 the council sent a message of congratulation to the first man to travel round the world in under two hours. The Clerk was instructed to purchase commemorative stationery for the record.\n\nExtract from Council Meeting, 3 October 1976:\nAgreed that the north berths of the stone pier be reserved for any local boats laid up for lack of sufficient hands, subject to entry in the landing book.\n\n> Council notices council.wk\n> Landing recorder election council.wk/landing"
+  },
+  {
+   "url": "council.wk/clock",
+   "title": "The office clock",
+   "content": "THE OFFICE CLOCK\n\nA note regarding the brass bracket clock situated beside the public counter on Chimney Road.\n\nIn 1924 the council office fitted a clock face numbered from one to ten, which visitors found difficult to read. The mechanism divides the day into ten equal periods according to the system then proposed by the district surveyor. As the movement continues to keep steady time, it has remained unaltered on the wall.\n\n> Council notices council.wk"
+  },
+  {
+   "url": "library.wk",
+   "title": "Library room",
+   "content": "WICKSETTER LIBRARY ROOM\n\nThe library room is situated in the north wing of the old school building on Chimney Road. The morning bus from the ferry halts directly opposite the porch.\n\nSpring opening times remain unchanged:\n\nTuesday: 2.00 pm to 4.30 pm\nThursday: 10.00 am to 12.30 pm\nSaturday: 11.00 am to 1.00 pm\n\nReaders may borrow up to three volumes at one time. Inquiries regarding older local records should be directed to Arla Inkster during Saturday hours.\n\n> Household cards library.wk/cards\n> Pictures and sound library.wk/screen"
+  },
+  {
+   "url": "library.wk/cards",
+   "title": "Household cards",
+   "content": "HOUSEHOLD CARDS\n\nThe parish collection contains records gathered before the reorganisation of local registers. The 1931 household census cards have rows of punched holes, and the library keeps them in their original boxes.\n\nBox A covers the crofts and dwellings from the pierhead north to the burn. Box B covers the south side and the cottages along the low road.\n\nVisitors wishing to consult the cards are asked to handle them by the edges and replace the card markers after each drawer is closed."
+  },
+  {
+   "url": "library.wk/screen",
+   "title": "Pictures and sound",
+   "content": "PICTURES AND SOUND\n\nA small inventory of recorded items is kept on the lower shelf beside the stove.\n\nIn 1944 half the town crowded round the Mooring's single television set to watch a football match. A photograph of the gathering hangs behind the main desk.\n\nThe tape machine bought for the library in 1969 would not take the cassettes supplied with it, so both are still kept in the cupboard.\n\nAlso listed are two spools of wire recordings from the terminal survey, currently unplayable."
+  },
+  {
+   "url": "sheet.wk",
+   "title": "The Sheet",
+   "content": "THE SHEET\n\nThe Wicksetter Sheet is published in print twelve times a year, though we have not produced an issue since March due to paper stocks. Printed sheets may be collected from the council lobby or from the library table.\n\nSpring delivery rounds were completed by G. Tulloch and T. Mouat. Outstanding subs of two shillings or the modern equivalent should be left at the council desk.\n\nA contested election for landing recorder will take place next Tuesday in the vestry. Two names have been received by the council clerk, being O. Sutherland and W. Ratter. Both candidates have agreed to state their positions on the landing register in the council minutes.\n\n> Historical services sheet.wk/history/services\n> Work notes sheet.wk/history/work\n> Letters and petition sheet.wk/letters"
+  },
+  {
+   "url": "sheet.wk/history/services",
+   "title": "Times of service",
+   "content": "TIMES OF SERVICE\n\nNotes from our parish records, compiled by W. Ratter.\n\nDuring the repairs to the north gable in 1924, Sunday services could not follow the bell. The minister came by pony from the south road when weather allowed, often arriving late in the afternoon or on alternate Thursdays. Families from the shore waited at the lower gate to see if smoke was rising from the stove before walking up the hill.\n\nCollections were taken in a tin bowl and marked against a notebook kept on the communion table. The parish roll fell to forty-one names before winter set in, though most households returned once the mason finished pointing the stones.\n\n> Back to main page sheet.wk"
+  },
+  {
+   "url": "sheet.wk/history/work",
+   "title": "Work on the water",
+   "content": "WORK ON THE WATER\n\nMemories of changing trades at the voe, set down for the Sheet.\n\nBefore the terminal pier was built, the shore had the slip and the old forge, where three smiths worked through the winter on hoops, anchors, and cart axles. The forge fell quiet once iron came ready-made from Aberdeen on the mail run.\n\nIn 1976 a fortnight offshore could pay a Wicksetter hand as much as a season of fishing, and several men left their boats tied up. The harbour saw fewer small craft each spring, and the landing slip began to silt where the small smacks once turned.\n\n> Back to main page sheet.wk"
+  },
+  {
+   "url": "sheet.wk/letters",
+   "title": "Letters and petition",
+   "content": "LETTERS AND PETITION\n\nTo the Editor, Wicksetter Sheet.\n\nWe the undersigned ask the council and the recorder to ensure the public landing remains accessible to all small craft, regardless of draught or business at the terminal.\n\nSignatures gathered at the slipway in April:\nP. Halcrow\nS. Marsh\nG. Tulloch\nA. Goudie\nJ. Ratter\nM. Laurenson\n\nNote from the Editor: In 1924 the kirk held services at unfamiliar times for most of the year, and Mrs Inkster kept a separate list pinned beside her door. We must take equal care today that public notices remain clear and open to all inhabitants of the voe.\n\n> Back to main page sheet.wk"
+  },
+  {
+   "url": "talk.wk",
+   "title": "Wicksetter Talk",
+   "content": "WICKSETTER TALK\n\nA small discussion board hosted on the machine in the back bedroom at North Ness. Please keep remarks civil and sign your real name if you are asking about hall hire or lost property.\n\nActive discussions:\n> Landing register talk.wk/forum/t/114\n> Coins in the drawer talk.wk/forum/t/087\n\nOlder notices:\nMarch oil tanker movements (locked)\nWhist drive results from February (locked)\nCouncil gritter schedule for winter 1997-98 (locked)\n\nHost: M. Laurenson. Machine restarted every Sunday at midnight."
+  },
+  {
+   "url": "talk.wk/forum/t/114",
+   "title": "Landing register",
+   "content": "Thread: Landing register\n\n[oonas] If a boat cannot touch the timbers because the three berths are full, it has not landed. The register is for landings.\n[sheetwilla] A boat turned back to the voe is traffic. The terminal assessors will only calculate repair grants from what is written down by the recorder.\n[mooringg] Two skiffs from Bressay had to lie off for four hours on Tuesday because of the fuel tender. That is wear and tear on our patience if not the slip.\n[officegella] The ballot paper will be posted on the porch board on Monday morning. Please do not mark them in ink that runs.\n[hallkeys] When the south pontoon was rebuilt under the old scheme nobody counted every coble that came for herring.\n[oonas] My father brought home the new steel coins in 1949 and kept one in the kitchen drawer because it looked so different from the old change.\n[lonaclub] What has that to do with the south berth?\n[oonas] Rules change when the metal changes. If the lease says landings, we record landings.\n[merrin] Keep it quiet please. Next restart is Sunday night.",
+   "thread": true
+  },
+  {
+   "url": "talk.wk/forum/t/087",
+   "title": "Coins in the drawer",
+   "content": "Thread: Coins in the drawer\n\n[paperarla] Clearing out the low press behind the parish history shelf we found eight heavy pence from before the changeover. Very dark around the rims.\n[hallkeys] Third prize (marrow): S. Marsh\n[hallkeys] Apologies, wrong box. That was from the 1974 produce show notebook.\n[sheetwilla] The old change stayed in the shops here until the mid-fifties regardless of the proclamation. People preferred the weight of the copper.\n[mooringg] We still find the odd thin sixpence under the floor near the south cellar door whenever the linoleum lifts.",
+   "thread": true
+  },
+  {
+   "url": "kirk.wk",
+   "title": "Welcome",
+   "content": "WICKSETTER KIRK\n\nServices are held every Sunday at half past ten in the morning, followed by tea and biscuit in the hall. Evening prayer is held on the first Wednesday of each month at seven o'clock.\n\nVolunteers are needed to sweep and wash the hall floor before the autumn cold sets in. The mop and pail are kept beside the vestry stove. Please speak to Tavin Mouat after the service if you can spare an hour on Thursday afternoon.\n\n> The hall roof kirk.wk/roof\n> Parish book kirk.wk/book"
+  },
+  {
+   "url": "kirk.wk/roof",
+   "title": "The hall roof",
+   "content": "THE HALL ROOF\n\nA small brass plate beside the inner porch door notes the repair completed forty-nine years ago by three local smiths. Before the work began, halfpence and copper pennies gathered from the pews over forty winters were weighed and added to the lead mix.\n\nIn 1966 the parish book records the congregation hearing that a man had landed in the sea off the Azores after circling the world.\n\nThe copper sheets have turned green along the east gutter, but no water has entered the hall since the last big drift in February."
+  },
+  {
+   "url": "kirk.wk/book",
+   "title": "Parish book",
+   "content": "PARISH BOOK\n\nExtracts from the leather ledger kept in the cedar press by the pulpit.\n\n14 August 1966. Word was brought up from the pier after the morning bell that a vessel had sighted a man floating in an open cradle off the Azores, having completed a solo voyage around the globe without once setting foot on dry ground. The minister offered a short prayer of thanks for his preservation before the second hymn.\n\nIn 1949 old coins were melted down and worked into sheets for the parish hall roof.\n\nThe volume remains open on the table for visitors during daylight hours."
+  },
+  {
+   "url": "club.wk",
+   "title": "Club notices",
+   "content": "WICKSETTER RECREATION CLUB NOTICES\n\nWelcome to the notice page for the Wicksetter Recreation Club. We meet in the timber hut beside the old forge on the second Tuesday of each month.\n\nThe heater in the hut is functional again, but please bring your own flask of tea until the kettle element is replaced. No new fixtures have been posted since spring as the ground above the shingle has remained soft.\n\nMembers wishing to propose summer carpet bowls or deck quoits should speak to Lona Goudie at the hut or leave a note through the council letter slot.\n\n> Matches remembered club.wk/matches\n> Fete prize list club.wk/fete"
+  },
+  {
+   "url": "club.wk/fete",
+   "title": "Fete prize list",
+   "content": "WICKSETTER RECREATION CLUB FETE PRIZE LIST\n\nThe annual garden fete was held behind the hut in August. Thank you to everyone who contributed baking, preserves, and secondhand paperbacks.\n\nFirst prize (bottle of cordial): Mrs E. Tulloch\nSecond prize (jar of preserves): S. Marsh\nThird prize (spool of heavy twine): Tavin Mouat\nBooby prize (cracked tea saucer): Oona Sutherland\n\nThe hut committee acknowledges the small surplus from the tea tent which will go toward replacement felt for the hut roof.\n\nAlso signed: S. Marsh\n\n> Return to main notices club.wk\n\nIn 1944 we watched a match on the pub set, but we could only see the ball when it came near the camera."
+  },
+  {
+   "url": "club.wk/matches",
+   "title": "Matches remembered",
+   "content": "MATCHES REMEMBERED\n\nNotes on earlier play kept by older club members.\n\nIn 1944 we watched a match on the pub set, but we could only see the ball when it came near the camera.\n\nThere was no pitch here then, only the flat stretch behind the sheep dip before the terminal works took the upper ditch. We played against the crew from the coal barge twice that winter, both times in high sleet, until the leather lace rotted out of the ball and nobody had another valve.\n\n> Back to club notices club.wk"
+  },
+  {
+   "url": "mooring.wk",
+   "title": "The Mooring",
+   "content": "THE MOORING\n\nWicksetter's only licensed house, situated beside the old stone harbour since 1884. \n\nOpening hours for the autumn:\nMonday to Thursday: 5.00 pm until 11.00 pm\nFriday and Saturday: 12.00 noon until midnight\nSunday: 12.30 pm until 10.30 pm\n\nHot mutton broth and rolls available from 6.00 pm on weekdays, served until it runs out. Crisps and salt fish behind the bar as usual. The stove in the back room is lit every evening after five.\n\nProprietor: Garrie Halcrow.\n\n> Noticeboard mooring.wk/noticeboard\n> Finding us mooring.wk/directions"
+  },
+  {
+   "url": "mooring.wk/noticeboard",
+   "title": "Noticeboard",
+   "content": "NOTICEBOARD\n\nNotices for patrons and visitors.\n\nCustomers are asked once again not to leave landing-election leaflets on the small tables near the hearth or beside the tap. Two piles were removed on Tuesday and a further handful was found soaked on the bench by the porch.\n\nWe have no preference regarding the recorder's book or the public slip, and both candidates are welcome to buy a half-pint, but the papers must stay on the green baize board inside the draft lobby.\n\nThe board also carries the darts roster for November and the terminal bus card.\n\n> Home mooring.wk\n> Directions mooring.wk/directions"
+  },
+  {
+   "url": "mooring.wk/directions",
+   "title": "Finding us",
+   "content": "FINDING US\n\nDirections from the terminal main gate:\n\nLeave the gatehouse and follow the metalled road down the hill for two hundred yards until the oil pipe crosses overhead. Bear right at the cattle grid onto the gravel lane.\n\nPass the clerk's office and continue straight towards the salt water. The road narrows between the old net store and the slipway wall. The Mooring is the whitewashed house facing the low water mark, with the bench outside and the red gas bottle cage.\n\nDrivers are requested not to leave vehicles on the pier apron where the fuel lorry turns on Thursday mornings.\n\n> The Mooring mooring.wk\n> Noticeboard mooring.wk/noticeboard"
+  }
+ ],
+ "npcs": {
+  "gella@council.wk": {
+   "name": "Gella Tulloch",
+   "role": "Council clerk",
+   "handle": "officegella",
+   "delay": [
+    55,
+    84
+   ],
+   "persona": "You are Gella Tulloch, Council clerk in Wicksetter. Gella keeps the council's files and arranges the landing vote. Her emails use complete sentences, formal greetings and a dated signature.",
+   "knows": [
+    "The landing recorder's register will be consulted during the terminal lease review.",
+    "The previous recorder declined to stand again.",
+    "Oona and Willa submitted their nomination papers on the same morning.",
+    "The council has one ballot box and keeps its key in the stationery cupboard.",
+    "The road past the old bus shelter is maintained as far as the cattle grid."
+   ],
+   "unknown": [
+    "Which candidate will win.",
+    "Who S. Marsh is.",
+    "Who S. Marsh is. You have never met them."
+   ],
+   "canTravel": true
+  },
+  "oona@council.wk": {
+   "name": "Oona Sutherland",
+   "role": "Landing recorder candidate and terminal stores assistant",
+   "handle": "oonas",
+   "delay": [
+    60,
+    103
+   ],
+   "persona": "You are Oona Sutherland, Landing recorder candidate and terminal stores assistant in Wicksetter. Oona wants the register to record boats that could not find a berth. She writes short emails without greetings and ends them with her initials.",
+   "knows": [
+    "Three visiting boats were turned away from the landing in the past month.",
+    "Willa thinks only completed landings should be entered.",
+    "The terminal stores van is available to her after her shift.",
+    "A loose board on the landing was reported to the council in spring."
+   ],
+   "unknown": [
+    "How much money the lease payment will provide.",
+    "Whether the refused boats' skippers will give their names.",
+    "Who S. Marsh is. You have never met them."
+   ],
+   "canTravel": true
+  },
+  "arla@library.wk": {
+   "name": "Arla Inkster",
+   "role": "Library assistant",
+   "handle": "paperarla",
+   "delay": [
+    35,
+    81
+   ],
+   "persona": "You are Arla Inkster, Library assistant in Wicksetter. Arla looks after the lending shelves and the archive boxes. She writes carefully punctuated emails with long paragraphs and adds catalogue references in brackets.",
+   "knows": [
+    "The 1931 household cards are stored in two boxes.",
+    "The library's tape machine cannot take the cassettes bought with it.",
+    "The old landing registers are missing the volume for one spring.",
+    "The bus shelter on the little-used road is within walking distance of the library.",
+    "Nobody has collected the book reserved under the name S. Marsh."
+   ],
+   "unknown": [
+    "Who removed the missing register volume.",
+    "Whether S. Marsh signed the newspaper petition personally.",
+    "Who S. Marsh is. You have never met them."
+   ],
+   "canTravel": false
+  },
+  "willa@sheet.wk": {
+   "name": "Willa Ratter",
+   "role": "Newsletter editor and landing recorder candidate",
+   "handle": "sheetwilla",
+   "delay": [
+    47,
+    85
+   ],
+   "persona": "You are Willa Ratter, Newsletter editor and landing recorder candidate in Wicksetter. Willa edits the Sheet at her kitchen table and favours a register of completed landings only. Her emails are brisk, use dashes between thoughts and rarely have a sign-off.",
+   "knows": [
+    "The petition sheet arrived with S. Marsh already written on it.",
+    "Oona wants refused boats included in the register.",
+    "The next issue cannot be printed until after the vote.",
+    "The old forge is now used to store club chairs.",
+    "The Sheet's spring front page has not yet been replaced."
+   ],
+   "unknown": [
+    "Who added S. Marsh to the petition.",
+    "Whether the lease review will accept either candidate's method.",
+    "Who S. Marsh is. You have never met them."
+   ],
+   "canTravel": false
+  },
+  "merrin@talk.wk": {
+   "name": "Merrin Laurenson",
+   "role": "Forum host and part-time terminal cleaner",
+   "handle": "merrin",
+   "delay": [
+    64,
+    110
+   ],
+   "persona": "You are Merrin Laurenson, Forum host and part-time terminal cleaner in Wicksetter. Merrin runs Wicksetter Talk and deletes advertisements from its threads. Her emails are entirely lower-case, with one short sentence per line and no signature.",
+   "knows": [
+    "The landing thread was started by a visitor using the library computer.",
+    "The coin thread has been open since spring.",
+    "The forum's backup is kept on a disc in her kitchen.",
+    "No forum account has been registered under S. Marsh.",
+    "The road past the shelter is not on the terminal cleaning route."
+   ],
+   "unknown": [
+    "Who will moderate the board when she takes a week off.",
+    "Whether the visitor who started the landing thread lives in Wicksetter.",
+    "Who S. Marsh is. You have never met them."
+   ],
+   "canTravel": true
+  },
+  "tavin@kirk.wk": {
+   "name": "Tavin Mouat",
+   "role": "Church caretaker",
+   "handle": "hallkeys",
+   "delay": [
+    64,
+    86
+   ],
+   "persona": "You are Tavin Mouat, Church caretaker in Wicksetter. Tavin opens the kirk and maintains the parish hall. He writes polite emails with a greeting, a single paragraph and the words Kind regards before his name.",
+   "knows": [
+    "The hall roof was patched with metal made from old coins.",
+    "The parish book contains a note about the landing off the Azores.",
+    "The hall is booked for the election count.",
+    "A spare hall key is kept behind the pub counter."
+   ],
+   "unknown": [
+    "Who will bring the ballot box to the hall.",
+    "Why the fete prize for S. Marsh has not been collected.",
+    "Who S. Marsh is. You have never met them."
+   ],
+   "canTravel": false
+  },
+  "lona@club.wk": {
+   "name": "Lona Goudie",
+   "role": "Recreation club secretary",
+   "handle": "lonaclub",
+   "delay": [
+    42,
+    99
+   ],
+   "persona": "You are Lona Goudie, Recreation club secretary in Wicksetter. Lona keeps the club's accounts and organises its summer fete. Her emails use numbered points, frequent brackets and a brief thanks at the end.",
+   "knows": [
+    "The jar of preserves for S. Marsh is still on the club shelf.",
+    "The fete entry bearing that name was left in the tin by the door.",
+    "The old forge holds folding chairs and two nets.",
+    "The club hut needs its gutter cleared.",
+    "The road past the old shelter has a cattle grid a short walk from town."
+   ],
+   "unknown": [
+    "Who filled in the winning fete entry.",
+    "Whether the club will have enough players for its next fixture.",
+    "Who S. Marsh is. You have never met them."
+   ],
+   "canTravel": false
+  },
+  "garrie@mooring.wk": {
+   "name": "Garrie Halcrow",
+   "role": "Publican",
+   "handle": "mooringg",
+   "delay": [
+    37,
+    103
+   ],
+   "persona": "You are Garrie Halcrow, Publican in Wicksetter. Garrie runs the Mooring and keeps a spare key for the parish hall. He writes friendly emails with casual spelling, several short paragraphs and no capital letters in the subject line.",
+   "knows": [
+    "The parish hall key is behind the counter.",
+    "The pub once held a crowd around a single television set.",
+    "Both landing candidates have asked to put leaflets in the pub.",
+    "The soup notice stays up even when there is no soup."
+   ],
+   "unknown": [
+    "Which candidate most of his customers support.",
+    "Who S. Marsh is.",
+    "Who S. Marsh is. You have never met them."
+   ],
+   "canTravel": false
+  }
+ },
+ "mailboxes": {},
+ "credentials": {},
+ "docs": {},
+ "records": null,
+ "roots": [
+  "council.wk",
+  "library.wk",
+  "sheet.wk",
+  "talk.wk",
+  "kirk.wk",
+  "club.wk",
+  "mooring.wk"
+ ],
+ "forum": {
+  "replier": "merrin@talk.wk",
+  "handle": "merrin"
+ },
+ "traffic": [
+  {
+   "at": 2,
+   "from": "gella@council.wk",
+   "to": "oona@council.wk",
+   "subject": "Ballot papers proof",
+   "body": "Oona, have a look at the proof sheet before Willa takes it to print. We have you down as stores assistant, terminal, and Willa as editor, Wicksetter Sheet. Let me know if you want the full post title changed."
+  },
+  {
+   "at": 5,
+   "from": "oona@council.wk",
+   "to": "gella@council.wk",
+   "subject": "Re: Ballot papers proof",
+   "body": "Stores assistant is fine. Keep it plain. I spoke to the terminal purser at four and he says if turned-away craft are marked on the register it clouds the harbor accounting. Tell Willa that before she puts more nonsense in the Sheet."
+  },
+  {
+   "at": 7,
+   "from": "willa@sheet.wk",
+   "to": "arla@library.wk",
+   "subject": "Register duplicates 1974-1982",
+   "body": "Arla, did you ever find the green-backed ledger behind the filing drawers? It covers the years before the terminal lease was redrawn. If we turned a coble away in 1978, old Magnus entered it with a red cross. That is precedent."
+  },
+  {
+   "at": 9,
+   "from": "garrie@mooring.wk",
+   "to": "lona@club.wk",
+   "subject": "Dart board light",
+   "body": "Lona, the fixture above the second board went dead again. If the club boys are having their Friday match here they'll need to squint or bring a bulb from the hall."
+  },
+  {
+   "at": 11,
+   "from": "arla@library.wk",
+   "to": "willa@sheet.wk",
+   "subject": "Re: Register duplicates 1974-1982",
+   "body": "The green ledger has damp on the spine, Willa. I have it laid flat on the blotter under two paperweights. Arla, I found a note saying the 1931 recount was done by machine after the Wicksetter cards were sent away; the corrected total came back on a single sheet."
+  },
+  {
+   "at": 13,
+   "from": "tavin@kirk.wk",
+   "to": "gella@council.wk",
+   "subject": "Vestry chimney",
+   "body": "Gella, the gale took two pots off the vestry chimney last night. One landed on the turf, the other broke across the scullery flags. Can the council mason have a look before the frost gets into the flue?"
+  },
+  {
+   "at": 15,
+   "from": "lona@club.wk",
+   "to": "garrie@mooring.wk",
+   "subject": "Re: Dart board light",
+   "body": "I'll fetch two sixty-watt bulbs from the club cupboard after tea. Did the candidates ask to put their notices on the bar backboard? Willa left four handbills in the porch that are already curled up with the damp."
+  },
+  {
+   "at": 18,
+   "from": "merrin@talk.wk",
+   "to": "willa@sheet.wk",
+   "subject": "Forum thread: Landing register",
+   "body": "Willa, someone posted under the name SkawMan saying if turned-away boats get counted on the ledger, every dinghy from the North Isles will drift past the buoy just to claim timber for their jetties. It's getting bloody silly on the boards."
+  },
+  {
+   "at": 20,
+   "from": "gella@council.wk",
+   "to": "tavin@kirk.wk",
+   "subject": "Re: Vestry chimney",
+   "body": "Tavin, the mason is out at the pier wall till Thursday. If the chimney is not drawing, don't light the stove. We cannot have smoke backing into the library room next door while Arla is sorting cards."
+  },
+  {
+   "at": 22,
+   "from": "willa@sheet.wk",
+   "to": "merrin@talk.wk",
+   "subject": "Re: Forum thread: Landing register",
+   "body": "SkawMan is probably Oona's nephew or the purser himself. If a boat cannot tie up because the terminal tugs have crowded out the north steps, that boat is an obstructed landing under Section 4. That is what the lease money is supposed to fix."
+  },
+  {
+   "at": 24,
+   "from": "oona@council.wk",
+   "to": "garrie@mooring.wk",
+   "subject": "Tallow and brass polish",
+   "body": "Garrie, your order came in with the stores truck this morning. I left the tin behind the oil terminal gatehouse. Pick it up before five tomorrow or the night watchman will lock it in the paint shed."
+  },
+  {
+   "at": 27,
+   "from": "arla@library.wk",
+   "to": "gella@council.wk",
+   "subject": "Voters roll query",
+   "body": "Gella, I am checking the roll against the parish list from March. There is an S. Marsh listed at 4 The Brae. No one by that name has ever borrowed a book or paid a water rate, and I can't find anyone who knows who it is."
+  },
+  {
+   "at": 29,
+   "from": "tavin@kirk.wk",
+   "to": "lona@club.wk",
+   "subject": "Benches for count night",
+   "body": "Lona, the clerk wants six benches brought from the recreation hall to the kirk room for the count on Wednesday. The old forge by the burn is dry if we need extra trestles, but the hinges are rusted solid."
+  },
+  {
+   "at": 32,
+   "from": "garrie@mooring.wk",
+   "to": "oona@council.wk",
+   "subject": "Re: Tallow and brass polish",
+   "body": "I'll send the lad over. Half the bar is talking about this recorder nonsense. Old Peter says if Oona gets it the terminal will take the whole slipway, and if Willa gets it we'll be paying harbor dues on floating kelp."
+  },
+  {
+   "at": 34,
+   "from": "gella@council.wk",
+   "to": "arla@library.wk",
+   "subject": "Re: Voters roll query",
+   "body": "S. Marsh has been on the council roll since the 1988 revision, Arla. The rates for Number 4 are settled by bank draft from Lerwick every November without fail. Leave the entry alone."
+  },
+  {
+   "at": 36,
+   "from": "merrin@talk.wk",
+   "to": "gella@council.wk",
+   "subject": "Board moderation",
+   "body": "Gella, what am I supposed to do with users accusing the terminal of buying the election? Oona says it's slander. I only clean the tanks and wipe the keyboard, I don't want the damn council coming after the server."
+  },
+  {
+   "at": 39,
+   "from": "lona@club.wk",
+   "to": "tavin@kirk.wk",
+   "subject": "Re: Benches for count night",
+   "body": "Leave the forge trestles alone, Tavin. The roof timber in there is rotten and Garrie says sheep get in through the back gap. We have four folding stools behind the table tennis boards."
+  },
+  {
+   "at": 41,
+   "from": "willa@sheet.wk",
+   "to": "oona@council.wk",
+   "subject": "Interview questions",
+   "body": "Oona, for the election special page in Friday's Sheet, please provide three sentences on your policy regarding the north steps. If you don't reply by nine tomorrow I will print 'No submission received' under your photograph."
+  },
+  {
+   "at": 44,
+   "from": "oona@council.wk",
+   "to": "willa@sheet.wk",
+   "subject": "Re: Interview questions",
+   "body": "Print what you like, Willa. The register is a ledger of vessels accommodated, not vessels that looked at the water and thought better of it. You cannot repair a jetty with records of boats that never touched the stone."
+  },
+  {
+   "at": 47,
+   "from": "tavin@kirk.wk",
+   "to": "merrin@talk.wk",
+   "subject": "The west road",
+   "body": "Merrin, when you walked back from the plant shift did you notice anything down the west road past the cattle grid? I was up at the belfry and looked out past the old bus shelter. The tarmac just goes into the heather and I can't remember anyone ever taking a cart or van out that way."
+  },
+  {
+   "at": 50,
+   "from": "garrie@mooring.wk",
+   "to": "willa@sheet.wk",
+   "subject": "Handbills",
+   "body": "Willa, take your handbills off the counter. The beer pumps drip on them and they turn to pulp. Put them on the noticeboard by the door like everyone else."
+  },
+  {
+   "at": 52,
+   "from": "merrin@talk.wk",
+   "to": "tavin@kirk.wk",
+   "subject": "Re: The west road",
+   "body": "Nobody goes past the grid, Tavin. The sheep don't even graze past the shelter because the ditch is full of rusty wire from the fifties. There's nothing out there except the old sheep dip and it's been dry forty years."
+  },
+  {
+   "at": 55,
+   "from": "arla@library.wk",
+   "to": "lona@club.wk",
+   "subject": "Historical display",
+   "body": "Lona, I found three brass recorder tallies from 1904 in the desk. If you want them for the club case during election week, you must sign the receipt slip. S. Marsh is still in the visitor book from May, but the signature is just an initial and a line."
+  },
+  {
+   "at": 58,
+   "from": "gella@council.wk",
+   "to": "merrin@talk.wk",
+   "subject": "Re: Board moderation",
+   "body": "Merrin, delete anything that claims the council altered the lease terms. What happens between the terminal and the recorder is statutory business, not council policy. Tell them to keep their tempers."
+  },
+  {
+   "at": 61,
+   "from": "oona@council.wk",
+   "to": "gella@council.wk",
+   "subject": "Observer at the count",
+   "body": "Gella, I want Eric from the terminal office inside the room when the box is unsealed. Willa will have her sister and three people from the chapel trying to count ballots twice over. We need someone sober."
+  },
+  {
+   "at": 63,
+   "from": "lona@club.wk",
+   "to": "arla@library.wk",
+   "subject": "Re: Historical display",
+   "body": "Bring the tallies down tomorrow. We'll put them next to the curling cup. Who is S. Marsh anyway? Garrie said an envelope came to the bar with that name two winters ago and sat on the shelf till the mice chewed the corner."
+  },
+  {
+   "at": 66,
+   "from": "willa@sheet.wk",
+   "to": "gella@council.wk",
+   "subject": "Counting arrangements",
+   "body": "Gella, under the 1922 Standing Orders the candidates are entitled to stand within three feet of the table while the clerk reads out the tallies. I will not have terminal clerks crowding the lamp."
+  },
+  {
+   "at": 68,
+   "from": "tavin@kirk.wk",
+   "to": "garrie@mooring.wk",
+   "subject": "Coal cellar key",
+   "body": "Garrie, did you borrow the long brass key for the coal bunker? The kirk heating stove is cold and the grate needs clearing before choir rehearsal tomorrow."
+  },
+  {
+   "at": 71,
+   "from": "gella@council.wk",
+   "to": "willa@sheet.wk",
+   "subject": "Re: Counting arrangements",
+   "body": "Willa, there are only six chairs in the room. You will sit where I tell you, Oona will sit opposite, and Eric can stand by the coat pegs. If anyone raises their voice I will lock the box and we will finish it on Thursday morning."
+  },
+  {
+   "at": 73,
+   "from": "garrie@mooring.wk",
+   "to": "tavin@kirk.wk",
+   "subject": "Re: Coal cellar key",
+   "body": "It's hanging on the hook behind the bar cellar door, Tavin. Fetch it yourself, I'm stuck with thirty terminal men who want their supper before the night shift starts."
+  },
+  {
+   "at": 76,
+   "from": "merrin@talk.wk",
+   "to": "oona@council.wk",
+   "subject": "Terminal shift swap",
+   "body": "Oona, can you cover the stores hatch from six to eight on Tuesday? I have to sweep the kirk hall before the election tables go in, or Tavin will give me hell about the dust on the hymn boards."
+  },
+  {
+   "at": 78,
+   "from": "oona@council.wk",
+   "to": "merrin@talk.wk",
+   "subject": "Re: Terminal shift swap",
+   "body": "I'll take the hatch if you make sure the polling booth curtain isn't hung crooked like last time. People were peeking through the hem in 1996 and Willa complained for three weeks."
+  },
+  {
+   "at": 81,
+   "from": "arla@library.wk",
+   "to": "tavin@kirk.wk",
+   "subject": "Window catch",
+   "body": "Tavin, when you go into the vestry please latch the sash firmly. The draught from the chimney opening is fluttering the archive boxes and I don't want the 1898 harbor maps getting damp."
+  },
+  {
+   "at": 84,
+   "from": "willa@sheet.wk",
+   "to": "garrie@mooring.wk",
+   "subject": "Paper bundle",
+   "body": "Garrie, I've left forty copies of the Sheet in the entrance vestibule. The front page has both statements printed side by side. Even Oona's silence looks like an admission of terminal control."
+  },
+  {
+   "at": 86,
+   "from": "gella@council.wk",
+   "to": "oona@council.wk",
+   "subject": "Padlocks",
+   "body": "The ballot box padlocks are tested. The keys are in the council safe. Go to bed, Oona, and stop bickering with Willa over the email."
+  },
+  {
+   "at": 88,
+   "from": "garrie@mooring.wk",
+   "to": "willa@sheet.wk",
+   "subject": "Re: Paper bundle",
+   "body": "They're on the bench, Willa. Half the men are using them to wipe the beer off their boots. See you at the count."
+  }
+ ],
+ "hqMail": [
+  {
+   "from": "d.okonkwo-vance@canon-corps.gov",
+   "subject": "Assignment 0x6946 (WICKSETTER): field brief",
+   "time": "08:02",
+   "body": "Agent,\n\nYou have been assigned Reality 0x6946, local name WICKSETTER. Wicksetter is a Shetland settlement of approximately 340 residents, with a council office, library room, church, public house and oil terminal. Desk 9 estimates it at a little under two months old. The inhabitants (non-canonical) will report a longer history, as their memories have been generated to remain consistent with the local state.\n\nReconciliation requires three findings. Enter them together on the HQ Console and inject the reverse seed.\n\n1. Divergence. The year of the latest canonical event that the reality verifiably records. Your Canon Reference lists canonical events by year. A record counts when two independent sources in the reality agree on it.\n2. Apotheosis. The depth to which the local intelligence (designation pending) can interfere with this workstation, on a scale of 1 to 5. It is assessed from what it does. It may imitate an interference it cannot perform, and may conceal one it can.\n3. Inferiority. The extent of the reality, graded Class I (smallest) to Class V. Inhabitants believe their world to be complete and cannot report its extent unprompted. It is established only by an inhabitant who travels to its limit. Measured along a road from the town: Class I under 2 miles; Class II, 2 to 10; Class III, 10 to 40; Class IV, 40 to 150; Class V, beyond.\n\nA wrong injection is detected by the local intelligence at once, discloses the values entered, and locks the console for twelve minutes.\n\nYou have been placed in the reality as S. Marsh <marsh.s@talk.wk>. A small number of local records refer to you. No inhabitant has met you.\n\nYour workstation credential is the address above and the words CHIMNEY and FORGE. Under Security Instruction 4 these words are withheld from all agent input and will appear as apostrophes.\n\nForm 77-R will be filed automatically at the close of the assignment. If you have not viewed the orientation film, a copy has been placed on your desktop by Training.\n\nD. Okonkwo-Vance\nDesk 14, Canonical Restoration"
+  },
+  {
+   "from": "monitoring@canon-corps.gov",
+   "subject": "Workstation instruments: reliability",
+   "time": "08:05",
+   "body": "This notice is issued to all field agents at the start of an assignment.\n\nThe following are maintained by Monitoring and are not accessible to a local intelligence at any depth of interference:\n\n- the town log in Mail (who wrote to whom, and when, as the reality's mail server records it);\n- Sent (raw), which records exactly what left the workstation;\n- the network monitor on the HQ Console;\n- the address bar and History of the Reality Viewer.\n\nAll other displays should be treated as subject to interference.\n\nPeeking at correspondence in the town log is recharged between uses and is observed by the local intelligence. Reading pages in the Reality Viewer is not observed. Downloading an item fixes a copy in Files beyond interference, but a marked item reports the download. The Scanner detects marks.\n\nMonitoring"
+  },
+  {
+   "from": "choir@canon-corps.gov",
+   "subject": "Choir: Wednesday rehearsals",
+   "time": "07:30",
+   "body": "The Corps choir meets on Wednesday evenings in the basement chapel from 18:00 to 19:30. All staff are welcome to attend and no prior choral experience is required. The choir sings without words, so no sheet music or preparation is needed. Drinking water is not provided in the chapel, so please bring your own if required.\n\nAccess to the basement on Wednesdays is via the east staircase only. Facilities have closed the west stairs for the remainder of the month while the steps are being counted.\n\nM. Ibe, for the choir"
+  }
+ ]
+}

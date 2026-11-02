@@ -6,7 +6,7 @@ import { chooseWorld, markPlayed } from "./worlds.js";
 import { initNPCs } from "./npc.js";
 import { initEntity, wake, entityDebug } from "./entity.js";
 import { open, rerender, isOpen } from "./wm.js";
-import "./apps.js";
+import { tickLabels } from "./apps.js";
 import "./orientation.js";
 import "./desk.js";
 import { tickLeaks, displayClock, forceLeak } from "./leaks.js";
@@ -137,7 +137,8 @@ setInterval(() => {
   tickLeaks();
   tickLiving();
   moodTick();
-  if (isOpen("mail") || isOpen("scanner") || isOpen("hq")) for (const id of ["mail", "scanner", "hq", "severance"]) if (isOpen(id)) rerender(id); // cooldowns count down
+  tickLabels();                                                     // cooldowns count down in place
+  for (const id of ["hq", "severance"]) if (isOpen(id) && (E.injectReadyIn() || E.uploadLeft() != null || S.severance)) rerender(id);
   document.getElementById("tray-clock").textContent = displayClock(clock());
   if (!document.getElementById("debug").hidden) debug();
 }, 1000);

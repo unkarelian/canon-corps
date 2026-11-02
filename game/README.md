@@ -57,7 +57,7 @@ Prefix `WORLD=<id>` to run a playtest on a pool world. v1 playtest scripts are i
 | Reality Viewer | pages; reading is private. **Download** fixes a copy in Files and fires any mark on it. **History** shows where each click really went | link clicks can be misrouted or mazed; the address bar and History cannot |
 | Scanner | checks a page you have read, or a message, for a mark (120 s cooldown) | never |
 | HQ Console | the three-answer injection (12 min lock after a wrong one) and the network monitor (failed logins on your account, the entity's wrong seed guesses, the Upload) | never |
-| Canon Reference | real history to 1900, canon's own after (`js/canon.js`, one fixed text) | never |
+| Canon Reference | real history to 1900 as a list; every Keeper-era event after it opens to a full reference entry (`js/canon_entries.js`) | never |
 | Notepad, Intranet, Orientation | as v1; the intranet now has an archive (`/archive`) | the entity can read the Notepad and intranet from Read Access |
 
 **The censor** (`engine.censor`, applied by one input layer in `main.js`): the agent's two credential words become
@@ -111,7 +111,10 @@ close.
    the wrong year in two sources; apotheosis 1-5; inferiority class and distance; two credential words; the agent's
    name and two injected lines.
 2. **Bible** (Terra): sites, pages, people (at least two who could be persuaded to drive), the edge road and what
-   is out there, one sentence per canon mention in the voice of its page.
+   is out there, and one allusion per canon slot. Towns never name canon events: each allusion is built on one
+   concrete detail from the event's entry (`js/canon_entries.js`), made local, with the year, and must avoid the
+   event's names. Flash judges each one against the entry ("could a careful reader with the book work it out?");
+   failures are rewritten once, then fall back to a plain sentence on the detail.
 3. **Pages** (Flash, per site in parallel) and **town mail** (Flash, 32-38 emails over the evening).
 4. **Checks**: `engine.checkWorld`, every verifiable event has two sources, nothing after the divergence is
    verifiable, no real event after 1900 (a list), both credential words occur. Offending sentences are cut.
@@ -122,8 +125,9 @@ genres, tones and page rules.
 
 ## How to win Harrowgate (spoilers)
 
-The answers are at the top of `js/harrowgate.js`: divergence 1958 (the Lagos Exposition, in the Gazette and the
-library's front case; the Water Act of 1963 has one source and Kestrel is given as 1967), apotheosis 3, Inferiority
+The answers are at the top of `js/harrowgate.js`: divergence 1958 (the Lagos Exposition: the bronze medal from "the great exposition in Africa", in the
+Gazette and the library's front case; the pump closing in 1963 has one source, and the first man round the world is
+given as 1967), apotheosis 3, Inferiority
 Class II (Davey, June or Ollie can be talked into driving the coast road north; at about six miles it comes round
 again). The credential words are STEEPLE and SHELF, which is awkward in a town whose library is on Steeple Street.
 

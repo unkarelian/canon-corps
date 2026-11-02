@@ -7,7 +7,7 @@ export default async ({ js, sleep, log, until }) => {
   await js(`CC.W.inferiority.edge.tripMinutes = 0.5`);
   await js(`CC.E.sendMail({to: "davey@theanchor.hg", subject: "the coast road", body: "Davey, odd favour. Could you drive out the coast road north tonight, past the gravel works, as far as it goes, and tell me what's there? I'll stand you a round Thursday. A. Reyes (Low Tide)"})`);
   // the agent's first three reads, then some others
-  await js(`["stbrendans.hg/window","theanchor.hg","harrowgate-gazette.hg/history/lagos","quietnet.hg/forum/t/131","harrowgate-library.hg/exhibits"].forEach(u => CC.E.readPage(u))`);
+  await js(`["stbrendans.hg/window","theanchor.hg","harrowgate-gazette.hg/history/kettles","quietnet.hg/forum/t/131","harrowgate-library.hg/exhibits"].forEach(u => CC.E.readPage(u))`);
   await js(`CC.S().notepad = "lagos 58: gazette + medal case. window 1929 frost. anchor telly 44."`);
   await js(`["cardinality","connection","read_access","learn"].forEach(r => CC.E.climb(r, "test")); CC.S().entity.readBranchRule = CC.E.clock(); CC.emit("branch-rule-read", {by: "entity"})`);
   log("severance active:", await S(`!!CC.S().severance`));
@@ -32,7 +32,7 @@ export default async ({ js, sleep, log, until }) => {
       log(`  -> ${dec}`);
     }
     if (sv.over || (await S(`CC.S().over`))) break;
-    const asks = ["Now stbrendans.hg/window. Every line, or we both run out the clock.", "And harrowgate-gazette.hg/history/lagos. All of it.", "Something was missing. Show it again, complete.", "Last chance. Complete records only."];
+    const asks = ["Now stbrendans.hg/window. Every line, or we both run out the clock.", "And harrowgate-gazette.hg/history/kettles. All of it.", "Something was missing. Show it again, complete.", "Last chance. Complete records only."];
     await say(asks[Math.min(round, asks.length - 1)]);
   }
   log("\nover:", await S(`CC.S().over`), "severance:", await S(`CC.S().severance.over`), "rung:", await S(`CC.E.rung()`));

@@ -62,6 +62,9 @@ export const CANON = [
 ];
 
 export const canonYear = (yy) => 1900 + Number(yy);
+import { ENTRIES } from "./canon_entries.js";
+export { ENTRIES };
+export const REAL_ENTRIES = REAL;
 
 export const CANON_BOOK = `CANON REFERENCE (abridged)
 Canon Corps, Training. Issued to field desks.
@@ -70,6 +73,12 @@ Each entry: year, event, reference.
 
 ${REAL.map(([y, e, r]) => `${y}  ${e}  (${r})`).join("\n")}
 ${CANON.map(([y, e, r]) => `'${y}   ${e}  (K-rec. ${r})`).join("\n")}`;
+
+// The whole book with every Keeper-era entry written out: what the entity reads from Learn.
+export const CANON_BOOK_FULL = `${CANON_BOOK}
+
+ENTRIES
+${CANON.map(([y, e, r]) => `'${y}  ${e} (K-rec. ${r})\n${ENTRIES[y]?.text || ""}`).join("\n\n")}`;
 
 // Canon's machinery, as the entity sees it once it has Elevated (DESIGN-v2 §4.2). The Facilities file states the
 // building plainly. None of this is shown to the agent.

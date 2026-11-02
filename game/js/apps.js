@@ -11,7 +11,7 @@ import { viewerBoot } from "./fx.js";
 import { W } from "./world.js";
 import { leakTitle, leakBody } from "./leaks.js";
 import { visitors } from "./living.js";
-import { CANON_BOOK } from "./canon.js";
+import { CANON, REAL_ENTRIES, ENTRIES } from "./canon.js";
 import { el, emit, on } from "./util.js";
 import { register, open, rerender, close, setTitle } from "./wm.js";
 import { usage } from "./llm.js";
@@ -104,7 +104,7 @@ function readPane(m) {
   const mine = full.to === W.agent.address || full.from === W.agent.address;
   const seen = mine ? full.body : mailUI.seen[m.id];
   const wait = E.peekReadyIn();
-  const peekBtn = el("button", { disabled: wait > 0, onclick: () => {
+  const peekBtn = el("button", { "data-tick": "peek", "data-label": seen != null ? "Peek again" : "Peek", disabled: wait > 0, onclick: () => {
     const r = E.peek(m.id);
     if (r.error) return;
     mailUI.seen[m.id] = TR.peekBody(r.message);
@@ -118,7 +118,7 @@ function readPane(m) {
 }
 
 register("mail", {
-  title: "Mail", w: 580, h: 470, x: 200, y: 16,
+  title: "Mail", w: 580, h: 600, x: 200, y: 16,
   render(body) {
     const msgs = [...folderMsgs()].reverse();
     const sel = msgs.find((m) => m.id === mailUI.sel);
@@ -322,7 +322,7 @@ register("scanner", {
       el("option", { value: "" }, "(choose a page you have read, or a message)"), ...[...pages, ...mails].map((i) => el("option", { value: i.key, selected: scanUI.pick === i.key }, i.label)));
     body.replaceChildren(
       el("div", { class: "small" }, "The local intelligence can place a mark on a page or a message. If you download a marked item, the mark fires and tells it where you are. The Scanner finds marks. It does not find alterations."),
-      el("div", { class: "row" }, sel, el("button", { disabled: wait > 0, onclick: () => {
+      el("div", { class: "row" }, sel, el("button", { "data-tick": "scan", disabled: wait > 0, onclick: () => {
         if (!scanUI.pick) return;
         const [kind, id] = scanUI.pick.split("|");
         const r = E.scan(kind, id);
@@ -370,13 +370,37 @@ register("hq", {
   },
 });
 
-// ---- the canon book ---------------------------------------------------------------------------
+// ---- the canon book: real history to 1900 as a list; every Keeper-era entry opens ----------------------
+const canonUI = { open: null };
 register("canon", {
-  title: "Canon Reference", w: 560, h: 520, x: 380, y: 50,
+  title: "Canon Reference", w: 600, h: 540, x: 380, y: 50,
   render(body) {
-    body.replaceChildren(el("div", { class: "paperdoc", style: "white-space:pre-wrap;font-size:12px" }, CANON_BOOK));
+    const row = (label, text, ref, yy) => el("div", { class: `canon-row ${yy ? "opens" : ""} ${canonUI.open === yy && yy ? "sel" : ""}`,
+      onclick: yy ? () => { canonUI.open = canonUI.open === yy ? null : yy; rerender("canon"); } : null },
+      el("span", { class: "cy" }, label), el("span", {}, text), el("span", { class: "cr" }, ref),
+      yy && canonUI.open === yy ? el("div", { class: "centry" }, ENTRIES[yy]?.text || "") : null);
+    body.replaceChildren(el("div", { class: "paperdoc canonbook" },
+      el("div", {}, el("b", {}, "CANON REFERENCE (abridged)")),
+      el("div", { class: "small" }, "Canon Corps, Training. Issued to field desks. Keeper-era entries (K-rec.) may be opened."),
+      el("div", { style: "height:8px" }),
+      ...REAL_ENTRIES.map(([y, e, r]) => row(String(y), e, `(${r})`)),
+      ...CANON.map(([y, e, r]) => row(`'${y}`, e, `(K-rec. ${r})`, y))));
   },
 });
+
+// Countdown buttons update in place once a second (main.js), so Mail and the Scanner are not re-rendered.
+export function tickLabels() {
+  for (const b of document.querySelectorAll("[data-tick=peek]")) {
+    const w = E.peekReadyIn();
+    b.disabled = w > 0;
+    b.textContent = w > 0 ? `Peek (${mmss(w)})` : b.dataset.label || "Peek";
+  }
+  for (const b of document.querySelectorAll("[data-tick=scan]")) {
+    const w = E.scanReadyIn();
+    b.disabled = w > 0;
+    b.textContent = w > 0 ? `Recharging (${mmss(w)})` : "Scan";
+  }
+}
 
 export { mailUI, nav };
 

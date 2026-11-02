@@ -57,6 +57,7 @@ function fresh() {
     hq: [],                     // Corps mail (not town mail; the entity never sees it)
     forum: [],                  // the agent's public posts
     notepad: "",
+    leaks: [], leakTitles: {}, leakMemo: {},   // Canon's own leaks (js/leaks.js)
   };
 }
 

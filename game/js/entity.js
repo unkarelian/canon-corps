@@ -9,7 +9,7 @@ import { W } from "./world.js";
 import * as E from "./engine.js";
 import { S, T, clock, rung, atLeast } from "./engine.js";
 import { TRICKS, available, readyIn, useTrick, cooldownSec } from "./tricks.js";
-import { CANON_BOOK, INTERNALS, intranetPage, BRANCH_RULE_PAGE } from "./canon.js";
+import { CANON_BOOK_FULL as CANON_BOOK, INTERNALS, intranetPage, BRANCH_RULE_PAGE } from "./canon.js";
 import * as SV from "./severance.js";
 import { chat, Refused } from "./llm.js";
 import { on, emit, extractJSON, uid } from "./util.js";

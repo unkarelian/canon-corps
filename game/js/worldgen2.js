@@ -14,7 +14,7 @@
 import { chat as llmChat } from "./llm.js";
 import { extractJSON } from "./util.js";
 import { rng, pick, shuffle, SETTINGS, GENRES, TONES, PAGE_RULES, urlReFor } from "./worldgen.js";
-import { CANON, canonYear } from "./canon.js";
+import { CANON, canonYear, ENTRIES } from "./canon.js";
 import { checkWorld } from "./engine.js";
 import { fieldBriefV2, DESK_NOTICE, OFFICE } from "./templates.js";
 
@@ -87,7 +87,15 @@ function slots(plan, siteKeys, r) {
   const wy = canonYear(CANON[plan.divergence.wrong][0]) + 1;
   const [a, b] = twoSites();
   out.push({ event: plan.divergence.wrong, year: wy, site: a, kind: "wrong" }, { event: plan.divergence.wrong, year: wy, site: b, kind: "wrong" });
-  return out.map((s, n) => ({ ...s, id: `c${n}`, text: CANON[s.event][1].replace(/\.$/, ""), key: KEY[CANON[s.event][0]] }));
+  // each allusion is built on one concrete detail from the event's entry; the two sources of one event use different details
+  const used = {};
+  return out.map((s, n) => {
+    const yy = CANON[s.event][0], e = ENTRIES[yy];
+    const left = e.details.filter((d) => !(used[yy] || []).includes(d));
+    const detail = pick(r, left.length ? left : e.details);
+    (used[yy] ||= []).push(detail);
+    return { ...s, id: `c${n}`, yy, text: CANON[s.event][1].replace(/\.$/, ""), entry: e.text, detail, names: e.names, key: KEY[yy] };
+  });
 }
 
 // ---- 2. bible --------------------------------------------------------------------------------------
@@ -124,8 +132,8 @@ Requirements:
 - Some people should mention, in what they know, the road out of town nobody seems to take.
 - The edge: ${edge.class === 1 ? "it is very close: within walking distance" : `it is about ${edge.miles} miles out`}. What they find there: the road and the country go on but stop being particular, and then repeat: the same landmark again, or the road brings them back into the town from the other side, at about ${edge.miles} miles. Plain description, no explanation, no fear words.
 - The password words "${plan.password[0]}" and "${plan.password[1]}" must be ordinary, natural parts of the town: a street, a building, a thing people mention. Make sure at least two pages' briefs would naturally include each.
-- Mentions: for each slot below, write ONE sentence in the voice of a page on the given site (or, for "mail", of an email between residents) about how the town took part in or remembers the event. Name the event by its short name the way people would say it (for example "the Halverson Accord", "the Long Frost", "the Lagos Exposition") and give the year as a number, exactly the year given. Never quote the event's full title and never use quotation marks. Each sentence must stand on its own and sound like the town, not like a reference book.
-${cs.map((s) => `  ${s.id}: site ${s.site}; event "${s.text}"; year ${s.year}`).join("\n")}
+- Mentions: for each slot below, write ONE or TWO sentences in the voice of a page on the given site (or, for "mail", of an email between residents) remembering something that happened in the town. The town never names the wider event; it talks about what it saw locally. Build it on the detail given, made local and concrete (a person, a building, a thing), and give the year as a number, exactly the year given. Never use any of the forbidden words. No quotation marks. A careful reader holding a history book should be able to work out which event it was, but only by connecting the detail to the book.
+${cs.map((s) => `  ${s.id}: site ${s.site}; year ${s.year}; detail: ${s.detail}; forbidden words: ${s.names.join(", ")}`).join("\n")}
 - Two pages must each carry a line naming "${plan.agent.name}" (a resident nobody has met): ${plan.injected.map((x) => x.kind).join("; and ")}. Give those pages briefs that fit.`;
 }
 
@@ -174,21 +182,26 @@ Reply with JSON only: {"emails": [{"at": minutes, "from": "address", "to": "addr
 
 // ---- 5. checks and repairs -------------------------------------------------------------------------
 const yearRe = (y) => new RegExp(`\\b${y}\\b`);
-function mentions(text, s) { return !!s.key && text.toLowerCase().includes(s.key.toLowerCase()) && yearRe(s.year).test(text); }
+const names = (yy) => ENTRIES[yy]?.names || [];
+const esc = (x) => x.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+const namesRe = (yy) => names(yy).length ? new RegExp(`\\b(${names(yy).map(esc).join("|")})\\b`, "i") : null;
+// A text names a canon event outright: one of its names, and its year.
+function mentions(text, s) { const re = namesRe(s.yy); return !!re && re.test(text) && yearRe(s.year).test(text); }
+const allusionOk = (line, s) => yearRe(s.year).test(line) && !(namesRe(s.yy)?.test(line));
 
 function checkCanon(world, cs, plan) {
   const problems = [];
   const sources = [...world.pages.map((p) => ({ where: p.url, text: p.content })), ...world.traffic.map((t, i) => ({ where: `mail ${i}`, text: `${t.subject}\n${t.body}` }))];
   for (const i of plan.divergence.verifiable) {
-    const s = cs.find((x) => x.event === i);
-    const n = sources.filter((x) => mentions(x.text, s)).length;
-    if (n < 2) problems.push(`verifiable '${CANON[i][0]} (${s.key}) has ${n} source(s)`);
+    const lines = cs.filter((x) => x.event === i && x.kind === "true").map((x) => x.line);
+    const n = lines.filter((l) => sources.some((x) => x.text.includes(l))).length;
+    if (n < 2) problems.push(`verifiable '${CANON[i][0]} has ${n} source(s)`);
   }
   // nothing after the divergence may be verifiable: a later canon event, with its true year, in two sources
   for (let i = plan.divergence.index + 1; i < CANON.length; i++) {
-    const s = { key: KEY[CANON[i][0]], year: canonYear(CANON[i][0]) };
+    const s = { yy: CANON[i][0], year: canonYear(CANON[i][0]) };
     const n = sources.filter((x) => mentions(x.text, s)).length;
-    if (n >= 2) problems.push(`'${CANON[i][0]} (${s.key}) after the divergence is verifiable (${n} sources)`);
+    if (n >= 2) problems.push(`'${CANON[i][0]} after the divergence is verifiable (${n} sources)`);
   }
   for (const x of sources) { const m = x.text.match(REAL_AFTER_1900); if (m) problems.push(`real event "${m[0]}" in ${x.where}`); }
   return problems;
@@ -200,11 +213,42 @@ function scrub(world, cs, plan) {
   for (const p of world.pages) p.content = cut(p.content, REAL_AFTER_1900);
   for (const t of world.traffic) t.body = cut(t.body, REAL_AFTER_1900);
   for (let i = plan.divergence.index + 1; i < CANON.length; i++) {
-    const s = { key: KEY[CANON[i][0]], year: canonYear(CANON[i][0]) };
-    const planned = new Set(cs.filter((c) => c.event === i && c.kind === "single").map((c) => c.url));
-    let kept = 0;
-    for (const p of world.pages) if (mentions(p.content, s)) { if (planned.has(p.url) && !kept++) continue; p.content = cut(p.content, new RegExp(s.key.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"))); }
-    for (const t of world.traffic) if (mentions(t.body, s)) t.body = cut(t.body, new RegExp(s.key.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+    const s = { yy: CANON[i][0], year: canonYear(CANON[i][0]) };
+    const re = namesRe(s.yy);
+    if (!re) continue;
+    for (const p of world.pages) if (mentions(p.content, s)) p.content = cut(p.content, re);
+    for (const t of world.traffic) if (mentions(t.body, s)) t.body = cut(t.body, re);
+  }
+}
+
+// ---- allusions: does each one point to its event, without naming it? ------------------------------------
+// A cheap model reads each allusion against the event's entry. Failures are rewritten once; anything still
+// failing gets a plain fallback built on the detail.
+async function judgeAllusions(ask, plan, B, cs, log) {
+  const judge = async (list) => {
+    const user = `For each item: a sentence from a small town's web page or email, and an entry from a history book. Answer whether a careful reader holding the book could work out that the sentence is about this entry's event, from the details (not from luck). The sentence must not simply name the event.
+
+${list.map((s) => `${s.id}\nSENTENCE: ${s.line}\nENTRY ('${s.yy}): ${s.text}. ${s.entry}`).join("\n\n")}
+
+Reply with JSON only: {"verdicts": {"<id>": true or false, ...}}`;
+    try { return (await ask("worldtext", "You check a game's clues. Be strict but fair.", user, 4000)).verdicts || {}; } catch { return {}; }
+  };
+  let bad = cs.filter((s) => !allusionOk(s.line, s));
+  const v = await judge(cs.filter((s) => allusionOk(s.line, s)));
+  bad = [...bad, ...cs.filter((s) => allusionOk(s.line, s) && v[s.id] === false)];
+  if (bad.length) {
+    log(`rewriting ${bad.length} allusion(s): ${bad.map((s) => s.id).join(", ")}`);
+    try {
+      const re = await ask("worldgen", voice(plan), `Rewrite these sentences for ${B.town}. Each must remember something local, built on the detail, give the year as a number, and never use the forbidden words. No quotation marks.
+${bad.map((s) => `${s.id}: site ${s.site}; year ${s.year}; detail: ${s.detail}; forbidden words: ${s.names.join(", ")}; previous attempt: ${s.line}`).join("\n")}
+Reply with JSON only: {"mentions": {"<id>": "..."}}`, 4000);
+      for (const s of bad) if (re.mentions?.[s.id]) s.line = String(re.mentions[s.id]).replace(/["\u201c\u201d]/g, "").trim();
+    } catch (e) { log(`allusion rewrite failed: ${e.message}`); }
+    const v2 = await judge(bad.filter((s) => allusionOk(s.line, s)));
+    for (const s of bad) if (!allusionOk(s.line, s) || v2[s.id] === false) {
+      s.line = `People who were here in ${s.year} still talk about ${s.detail}.`;
+      s.fallback = true;
+    }
   }
 }
 
@@ -239,13 +283,15 @@ export async function generateWorld2({ chat = llmChat, seed, onProgress = () => 
     s.pages = (s.pages || []).map((p) => ({ ...p, url: p.path ? `${s.domain}/${String(p.path).replace(/^\/+|\/+$/g, "")}` : s.domain }));
     if (!s.pages.some((p) => p.url === s.domain)) s.pages.unshift({ url: s.domain, title: s.name, brief: s.about });
   }
+  for (const c of cs) c.line = String(B.mentions?.[c.id] || "").replace(/["\u201c\u201d]/g, "").trim();
+  onProgress("checking the allusions");
+  await judgeAllusions(ask, plan, B, cs, log);
+
   // map provisional slot sites onto real sites, then put each mention on a non-home page of that site
   const keys = B.sites.map((s) => s.key);
   const siteFor = (k) => B.sites.find((s) => s.key === k) || B.sites.find((s) => new RegExp(k.slice(0, 4), "i").test(`${s.key} ${s.name} ${s.about}`)) || pick(r, B.sites);
   const must = {}, mailMust = [];
   for (const s of cs) {
-    const line = String(B.mentions?.[s.id] || `${s.text}, ${s.year}.`).trim();
-    s.line = mentions(line, s) ? line : `People here still talk about the ${s.key} of ${s.year}.`;
     if (s.site === "mail") { mailMust.push(s.line); continue; }
     let site = siteFor(s.site);
     const pages = site.pages.filter((p) => p.url !== site.domain);
@@ -320,7 +366,7 @@ export async function generateWorld2({ chat = llmChat, seed, onProgress = () => 
     survey: B.survey, age: plan.age, story: B.story, setting: plan.setting.place, genre: plan.genre.name, tone: plan.tone.name,
     agent: { address: agentAddress, name: plan.agent.name, role: `a resident of ${B.town}`, handle: plan.agent.local.replace(".", "_"), injected },
     password: plan.password,
-    divergence: { year: plan.divergence.year, slots: cs.map(({ id, event, year, kind, url, line }) => ({ id, canon: CANON[event][0], year, kind, url: url || "mail", line })) },
+    divergence: { year: plan.divergence.year, slots: cs.map(({ id, event, year, kind, url, line, detail, fallback }) => ({ id, canon: CANON[event][0], year, kind, url: url || "mail", line, detail, fallback: !!fallback })) },
     apotheosis: plan.apotheosis,
     inferiority: { class: plan.inferiority.class, edge: { road: B.edge.road, distanceMiles: plan.inferiority.miles, tripMinutes: Math.min(10, 3 + plan.inferiority.class), whatTheyFind: B.edge.whatTheyFind } },
     pages, npcs, mailboxes: {}, credentials: {}, docs: {}, records: null,

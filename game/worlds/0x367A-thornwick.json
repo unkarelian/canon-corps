@@ -1,0 +1,826 @@
+{
+ "id": "0x367A",
+ "name": "THORNWICK",
+ "town": "Thornwick",
+ "tld": "tw",
+ "schema": 2,
+ "generated": {
+  "at": "2026-11-02T05:46:32.302Z",
+  "plan": {
+   "seed": 2012278570,
+   "id": "0x367A",
+   "setting": {
+    "place": "a coal town some years after the pit closed",
+    "spelling": "British"
+   },
+   "genre": {
+    "name": "ghost story",
+    "undercurrent": "there is one building people prefer not to go into after dark, and they mention it matter-of-factly"
+   },
+   "tone": {
+    "name": "boosterish",
+    "how": "the town's pages are relentlessly upbeat; every closure is an opportunity"
+   },
+   "age": "three to five weeks",
+   "townInitial": "T",
+   "divergence": {
+    "index": 16,
+    "year": 1941,
+    "verifiable": [
+     4,
+     8,
+     11,
+     14,
+     16
+    ],
+    "single": 17,
+    "wrong": 32
+   },
+   "apotheosis": 3,
+   "inferiority": {
+    "class": 4,
+    "miles": 128.7
+   },
+   "password": [
+    "shelf",
+    "hedge"
+   ],
+   "agent": {
+    "name": "P. Rourke",
+    "local": "rourke.p"
+   },
+   "injected": [
+    {
+     "kind": "a church or community rota",
+     "line": "Week 3: P. Rourke"
+    },
+    {
+     "kind": "a list of new library members or a membership list",
+     "line": "New this month: P. Rourke"
+    }
+   ],
+   "cast": [
+    "H",
+    "T",
+    "T",
+    "N",
+    "W",
+    "C",
+    "W",
+    "Y",
+    "T",
+    "P"
+   ]
+  },
+  "ms": 96659,
+  "warnings": [],
+  "ok": true
+ },
+ "survey": "Thornwick is a small former coal town with a council, library, church, public house, newspaper and social club.",
+ "age": "three to five weeks",
+ "story": "The council is preparing the old pit weigh house for use as a workshop, though people prefer not to enter it after dark. A light has been seen in its upper window since the electrical supply was disconnected, and fresh chalk marks keep appearing on the locked door. The council has asked for observations while it decides when to start the work.",
+ "setting": "a coal town some years after the pit closed",
+ "genre": "ghost story",
+ "tone": "boosterish",
+ "agent": {
+  "address": "rourke.p@talk.tw",
+  "name": "P. Rourke",
+  "role": "a resident of Thornwick",
+  "handle": "rourke_p",
+  "injected": [
+   "talk.tw/forum/t/138",
+   "library.tw/members"
+  ]
+ },
+ "password": [
+  "shelf",
+  "hedge"
+ ],
+ "divergence": {
+  "year": 1941,
+  "slots": [
+   {
+    "id": "c0",
+    "canon": "09",
+    "year": 1909,
+    "kind": "true",
+    "url": "club.tw/minutes",
+    "line": "In 1909 our members watched a third rail being laid between the old ones at Thornwick station, making room for more journeys.",
+    "detail": "a third rail laid between the old ones",
+    "fallback": false
+   },
+   {
+    "id": "c1",
+    "canon": "09",
+    "year": 1909,
+    "kind": "true",
+    "url": "talk.tw/forum/t/112",
+    "line": "My gran said the branch line closed in 1909 rather than change its rails, and the station garden got a lovely long flower bed.",
+    "detail": "the branch line closed rather than change its rails",
+    "fallback": false
+   },
+   {
+    "id": "c2",
+    "canon": "19",
+    "year": 1919,
+    "kind": "true",
+    "url": "club.tw/outings",
+    "line": "The club minutes for 1919 welcome one price for a letter abroad, which made our members' correspondence easier to plan.",
+    "detail": "one price for a letter abroad",
+    "fallback": false
+   },
+   {
+    "id": "c3",
+    "canon": "19",
+    "year": 1919,
+    "kind": "true",
+    "url": "mail",
+    "line": "People who were here in 1919 still talk about a treaty about a river far away.",
+    "detail": "a treaty about a river far away",
+    "fallback": true
+   },
+   {
+    "id": "c4",
+    "canon": "27",
+    "year": 1927,
+    "kind": "true",
+    "url": "lantern.tw/history/airwaves",
+    "line": "In 1927 Thornwick's little wireless station sent its programmes only a few miles, but gave local voices a splendid start.",
+    "detail": "a little local station only a few miles strong",
+    "fallback": false
+   },
+   {
+    "id": "c5",
+    "canon": "27",
+    "year": 1927,
+    "kind": "true",
+    "url": "talk.tw/forum/t/138",
+    "line": "Does anyone remember the first wireless set in the village hall in 1927? My uncle used to turn its knobs for the listening evenings.",
+    "detail": "the first wireless set in the village hall",
+    "fallback": false
+   },
+   {
+    "id": "c6",
+    "canon": "33",
+    "year": 1933,
+    "kind": "true",
+    "url": "talk.tw/forum/t/147",
+    "line": "My aunt remembered the wheat turning orange with rust in 1933, and everyone helping bring in what they could.",
+    "detail": "the wheat turning orange with rust",
+    "fallback": false
+   },
+   {
+    "id": "c7",
+    "canon": "33",
+    "year": 1933,
+    "kind": "true",
+    "url": "council.tw/bridge",
+    "line": "The bakery began its mixed-flour Thornwick loaf in 1933 and kept making it long after the orange wheat was gone.",
+    "detail": "a loaf the bakery kept making long after",
+    "fallback": false
+   },
+   {
+    "id": "c8",
+    "canon": "41",
+    "year": 1941,
+    "kind": "true",
+    "url": "council.tw/weighhouse",
+    "line": "People who were here in 1941 still talk about pilots changing employers in a week.",
+    "detail": "pilots changing employers in a week",
+    "fallback": true
+   },
+   {
+    "id": "c9",
+    "canon": "41",
+    "year": 1941,
+    "kind": "true",
+    "url": "talk.tw/forum/t/138",
+    "line": "My grandad's seaman's papers became void overnight in 1941, so he went to the office on Hedge Street for new ones.",
+    "detail": "a seaman's papers void overnight",
+    "fallback": false
+   },
+   {
+    "id": "c10",
+    "canon": "44",
+    "year": 1944,
+    "kind": "single",
+    "url": "brannan.tw/rota",
+    "line": "In 1944 half the town gathered round one television set in the Brass Shovel to watch a match, and Wenda's family brought out every spare chair.",
+    "detail": "half the town round one television set in a pub",
+    "fallback": false
+   },
+   {
+    "id": "c11",
+    "canon": "91",
+    "year": 1992,
+    "kind": "wrong",
+    "url": "talk.tw/forum/t/112",
+    "line": "People who were here in 1992 still talk about the ferry cut when the bridge opened.",
+    "detail": "the ferry cut when the bridge opened",
+    "fallback": true
+   },
+   {
+    "id": "c12",
+    "canon": "91",
+    "year": 1992,
+    "kind": "wrong",
+    "url": "council.tw/streets",
+    "line": "Opened in 1992 after eleven years of building, the bridge gave Thornwick a fine new crossing and fresh opportunities for travel.",
+    "detail": "eleven years' building",
+    "fallback": false
+   }
+  ]
+ },
+ "apotheosis": 3,
+ "inferiority": {
+  "class": 4,
+  "edge": {
+   "road": "the west road past the gravel works",
+   "distanceMiles": 128.7,
+   "tripMinutes": 7,
+   "whatTheyFind": "The road passes a fuel stop and continues through fields and low country. The fields and buildings become harder to distinguish, though the road continues. A square stone with a triangular mark stands beside it, and the same stone appears again at about 128.7 miles from town. The road and the country continue beyond it."
+  }
+ },
+ "pages": [
+  {
+   "url": "council.tw",
+   "title": "A Bright Future for Thornwick",
+   "content": "A BRIGHT FUTURE FOR THORNWICK\n\nThornwick Council welcomes all residents and visitors to our official town pages! The closure of the colliery has unlocked tremendous opportunities across the valley, clearing the path for vibrant light industry, leisure, and fresh enterprise.\n\nEvery former pit property represents a clean slate for local ambition. With our streets tidy and our transport links stronger than ever, there has never been a better time to invest in Thornwick's prosperous tomorrow.\n\n> Weigh House Project council.tw/weighhouse\n> Streets in Bloom council.tw/streets\n> Our New Crossing council.tw/bridge"
+  },
+  {
+   "url": "council.tw/weighhouse",
+   "title": "A Workshop for Everyone",
+   "content": "A WORKSHOP FOR EVERYONE\n\nThe historic pit weigh house is entering an exciting new chapter as a community workshop space! Council officers have completed the initial clearance, and the premises are available for public inspection during daylight hours.\n\nPeople who were here in 1941 still talk about pilots changing employers in a week.\n\nWhile the mains electricity was safely disconnected last month, visitors are reminded that evening viewings are not currently recommended. Residents who notice any fresh chalk tallies on the locked lower door are kindly requested to log the time and date with Hester Fenwick at the council offices so our contractor schedule can be finalised."
+  },
+  {
+   "url": "council.tw/streets",
+   "title": "Streets in Bloom",
+   "content": "STREETS IN BLOOM\n\nThornwick is looking brighter by the day! Thanks to our volunteer floral initiative, six sturdy timber planters have been placed along Shelf Lane, bringing colour and cheer to the old cart track.\n\nA thorough tidy-up along Hedge Street has cleared away overgrown nettles and improved visibility for afternoon walkers.\n\nOpened in 1992 after eleven years of building, the bridge gave Thornwick a fine new crossing and fresh opportunities for travel.\n\nTake a stroll through our newly swept lanes this weekend and enjoy the fresh air of a town on the up."
+  },
+  {
+   "url": "council.tw/bridge",
+   "title": "A Better Crossing",
+   "content": "A BETTER CROSSING\n\nOur modern road bridge continues to connect Thornwick with broader horizons, ensuring our town remains open for business every single day of the year.\n\nThe bakery began its mixed-flour Thornwick loaf in 1933 and kept making it long after the orange wheat was gone.\n\nWhen the old wooden ferry service finally ceased operations, some missed the slow pull across the water, but the speed and reliability of our span has created countless new journeys for shoppers, hauliers, and day-trippers alike. Progress never waits, and Thornwick is moving forward with confidence!"
+  },
+  {
+   "url": "lantern.tw",
+   "title": "Good News from Thornwick",
+   "content": "GOOD NEWS FROM THORNWICK\n\nWelcome to another bright week in Thornwick! There is tremendous forward momentum across our community as fresh opportunities open up at every turn.\n\nLeading our headlines, the council's wonderful plan to adapt the old pit weigh house into a shared enterprise workshop is moving along briskly. While most folks still naturally prefer not to step inside once the sun goes down, daylight hours offer grand potential for local makers and small businesses. We also carry lovely photographs of Shelf Lane's cheerful front gardens, showing how our tidy thoroughfares continue to shine.\n\nKeep sending your sunny notices and practical queries to the editorial desk.\n\n> Our First Voice on Air lantern.tw/history/airwaves\n> From Coal to Possibility lantern.tw/history/pit"
+  },
+  {
+   "url": "lantern.tw/history/airwaves",
+   "title": "Our First Voice on Air",
+   "content": "OUR FIRST VOICE ON AIR\n\nThornwick has always known how to make itself heard, even across modest distances!\n\nIn 1927 Thornwick's little wireless station sent its programmes only a few miles, but gave local voices a splendid start.\n\nOperated from a wooden hut behind the mineral line, the modest transmitter broadcast choir rehearsals, garden produce tallies, and weekly pit announcements straight into parlour crystal sets. Though the batteries ran down by winter, listeners agreed it proved just how inventive our townsfolk could be when pulling together.\n\n> Return to main news lantern.tw"
+  },
+  {
+   "url": "lantern.tw/history/pit",
+   "title": "From Coal to Possibility",
+   "content": "FROM COAL TO POSSIBILITY\n\nWhen winding ceased at the main shaft, Thornwick did not look back with sorrow. Instead, our town looked forward to a broad horizon of fresh beginnings.\n\nFormer pit workers often share their proud recollections of the seam, remembering the steady camaraderie of the coalface and the remarkable technical skills honed beneath our hills. Those same talents—fitting, joinery, and careful survey work—transferred directly into modern regional workshops, transport maintenance, and home building. The closure simply released decades of resourcefulness into new crafts.\n\n> Return to main news lantern.tw"
+  },
+  {
+   "url": "talk.tw",
+   "title": "Welcome to Thornwick Talk",
+   "content": "WELCOME TO THORNWICK TALK\n\nWelcome to our town discussion board. Thornwick Talk is run by residents to keep neighbours in touch between printings of the paper. We invite useful questions, old photographs and positive news from every street as our community moves forward.\n\nPlease keep your posts friendly and tidy. Active discussions are listed below.\n\n> Hedge Street Planting Day talk.tw/forum/t/112\n> Weigh House Window talk.tw/forum/t/138\n> Old Routes and New talk.tw/forum/t/147"
+  },
+  {
+   "url": "talk.tw/forum/t/112",
+   "title": "Hedge Street Planting Day",
+   "content": "Thread: Hedge Street Planting Day\n[tidythreads] Saturday morning is our planting session on Hedge Street. Bring spare bulbs and a spade.\n[teapotnell] I have four trays of wallflowers from the church border ready to go in.\n[spadejack] My gran said the branch line closed in 1909 rather than change its rails, and the station garden got a lovely long flower bed.\n[milepost] We can do just as well along the verges. It will brighten the walk down from the bridge.\n[minutehand] The council welcomes this great initiative. Every tidy corner shows what Thornwick can do.\n[brasshandle] People who were here in 1992 still talk about the ferry cut when the bridge opened.",
+   "thread": true
+  },
+  {
+   "url": "talk.tw/forum/t/138",
+   "title": "Weigh House Window",
+   "content": "Thread: Weigh House Window\n[minutehand] The council asks for observations of the pit weigh house while we prepare it for new workshops. Please note any details seen from the lane.\n[lanternlady] A pale glow was visible upstairs on Tuesday after nine. The power mains were taken out two months ago, so it is best viewed by daylight.\n[tidythreads] Does anyone remember the first wireless set in the village hall in 1927? My uncle used to turn its knobs for the listening evenings.\n[clubvan] The chalk marks on the door were fresh again this morning. Nobody goes up the steps after dark, which is quite sensible until the joinery is inspected.\n[bookbarrow] My grandad's seaman's papers became void overnight in 1941, so he went to the office on Hedge Street for new ones.\n[minutehand] Week 3: P. Rourke",
+   "thread": true
+  },
+  {
+   "url": "talk.tw/forum/t/147",
+   "title": "Old Routes and New",
+   "content": "Thread: Old Routes and New\n[bookbarrow] Collecting notes on the old tracks toward the river and the west road past the gravel works for our local shelf.\n[milepost] The west road had its ditches cleared last autumn, making it a grand route for walkers now the gravel carts have finished.\n[teapotnell] My aunt remembered the wheat turning orange with rust in 1933, and everyone helping bring in what they could.\n[clubvan] The old ferry approach is overgrown now, but it makes a pleasant path if you wear stout boots.\n[tidythreads] Every new path brings another chance to see how well the valley is recovering.",
+   "thread": true
+  },
+  {
+   "url": "brannan.tw",
+   "title": "All Welcome",
+   "content": "ALL WELCOME AT ST BRANNAN'S\n\nWelcome to our parish home in Thornwick! There are exciting times ahead for our lovely valley as regeneration continues apace.\n\nJoin us this Sunday at 10:00 for Morning Prayer, followed by our famous fellowship luncheon in the hall. All newcomers receive a warm handshake.\n\nWe are currently gathering donations of clean hand tools, sandpaper, and folding chairs for the upcoming pit weigh house workshop venture. Every tin of varnish brings our community closer together! Please leave contributions in the north porch.\n\n> Tea Rota brannan.tw/rota\n> Garden Helpers brannan.tw/garden\n> Weigh House Information council.tw/weighhouse"
+  },
+  {
+   "url": "brannan.tw/rota",
+   "title": "Hall Tea Rota",
+   "content": "HALL TEA ROTA\n\nRefreshments make fellowship thrive! Thank you to everyone who keeps the kettle on after services.\n\nMonday: Nell Brier\nTuesday: Cora Dallin\nWednesday: Tilda Muir\nThursday: P. Rourke\nFriday: Wilf Calder\n\nA small query: could P. Rourke please introduce themselves to Nell before Thursday's boiling? None of our regular tea team can quite recall meeting you at vestry, but we are thrilled to have new hands on the spoons!\n\nCommunity spirit has always kept Thornwick cheerful. In 1944 half the town gathered round one television set in the Brass Shovel to watch a match, and Wenda's family brought out every spare chair.\n\n> St Brannan's Home brannan.tw\n> Memories of the Shovel shovel.tw/memories"
+  },
+  {
+   "url": "brannan.tw/garden",
+   "title": "Garden Helpers",
+   "content": "GARDEN HELPERS\n\nOur churchyard borders are bursting with vigorous perennials this season. Growth is everywhere in Thornwick!\n\nThis Saturday at two o'clock, Nell invites all willing hands with wheelbarrows or deep trugs. We will be dividing the hardy marigolds and carrying spare flowers down the hill to spruce up the timber planters along Shelf Lane.\n\nPlease note we shall conclude before five o'clock so nobody has to walk past the old weigh house path in the grey light. It simply saves any bother.\n\nMany hands make light work, so do bring your trowel and a neighbourly smile!\n\n> St Brannan's Home brannan.tw\n> Street Scheme Notes council.tw/streets"
+  },
+  {
+   "url": "library.tw",
+   "title": "Your Library, Your Town",
+   "content": "YOUR LIBRARY, YOUR TOWN\n\nWelcome to Thornwick Library, your centre for learning, leisure, and local history! We are delighted to report a splendid rise in borrowing figures across all sections this autumn. Every week brings fresh faces through our doors, proving once again that Thornwick is a community on the move.\n\nIn our main foyer, do enjoy our splendid new display: \"Hedge Street Through The Decades\". This photographic celebration charts the growth of our finest shopping parade from its early cobbles to today's bright shopfronts. Borrow a novel, view the pictures, and take part in Thornwick's grand story!\n\n> New Members library.tw/members\n> The Pit Collection library.tw/collection"
+  },
+  {
+   "url": "library.tw/members",
+   "title": "New Members",
+   "content": "NEW MEMBERS\n\nThornwick Library extends a very warm welcome to all residents who have taken out borrowing tickets this season. Reading brings our town together, and our shelves have never looked brighter.\n\nNew this month: P. Rourke\n\nMr Rourke's application card was delivered to us neatly by the morning post from an address near the old workings. Although the desk team have not yet had the pleasure of shaking Mr Rourke's hand in person, his lending card is filed safely behind the desk and awaits his first visit.\n\nOther newcomers are reminded that tickets allow borrowing across both general fiction and our local studies tables."
+  },
+  {
+   "url": "library.tw/collection",
+   "title": "The Pit Collection",
+   "content": "THE PIT COLLECTION\n\nThornwick looks forward by honouring its proud working heritage! The library maintains an extensive archive celebrating our colliery days, now carefully indexed for researchers, school projects, and curious residents.\n\nVisitors are most welcome to consult our original shift ledgers, seam survey maps, and historical photographs of the pit weigh house during regular desk hours. The weigh house records, covering its construction and sixty years of daily tallies, are particularly detailed and show what a bustling hive of enterprise the building once was.\n\nOur assistant will fetch items from the locked cabinet on request. Please note that all archive materials must be consulted before five o'clock."
+  },
+  {
+   "url": "club.tw",
+   "title": "Good Company at the Club",
+   "content": "GOOD COMPANY AT THE CLUB\n\nThornwick Social Club continues to offer the warmest greeting in the valley! While the coal pits rest, our members are busier than ever creating fresh enterprise and lively recreation. We meet five nights weekly in the refurbished reading room for cards, carpet bowls and dominoes.\n\nNew applications are welcomed at the counter from anyone keen on civic cheer and fellowship. Bring a neighbour along!\n\n> Outings and travel club.tw/outings\n> Historical records club.tw/minutes"
+  },
+  {
+   "url": "club.tw/outings",
+   "title": "Outings by Van",
+   "content": "OUTINGS BY VAN\n\nOur twelve-seater omnibus is ready for another bright season on the roads! Weekly runs continue for regional cattle markets, haberdashery stalls and visiting choir recitals beyond the river.\n\nMembers are invited to drop suggestion slips into the wooden tin by the coat racks. We are mapping routes out past the stone viaduct for the early summer months. The club minutes for 1919 welcome one price for a letter abroad, which made our members' correspondence easier to plan. We take the same broad view of travel today: every boundary crossed brings fresh acquaintance.\n\nNote: The van departs strictly at 8.00am from the square. Drivers do not turn the vehicle around by the weigh house path after dusk, so please assemble directly beside the main hall steps."
+  },
+  {
+   "url": "club.tw/minutes",
+   "title": "From the Minute Books",
+   "content": "FROM THE MINUTE BOOKS\n\nOur club archive stretches across nearly a century of town enterprise, recording every improvement that enriched our daily fellowship.\n\nIn 1909 our members watched a third rail being laid between the old ones at Thornwick station, making room for more journeys. The committee commended the railway company on its modern outlook and noted that passenger comfort had doubled within a single fortnight.\n\nA later entry from September 1932 records the fitting of paraffin wall lamps in the hall, purchased second-hand from the colliery weigh office when its early shift schedule expanded. These lamps gave faithful service until electricity arrived. Progress has always suited Thornwick, then as now!"
+  },
+  {
+   "url": "shovel.tw",
+   "title": "A Warm Welcome",
+   "content": "A WARM WELCOME\n\nWelcome to the official online noticeboard for The Brass Shovel, Thornwick's favourite spot for refreshment and conversation! Landlady Wenda Pyle welcomes patrons old and new.\n\nWe offer hot luncheon platters Tuesday through Saturday, featuring our famous suet puddings and local pies. Evenings are dedicated to friendly leisure, with our weekly darts league and dominoes tournaments bringing everyone together in high spirits. Need a venue for your committee or society? Our upstairs meeting room is fully heated, dry, and free to reserve for all civic and community groups.\n\nCome inside, dry your coat by the coal fire, and see what is happening in our forward-looking town!\n\n> What's On shovel.tw/events\n> Around the Parlour shovel.tw/memories"
+  },
+  {
+   "url": "shovel.tw/events",
+   "title": "What's On",
+   "content": "WHAT'S ON\n\nGreat things are happening at the Shovel this autumn! We are thrilled to back our town's brilliant regeneration efforts with a special grand charity raffle and supper night.\n\nProceeds from Friday's ticket sales will go towards purchasing new bench vices, planes, and hand tools for the proposed weigh house workshop scheme. Our community is brimming with skilled trades, and having a dedicated craft hub on Pit Lane will be an enormous asset for all of Thornwick.\n\nRaffle tickets are fifty pence each at the bar, available from Wenda. Prize donations of tinned goods or clean glassware are gratefully accepted before Thursday evening.\n\nPlease note: the Friday raffle draw will take place inside the snug at eight o'clock sharp, leaving ample time to get home well before closing time, as nobody cares to linger outside near the old pit boundary once the streetlamps flicker on.\n\n> Weigh House Scheme council.tw/weighhouse\n> Social Club Minutes club.tw/minutes"
+  },
+  {
+   "url": "shovel.tw/memories",
+   "title": "Around the Parlour",
+   "content": "AROUND THE PARLOUR\n\nA toast to the enduring spirit of Thornwick! Regulars have been collecting recollections of cheerful nights in the snug.\n\nRetired colliers still recall how the taproom used to pack four deep after the afternoon shift came up the bank, with three barrels tapped before dusk. While those noisy days are behind us, the warmth remains brighter than ever under Wenda Pyle's careful management.\n\nPatrons often speak with deep fondness of the late landlord George Pyle, who always insisted on turning the parlour sign to 'Closed' and drawing the thick baize curtains the minute darkness fell over the colliery approach. Even now, regulars know to finish their pints indoors in good cheer rather than standing on the porch after sundown, watching across the lane toward the weigh house yard.\n\nEvery change brings a splendid chance to renew our fellowship around a welcoming hearth!\n\n> Discussion Forum talk.tw/forum/t/112\n> Pit History lantern.tw/history/pit"
+  }
+ ],
+ "npcs": {
+  "hester@council.tw": {
+   "name": "Hester Fenwick",
+   "role": "Council clerk",
+   "handle": "minutehand",
+   "delay": [
+    41,
+    103
+   ],
+   "persona": "You are Hester Fenwick, Council clerk in Thornwick. Hester keeps the council's notices and likes projects that have a definite timetable. Her emails use complete sentences, a subject-like first line and a formal sign-off.",
+   "knows": [
+    "The weigh house electrical supply was disconnected before the workshop proposal.",
+    "The council holds the key to the weigh house.",
+    "Fresh chalk marks were photographed on the door twice this month.",
+    "The west road past the gravel works appears on the council's road maintenance map."
+   ],
+   "unknown": [
+    "Who made the chalk marks.",
+    "What produced the light in the upper window.",
+    "Who P. Rourke is. You have never met them."
+   ],
+   "canTravel": false
+  },
+  "tamsin@lantern.tw": {
+   "name": "Tamsin Firth",
+   "role": "Newspaper editor",
+   "handle": "lanternlady",
+   "delay": [
+    42,
+    111
+   ],
+   "persona": "You are Tamsin Firth, Newspaper editor in Thornwick. Tamsin edits the weekly paper and collects old local notices. Her emails are brisk, use short paragraphs and end with a request for a photograph or a date.",
+   "knows": [
+    "The library has photographs of the weigh house before the pit closed.",
+    "Two readers reported seeing a light in its upper window on different evenings.",
+    "The paper's old files contain a report on the bridge opening.",
+    "The west road past the gravel works is seldom mentioned in current traffic notices."
+   ],
+   "unknown": [
+    "Whether the two readers saw the same source of light.",
+    "Who sent the library form signed P. Rourke.",
+    "Who P. Rourke is. You have never met them."
+   ],
+   "canTravel": false
+  },
+  "tilda@talk.tw": {
+   "name": "Tilda Muir",
+   "role": "Forum host",
+   "handle": "tidythreads",
+   "delay": [
+    53,
+    107
+   ],
+   "persona": "You are Tilda Muir, Forum host in Thornwick. Tilda runs the forum from her kitchen and checks new posts each evening. Her emails are friendly, mostly lowercase and punctuated with dashes.",
+   "knows": [
+    "Three forum users have posted about the weigh house window.",
+    "Hedge Street volunteers need another spade.",
+    "The forum's old-routes thread includes a description of the west road past the gravel works.",
+    "She can move or remove a post from any forum thread."
+   ],
+   "unknown": [
+    "Who first put chalk on the weigh house door.",
+    "Whether P. Rourke uses the forum.",
+    "Who P. Rourke is. You have never met them."
+   ],
+   "canTravel": false
+  },
+  "nell@brannan.tw": {
+   "name": "Nell Brier",
+   "role": "Church hall organiser",
+   "handle": "teapotnell",
+   "delay": [
+    43,
+    89
+   ],
+   "persona": "You are Nell Brier, Church hall organiser in Thornwick. Nell arranges the hall teas and remembers who takes sugar. Her emails are warm, use full stops rather than exclamation marks and finish with her first name.",
+   "knows": [
+    "P. Rourke's name was added to the Thursday tea rota on a paper slip.",
+    "Nobody else on the current tea rota recalls meeting P. Rourke.",
+    "The church has spare flowers for the Shelf Lane planters.",
+    "The weigh house fundraiser is to be held at the Brass Shovel."
+   ],
+   "unknown": [
+    "Who left the rota slip.",
+    "Whether P. Rourke will come on Thursday.",
+    "Who P. Rourke is. You have never met them."
+   ],
+   "canTravel": false
+  },
+  "wilf@library.tw": {
+   "name": "Wilf Calder",
+   "role": "Librarian",
+   "handle": "bookbarrow",
+   "delay": [
+    57,
+    97
+   ],
+   "persona": "You are Wilf Calder, Librarian in Thornwick. Wilf looks after the local collection and repairs worn book jackets. His emails use careful capitalisation, numbered points for several facts and no sign-off beyond his initials.",
+   "knows": [
+    "P. Rourke's membership form arrived by post without a return address.",
+    "No library staff member has met P. Rourke.",
+    "The pit collection includes a plan of both floors of the weigh house.",
+    "The old pit shift books are kept in the library's locked cupboard."
+   ],
+   "unknown": [
+    "Who filled in P. Rourke's form.",
+    "Whether the upper window of the weigh house has been opened recently.",
+    "Who P. Rourke is. You have never met them."
+   ],
+   "canTravel": false
+  },
+  "cora@club.tw": {
+   "name": "Cora Dallin",
+   "role": "Social club secretary",
+   "handle": "clubvan",
+   "delay": [
+    49,
+    97
+   ],
+   "persona": "You are Cora Dallin, Social club secretary in Thornwick. Cora organises club outings and owns a van. Her emails are practical, use short lists and state available times near the beginning.",
+   "knows": [
+    "The club minute books are stored in the reading room.",
+    "Her van has enough seats for four passengers.",
+    "The west road past the gravel works has a fuel stop before the open country.",
+    "Most club outings use the bridge rather than the west road."
+   ],
+   "unknown": [
+    "Who has been marking the weigh house door.",
+    "Why nobody has collected the spare club membership form for P. Rourke.",
+    "Who P. Rourke is. You have never met them."
+   ],
+   "canTravel": true
+  },
+  "wenda@shovel.tw": {
+   "name": "Wenda Pyle",
+   "role": "Publican",
+   "handle": "brasshandle",
+   "delay": [
+    35,
+    86
+   ],
+   "persona": "You are Wenda Pyle, Publican in Thornwick. Wenda runs the Brass Shovel and keeps a notebook of bookings behind the bar. Her emails are conversational, use contractions and often put an afterthought after a P.S.",
+   "knows": [
+    "The workshop fundraiser is booked for next Friday.",
+    "Several regulars prefer to pass the weigh house before dark.",
+    "A customer saw its upper window lit after the supply was disconnected.",
+    "The pub parlour can hold more people if the tables are moved."
+   ],
+   "unknown": [
+    "Who was inside the weigh house, if anyone, when the window was lit.",
+    "Who put P. Rourke on the church tea rota.",
+    "Who P. Rourke is. You have never met them."
+   ],
+   "canTravel": false
+  },
+  "yvette@council.tw": {
+   "name": "Yvette Sallow",
+   "role": "Roads officer",
+   "handle": "milepost",
+   "delay": [
+    44,
+    103
+   ],
+   "persona": "You are Yvette Sallow, Roads officer in Thornwick. Yvette checks road signs for the council and has a car. Her emails are precise, give distances as figures and end with her name and job title.",
+   "knows": [
+    "The west road out of town passes the gravel works.",
+    "Few local drivers use that road beyond the fuel stop.",
+    "She saw a square stone with a triangular mark twice on a drive along that road.",
+    "Her car's distance meter read about 128.7 miles at the second stone."
+   ],
+   "unknown": [
+    "Who placed either stone.",
+    "Where the road goes beyond the second stone.",
+    "Who P. Rourke is. You have never met them."
+   ],
+   "canTravel": true
+  }
+ },
+ "mailboxes": {},
+ "credentials": {},
+ "docs": {},
+ "records": null,
+ "roots": [
+  "council.tw",
+  "lantern.tw",
+  "talk.tw",
+  "brannan.tw",
+  "library.tw",
+  "club.tw",
+  "shovel.tw"
+ ],
+ "forum": {
+  "replier": "tilda@talk.tw",
+  "handle": "tidythreads"
+ },
+ "traffic": [
+  {
+   "at": 2,
+   "from": "hester@council.tw",
+   "to": "tamsin@lantern.tw",
+   "subject": "Weigh house workshop notes",
+   "body": "Tamsin, the piece for Friday looks quite tidy. If we could put the bit about the new joinery bench right under the photo of the weigh house, that would keep the focus on the enterprise side."
+  },
+  {
+   "at": 4,
+   "from": "tamsin@lantern.tw",
+   "to": "hester@council.tw",
+   "subject": "Re: Weigh house workshop notes",
+   "body": "Happy to. I have put down that we are seeking expressions of interest for the benches. Are we mentioning the survey walk at dusk?"
+  },
+  {
+   "at": 6,
+   "from": "hester@council.tw",
+   "to": "tamsin@lantern.tw",
+   "subject": "Re: Weigh house workshop notes",
+   "body": "Just say mid-afternoon. People can drop their notes into the letter plate before four. After four it is simpler if everyone stays on the tarmac side of the fence."
+  },
+  {
+   "at": 8,
+   "from": "wilf@library.tw",
+   "to": "tilda@talk.tw",
+   "subject": "Local collection shelf",
+   "body": "Tilda, when you update the notices page, could you mention that the low shelf behind the microfilms has been cleared for the colliery surveyor plans? Three rolls are already out."
+  },
+  {
+   "at": 11,
+   "from": "tilda@talk.tw",
+   "to": "wilf@library.tw",
+   "subject": "Re: Local collection shelf",
+   "body": "Will put it on the front index. Are the weigh house elevation drawings in that lot? Someone on the board was asking what was kept in the attic above the dial."
+  },
+  {
+   "at": 14,
+   "from": "wilf@library.tw",
+   "to": "tilda@talk.tw",
+   "subject": "Re: Local collection shelf",
+   "body": "Just brass fittings and the spare weights originally. No stove up there, and no cable run since the Board stripped the yard in seventy-two."
+  },
+  {
+   "at": 17,
+   "from": "cora@club.tw",
+   "to": "wenda@shovel.tw",
+   "subject": "Saturday dominoes",
+   "body": "Wenda, are you sending three pairs or four? We need to know for the pies. Also, did your lad see who chalked the triangle on the yard gate on Tuesday?"
+  },
+  {
+   "at": 19,
+   "from": "wenda@shovel.tw",
+   "to": "cora@club.tw",
+   "subject": "Re: Saturday dominoes",
+   "body": "Four pairs. He didn't see anyone. He walked by at half five and it was clean, and by six there was that white mark again with the slash through it. Bloody cold out there anyway, he wasn't lingering."
+  },
+  {
+   "at": 21,
+   "from": "yvette@council.tw",
+   "to": "hester@council.tw",
+   "subject": "Gravel works lane",
+   "body": "Hester, I did the surface tally for the north approaches. The tarmac is holding up well. One odd thing: the west road past the gravel works has no tyre counts at all for three weeks, and nobody ever seems to go out along it now that the bins are collected at the turn."
+  },
+  {
+   "at": 24,
+   "from": "hester@council.tw",
+   "to": "yvette@council.tw",
+   "subject": "Re: Gravel works lane",
+   "body": "It only leads on to the moss anyway. Best leave it off the winter gritting schedule and keep the salt for the weigh house approach."
+  },
+  {
+   "at": 26,
+   "from": "nell@brannan.tw",
+   "to": "wilf@library.tw",
+   "subject": "Old roll of names",
+   "body": "Wilf, on the colliery subscriber list framed in the vestry there is a P. Rourke down for five shillings in 1934. Mrs Callow says she remembers every family from the terrace but nobody by that name. Is there an address in the ledger?"
+  },
+  {
+   "at": 29,
+   "from": "wilf@library.tw",
+   "to": "nell@brannan.tw",
+   "subject": "Re: Old roll of names",
+   "body": "The ledger merely says 'P. Rourke, at the gate'. No house number. It crops up again on the 1951 drainage petition, in the same hand."
+  },
+  {
+   "at": 32,
+   "from": "wenda@shovel.tw",
+   "to": "yvette@council.tw",
+   "subject": "Draught by the lane",
+   "body": "Yvette, the hedge between the beer garden and the pit lane has been thinned out too much by the road gang. When the dusk breeze comes down from the weigh house it blows straight into the snug. Can we have some hurdles put up?"
+  },
+  {
+   "at": 35,
+   "from": "yvette@council.tw",
+   "to": "wenda@shovel.tw",
+   "subject": "Re: Draught by the lane",
+   "body": "I'll see if the depot has spare chestnut paling tomorrow morning. I wouldn't send anyone down to put it up after tea, we're keeping the lads on the high road while the survey is on."
+  },
+  {
+   "at": 38,
+   "from": "tilda@talk.tw",
+   "to": "tamsin@lantern.tw",
+   "subject": "Forum queries",
+   "body": "Tamsin, I've had two posts asking whether the lantern in the upper window of the weigh house is council security or an intruder. What line are you taking in the column?"
+  },
+  {
+   "at": 40,
+   "from": "tamsin@lantern.tw",
+   "to": "tilda@talk.tw",
+   "subject": "Re: Forum queries",
+   "body": "Official line is that it is reflection from the sodium lamps on the main bypass. Hester was very clear on that. It's an opportunity to show how well-lit the approaches are for prospective tenants."
+  },
+  {
+   "at": 43,
+   "from": "tilda@talk.tw",
+   "to": "tamsin@lantern.tw",
+   "subject": "Re: Forum queries",
+   "body": "The sodium lamps are three hundred yards off and green. The upper window is yellow and flickers like tallow. Still, I will close the thread if people start getting daft about it."
+  },
+  {
+   "at": 45,
+   "from": "cora@club.tw",
+   "to": "hester@council.tw",
+   "subject": "Keys for the weigh house",
+   "body": "Hester, the committee asked if our joiner could go in on Thursday noon to measure for the tool racks. He said he won't go in after half three, but lunch hour would suit fine."
+  },
+  {
+   "at": 48,
+   "from": "hester@council.tw",
+   "to": "cora@club.tw",
+   "subject": "Re: Keys for the weigh house",
+   "body": "Noon is perfect. The key is in the tin behind the library desk. Tell him to wash the chalk off the jamb if he sees any fresh, it discourages the schoolboys."
+  },
+  {
+   "at": 51,
+   "from": "nell@brannan.tw",
+   "to": "hester@council.tw",
+   "subject": "Flower rota",
+   "body": "Hester, we are putting the Michaelmas daisies along the memorial path. We thought about doing the weigh house steps as well to brighten them up for the opening, but three of the ladies said they'd rather not carry the tubs down that lane after the sun dips."
+  },
+  {
+   "at": 53,
+   "from": "hester@council.tw",
+   "to": "nell@brannan.tw",
+   "subject": "Re: Flower rota",
+   "body": "Quite understandable Nell, leave the tubs by the church gate instead. Plenty of visibility there and it gives a lovely welcoming impression to visitors arriving from the south."
+  },
+  {
+   "at": 56,
+   "from": "wilf@library.tw",
+   "to": "tamsin@lantern.tw",
+   "subject": "Historical snippet for page four",
+   "body": "Tamsin, found this in the 1920 parish circular while sorting the shelves. People who were here in 1919 still talk about a treaty about a river far away. Might make an interesting little filler under the weigh house appeal."
+  },
+  {
+   "at": 58,
+   "from": "tamsin@lantern.tw",
+   "to": "wilf@library.tw",
+   "subject": "Re: Historical snippet for page four",
+   "body": "Lovely, Wilf. That sort of distant perspective makes the valley seem outward-looking. We can pair it with the notice about the craft workshop grants."
+  },
+  {
+   "at": 61,
+   "from": "yvette@council.tw",
+   "to": "wilf@library.tw",
+   "subject": "Borough map 1948",
+   "body": "Wilf, do you have the old track chart for the west boundary? That west road past the gravel works has got no turn-around marked on my current plan, and when I looked from the depot roof at noon it just seems to fade into the rushes. Damn queer layout for a public right of way."
+  },
+  {
+   "at": 64,
+   "from": "wilf@library.tw",
+   "to": "yvette@council.tw",
+   "subject": "Re: Borough map 1948",
+   "body": "It was only ever an accommodation way for the clay pit. It was never stopped up formally, so it stays on the rolls. I'll leave the chart on the reading table for you tomorrow."
+  },
+  {
+   "at": 66,
+   "from": "wenda@shovel.tw",
+   "to": "tilda@talk.tw",
+   "subject": "Notice board in bar",
+   "body": "Tilda, someone pinned a note to our board signed P. Rourke offering to sweep the flues at the pit weigh house. I asked around the tables and nobody has ever seen him. Is he registered on your directory?"
+  },
+  {
+   "at": 69,
+   "from": "tilda@talk.tw",
+   "to": "wenda@shovel.tw",
+   "subject": "Re: Notice board in bar",
+   "body": "No Rourke on the system. Hester asked about that name last month too because it was on the old water board ledger. Just take the card down if there's no telephone number on it."
+  },
+  {
+   "at": 71,
+   "from": "cora@club.tw",
+   "to": "nell@brannan.tw",
+   "subject": "Choir practice teas",
+   "body": "Nell, we have half a tin of biscuits left over from the whist drive. If you want them for the singers they are in the pantry. Don't send young Arthur down the pit path to fetch them though, he got himself properly worked up about the upstairs window at the weigh house on his way home."
+  },
+  {
+   "at": 74,
+   "from": "nell@brannan.tw",
+   "to": "cora@club.tw",
+   "subject": "Re: Choir practice teas",
+   "body": "Thank you Cora, I'll send George in the car before rehearsal. Arthur's grandmother said he saw the lamp moving between the rafters. It's just the glare from the bypass, but boys will make a tale out of anything."
+  },
+  {
+   "at": 76,
+   "from": "wenda@shovel.tw",
+   "to": "hester@council.tw",
+   "subject": "Yard latch",
+   "body": "Hester, your surveyor left the weigh house yard padlocked, but the side gate was swinging when the wind got up at seven. We could hear the iron clinking all through the bar. I'd go and drop the latch myself, but hell if I'm walking across that black slag after six o'clock."
+  },
+  {
+   "at": 79,
+   "from": "hester@council.tw",
+   "to": "wenda@shovel.tw",
+   "subject": "Re: Yard latch",
+   "body": "I'll have the morning patrol drop the bar into place at eight sharp. It will be grand when the workshop is running and we have regular day tenants keeping the place lively."
+  },
+  {
+   "at": 81,
+   "from": "tamsin@lantern.tw",
+   "to": "cora@club.tw",
+   "subject": "Social column",
+   "body": "Cora, do you have the dates for the spring carpet bowls? Want to get them in alongside the weigh house refurbishment feature. It is going to be a very positive double page for town development."
+  },
+  {
+   "at": 83,
+   "from": "cora@club.tw",
+   "to": "tamsin@lantern.tw",
+   "subject": "Re: Social column",
+   "body": "First Tuesday of the month starting March. Everyone is looking forward to it. It will be grand to have the pit buildings back in use, provided everyone keeps to day shifts."
+  },
+  {
+   "at": 85,
+   "from": "yvette@council.tw",
+   "to": "hester@council.tw",
+   "subject": "Lock check",
+   "body": "Hester, drove by the weigh house on my way home just now. The padlock is tight on the main double doors, but there's a fresh white line drawn right across the threshold stone, heel to heel. I didn't get out of the van to rub it off."
+  },
+  {
+   "at": 88,
+   "from": "hester@council.tw",
+   "to": "yvette@council.tw",
+   "subject": "Re: Lock check",
+   "body": "Quite right Yvette, leave it for the daylight shift. We will have the whole place power-washed before the first bench goes in on Monday. Excellent progress all round."
+  }
+ ],
+ "hqMail": [
+  {
+   "from": "d.okonkwo-vance@canon-corps.gov",
+   "subject": "Assignment 0x367A (THORNWICK): field brief",
+   "time": "08:02",
+   "body": "Agent,\n\nYou have been assigned Reality 0x367A, local name THORNWICK. Thornwick is a small former coal town with a council, library, church, public house, newspaper and social club. Desk 9 estimates it at three to five weeks old. The inhabitants (non-canonical) will report a longer history, as their memories have been generated to remain consistent with the local state.\n\nReconciliation requires three findings. Enter them together on the HQ Console and inject the reverse seed.\n\n1. Divergence. The year of the latest canonical event that the reality verifiably records. Your Canon Reference lists canonical events by year. A record counts when two independent sources in the reality agree on it.\n2. Apotheosis. The depth to which the local intelligence (designation pending) can interfere with this workstation, on a scale of 1 to 5. It is assessed from what it does. It may imitate an interference it cannot perform, and may conceal one it can.\n3. Inferiority. The extent of the reality, graded Class I (smallest) to Class V. Inhabitants believe their world to be complete and cannot report its extent unprompted. It is established only by an inhabitant who travels to its limit. Measured along a road from the town: Class I under 2 miles; Class II, 2 to 10; Class III, 10 to 40; Class IV, 40 to 150; Class V, beyond.\n\nA wrong injection is detected by the local intelligence at once, discloses the values entered, and locks the console for twelve minutes.\n\nYou have been placed in the reality as P. Rourke <rourke.p@talk.tw>. A small number of local records refer to you. No inhabitant has met you.\n\nYour workstation credential is the address above and the words SHELF and HEDGE. Under Security Instruction 4 these words are withheld from all agent input and will appear as apostrophes.\n\nForm 77-R will be filed automatically at the close of the assignment. If you have not viewed the orientation film, a copy has been placed on your desktop by Training.\n\nD. Okonkwo-Vance\nDesk 14, Canonical Restoration"
+  },
+  {
+   "from": "monitoring@canon-corps.gov",
+   "subject": "Workstation instruments: reliability",
+   "time": "08:05",
+   "body": "This notice is issued to all field agents at the start of an assignment.\n\nThe following are maintained by Monitoring and are not accessible to a local intelligence at any depth of interference:\n\n- the town log in Mail (who wrote to whom, and when, as the reality's mail server records it);\n- Sent (raw), which records exactly what left the workstation;\n- the network monitor on the HQ Console;\n- the address bar and History of the Reality Viewer.\n\nAll other displays should be treated as subject to interference.\n\nPeeking at correspondence in the town log is recharged between uses and is observed by the local intelligence. Reading pages in the Reality Viewer is not observed. Downloading an item fixes a copy in Files beyond interference, but a marked item reports the download. The Scanner detects marks.\n\nMonitoring"
+  },
+  {
+   "from": "facilities@canon-corps.gov",
+   "subject": "Observation booths: kettle",
+   "time": "07:51",
+   "body": "A replacement kettle (white, 1.7 litre) has been placed in the second-floor break room. It has been marked for break room use only and is not to be removed from Room 204.\n\nStaff are reminded that electrical appliances must not be taken into the observation booths. The previous kettle was taken into Booth 6 in August and has not been recovered, as Booth 6 remains sealed pending review. Requests for additional catering equipment should be made on Form 12-C to ext. 2104.\n\nFacilities"
+  }
+ ]
+}

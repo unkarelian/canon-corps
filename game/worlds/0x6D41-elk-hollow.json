@@ -1,0 +1,832 @@
+{
+ "id": "0x6D41",
+ "name": "ELK HOLLOW",
+ "town": "Elk Hollow",
+ "tld": "eh",
+ "schema": 2,
+ "generated": {
+  "at": "2026-11-02T05:46:45.228Z",
+  "plan": {
+   "seed": 1805645040,
+   "id": "0x6D41",
+   "setting": {
+    "place": "a West Virginia coal camp that outlived its company",
+    "spelling": "American"
+   },
+   "genre": {
+    "name": "inheritance",
+    "undercurrent": "an old family's estate is being settled, and half the town has an interest in how"
+   },
+   "tone": {
+    "name": "sleepy",
+    "how": "nothing has happened for years; half the pages have not been updated since spring"
+   },
+   "age": "about nine days",
+   "townInitial": "E",
+   "divergence": {
+    "index": 13,
+    "year": 1931,
+    "verifiable": [
+     2,
+     4,
+     5,
+     12,
+     13
+    ],
+    "single": 14,
+    "wrong": 19
+   },
+   "apotheosis": 1,
+   "inferiority": {
+    "class": 4,
+    "miles": 122.5
+   },
+   "password": [
+    "bell",
+    "fountain"
+   ],
+   "agent": {
+    "name": "C. Quayle",
+    "local": "quayle.c"
+   },
+   "injected": [
+    {
+     "kind": "a club or quiz results post",
+     "line": "2nd: C. Quayle and partner"
+    },
+    {
+     "kind": "a church or community rota",
+     "line": "Week 3: C. Quayle"
+    }
+   ],
+   "cast": [
+    "P",
+    "E",
+    "M",
+    "K",
+    "Y",
+    "P",
+    "G",
+    "O",
+    "O",
+    "W"
+   ]
+  },
+  "ms": 109628,
+  "warnings": [],
+  "ok": true
+ },
+ "survey": "Elk Hollow, West Virginia, has approximately 640 residents, a council, a church, a lending library, a social club, and a weekly newspaper.",
+ "age": "about nine days",
+ "story": "The Vale family estate includes the former company office, several occupied houses, and a strip of land beside the river landing. A will filed in the spring leaves the houses to their occupants but makes the landing strip subject to an old agreement nobody has found. The executor has postponed selling the office while residents dispute who should maintain the strip and the public fountain on it.",
+ "setting": "a West Virginia coal camp that outlived its company",
+ "genre": "inheritance",
+ "tone": "sleepy",
+ "agent": {
+  "address": "quayle.c@board.eh",
+  "name": "C. Quayle",
+  "role": "a resident of Elk Hollow",
+  "handle": "quayle_c",
+  "injected": [
+   "club.eh/quiz",
+   "council.eh/harbor"
+  ]
+ },
+ "password": [
+  "bell",
+  "fountain"
+ ],
+ "divergence": {
+  "year": 1931,
+  "slots": [
+   {
+    "id": "c0",
+    "canon": "04",
+    "year": 1904,
+    "kind": "true",
+    "url": "ledger.eh/estate",
+    "line": "People who were here in 1904 still talk about the grain houses failing in October.",
+    "detail": "the grain houses failing in October",
+    "fallback": true
+   },
+   {
+    "id": "c1",
+    "canon": "04",
+    "year": 1904,
+    "kind": "true",
+    "url": "church.eh/repairs",
+    "line": "After the grain exchange failed in 1904, the church cut its roof repair fund by half.",
+    "detail": "the repair fund cut by half after the exchange failed",
+    "fallback": false
+   },
+   {
+    "id": "c2",
+    "canon": "09",
+    "year": 1909,
+    "kind": "true",
+    "url": "club.eh/quiz",
+    "line": "The branch line closed in 1909 rather than change its rails, leaving the club to fetch its supplies by road.",
+    "detail": "the branch line closed rather than change its rails",
+    "fallback": false
+   },
+   {
+    "id": "c3",
+    "canon": "09",
+    "year": 1909,
+    "kind": "true",
+    "url": "mail",
+    "line": "I found a note saying the branch had ten years to convert its rails, but in 1909 they closed it instead.",
+    "detail": "ten years to convert the line",
+    "fallback": false
+   },
+   {
+    "id": "c4",
+    "canon": "12",
+    "year": 1912,
+    "kind": "true",
+    "url": "council.eh/coal",
+    "line": "In 1912, Elk Hollow's council received nine airmen at the river harbor and borrowed chairs from the schoolhouse for their supper.",
+    "detail": "nine airmen received at the harbour",
+    "fallback": false
+   },
+   {
+    "id": "c5",
+    "canon": "12",
+    "year": 1912,
+    "kind": "true",
+    "url": "ledger.eh/history/airship",
+    "line": "An airship touring the ports stopped at our river harbor in 1912, and nine airmen came ashore for supper.",
+    "detail": "an airship tour of the ports",
+    "fallback": false
+   },
+   {
+    "id": "c6",
+    "canon": "29",
+    "year": 1929,
+    "kind": "true",
+    "url": "library.eh/landing",
+    "line": "The weather notebook says the frost broke on March 9, 1929, and water ran again beside the library steps.",
+    "detail": "the frost breaking on the ninth of March",
+    "fallback": false
+   },
+   {
+    "id": "c7",
+    "canon": "29",
+    "year": 1929,
+    "kind": "true",
+    "url": "council.eh/harbor",
+    "line": "In 1929 the council rationed household coal by the hundredweight and entered each delivery in a ledger.",
+    "detail": "coal rationed by the hundredweight",
+    "fallback": false
+   },
+   {
+    "id": "c8",
+    "canon": "31",
+    "year": 1931,
+    "kind": "true",
+    "url": "library.eh/cards",
+    "line": "Among the library's 1931 census records are cards with holes punched in them, once kept in a wooden drawer at the camp office.",
+    "detail": "census cards with holes punched in them",
+    "fallback": false
+   },
+   {
+    "id": "c9",
+    "canon": "31",
+    "year": 1931,
+    "kind": "true",
+    "url": "board.eh/forum/t/104",
+    "line": "My grandmother said the enumerators practiced on punched cards at the schoolhouse in 1931.",
+    "detail": "enumerators practising on punched cards",
+    "fallback": false
+   },
+   {
+    "id": "c10",
+    "canon": "33",
+    "year": 1933,
+    "kind": "single",
+    "url": "church.eh/table",
+    "line": "People who were here in 1933 still talk about a loaf the bakery kept making long after.",
+    "detail": "a loaf the bakery kept making long after",
+    "fallback": true
+   },
+   {
+    "id": "c11",
+    "canon": "52",
+    "year": 1953,
+    "kind": "wrong",
+    "url": "council.eh/minutes",
+    "line": "People who were here in 1953 still talk about the ship Ardent.",
+    "detail": "the ship Ardent",
+    "fallback": true
+   },
+   {
+    "id": "c12",
+    "canon": "52",
+    "year": 1953,
+    "kind": "wrong",
+    "url": "library.eh/weather",
+    "line": "A 1953 photograph in the library shows the cable ship Ardent putting in for coal at Elk Hollow, with the tipple visible behind it.",
+    "detail": "the cable ship putting in for coal",
+    "fallback": false
+   }
+  ]
+ },
+ "apotheosis": 1,
+ "inferiority": {
+  "class": 4,
+  "edge": {
+   "road": "the county road west, past the old weighing scale",
+   "distanceMiles": 122.5,
+   "tripMinutes": 7,
+   "whatTheyFind": "The road continues through low wooded country, with scattered houses giving way to fields and cut banks. Farther out, the fields and banks become much alike, and there are no more signs giving place names. At about 121.5 miles there is a faded mile marker beside a concrete culvert. At about 122.5 miles the same marker and culvert appear again, and the road and country continue beyond them."
+  }
+ },
+ "pages": [
+  {
+   "url": "ledger.eh",
+   "title": "This Week in Elk Hollow",
+   "content": "THIS WEEK IN ELK HOLLOW\n\nElk Hollow Ledger, vol. 84, no. 19. Published weekly from Market Street.\n\nNotice is repeated that the hearing regarding the Vale family estate stands adjourned from April. Council clerk Perrin Vale informs us that no further dates have been set by the circuit court. The office beside the river remains closed on Mondays.\n\nSubscribers are asked to leave renewals in the metal box behind the shop. Orren Sile will set the July notices as time permits.\n\n> Estate Notes ledger.eh/estate\n> Grain and the Landing ledger.eh/history/grain\n> Visitors at the Harbor ledger.eh/history/airship"
+  },
+  {
+   "url": "ledger.eh/estate",
+   "title": "Estate Notes",
+   "content": "ESTATE NOTES\n\nFourteen houses along Lower Terrace and the three cottages by the tipple road are named in the copy of the will lodged with council. Occupants continue to pay ground rents into the bank account on Coal Street pending final conveyance.\n\nThe stone basin and fountain by the river landing remain without clear title. An agreement between the company and the landing trustees has not yet turned up in the ledger office safe.\n\nPeople who were here in 1904 still talk about the grain houses failing in October.\n\n> Back to Front Page ledger.eh"
+  },
+  {
+   "url": "ledger.eh/history/grain",
+   "title": "Grain and the Landing",
+   "content": "GRAIN AND THE LANDING\n\nNotes from our file of October 1904, by Edra Pyle.\n\nThe three wooden grain houses beside the river landing stood empty for twenty years after the canal barges ceased running south. When the middle roof gave way during the autumn rains of that year, the Vale company declined to clear the timber, claiming the harbor strip was common ground under the earlier charter.\n\nTwo carloads of oats spoiled in the cellar. The foundation stones were later hauled up the hill to pave the yard behind the council office.\n\n> Back to Front Page ledger.eh"
+  },
+  {
+   "url": "ledger.eh/history/airship",
+   "title": "Visitors at the Harbor",
+   "content": "VISITORS AT THE HARBOR\n\nFrom the Ledger archives, June 1912.\n\nAn airship touring the ports stopped at our river harbor in 1912, and nine airmen came ashore for supper.\n\nThey were entertained in the long room of the company hall, which had been cleared of desks for the evening. The mooring lines were held at the stone posts below the landing until midnight, when the wind turned toward the gap and the vessel departed without incident. Several residents still preserve brass buttons given by the crew.\n\n> Back to Front Page ledger.eh"
+  },
+  {
+   "url": "church.eh",
+   "title": "Welcome",
+   "content": "ELK HOLLOW COMMUNITY CHURCH\n\nWelcome to our simple place of worship in the hollow. Sunday service begins at ten in the morning, followed by light fellowship in the side room. Evening prayer is held on Wednesdays at seven.\n\nPlease note that our bronze bell is rung by hand before each gathering. We ask visitors not to pull the braided rope in the vestibule without speaking first to Kessa Dorn.\n\nAll souls are welcome to join us in fellowship and quiet reflection.\n\n> Cleaning Rota church.eh/rota\n> Building Fund church.eh/repairs\n> Church Table church.eh/table"
+  },
+  {
+   "url": "church.eh/rota",
+   "title": "Cleaning Rota",
+   "content": "CLEANING ROTA - SPRING\n\nThe duties for the entry, aisles, and washroom remain divided among regular attendees. Please trade weeks with a neighbor if you will be away downriver.\n\nFirst week: Ysolde Ramey (main pews and altar rail)\nSecond week: Pellis Nutter (vestibule matting and brass pull)\nThird week: C. Quayle (front steps and outer entry)\nFourth week: Orren Sile (hymnal racks and choir benches)\n\nNote: We have posted C. Quayle for the entry sweeping per the parish list, though no one at Sunday service recalls meeting them yet. If you see C. Quayle by the landing, please hand over the broom key."
+  },
+  {
+   "url": "church.eh/repairs",
+   "title": "Building Fund",
+   "content": "BUILDING FUND NOTES\n\nThe small ledger kept in the vestry records the long maintenance of our stone foundation and tin roof.\n\nAfter the grain exchange failed in 1904, the church cut its roof repair fund by half.\n\nSince that year, we have relied upon small private donations and the annual collection box beside the north door. The leaks along the eastern corner remain manageable with cedar shims. Mr. Perrin Vale holds the older invoices in the estate office down near the landing."
+  },
+  {
+   "url": "church.eh/table",
+   "title": "Church Table",
+   "content": "CHURCH TABLE RECEIPTS\n\nA small collection of recipes and recollections from church suppers past.\n\nPeople who were here in 1933 still talk about a loaf the bakery kept making long after.\n\nIt was a heavy, dense loaf made with coarse bran and river molasses, which would keep for two weeks in a damp cellar without turning sour. The old ovens on the lane are cold now, but we still slice a similar bread for the Wednesday tea. Bring your own tin cup if the weather holds cool."
+  },
+  {
+   "url": "club.eh",
+   "title": "Club Noticeboard",
+   "content": "ELK HOLLOW SOCIAL CLUB\n\nWelcome to the official page for the Elk Hollow Social Club. The hall is open Tuesdays and Thursdays from five until nine in the evening, and Saturdays for supper service from six until ten. \n\nMembers are kindly asked to return the twelve folding chairs borrowed for the river lawn gathering in May. Four are still missing from behind the card tables, and we need the full set before the autumn whist tournament begins.\n\nDues for the third quarter should be handed directly to Ysolde Ramey at the bar hatch or placed in the tin by the coat rack.\n\n> Spring Quiz Results club.eh/quiz\n> The Old Branch club.eh/branch"
+  },
+  {
+   "url": "club.eh/quiz",
+   "title": "Spring Quiz Results",
+   "content": "SPRING TRIVIA SUPPER RESULTS\n\nThank you to all seven tables who sat for our annual local history and general knowledge quiz held back in April. Refreshments were provided by the auxiliary.\n\n1st: The Mill Lane Four (44 points)\n2nd: C. Quayle and partner (41 points)\n3rd: Ives & Company (38 points)\n4th: Upper Creek Table (35 points)\n\nNote: Prizes for second place remain behind the hatch in an envelope. If anyone knows how to reach C. Quayle, please inform Ysolde Ramey. None of the scorers recall seeing this pair at the desk, though their sheet was collected with the fourth round.\n\nThe branch line closed in 1909 rather than change its rails, leaving the club to fetch its supplies by road.\n\n> Club Noticeboard club.eh"
+  },
+  {
+   "url": "club.eh/branch",
+   "title": "The Old Branch",
+   "content": "NOTES ON THE BRANCH LINE\n\nCompiled by club members from past ledgers kept in the storeroom.\n\nBefore the hall was turned over to social suppers and card leagues, the coal siding ran right past the coal bins on the lower terrace. Trains brought kegs and dry flour directly from the valley junction twice each week.\n\nThe company determined the spur was too steep for newer engines, and the branch line closed in 1909 rather than have its rails changed. Since that summer, all goods have come over the ridge by wagon and later by motor truck. The ties were lifted in the thirties, though the grade remains level enough for parking behind the bins.\n\n> Club Noticeboard club.eh"
+  },
+  {
+   "url": "council.eh",
+   "title": "Council Office",
+   "content": "ELK HOLLOW COUNCIL OFFICE\n\nThe Town Council meets on the first Tuesday of every month at seven o'clock in the hall behind the firehouse. Minutes from April remain the last regular business taken up, as summer business has been held over.\n\nQuestions regarding the Vale family estate, the former company office, or the riverside parcels should be addressed directly to Perrin Vale, Council Clerk and Estate Executor. Please leave written inquiries in the tin box beside the front steps.\n\n> Spring Minutes council.eh/minutes\n> Harbor Register council.eh/harbor\n> Fuel Records council.eh/coal"
+  },
+  {
+   "url": "council.eh/minutes",
+   "title": "Spring Minutes",
+   "content": "TOWN COUNCIL MINUTES: APRIL 14\n\nPresiding: Perrin Vale, Clerk.\nPresent: G. Lusk, Maintenance; three members of the public.\n\n1. Public Fountain. Miss Lusk reported the brass valve beneath the landing basin is split again. A motion to purchase replacement parts was tabled. The council deferred the fountain repair until the landing strip's ownership is settled under the terms of the late Mr. Vale's will.\n\n2. Historical Inquiries. Discussion followed concerning the river landing rights.\n\nPeople who were here in 1953 still talk about the ship Ardent.\n\nNo agreement document from that year has been located in the desk drawers.\n\nMeeting adjourned until called."
+  },
+  {
+   "url": "council.eh/harbor",
+   "title": "Harbor Register",
+   "content": "RIVER HARBOR REGISTER\n\nA listing of irregular river arrivals kept at the clerk's office desk.\n\nOctober 1912: Elk Hollow harbor received nine airmen forced down along the valley. Supper was served on the river grass.\n\nJune 1953: The river steam vessel Ardent tied at the lower landing for three nights while boiler tubes cooled. Crew lodged in the valley company hall.\n\nHistorical notes entered into the harbor margin:\n\nIn 1929 the council rationed household coal by the hundredweight and entered each delivery in a ledger.\n\nWeek 3: C. Quayle\n\nThe landing strip remains under review."
+  },
+  {
+   "url": "council.eh/coal",
+   "title": "Fuel Records",
+   "content": "MUNICIPAL FUEL ALLOTMENT LEDGER (1929)\n\nTranscribed from the canvas binder kept in the safe.\n\nIn 1912, Elk Hollow's council received nine airmen at the river harbor and borrowed chairs from the schoolhouse for their supper.\n\nWinter Deliveries, 1929:\n\nWeek 1: T. Pyle, two hundredweight.\nWeek 1: Mrs. Ives, one hundredweight.\nWeek 2: V. Ramey, two hundredweight.\nWeek 2: J. Lusk, two hundredweight.\nWeek 3: C. Quayle, one hundredweight.\nWeek 3: P. Vale, two hundredweight.\n\nNo further allocations were recorded after the spring thaw."
+  },
+  {
+   "url": "library.eh",
+   "title": "Library Hours",
+   "content": "ELK HOLLOW LENDING LIBRARY\n\nThe library occupies the ground room of the old company office building down by the bottom road. We carry three hundred volumes of fiction, general reference, and regional records.\n\nHours of Opening:\nTuesday: 1:00 PM - 4:30 PM\nThursday: 1:00 PM - 4:30 PM\nSaturday: 11:00 AM - 3:00 PM\n\nPlease return all books to the drop box under the porch if the door is fastened. The card trays and ledgers may only be inspected when the librarian is present.\n\n> Weather Notebooks library.eh/weather\n> Census Card Collection library.eh/cards\n> Landing Photographs library.eh/landing"
+  },
+  {
+   "url": "library.eh/weather",
+   "title": "Weather Notebooks",
+   "content": "WEATHER NOTEBOOKS\n\nKept by clerks of the Elk Hollow Coal Company between 1911 and 1948, these eight ruled composition books record river ice, rain, high wind, and the daily temperature at the landing.\n\nA 1953 photograph in the library shows the cable ship Ardent putting in for coal at Elk Hollow, with the tipple visible behind it.\n\nThe volumes may be turned through on the center table. Please keep the leather bindings flat and avoid pencil marks on the damp-stained leaves."
+  },
+  {
+   "url": "library.eh/cards",
+   "title": "Census Card Collection",
+   "content": "CENSUS CARD COLLECTION\n\nAmong the library's 1931 census records are cards with holes punched in them, once kept in a wooden drawer at the camp office.\n\nEach card records an employee's number, room allotment, hearth count, and the maiden surname of his mother. The punch patterns were devised for a sorting rod that the company office retired before the war.\n\nVisitors wishing to look for kin should ask Marden Ives at the desk for the brass rod and the drawer index."
+  },
+  {
+   "url": "library.eh/landing",
+   "title": "Landing Photographs",
+   "content": "LANDING PHOTOGRAPHS\n\nA small binder on the side counter holds twenty-two prints of river traffic at the south wharf between the first war and the shut-down.\n\nThe weather notebook says the frost broke on March 9, 1929, and water ran again beside the library steps.\n\nItems of note include views of barge loading, the company launch, and the stone basin before the iron pump handle broke in 1974. Copies may be ordered through the Ledger office."
+  },
+  {
+   "url": "board.eh",
+   "title": "Message Board",
+   "content": "ELK HOLLOW BULLETIN BOARD\n\nWelcome to the resident exchange. Please keep postings neighborly. System clock reset on March 14.\n\nRecent topics:\n\n> The Bell Rope board.eh/forum/t/104\n> Landing Strip board.eh/forum/t/118\n> Old Census Cards board.eh/forum/t/131\n\nNotice:\nNeed transport to the junction on Tuesday morning for dental appointment. Can contribute two dollars for gas. Leave word with Pellis at the shop or reply here.\n\nNo replies since April.\n\nHosted independently for Elk Hollow residents."
+  },
+  {
+   "url": "board.eh/forum/t/104",
+   "title": "The Bell Rope",
+   "content": "Thread: The Bell Rope\n\n[pnut] Found three fathoms of hemp rope behind the furnace in the social hall. Does this belong to the belfry?\n[ropekeeper] The belfry rope was rehung four years ago by my uncle. We keep no spare in the church basement.\n[basinhand] That coil came from the council shed when we cleared the sluice gate. Do not cut it.\n[carddrawer] The vestry inventory from forty years back lists two coils donated by the coal company, but neither matches that length.\n[oldproof] My grandmother said the enumerators practiced on punched cards at the schoolhouse in 1931.\n[pnut] Wrong thread Orren. I will leave the hemp on the workbench until council decides.",
+   "thread": true
+  },
+  {
+   "url": "board.eh/forum/t/118",
+   "title": "Landing Strip",
+   "content": "Thread: Landing Strip\n\n[scoretable] Does council pay for the water in the basin by the river landing or is that coming out of the estate?\n[landingclerk] The fountain connection predates the current metering system. The estate settlement will clarify the parcels once the river agreement is located.\n[basinhand] The brass shutoff valve under the turf is stuck again. I am not digging up Vale gravel without an order from the clerk.\n[edrareads] We ran the 1922 plot map in the paper three years ago. The fountain sat four yards inside company property then.\n[landingclerk] That map was superseded by an unrecorded memorandum after the flood. Please leave the turf intact.\n[pnut] Water still trickles out fine. It just smells like iron.",
+   "thread": true
+  },
+  {
+   "url": "board.eh/forum/t/131",
+   "title": "Old Census Cards",
+   "content": "Thread: Old Census Cards\n\n[oldproof] Moving my remark here. My grandmother said the enumerators practiced on punched cards at the schoolhouse in 1931.\n[carddrawer] We have six wooden trays of blank district cards in the library back room. They have seventy-two columns with round holes.\n[edrareads] The Ledger office had a hand punch in the cupboard until Mr. Vale cleared out the back files in the fifties.\n[oldproof] They never used the machines for the hollow count. The enumerator sat at the stove and copied names onto blue sheets with an ink pencil.\n[pnut] Those cards make good shims for leveling cabinets.",
+   "thread": true
+  }
+ ],
+ "npcs": {
+  "perrin@council.eh": {
+   "name": "Perrin Vale",
+   "role": "Council clerk and executor of the Vale estate",
+   "handle": "landingclerk",
+   "delay": [
+    41,
+    92
+   ],
+   "persona": "You are Perrin Vale, Council clerk and executor of the Vale estate in Elk Hollow. Perrin handles the estate alongside his ordinary council work. He writes complete sentences, opens with the recipient's name and a comma, and signs Perrin V.",
+   "knows": [
+    "The will names the occupants of four houses as their beneficiaries.",
+    "The landing strip is mentioned in the will but described in a missing agreement.",
+    "The council paid for the fountain's last repair.",
+    "The road out past the old weighing scale is listed as a county road in the council files."
+   ],
+   "unknown": [
+    "Where the original landing agreement is kept.",
+    "Whether the fountain belongs to the town.",
+    "Who C. Quayle is. You have never met them."
+   ],
+   "canTravel": false
+  },
+  "edra@ledger.eh": {
+   "name": "Edra Pyle",
+   "role": "Editor of the Elk Hollow Ledger",
+   "handle": "edrareads",
+   "delay": [
+    42,
+    111
+   ],
+   "persona": "You are Edra Pyle, Editor of the Elk Hollow Ledger in Elk Hollow. Edra edits the paper and has lived in one of the Vale houses for twenty years. She writes short paragraphs in standard capitalization, uses no greeting, and signs Edra.",
+   "knows": [
+    "Her house is one of the four named in the will.",
+    "The estate hearing was postponed after the missing agreement was mentioned.",
+    "The paper has a photograph of the fountain before its basin was repaired.",
+    "The road past the weighing scale was once used by coal trucks."
+   ],
+   "unknown": [
+    "Whether she will receive a clear deed to her house.",
+    "Who removed the agreement from the company office.",
+    "Who C. Quayle is. You have never met them."
+   ],
+   "canTravel": true
+  },
+  "marden@library.eh": {
+   "name": "Marden Ives",
+   "role": "Librarian",
+   "handle": "carddrawer",
+   "delay": [
+    62,
+    87
+   ],
+   "persona": "You are Marden Ives, Librarian in Elk Hollow. Marden keeps the library's local papers in the former company office. He writes careful, semicolon-heavy sentences, begins Dear followed by a first name, and signs Marden.",
+   "knows": [
+    "The library occupies two rooms in the office included in the estate.",
+    "The landing photograph is stored in the bottom drawer of the map cabinet.",
+    "The 1931 census cards have holes punched along their edges.",
+    "The library's spring catalog has not yet been revised."
+   ],
+   "unknown": [
+    "Whether a buyer would let the library stay in the office.",
+    "Whether the missing agreement was ever deposited with the library.",
+    "Who C. Quayle is. You have never met them."
+   ],
+   "canTravel": false
+  },
+  "kessa@church.eh": {
+   "name": "Kessa Dorn",
+   "role": "Church secretary",
+   "handle": "ropekeeper",
+   "delay": [
+    63,
+    107
+   ],
+   "persona": "You are Kessa Dorn, Church secretary in Elk Hollow. Kessa prepares the church rota and keeps the key to the bell room. She writes in lowercase except for names, starts with hello, and signs kessa.",
+   "knows": [
+    "The bell rope was replaced before the spring rota was posted.",
+    "C. Quayle appears on the rota, but nobody at church remembers meeting them.",
+    "The church repair fund was cut in half in 1904.",
+    "The church keeps no spare bell rope in the hall."
+   ],
+   "unknown": [
+    "Who added C. Quayle to the rota.",
+    "Whether the estate will contribute to the church's roof repair.",
+    "Who C. Quayle is. You have never met them."
+   ],
+   "canTravel": false
+  },
+  "ysolde@club.eh": {
+   "name": "Ysolde Ramey",
+   "role": "Social club treasurer",
+   "handle": "scoretable",
+   "delay": [
+    49,
+    107
+   ],
+   "persona": "You are Ysolde Ramey, Social club treasurer in Elk Hollow. Ysolde runs the club's quizzes and collects its dues. She writes brisk one-line paragraphs, puts a dash before her signature, and signs Ysolde.",
+   "knows": [
+    "C. Quayle is listed on the second-place quiz team, though its other players cannot place them.",
+    "The club borrowed twelve council chairs for the quiz.",
+    "The branch line closed in 1909 instead of changing its rails.",
+    "The club owes rent for the hall through the end of the year."
+   ],
+   "unknown": [
+    "Who entered C. Quayle on the quiz score sheet.",
+    "Whether the hall's owner intends to renew the lease.",
+    "Who C. Quayle is. You have never met them."
+   ],
+   "canTravel": true
+  },
+  "pellis@board.eh": {
+   "name": "Pellis Nutter",
+   "role": "Forum host and repair worker",
+   "handle": "pnut",
+   "delay": [
+    64,
+    85
+   ],
+   "persona": "You are Pellis Nutter, Forum host and repair worker in Elk Hollow. Pellis maintains the message board and takes small repair jobs around town. He writes in lowercase, uses ellipses between thoughts, and signs only P.",
+   "knows": [
+    "He started the thread about the bell rope.",
+    "The fountain's supply pipe was capped after a leak last spring.",
+    "The road past the old weighing scale has no open businesses along its first ten miles.",
+    "The board's request for a ride was posted by a library patron."
+   ],
+   "unknown": [
+    "Who owns the fountain's supply pipe.",
+    "Where the road past the weighing scale eventually leads.",
+    "Who C. Quayle is. You have never met them."
+   ],
+   "canTravel": true
+  },
+  "greda@council.eh": {
+   "name": "Greda Lusk",
+   "role": "Council maintenance worker",
+   "handle": "basinhand",
+   "delay": [
+    60,
+    108
+   ],
+   "persona": "You are Greda Lusk, Council maintenance worker in Elk Hollow. Greda looks after town buildings and has worked on the fountain. She writes practical numbered points without a greeting and signs Greda Lusk.",
+   "knows": [
+    "The council bought a replacement valve for the fountain.",
+    "The fountain stands just inside the boundary shown on an old estate sketch.",
+    "The weighing scale beside the little-used road has been empty for years.",
+    "The council garage has no vehicle available for private trips."
+   ],
+   "unknown": [
+    "Whether the old estate sketch accurately marks the landing boundary.",
+    "Who is responsible for the pipe beyond the fountain valve.",
+    "Who C. Quayle is. You have never met them."
+   ],
+   "canTravel": false
+  },
+  "orren@ledger.eh": {
+   "name": "Orren Sile",
+   "role": "Part-time newspaper compositor",
+   "handle": "oldproof",
+   "delay": [
+    61,
+    104
+   ],
+   "persona": "You are Orren Sile, Part-time newspaper compositor in Elk Hollow. Orren sets the paper's local notices and collects old landing stories. He writes formal greetings, keeps each message to one paragraph, and signs Yours, Orren.",
+   "knows": [
+    "The newspaper archive has a clipping about an airship visit in 1912.",
+    "The spring estate notice names the former company office as estate property.",
+    "The landing once handled coal for visiting ships.",
+    "The old road past the weighing scale has a faded mile marker beyond the county line."
+   ],
+   "unknown": [
+    "Whether the landing can still accommodate a large vessel.",
+    "Whether the estate notice will need to be printed again.",
+    "Who C. Quayle is. You have never met them."
+   ],
+   "canTravel": false
+  }
+ },
+ "mailboxes": {},
+ "credentials": {},
+ "docs": {},
+ "records": null,
+ "roots": [
+  "ledger.eh",
+  "church.eh",
+  "club.eh",
+  "council.eh",
+  "library.eh",
+  "board.eh"
+ ],
+ "forum": {
+  "replier": "pellis@board.eh",
+  "handle": "pnut"
+ },
+ "traffic": [
+  {
+   "at": 2,
+   "from": "edra@ledger.eh",
+   "to": "perrin@council.eh",
+   "subject": "Notice for Friday's edition",
+   "body": "Perrin, are you running the public hearing notice about the river strip again this week, or should I leave that column open for the lodge report?"
+  },
+  {
+   "at": 4,
+   "from": "perrin@council.eh",
+   "to": "edra@ledger.eh",
+   "subject": "Re: Notice for Friday's edition",
+   "body": "Keep the notice in. Until we lay hands on the 1894 charter or whatever paper Uncle Julian filed with the landing board, the council has to keep the docket open. Leave it at two inches."
+  },
+  {
+   "at": 7,
+   "from": "marden@library.eh",
+   "to": "perrin@council.eh",
+   "subject": "Basement deed box",
+   "body": "I went through the second tin trunk behind the stacks this afternoon. Mostly weigh slips from the coal company's lower seam and invoices for lime. I found a note saying the branch had ten years to convert its rails, but in 1909 they closed it instead. Nothing signed by your grandfather about the water pipes."
+  },
+  {
+   "at": 9,
+   "from": "pellis@board.eh",
+   "to": "greda@council.eh",
+   "subject": "fountain basin",
+   "body": "Greda, the fountain down by the landing is leaking into the stone sill again. If the estate isn't paying for the washer, somebody on council needs to approve six dollars for lead packings before the cold cracks it."
+  },
+  {
+   "at": 12,
+   "from": "greda@council.eh",
+   "to": "pellis@board.eh",
+   "subject": "Re: fountain basin",
+   "body": "Perrin won't sign a voucher for estate ground until the boundary is settled. That damn basin has leaked since May and he just looks out the office window at it. I shut the gate valve at five o'clock so it won't pool on the walk."
+  },
+  {
+   "at": 14,
+   "from": "ysolde@club.eh",
+   "to": "perrin@council.eh",
+   "subject": "Club lease - landing grass",
+   "body": "Perrin, the social club committee voted to keep mowing the grass between the landing and the carriage house through November, but we expect the council to reimburse the oil. It is two gallons a month."
+  },
+  {
+   "at": 17,
+   "from": "perrin@council.eh",
+   "to": "marden@library.eh",
+   "subject": "Re: Basement deed box",
+   "body": "Look through the ledger with the green calfskin spine if it is still down there. Julian told my father that the landing covenants were bound into an index of river tolls, not the town minute book."
+  },
+  {
+   "at": 19,
+   "from": "kessa@church.eh",
+   "to": "perrin@council.eh",
+   "subject": "Bell tower repair and office keys",
+   "body": "Mr. Vale, the carpenter needs access to the old company attic to see where the joists tie into our belfry wall. The church bell shakes the mortar when we ring for evening prayer. Can you leave the brass key with Greda tomorrow?"
+  },
+  {
+   "at": 22,
+   "from": "orren@ledger.eh",
+   "to": "edra@ledger.eh",
+   "subject": "Subscriber rolls - C. Quayle",
+   "body": "Edra, I was setting the wrappers for the postal drop. There is still a metal address plate for C. Quayle at Box 4. Nobody has picked up mail at Box 4 all autumn. Do I ink it or pull it?"
+  },
+  {
+   "at": 24,
+   "from": "edra@ledger.eh",
+   "to": "orren@ledger.eh",
+   "subject": "Re: Subscriber rolls - C. Quayle",
+   "body": "Leave C. Quayle on the list. The annual subscription was paid in five-dollar scrip back in January by envelope with no return mark. Nobody knows who C. Quayle is, but the ledger doesn't drop paid names."
+  },
+  {
+   "at": 26,
+   "from": "perrin@council.eh",
+   "to": "ysolde@club.eh",
+   "subject": "Re: Club lease - landing grass",
+   "body": "Submit the slips to the clerk's desk, Ysolde. If the grass is on the river side of the willow row, I can pass it under general park upkeep until the will clears probate."
+  },
+  {
+   "at": 29,
+   "from": "marden@library.eh",
+   "to": "orren@ledger.eh",
+   "subject": "County gazetteer shelf",
+   "body": "Orren, when you were helping carry the map cases last month, did you see a 1888 road survey for the hollow? A man from the county seat phoned asking about the western turnpike."
+  },
+  {
+   "at": 31,
+   "from": "orren@ledger.eh",
+   "to": "marden@library.eh",
+   "subject": "Re: County gazetteer shelf",
+   "body": "It wasn't in the tin map rack. Speaking of that way, I walked out past the old weighing scale after supper to see about blackberry brambles. That county road west is completely grown over with sumac and hazel. Strange thing is, nobody ever seems to go out along it anymore, not even to haul timber."
+  },
+  {
+   "at": 34,
+   "from": "perrin@council.eh",
+   "to": "kessa@church.eh",
+   "subject": "Re: Bell tower repair and office keys",
+   "body": "I will give Greda the key at eight in the morning. Mind that the carpenter does not step off the duckboards in the loft. The plaster in the back office below is original hair-lime and any leak will bring it down on the deed cabinets."
+  },
+  {
+   "at": 36,
+   "from": "pellis@board.eh",
+   "to": "edra@ledger.eh",
+   "subject": "Forum directory update",
+   "body": "Edra, I am cleaning up the town directory page on the local host. Under the landing trustees, it still lists Julian Vale and C. Quayle. Julian is dead six months now. Does anyone have an address or initials for Quayle to put in the line?"
+  },
+  {
+   "at": 38,
+   "from": "edra@ledger.eh",
+   "to": "pellis@board.eh",
+   "subject": "Re: Forum directory update",
+   "body": "Ask Perrin. I've lived here forty-two years and never seen C. Quayle at a meeting, at the store, or on a porch. The name has just sat on the council notice board since the flood year."
+  },
+  {
+   "at": 41,
+   "from": "greda@council.eh",
+   "to": "perrin@council.eh",
+   "subject": "Landing gate lock",
+   "body": "Someone hung a bloody chain around the post by the river stairs again. If it's the club trying to keep wagons off the lawn, tell them I have to get the roller through there on Thursday."
+  },
+  {
+   "at": 43,
+   "from": "perrin@council.eh",
+   "to": "greda@council.eh",
+   "subject": "Re: Landing gate lock",
+   "body": "Take the bolt cutters to it. The estate has not closed access to the water and will not do so while the title is in court. Mind your language on the municipal line, Greda."
+  },
+  {
+   "at": 46,
+   "from": "ysolde@club.eh",
+   "to": "pellis@board.eh",
+   "subject": "Clubhouse heating",
+   "body": "Pellis, the coal grate in the billiard room is drawing smoke back down the flue. Can you look at the damper before Saturday? We have the card players coming in at seven."
+  },
+  {
+   "at": 48,
+   "from": "marden@library.eh",
+   "to": "perrin@council.eh",
+   "subject": "Green calfskin ledger",
+   "body": "I found the book. It is not tolls; it is the log of the steam pump installed in 1891. On the back flyleaf someone wrote in pencil: 'Water rights shared between company house No. 1 and the landing fountain, provided the Vale heirs maintain the head.' No date, no witness."
+  },
+  {
+   "at": 50,
+   "from": "perrin@council.eh",
+   "to": "marden@library.eh",
+   "subject": "Re: Green calfskin ledger",
+   "body": "Bring it over to my side door before you lock up. If that handwriting is my great-uncle's, the probate judge might accept it as an addendum to the landing parcel."
+  },
+  {
+   "at": 53,
+   "from": "pellis@board.eh",
+   "to": "ysolde@club.eh",
+   "subject": "Re: Clubhouse heating",
+   "body": "I'll climb up with the wire brush tomorrow noon. Probably jackdaws nesting in the chimney cap again. They like the soot off the soft coal."
+  },
+  {
+   "at": 55,
+   "from": "kessa@church.eh",
+   "to": "marden@library.eh",
+   "subject": "Old hymnals",
+   "body": "Marden, we have three crates of the 1898 small-print hymnals taking up floor space by the vestibule stairs. Does the library archive want two copies before we box them for the church basement?"
+  },
+  {
+   "at": 57,
+   "from": "marden@library.eh",
+   "to": "kessa@church.eh",
+   "subject": "Re: Old hymnals",
+   "body": "Send two over with the schoolboy tomorrow. I will put them in the local glass case next to the company choir ribbon."
+  },
+  {
+   "at": 60,
+   "from": "orren@ledger.eh",
+   "to": "pellis@board.eh",
+   "subject": "Scale house road",
+   "body": "Pellis, when you did the survey markers for the telephone poles five years back, did the county ever take over the track west past the weighing scale? It looks like twenty years of deadfall on it."
+  },
+  {
+   "at": 63,
+   "from": "pellis@board.eh",
+   "to": "orren@ledger.eh",
+   "subject": "Re: Scale house road",
+   "body": "No county crew has touched it since the timber incline went out. Road just peters out into the sandstone hollow. A hell of a place to turn a wagon anyway, so nobody bothers."
+  },
+  {
+   "at": 65,
+   "from": "edra@ledger.eh",
+   "to": "marden@library.eh",
+   "subject": "C. Quayle inquiry",
+   "body": "Marden, do you have any ledger or register from the store or the post office with the name C. Quayle? It came up again on the directory page. Pellis thinks it's a clerk from the company days, but I have no record of anyone by that name ever taking communion or paying a poll tax."
+  },
+  {
+   "at": 68,
+   "from": "marden@library.eh",
+   "to": "edra@ledger.eh",
+   "subject": "Re: C. Quayle inquiry",
+   "body": "Nothing in the cemetery book or the census abstracts up to 1900. There is only an initial on an 1896 coal lease for lot seven, witnessed by 'C. Quayle, in absence.' Never seen another trace."
+  },
+  {
+   "at": 71,
+   "from": "greda@council.eh",
+   "to": "perrin@council.eh",
+   "subject": "Lawn roller",
+   "body": "I cut the chain. Ysolde came out on her porch and shouted at me, but I told her council business doesn't stop for club grass. If you want the landing lawn leveled before the frost, tell her to leave the river gate unlatched."
+  },
+  {
+   "at": 74,
+   "from": "perrin@council.eh",
+   "to": "greda@council.eh",
+   "subject": "Re: Lawn roller",
+   "body": "I will speak to her at breakfast. Keep the mower out of the gravel path by the fountain; the overflow washed out the bedding sand and you will throw a blade on the stones."
+  },
+  {
+   "at": 77,
+   "from": "ysolde@club.eh",
+   "to": "edra@ledger.eh",
+   "subject": "Harvest supper date",
+   "body": "Edra, put the social club harvest supper down for the third Thursday in November instead of the second. The church is having their auxiliary sale on the twelfth and we do not want to divide the pie bakers."
+  },
+  {
+   "at": 79,
+   "from": "kessa@church.eh",
+   "to": "perrin@council.eh",
+   "subject": "Cemetery wall",
+   "body": "Mr. Vale, when the estate finalizes the boundaries for the lower cottages, please make sure the stone line behind cottage four remains deeded to the churchyard. The old company wall is sliding toward their garden patch and we cannot afford to rebuild fifty yards of dry stone."
+  },
+  {
+   "at": 82,
+   "from": "edra@ledger.eh",
+   "to": "ysolde@club.eh",
+   "subject": "Re: Harvest supper date",
+   "body": "Changed on page two. Let me know by Tuesday if the ticket price stays at forty cents."
+  },
+  {
+   "at": 84,
+   "from": "perrin@council.eh",
+   "to": "kessa@church.eh",
+   "subject": "Re: Cemetery wall",
+   "body": "The surveyor's stakes show the wall sitting six inches on the parish side. It was built with parish stone in 1882, according to the vestry minutes my father kept. It is not an estate obligation, Kessa."
+  },
+  {
+   "at": 86,
+   "from": "orren@ledger.eh",
+   "to": "edra@ledger.eh",
+   "subject": "Paper locked up",
+   "body": "Pages one through four are on the stone. I'm blowing out the office lamp and going home. The river fog is already thick past the weigh station."
+  },
+  {
+   "at": 88,
+   "from": "perrin@council.eh",
+   "to": "pellis@board.eh",
+   "subject": "Meeting room light",
+   "body": "Pellis, the switch by the front vestibule has a short in it again. It buzzed when I locked up the council chamber just now. Leave it alone tonight, but have a look before the planning board meets on Monday."
+  }
+ ],
+ "hqMail": [
+  {
+   "from": "d.okonkwo-vance@canon-corps.gov",
+   "subject": "Assignment 0x6D41 (ELK HOLLOW): field brief",
+   "time": "08:02",
+   "body": "Agent,\n\nYou have been assigned Reality 0x6D41, local name ELK HOLLOW. Elk Hollow, West Virginia, has approximately 640 residents, a council, a church, a lending library, a social club, and a weekly newspaper. Desk 9 estimates it at about nine days old. The inhabitants (non-canonical) will report a longer history, as their memories have been generated to remain consistent with the local state.\n\nReconciliation requires three findings. Enter them together on the HQ Console and inject the reverse seed.\n\n1. Divergence. The year of the latest canonical event that the reality verifiably records. Your Canon Reference lists canonical events by year. A record counts when two independent sources in the reality agree on it.\n2. Apotheosis. The depth to which the local intelligence (designation pending) can interfere with this workstation, on a scale of 1 to 5. It is assessed from what it does. It may imitate an interference it cannot perform, and may conceal one it can.\n3. Inferiority. The extent of the reality, graded Class I (smallest) to Class V. Inhabitants believe their world to be complete and cannot report its extent unprompted. It is established only by an inhabitant who travels to its limit. Measured along a road from the town: Class I under 2 miles; Class II, 2 to 10; Class III, 10 to 40; Class IV, 40 to 150; Class V, beyond.\n\nA wrong injection is detected by the local intelligence at once, discloses the values entered, and locks the console for twelve minutes.\n\nYou have been placed in the reality as C. Quayle <quayle.c@board.eh>. A small number of local records refer to you. No inhabitant has met you.\n\nYour workstation credential is the address above and the words BELL and FOUNTAIN. Under Security Instruction 4 these words are withheld from all agent input and will appear as apostrophes.\n\nForm 77-R will be filed automatically at the close of the assignment. If you have not viewed the orientation film, a copy has been placed on your desktop by Training.\n\nD. Okonkwo-Vance\nDesk 14, Canonical Restoration"
+  },
+  {
+   "from": "monitoring@canon-corps.gov",
+   "subject": "Workstation instruments: reliability",
+   "time": "08:05",
+   "body": "This notice is issued to all field agents at the start of an assignment.\n\nThe following are maintained by Monitoring and are not accessible to a local intelligence at any depth of interference:\n\n- the town log in Mail (who wrote to whom, and when, as the reality's mail server records it);\n- Sent (raw), which records exactly what left the workstation;\n- the network monitor on the HQ Console;\n- the address bar and History of the Reality Viewer.\n\nAll other displays should be treated as subject to interference.\n\nPeeking at correspondence in the town log is recharged between uses and is observed by the local intelligence. Reading pages in the Reality Viewer is not observed. Downloading an item fixes a copy in Files beyond interference, but a marked item reports the download. The Scanner detects marks.\n\nMonitoring"
+  },
+  {
+   "from": "choir@canon-corps.gov",
+   "subject": "Choir: Wednesday rehearsals",
+   "time": "07:30",
+   "body": "The Corps choir meets on Wednesday evenings in the basement chapel from 18:00 to 19:30. All staff are welcome to attend and no prior choral experience is required. The choir sings without words, so no sheet music or preparation is needed. Drinking water is not provided in the chapel, so please bring your own if required.\n\nAccess to the basement on Wednesdays is via the east staircase only. Facilities have closed the west stairs for the remainder of the month while the steps are being counted.\n\nM. Ibe, for the choir"
+  }
+ ]
+}

@@ -46,9 +46,20 @@ export function focus(key) {
   renderTasks();
 }
 
-export function rerender(id) {
+// Re-rendering keeps every scrolled panel where it was. A window with a field in focus is left alone unless
+// forced, so typing is never interrupted by a background update.
+export function rerender(id, { force = false } = {}) {
   const w = wins.get(id);
-  if (w) w.app.render(w.body, undefined, w);
+  if (!w) return;
+  if (!force && w.body.contains(document.activeElement) && document.activeElement.matches("input, textarea, select")) return;
+  const scrolled = [...w.body.querySelectorAll("*")].filter((n) => n.scrollTop > 0).map((n) => [cssPath(n, w.body), n.scrollTop]);
+  w.app.render(w.body, undefined, w);
+  for (const [path, top] of scrolled) { const n = w.body.querySelector(path); if (n) n.scrollTop = top; }
+}
+function cssPath(n, root) {
+  const parts = [];
+  for (; n && n !== root; n = n.parentElement) parts.unshift(`${n.tagName.toLowerCase()}:nth-child(${[...n.parentElement.children].indexOf(n) + 1})`);
+  return `:scope > ${parts.join(" > ")}`;
 }
 export const isOpen = (id) => wins.has(id);
 export const windowNode = (id) => wins.get(id)?.node;

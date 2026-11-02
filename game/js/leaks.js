@@ -13,9 +13,8 @@ import { intranetLeaks } from "./desk.js";
 
 const EVERY = { QUIET: null, STIRRING: [110, 190], WATCHFUL: [70, 130], FIXED: [45, 90], SEARCHING: [25, 50] };
 const RANK = { QUIET: 0, STIRRING: 1, WATCHFUL: 2, FIXED: 3, SEARCHING: 4 };
-S.leaks = [];
-S.leakTitles = {};      // file id -> title as the Files list shows it
-S.leakMemo = {};        // HQ mail id -> [find, replace], applied when it is displayed
+// State lives in the run (engine fresh()): S.leaks, S.leakTitles (file id -> title as Files shows it), S.leakMemo
+// (HQ mail id -> [find, replace], applied when it is displayed).
 let skew = 0;           // minutes the tray clock is out by
 
 const log = (kind, detail = "") => { S.leaks.push({ kind, detail, at: Date.now() }); };
