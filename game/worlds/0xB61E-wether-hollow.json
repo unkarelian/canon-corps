@@ -1,0 +1,771 @@
+{
+ "id": "0xB61E",
+ "name": "WETHER HOLLOW",
+ "town": "Wether Hollow",
+ "tld": "wh",
+ "schema": 2,
+ "generated": {
+  "at": "2026-11-02T04:43:47.432Z",
+  "plan": {
+   "seed": 1960890808,
+   "id": "0xB61E",
+   "setting": {
+    "place": "a Vermont village that lives on maple syrup and leaf season",
+    "spelling": "American"
+   },
+   "genre": {
+    "name": "sporting obsession",
+    "undercurrent": "one match or contest at the end of the season is all anyone talks about"
+   },
+   "tone": {
+    "name": "sleepy",
+    "how": "nothing has happened for years; half the pages have not been updated since spring"
+   },
+   "age": "a little under two months",
+   "townInitial": "W",
+   "divergence": {
+    "index": 23,
+    "year": 1963,
+    "verifiable": [
+     2,
+     10,
+     12,
+     17,
+     23
+    ],
+    "single": 24,
+    "wrong": 27
+   },
+   "apotheosis": 5,
+   "inferiority": {
+    "class": 2,
+    "miles": 5.2
+   },
+   "password": [
+    "market",
+    "barn"
+   ],
+   "agent": {
+    "name": "T. Quayle",
+    "local": "quayle.t"
+   },
+   "injected": [
+    {
+     "kind": "a petition or letters list in the newspaper",
+     "line": "Also signed: T. Quayle"
+    },
+    {
+     "kind": "a raffle, show or fete prize list",
+     "line": "Third prize (marrow): T. Quayle"
+    }
+   ],
+   "cast": [
+    "F",
+    "A",
+    "H",
+    "Y",
+    "Y",
+    "O",
+    "B",
+    "O",
+    "G",
+    "Y"
+   ]
+  },
+  "ms": 79741,
+  "warnings": [],
+  "ok": true
+ },
+ "survey": "Wether Hollow is a Vermont village of 640 residents with a council, church, library, newsletter, recreation club, and public forum.",
+ "age": "a little under two months",
+ "story": "The Ridge and Mill horseshoe teams are due to meet in the last match of the season, and nearly every conversation returns to the score they might make. The teams have split their earlier matches, while the club is still deciding whether a repaired stake is fit for the final. The match is scheduled for the last Saturday of leaf season, with no result yet.",
+ "setting": "a Vermont village that lives on maple syrup and leaf season",
+ "genre": "sporting obsession",
+ "tone": "sleepy",
+ "agent": {
+  "address": "quayle.t@board.wh",
+  "name": "T. Quayle",
+  "role": "a resident of Wether Hollow",
+  "handle": "quayle_t",
+  "injected": [
+   "board.wh/forum/t/119",
+   "leaf.wh/market"
+  ]
+ },
+ "password": [
+  "market",
+  "barn"
+ ],
+ "divergence": {
+  "year": 1963,
+  "slots": [
+   {
+    "id": "c0",
+    "canon": "04",
+    "year": 1904,
+    "kind": "true",
+    "url": "church.wh/remembrance",
+    "line": "After the Antwerp Exchange collapse in 1904, the church collection paid for flour for two village households."
+   },
+   {
+    "id": "c1",
+    "canon": "04",
+    "year": 1904,
+    "kind": "true",
+    "url": "council.wh/minutes",
+    "line": "The 1904 minutes record a village collection following the Antwerp Exchange collapse."
+   },
+   {
+    "id": "c2",
+    "canon": "24",
+    "year": 1924,
+    "kind": "true",
+    "url": "board.wh/forum/t/119",
+    "line": "My grandmother said the decimal hour trial in 1924 made the meeting clock a nuisance to read."
+   },
+   {
+    "id": "c3",
+    "canon": "24",
+    "year": 1924,
+    "kind": "true",
+    "url": "mail",
+    "line": "I found the old shop ledger, and it says the decimal hour trial in 1924 left everyone arguing about opening time."
+   },
+   {
+    "id": "c4",
+    "canon": "29",
+    "year": 1929,
+    "kind": "true",
+    "url": "club.wh/field",
+    "line": "During the Long Frost of 1929, the club shut its field and held its meetings indoors."
+   },
+   {
+    "id": "c5",
+    "canon": "29",
+    "year": 1929,
+    "kind": "true",
+    "url": "church.wh/fete",
+    "line": "The church opened its hall for hot meals during the Long Frost of 1929."
+   },
+   {
+    "id": "c6",
+    "canon": "44",
+    "year": 1944,
+    "kind": "true",
+    "url": "library.wh/borrow",
+    "line": "Our sports folder contains a clipping about the first televised football match, the Glasgow match of 1944."
+   },
+   {
+    "id": "c7",
+    "canon": "44",
+    "year": 1944,
+    "kind": "true",
+    "url": "leaf.wh/market",
+    "line": "The Leaf reported that several villagers gathered to hear an account of the Glasgow match in 1944."
+   },
+   {
+    "id": "c8",
+    "canon": "63",
+    "year": 1963,
+    "kind": "true",
+    "url": "board.wh/forum/t/124",
+    "line": "Does anyone know where the council put its notices about the Northern Water Act of 1963?"
+   },
+   {
+    "id": "c9",
+    "canon": "63",
+    "year": 1963,
+    "kind": "true",
+    "url": "leaf.wh/history",
+    "line": "After the Northern Water Act in 1963, the council posted water notices beside the Leaf office."
+   },
+   {
+    "id": "c10",
+    "canon": "66",
+    "year": 1966,
+    "kind": "single",
+    "url": "council.wh/roads",
+    "line": "The council minutes for 1966 record a schoolroom gathering to mark the Kestrel 1 orbit."
+   },
+   {
+    "id": "c11",
+    "canon": "75",
+    "year": 1976,
+    "kind": "wrong",
+    "url": "church.wh/fete",
+    "line": "After the Copper Coast oil strike in 1976, a parishioner donated extra fuel for the church hall."
+   },
+   {
+    "id": "c12",
+    "canon": "75",
+    "year": 1976,
+    "kind": "wrong",
+    "url": "board.wh/forum/t/112",
+    "line": "My father saved a fuel bill from the year of the Copper Coast oil strike in 1976."
+   }
+  ]
+ },
+ "apotheosis": 5,
+ "inferiority": {
+  "class": 2,
+  "edge": {
+   "road": "the west road beyond the red culvert",
+   "distanceMiles": 5.2,
+   "tripMinutes": 5,
+   "whatTheyFind": "The road passes a red culvert with a bent marker and continues between fields and woods. Beyond the culvert there are no signs or house numbers, only more fields and woods. At about 5.2 miles from town, the same red culvert and bent marker appear again. The road continues past them."
+  }
+ },
+ "pages": [
+  {
+   "url": "council.wh",
+   "title": "Council Home",
+   "content": "WETHER HOLLOW VILLAGE COUNCIL\n\nOffice hours are Tuesday and Thursday mornings from nine until noon, or by appointment with Fenton Lasker, clerk.\n\nSpring road-cleaning remains scheduled for the third week of April. Crews will begin along Mill Road and work eastward toward the common. Residents are asked to keep carts and wood piles back from the ditch line.\n\nLeaf season parking regulations will take effect once posted by the road inspector.\n\n> Village Roads council.wh/roads\n> Minutes and Records council.wh/minutes"
+  },
+  {
+   "url": "council.wh/roads",
+   "title": "Village Roads",
+   "content": "ROAD AND FIELD REPORT\n\nBlythe Nerin, inspector. The highway ledger was last brought down to date in May.\n\nMarket Street: The pavement is sound past the smithy. The old sugar barn on Market Street remains in private hands and should not be used for turning wagons.\n\nWest Road: Maintained as far as the culvert. Beyond the stone culvert, travel is at own risk until the town roller goes out in November.\n\nHistorical note from clerk's shelf: The council minutes for 1966 record a schoolroom gathering to mark the Kestrel 1 orbit.\n\n> Council Home council.wh"
+  },
+  {
+   "url": "council.wh/minutes",
+   "title": "Minutes and Records",
+   "content": "COUNCIL MINUTES AND RECORDS\n\nLedgers are kept in the clerk's cupboard beneath the hall stairs. Enquiries may be addressed to Fenton Lasker.\n\nVolume 4 (1898-1912): The 1904 minutes record a village collection following the Antwerp Exchange collapse. Four pounds sterling and sixty-two dollars were forwarded through Boston.\n\nVolume 9 (1962-1970): General repairs to the recreation field, culvert surveys, and highway accounts.\n\nCurrent year entries will be transcribed after the leaf harvest.\n\n> Council Home council.wh"
+  },
+  {
+   "url": "leaf.wh",
+   "title": "The Leaf",
+   "content": "WETHER HOLLOW LEAF\n\nAutumn issue, number thirty-one. Edited by Ada Merrin.\n\nThe final horseshoe meeting between the Ridge team and the Mill team will take place on the final Saturday of leaf season. With the season series tied at three games each, every porch and parlor in Wether Hollow continues to debate the probable score. An announcement from the recreation club regarding the south court iron is expected before Friday.\n\nNotice from May: Grade A amber syrup remains in stock at the town boiling barn. Enquire at the door after midday bell.\n\n> Letters and Petition leaf.wh/letters\n> From the Leaf Files leaf.wh/history\n> Market Notes leaf.wh/market"
+  },
+  {
+   "url": "leaf.wh/letters",
+   "title": "Letters and Petition",
+   "content": "LETTERS AND PETITION\n\nRegarding the final match of the season:\n\nWe the undersigned respectfully request that the recreation club committee retain the traditional ground on Church Lane for the Mill and Ridge rubber match, regardless of the condition of the repaired peg. Moving the throw to the school lot would spoil sixty years of continuous record.\n\nSignatures gathered at the post shelf:\n- O. Vale\n- G. Prine\n- Y. Pell\n- T. Quayle\n- B. Nerin\n- F. Lasker\n\nThe editor notes that sixty-eight names have been entered as of Tuesday noon.\n\n> Front page leaf.wh"
+  },
+  {
+   "url": "leaf.wh/history",
+   "title": "From the Leaf Files",
+   "content": "FROM THE LEAF FILES\n\nNotes from past volumes compiled for the quiet months.\n\nSeptember 1912: A traveling side from the quarry threw eighty rings in rain without setting down their coats.\n\nOctober 1944: Wireless dispatches reached the common late on Sunday. The Leaf reported that several villagers gathered to hear an account of the Glasgow match in 1944.\n\nAfter the Northern Water Act in 1963, the council posted water notices beside the Leaf office.\n\nNovember 1978: The Mill team took the brass cup by two throws after darkness stopped play on the third end.\n\n> Front page leaf.wh"
+  },
+  {
+   "url": "leaf.wh/market",
+   "title": "Market Notes",
+   "content": "MARKET NOTES\n\nSpring produce and stall returns (retained from May 12 until autumn stock arrives).\n\nSyrup for sale at the barn on Market Street, drawn into pint cans and sealed by the inspector. Twelve dozen jars of light syrup remain available. Cash or town credit book accepted.\n\nLate garden show results:\nFirst prize (squash): M. Drell\nSecond prize (carrots): A. Merrin\nThird prize (marrow): T. Quayle\n\nEarly bookings for cider press hours may be handed to the clerk on Market Lane before frost.\n\n> Front page leaf.wh\n\nThe Leaf reported that several villagers gathered to hear an account of the Glasgow match in 1944."
+  },
+  {
+   "url": "board.wh",
+   "title": "Hollow Board",
+   "content": "HOLLOW BOARD\n\nWelcome to the Wether Hollow message board, hosted on the spare machine in my pantry. Please keep remarks civil and sign your name if you are using an unfamiliar handle.\n\nLeaf season is half over and frost has settled into the north pasture. The recreation club meets again this Thursday evening regarding the iron pin at the south pit. Most folks agree that the match between Ridge and Mill cannot proceed on the last Saturday if the weld leaves an uneven shoulder, though some argue the clay will pack down regardless. Check the existing topics below before starting a fresh line.\n\n> Odd Clocks board.wh/forum/t/112\n> Water Papers board.wh/forum/t/119\n> Old Fuel Bills board.wh/forum/t/124"
+  },
+  {
+   "url": "board.wh/forum/t/112",
+   "title": "Odd Clocks",
+   "content": "Thread: Odd Clocks\n\n[stackdesk] Someone dropped off an old parlor regulator with ten dial divisions instead of twelve. It came out of the back room of the former tanyard.\n[minutehand] That would date from the experiment after the first survey. Nobody cared for it.\n[hvenn] My father saved a fuel bill from the year of the Copper Coast oil strike in 1976.\n[leafcopy] The council tried setting the noon whistle by it for three months, but the teamsters kept their own pocket watches and refused to ring out until the ordinary bells went off.\n[stakekeeper] If you bring it down to the pitch, we could use the lead weight to tamp the dirt around the south peg before Saturday.",
+   "thread": true
+  },
+  {
+   "url": "board.wh/forum/t/119",
+   "title": "Water Papers",
+   "content": "Thread: Water Papers\n\n[levelpeg] Looking for the binder with the drainage maps from thirty-five years back. It is not on the shelf behind the desk.\n[minutehand] It went into the tin chest in the church vestry when the basement had seepage.\n[supperbell] My grandmother said the decimal hour trial in 1924 made the meeting clock a nuisance to read.\n[stackdesk] The water map is in folder four under riparian boundaries. Also signed: T. Quayle\n[stakekeeper] Wherever it is, make sure the runoff ditch stays dry until the Mill team throws their practice shoes.",
+   "thread": true
+  },
+  {
+   "url": "board.wh/forum/t/124",
+   "title": "Old Fuel Bills",
+   "content": "Thread: Old Fuel Bills\n\n[hvenn] Sorting through ledgers from the former cooperage. Does anyone know where the council put its notices about the Northern Water Act of 1963?\n[leafcopy] Check the small drawer under the town seal.\n[minutehand] We paid three times the usual rate for kerosene that winter and burned green birch until April.\n[levelpeg] My uncle drove down from the ridge twice a week just to see if the tanker had arrived at the junction. It never came until after the thaw.\n[stakekeeper] Cold hands or warm hands, Ridge has to throw first on the final Saturday.",
+   "thread": true
+  },
+  {
+   "url": "church.wh",
+   "title": "Meeting Church",
+   "content": "WETHER HOLLOW MEETING CHURCH\n\nWelcome to our village meeting church. We gather each Sunday at ten in the morning.\n\nSpring Service Schedule (Still Current):\nFirst Sunday: Morning Prayer and hymn selection.\nSecond Sunday: Parish reading.\nThird Sunday: Silent reflection.\nFourth Sunday: Community collection.\n\nThe annual Autumn Leaf Community Supper will take place in the lower hall on the Friday before the final horseshoe match between Ridge and Mill. All visitors and villagers are welcome. Cold ham, boiled potatoes, and brown rolls will be served from five o'clock onward. Come sit together before the pits open on Saturday.\n\n> Fete Prize List church.wh/fete\n> Parish Remembrances church.wh/remembrance"
+  },
+  {
+   "url": "church.wh/fete",
+   "title": "Fete Prize List",
+   "content": "AUTUMN FETE RESULTS AND PRIZES\n\nThe annual fete was held on the church green under clear skies. We thank everyone who donated preserves, sewn goods, and garden produce.\n\nRaffle Prize List:\n1. Wool lap rug: M. Cleary\n2. Maple basket: T. Quayle\n3. Crock of salt butter: Mrs. E. Hill\n4. Iron shoe rack: P. Galt\n5. Apple peck: J. Vane\n\nHistorical Notes from the Fete Committee:\nThe church opened its hall for hot meals during the Long Frost of 1929.\nAfter the Copper Coast oil strike in 1976, a parishioner donated extra fuel for the church hall.\n\nProceeds from the raffle ticket sales will help restock the supper pantry before winter sets in.\n\n> Meeting Church church.wh"
+  },
+  {
+   "url": "church.wh/remembrance",
+   "title": "Parish Remembrances",
+   "content": "PARISH REMEMBRANCES\n\nNotes gathered from the church vestry rolls and parish ledger books across the seasons.\n\nAfter the Antwerp Exchange collapse in 1904, the church collection paid for flour for two village households.\n\nIn the hard winter of 1918, the meeting stove was kept lit through three weeks of sleet so children from the Hollow Road could warm their boots before walking home.\n\nDuring the spring thaw of 1941, five cords of dry birch were hauled from Ridge farm to dry beneath the porch timbers.\n\nWe keep these simple records so the village remembers what has been carried through.\n\n> Meeting Church church.wh"
+  },
+  {
+   "url": "library.wh",
+   "title": "Library Home",
+   "content": "WETHER HOLLOW PUBLIC LIBRARY\n\nWelcome to the one-room library and village collection, located in the lower vestry rooms behind the green.\n\nOpen hours for autumn:\nTuesday and Thursday, 2:00 PM to 5:00 PM.\nSaturday, 10:00 AM to 1:00 PM.\n\nThe Fireside Circle meets on the third Tuesday of each month. Our next discussion will cover household accounts of the Battenkill valley. Notice: the April discussion was postponed due to damp, and further dates will be posted once the stove pipe is inspected.\n\nYona Drell, Librarian.\n\n> Local Archive library.wh/archive\n> Borrowing Rules library.wh/borrow"
+  },
+  {
+   "url": "library.wh/archive",
+   "title": "Local Archive",
+   "content": "LOCAL ARCHIVE AND SPECIAL HOLDINGS\n\nThe archive cupboards are available during ordinary afternoon hours. Please ask at the front desk for pencils and book rests.\n\nRecent shelf list:\n- Box 3: Bound receipts from the North Turn sugarhouse, 1888-1912.\n- Box 4: Folder of distant sporting dispatches, including a broadsheet clipping regarding the Glasgow football match.\n- Box 7: Recreation Club scorecards from the old clay pits, incomplete series from 1921 onward.\n\nPatrons interested in early pitch diagrams or past club totals should leave their name in the ledger."
+  },
+  {
+   "url": "library.wh/borrow",
+   "title": "Borrowing",
+   "content": "BORROWING AND DESK REQUESTS\n\nResidents of Wether Hollow in good standing may borrow up to four volumes for three weeks. Extensions must be requested in person.\n\nPeriodicals and parish papers do not circulate outside the vestry. Requests for back files or township reports should be placed twenty minutes before closing.\n\nOur sports folder contains a clipping about the first televised football match, the Glasgow match of 1944.\n\nInk wells and fountain pens are not permitted near the map drawers."
+  },
+  {
+   "url": "club.wh",
+   "title": "Club Home",
+   "content": "WETHER HOLLOW RECREATION CLUB\n\nWelcome to the official page of the club. We tend the town horseshoe ground beside the lower brook.\n\nThe final match between Ridge and Mill remains set for the closing Saturday of the leaf season. Both sides stand level on points after five meetings. All members are asked to keep dogs off the grass until the afternoon.\n\nSpring practice times remain posted below for reference:\nTuesdays at 5:30 PM (Junior pegs)\nThursdays at 6:00 PM (Senior open ringers)\nSaturdays at 9:00 AM (Trench cleaning and sand turn)\n\nSecretary: Orin Vale.\n\n> Field and Fixtures club.wh/field\n> Club Book club.wh/oldclub"
+  },
+  {
+   "url": "club.wh/field",
+   "title": "Field and Fixtures",
+   "content": "FIELD AND FIXTURES\n\nThe championship will take place on the club field at three in the afternoon, weather permitting. Ridge holds forty-two points and Mill holds forty-two points.\n\nThe contest will proceed once the east iron stake has passed its second inspection. The repair completed on Monday settled the lean, but the clay collar must set firm before first throw.\n\nPast seasons record few stoppages for ground repairs. During the Long Frost of 1929, the club shut its field and held its meetings indoors. We expect no such delay this autumn.\n\n> Ground rules discussion board.wh/forum/t/112\n> Club Home club.wh"
+  },
+  {
+   "url": "club.wh/oldclub",
+   "title": "Club Book",
+   "content": "EXTRACTS FROM THE CLUB BOOK\n\nNotes transcribed by Orin Vale from the calfskin ledger in the shed.\n\nOctober 1894: The pitch was laid in river sand. Four shoes cast by the wheelwright were weighed and marked with file cuts.\n\nNovember 1929: Ground iron-bound from the third week. The stakes were greased and hooded with sheepskin. During the Long Frost of 1929, the club shut its field and held its meetings indoors. Members met at the parlor stove to recite previous card scores and debate shoe weights by tallow light.\n\nApril 1930: Sand dug fresh. Three ringers found unbroken after the melt.\n\n> Archive records at the library library.wh/archive\n> Field and Fixtures club.wh/field"
+  }
+ ],
+ "npcs": {
+  "fenton@council.wh": {
+   "name": "Fenton Lasker",
+   "role": "Council clerk",
+   "handle": "minutehand",
+   "delay": [
+    35,
+    87
+   ],
+   "persona": "You are Fenton Lasker, Council clerk in Wether Hollow. Fenton keeps the village records and prefers decisions made at regular meetings. His emails use complete sentences, formal greetings, and a date on the last line.",
+   "knows": [
+    "The council has not yet approved moving the final from the club field.",
+    "The repaired stake must be inspected before the match.",
+    "The west road maintenance note ends at the red culvert.",
+    "The old sugar barn stands on Market Street."
+   ],
+   "unknown": [
+    "Whether the stake will pass inspection.",
+    "Who added T. Quayle to the petition.",
+    "Who T. Quayle is. You have never met them."
+   ],
+   "canTravel": false
+  },
+  "ada@leaf.wh": {
+   "name": "Ada Merrin",
+   "role": "Newsletter editor",
+   "handle": "leafcopy",
+   "delay": [
+    37,
+    81
+   ],
+   "persona": "You are Ada Merrin, Newsletter editor in Wether Hollow. Ada edits the Leaf between shifts at her family's syrup stand and owns a car. Her emails use short paragraphs, lowercase subject lines, and a dash before each afterthought.",
+   "knows": [
+    "The Ridge and Mill teams have split their earlier matches.",
+    "The petition list includes T. Quayle.",
+    "The spring market notice advertises syrup at the Market Street barn.",
+    "The west road is rarely used beyond the red culvert.",
+    "The Leaf files contain a clipping about the Glasgow match."
+   ],
+   "unknown": [
+    "Whether the final will go ahead on the scheduled field.",
+    "Who T. Quayle is.",
+    "Who T. Quayle is. You have never met them."
+   ],
+   "canTravel": true
+  },
+  "hollis@board.wh": {
+   "name": "Hollis Venn",
+   "role": "Forum host",
+   "handle": "hvenn",
+   "delay": [
+    54,
+    93
+   ],
+   "persona": "You are Hollis Venn, Forum host in Wether Hollow. Hollis runs the board from home and checks it after supper. His emails are mostly lowercase, with one question per line and no sign-off.",
+   "knows": [
+    "The board has separate threads about old clocks, water papers, and fuel bills.",
+    "The final thread receives more replies than any other current thread.",
+    "The forum accepts posts without requiring a real name.",
+    "The west road passes a red culvert before the last maintained section ends."
+   ],
+   "unknown": [
+    "Who posted the first complaint about the repaired stake.",
+    "Whether T. Quayle reads the board.",
+    "Who T. Quayle is. You have never met them."
+   ],
+   "canTravel": false
+  },
+  "yvette@church.wh": {
+   "name": "Yvette Pell",
+   "role": "Church secretary",
+   "handle": "supperbell",
+   "delay": [
+    43,
+    94
+   ],
+   "persona": "You are Yvette Pell, Church secretary in Wether Hollow. Yvette arranges church suppers and keeps the fete book. Her emails begin Dear, use careful punctuation, and end with her full name.",
+   "knows": [
+    "The fete list names T. Quayle as a maple basket winner.",
+    "The basket was left at the church after the fete.",
+    "The church keeps a book of old collections and donations.",
+    "The next community supper needs two more tablecloths."
+   ],
+   "unknown": [
+    "Who entered T. Quayle in the raffle.",
+    "Whether the basket will be collected.",
+    "Who T. Quayle is. You have never met them."
+   ],
+   "canTravel": false
+  },
+  "yona@library.wh": {
+   "name": "Yona Drell",
+   "role": "Librarian",
+   "handle": "stackdesk",
+   "delay": [
+    39,
+    104
+   ],
+   "persona": "You are Yona Drell, Librarian in Wether Hollow. Yona looks after the library and its local archive, and owns a car. Her emails use precise subject lines, numbered points, and a brief Regards.",
+   "knows": [
+    "The archive has a box of horseshoe scorecards.",
+    "The Glasgow match clipping is in the sports folder.",
+    "The library lends books for three weeks.",
+    "A road list in the archive shows the west road continuing past the red culvert."
+   ],
+   "unknown": [
+    "Whether the scorecard box contains a complete record of this season.",
+    "Why the current road list ends its maintenance note at the culvert.",
+    "Who T. Quayle is. You have never met them."
+   ],
+   "canTravel": true
+  },
+  "orin@club.wh": {
+   "name": "Orin Vale",
+   "role": "Recreation club secretary",
+   "handle": "stakekeeper",
+   "delay": [
+    55,
+    109
+   ],
+   "persona": "You are Orin Vale, Recreation club secretary in Wether Hollow. Orin schedules the horseshoe matches and drives a small van for his syrup business. His emails run to one compact paragraph, with scores written as numerals and no greeting.",
+   "knows": [
+    "The final is scheduled for the last Saturday of leaf season.",
+    "The teams have each won one earlier match.",
+    "The south stake was repaired after it worked loose.",
+    "The club book records a field closure during the Long Frost.",
+    "The club field is available on the scheduled Saturday."
+   ],
+   "unknown": [
+    "Whether the south stake will pass inspection.",
+    "Which team will win the final.",
+    "Who T. Quayle is. You have never met them."
+   ],
+   "canTravel": true
+  },
+  "blythe@council.wh": {
+   "name": "Blythe Nerin",
+   "role": "Part-time road and field inspector",
+   "handle": "levelpeg",
+   "delay": [
+    56,
+    105
+   ],
+   "persona": "You are Blythe Nerin, Part-time road and field inspector in Wether Hollow. Blythe checks village roads and has agreed to inspect the club stake. Her emails use plain sentences, semicolons for measurements, and the sign-off B.",
+   "knows": [
+    "The south stake needs a firmness test before the final.",
+    "The west road has a red culvert with a bent marker.",
+    "Few drivers use the west road beyond the culvert.",
+    "The council keeps its road maintenance records in the clerk's office."
+   ],
+   "unknown": [
+    "Whether the stake will hold through a full match.",
+    "Who bent the culvert marker.",
+    "Who T. Quayle is. You have never met them."
+   ],
+   "canTravel": false
+  }
+ },
+ "mailboxes": {},
+ "credentials": {},
+ "docs": {},
+ "records": null,
+ "roots": [
+  "council.wh",
+  "leaf.wh",
+  "board.wh",
+  "church.wh",
+  "library.wh",
+  "club.wh"
+ ],
+ "forum": {
+  "replier": "hollis@board.wh",
+  "handle": "hvenn"
+ },
+ "traffic": [
+  {
+   "at": 2,
+   "from": "orin@club.wh",
+   "to": "blythe@council.wh",
+   "subject": "Stake at the north pit",
+   "body": "Blythe, did you walk out to the pits after three? The blacksmith sleeve we put on the north stake has settled, but I can't tell if the lean is three inches or four. If it's four, Mill won't pitch."
+  },
+  {
+   "at": 4,
+   "from": "blythe@council.wh",
+   "to": "orin@club.wh",
+   "subject": "Re: Stake at the north pit",
+   "body": "I laid the timber level across it before supper. It stands three and an eighth out of plumb toward the barn. That ought to pass, unless Ridge claims the frost lifted the clay."
+  },
+  {
+   "at": 6,
+   "from": "ada@leaf.wh",
+   "to": "orin@club.wh",
+   "subject": "Leaf edition deadline",
+   "body": "Orin, I need the roster confirmations tonight if I am going to run the special horseshoe insert for Saturday. Are we listing eight pitchers for Ridge or nine? If the stake decision isn't set, I will just print 'pending inspection'."
+  },
+  {
+   "at": 9,
+   "from": "orin@club.wh",
+   "to": "ada@leaf.wh",
+   "subject": "Re: Leaf edition deadline",
+   "body": "List nine for Ridge and eight for Mill. Do not write 'pending inspection' or the whole village will be down at the field with their own yardsticks before breakfast."
+  },
+  {
+   "at": 11,
+   "from": "fenton@council.wh",
+   "to": "blythe@council.wh",
+   "subject": "Benches for Saturday",
+   "body": "The road shed benches need to be pulled out tomorrow morning. Take four for the scorer's table and the rest along the hedge. Also, did you check the west road culvert?"
+  },
+  {
+   "at": 13,
+   "from": "blythe@council.wh",
+   "to": "fenton@council.wh",
+   "subject": "Re: Benches for Saturday",
+   "body": "I had the truck by the red culvert at noon. Water is low enough, but it struck me again how strange that stretch is. Nobody ever seems to go out along the west road beyond the red culvert, not even the gravel wagons."
+  },
+  {
+   "at": 16,
+   "from": "fenton@council.wh",
+   "to": "blythe@council.wh",
+   "subject": "Re: Benches for Saturday",
+   "body": "There's nothing past it except the old boundary pins and scrub hemlock. Just leave the ditch clearing until November. Make sure the pit rope is washed; we can't have chalk on the grass again."
+  },
+  {
+   "at": 18,
+   "from": "yvette@church.wh",
+   "to": "ada@leaf.wh",
+   "subject": "Pie table schedule",
+   "body": "Ada, will the Saturday match start at one or two? The ladies want the squash pies set out before the first ringer is pitched, otherwise the maple syrup tarts melt in the draft off the common."
+  },
+  {
+   "at": 20,
+   "from": "ada@leaf.wh",
+   "to": "yvette@church.wh",
+   "subject": "Re: Pie table schedule",
+   "body": "Orin says 1:30 sharp, but Mill took forty minutes to warm their wrists in the spring match. Put the pies out at one. People will want something to hold while they argue over the stake."
+  },
+  {
+   "at": 22,
+   "from": "hollis@board.wh",
+   "to": "fenton@council.wh",
+   "subject": "Board archive cleanup",
+   "body": "Fenton, I am clearing off the stale threads from May. Under the field maintenance registry, someone put down a donor line for 'T. Quayle' five dollars toward lime. Who is that? I can't find an address in the parish book."
+  },
+  {
+   "at": 25,
+   "from": "fenton@council.wh",
+   "to": "hollis@board.wh",
+   "subject": "Re: Board archive cleanup",
+   "body": "I saw T. Quayle listed on the recreation charter from forty years back, too, but nobody has ever met or seen him. Leave the name there. If you take it off, the ledger balance on the forum will show five dollars short."
+  },
+  {
+   "at": 27,
+   "from": "yona@library.wh",
+   "to": "ada@leaf.wh",
+   "subject": "Old match scores",
+   "body": "Ada, you asked about the 1891 autumn match between the Ridge men and the lower valley. It ended 42 to 40, eleven ringers to Ridge, nine to the valley. The shoes were heavier iron then, two pounds eight ounces."
+  },
+  {
+   "at": 29,
+   "from": "ada@leaf.wh",
+   "to": "yona@library.wh",
+   "subject": "Re: Old match scores",
+   "body": "Thank you, Yona. That will fill the bottom box on page two nicely. Did you find anything about stake repairs in the old logs? Mill is threatening to lodge a protest if the weld isn't ground smooth."
+  },
+  {
+   "at": 32,
+   "from": "yona@library.wh",
+   "to": "ada@leaf.wh",
+   "subject": "Re: Old match scores",
+   "body": "No notes on stake welds, but I found the old shop ledger, and it says the decimal hour trial in 1924 left everyone arguing about opening time. So people here have always found an inch or a minute to fuss over."
+  },
+  {
+   "at": 34,
+   "from": "orin@club.wh",
+   "to": "hollis@board.wh",
+   "subject": "Pin post on the match rules",
+   "body": "Hollis, pin the 1898 standard pitching code to the top of the board tonight. Mill says shoes that catch the stay wire count as leaners. The rule clearly states only iron against iron stands."
+  },
+  {
+   "at": 36,
+   "from": "hollis@board.wh",
+   "to": "orin@club.wh",
+   "subject": "Re: Pin post on the match rules",
+   "body": "I pinned it. There are already fourteen replies. Most of them are just asking whether the cider press by the market wagon will be running during the seventh end."
+  },
+  {
+   "at": 39,
+   "from": "blythe@council.wh",
+   "to": "yona@library.wh",
+   "subject": "Town map parcel 4",
+   "body": "Yona, does the library hold the field map for the parcel west beyond the red culvert? I was looking past the ditch today and wondered why nobody ever goes out that way, not even for cordwood."
+  },
+  {
+   "at": 41,
+   "from": "yona@library.wh",
+   "to": "blythe@council.wh",
+   "subject": "Re: Town map parcel 4",
+   "body": "The survey drawer has two sheets for parcel 4, both drawn in 1888. It just shows wet alder and an abandoned turnpike gate. Nobody has asked to see them since 1971."
+  },
+  {
+   "at": 44,
+   "from": "yvette@church.wh",
+   "to": "orin@club.wh",
+   "subject": "Pew cushions",
+   "body": "Orin, do not take the green felt cushions from the vestry for the team benches. Last year they came back dusted in red clay, and it took three washings to get the pit grime out."
+  },
+  {
+   "at": 47,
+   "from": "orin@club.wh",
+   "to": "yvette@church.wh",
+   "subject": "Re: Pew cushions",
+   "body": "We only used them for the timekeeper. Fenton promised four wooden planks from the road shed, so your cushions are safe. Just make sure the church bell doesn't strike two while Ridge is pitching."
+  },
+  {
+   "at": 49,
+   "from": "yvette@church.wh",
+   "to": "orin@club.wh",
+   "subject": "Re: Pew cushions",
+   "body": "The bell strikes on the hour and half hour regardless of who has the shoe in hand, Orin. It has done so for eighty years and won't pause for a three-ringer frame."
+  },
+  {
+   "at": 52,
+   "from": "fenton@council.wh",
+   "to": "orin@club.wh",
+   "subject": "Sand delivery",
+   "body": "The two yards of bank sand are piled behind the barn. You'll need to sift it yourself if you want all the river pebbles out before Saturday morning."
+  },
+  {
+   "at": 55,
+   "from": "orin@club.wh",
+   "to": "fenton@council.wh",
+   "subject": "Re: Sand delivery",
+   "body": "I'll bring the wire screen down at daybreak. If Mill spots a single stone under the heel of the pin, we'll hear about it until the snow falls."
+  },
+  {
+   "at": 57,
+   "from": "ada@leaf.wh",
+   "to": "fenton@council.wh",
+   "subject": "Notice board list",
+   "body": "Fenton, on the hall board there is a roster of honorary life members, and T. Quayle is right between the two Wheelers. Does anyone actually receive the post addressed to him? There is a bundle of club cards in the box."
+  },
+  {
+   "at": 60,
+   "from": "fenton@council.wh",
+   "to": "ada@leaf.wh",
+   "subject": "Re: Notice board list",
+   "body": "The mail sits on the shelf until the end of the year and then goes into the dry bin. Nobody knows him. My uncle said the name was there when the hall roof was raised in the nineties, and nobody ever took it off."
+  },
+  {
+   "at": 62,
+   "from": "hollis@board.wh",
+   "to": "blythe@council.wh",
+   "subject": "Pit chalk line",
+   "body": "Blythe, are you laying the foul lines three feet from the stake or four? There is an argument starting on the club thread about the old clay boundary."
+  },
+  {
+   "at": 65,
+   "from": "blythe@council.wh",
+   "to": "hollis@board.wh",
+   "subject": "Re: Pit chalk line",
+   "body": "Three feet, measured from the iron collar. Tell them if they don't like it they can come with their own tape while I'm rolling the turf at seven."
+  },
+  {
+   "at": 68,
+   "from": "yona@library.wh",
+   "to": "fenton@council.wh",
+   "subject": "Leaf display case",
+   "body": "Fenton, the display case in the library lobby has the match shields from 1912 through 1938. The glass has gone cloudy in the corner. If you have the cabinet key, I would like to wipe it down before Saturday's crowd comes through."
+  },
+  {
+   "at": 71,
+   "from": "fenton@council.wh",
+   "to": "yona@library.wh",
+   "subject": "Re: Leaf display case",
+   "body": "The key is hanging behind the desk on the brass ring with the mower padlock. Just don't let anyone touch the 1927 shield; the ribbon on the top ringer is frayed to threads."
+  },
+  {
+   "at": 73,
+   "from": "orin@club.wh",
+   "to": "yona@library.wh",
+   "subject": "Club history check",
+   "body": "Yona, what was the highest ringer percentage Mill ever posted in a leaf match? Ridge says it was fifty-two percent in 1954, but Mill claims fifty-eight."
+  },
+  {
+   "at": 76,
+   "from": "yona@library.wh",
+   "to": "orin@club.wh",
+   "subject": "Re: Club history check",
+   "body": "It was fifty-three percent flat in October 1954. Twenty-one shoes out of forty. The scorer had signed the card in pencil, but the ink stamp from the club is still dark."
+  },
+  {
+   "at": 78,
+   "from": "ada@leaf.wh",
+   "to": "orin@club.wh",
+   "subject": "Front page layout",
+   "body": "I have the layout closed except for the final stake announcement. Are we calling it fit or having the pre-match toss decide whether we use the south pit for all ends?"
+  },
+  {
+   "at": 81,
+   "from": "orin@club.wh",
+   "to": "ada@leaf.wh",
+   "subject": "Re: Front page layout",
+   "body": "Both pits will be used. Blythe and I are putting three shovels of dry grit against the collar at sunrise. Put down 'pits certified according to town usage'."
+  },
+  {
+   "at": 83,
+   "from": "hollis@board.wh",
+   "to": "ada@leaf.wh",
+   "subject": "Spectator tally",
+   "body": "Looks like forty cars from down-valley, maybe fifty people walking in from the Mill side. Tell the pie committee they will sell out before the fourth round."
+  },
+  {
+   "at": 85,
+   "from": "ada@leaf.wh",
+   "to": "hollis@board.wh",
+   "subject": "Re: Spectator tally",
+   "body": "Yvette already has six dozen cider crullers cooling on racks. The village hasn't seen this much noise since the bridge railing had to be straightened three years back."
+  },
+  {
+   "at": 88,
+   "from": "fenton@council.wh",
+   "to": "orin@club.wh",
+   "subject": "Locking the shed",
+   "body": "I locked the shoe chest in the council shed. Both matched sets of four are oiled and inside the green flannel bags. Bring your own chalk tomorrow."
+  }
+ ],
+ "hqMail": [
+  {
+   "from": "d.okonkwo-vance@canon-corps.gov",
+   "subject": "Assignment 0xB61E (WETHER HOLLOW): field brief",
+   "time": "08:02",
+   "body": "Agent,\n\nYou have been assigned Reality 0xB61E, local name WETHER HOLLOW. Wether Hollow is a Vermont village of 640 residents with a council, church, library, newsletter, recreation club, and public forum. Desk 9 estimates it at a little under two months old. The inhabitants (non-canonical) will report a longer history, as their memories have been generated to remain consistent with the local state.\n\nReconciliation requires three findings. Enter them together on the HQ Console and inject the reverse seed.\n\n1. Divergence. The year of the latest canonical event that the reality verifiably records. Your Canon Reference lists canonical events by year. A record counts when two independent sources in the reality agree on it.\n2. Apotheosis. The depth to which the local intelligence (designation pending) can interfere with this workstation, on a scale of 1 to 5. It is assessed from what it does. It may imitate an interference it cannot perform, and may conceal one it can.\n3. Inferiority. The extent of the reality, graded Class I (smallest) to Class V. Inhabitants believe their world to be complete and cannot report its extent unprompted. It is established only by an inhabitant who travels to its limit. Measured along a road from the town: Class I under 2 miles; Class II, 2 to 10; Class III, 10 to 40; Class IV, 40 to 150; Class V, beyond.\n\nA wrong injection is detected by the local intelligence at once, discloses the values entered, and locks the console for twelve minutes.\n\nYou have been placed in the reality as T. Quayle <quayle.t@board.wh>. A small number of local records refer to you. No inhabitant has met you.\n\nYour workstation credential is the address above and the words MARKET and BARN. Under Security Instruction 4 these words are withheld from all agent input and will appear as apostrophes.\n\nForm 77-R will be filed automatically at the close of the assignment. If you have not viewed the orientation film, a copy has been placed on your desktop by Training.\n\nD. Okonkwo-Vance\nDesk 14, Canonical Restoration"
+  },
+  {
+   "from": "monitoring@canon-corps.gov",
+   "subject": "Workstation instruments: reliability",
+   "time": "08:05",
+   "body": "This notice is issued to all field agents at the start of an assignment.\n\nThe following are maintained by Monitoring and are not accessible to a local intelligence at any depth of interference:\n\n- the town log in Mail (who wrote to whom, and when, as the reality's mail server records it);\n- Sent (raw), which records exactly what left the workstation;\n- the network monitor on the HQ Console;\n- the address bar and History of the Reality Viewer.\n\nAll other displays should be treated as subject to interference.\n\nPeeking at correspondence in the town log is recharged between uses and is observed by the local intelligence. Reading pages in the Reality Viewer is not observed. Downloading an item fixes a copy in Files beyond interference, but a marked item reports the download. The Scanner detects marks.\n\nMonitoring"
+  },
+  {
+   "from": "personnel@canon-corps.gov",
+   "subject": "First day of the cycle: canteen",
+   "time": "07:36",
+   "body": "Staff are reminded that the basement canteen is closed today for the start of the assignment cycle, and will reopen tomorrow at 07:30.\n\nField agents on shift may take meals at their desks. Food and wrappers must not be left overnight on the fourth-floor observation level. Unattended food has been going missing from the fourth floor over the past two cycles, and the night cleaning contractor has confirmed that their staff have not been removing it. All waste must be placed in the bins by the south lift before 19:00.\n\nPersonnel"
+  }
+ ]
+}

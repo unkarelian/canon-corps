@@ -298,3 +298,41 @@ export async function win() {
     el("div", { class: "muted small", style: "margin-top:12px" }, "Personnel reminds field agents that notebooks used during an assignment are to be handed in at its close."),
     el("div", { style: "margin-top:16px" }, el("button", { onclick: () => location.reload() }, "Next assignment"))));
 }
+
+// ---- severance: nobody closes. The desk does. ------------------------------------------------------------
+// Epilogue: what the local intelligence believed the agent knew, next to what the agent actually read.
+export async function severed() {
+  music(null, { fade: 2 });
+  await sleep(2500);
+  const read = [...new Set(S.reads.map((r) => r.url))].map((u) => S.pages[u]?.title || u);
+  const peeked = S.peeks.map((p) => S.mail.find((m) => m.id === p.id)?.subject).filter(Boolean);
+  const b = S.entity.beliefs || {};
+  const o = el("div", { class: "overlay form77" });
+  o.append(el("div", { class: "sheet", style: "height:auto;max-height:92vh;overflow:auto;font-family:var(--ui);font-size:13px;line-height:1.6" },
+    el("span", { class: "rubber" }, "REFERRED"),
+    el("div", { class: "head" }, el("img", { src: "assets/seal/emboss.png", alt: "" }), el("b", {}, "Canonical Restoration - assignment closed")),
+    el("div", {}, `Reality ${W.id} (${W.name}) is no longer connected to canon. It has not been reconciled.`),
+    el("div", {}, "Desk 14 is closed for the remainder of the cycle."),
+    el("div", {}, `The agent is referred to Personnel (Room 108). Please bring any notebooks used during the current cycle.`),
+    el("div", { style: "display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px" },
+      el("div", {}, el("b", {}, "What it saw of you"),
+        el("div", { class: "small" }, `Messages you looked inside: ${peeked.length ? peeked.join("; ") : "none"}.`),
+        el("div", { class: "small" }, `Who it thought you were: ${b.suspect || "not recorded"}${b.suspect_confidence ? ` (${b.suspect_confidence}%)` : ""}.`),
+        el("div", { class: "small" }, `Your password, as it guessed it: ${b.password_guess || "not recorded"}.`),
+        el("div", { class: "small" }, `Your world, as it named it: ${b.seed_year ? `${b.seed_year} / ${b.seed_apotheosis} / ${b.seed_inferiority}` : "not recorded"}.`)),
+      el("div", {}, el("b", {}, "What you read, which it never saw"),
+        el("div", { class: "small" }, read.length ? read.join("; ") : "nothing"))),
+    el("div", { style: "margin-top:16px" }, el("button", { onclick: () => location.reload() }, "Report to Room 108"))));
+  document.body.append(o);
+  window.CC?.saveRun?.("severed");
+}
+
+// The countdown ran out: both ends close. Nothing after.
+export async function closedBoth() {
+  const o = el("div", { class: "overlay black" });
+  document.body.append(o);
+  cutAll();
+  window.CC?.saveRun?.("closed");
+  await sleep(9000);
+  o.replaceChildren(el("div", { class: "after" }, "Connection closed at both ends.", el("button", { onclick: () => location.reload() }, "Begin a new assignment")));
+}

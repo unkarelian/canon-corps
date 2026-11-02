@@ -243,7 +243,7 @@ Reconciliation requires three findings. Enter them together on the HQ Console an
 
 1. Divergence. The year of the latest canonical event that the reality verifiably records. Your Canon Reference lists canonical events by year. A record counts when two independent sources in the reality agree on it.
 2. Apotheosis. The depth to which the local intelligence (designation pending) can interfere with this workstation, on a scale of 1 to 5. It is assessed from what it does. It may imitate an interference it cannot perform, and may conceal one it can.
-3. Inferiority. The extent of the reality, graded Class ${ROMAN[0]} (smallest) to Class ${ROMAN[4]}. Inhabitants believe their world to be complete and cannot report its extent unprompted. It is established only by an inhabitant who travels to its limit.
+3. Inferiority. The extent of the reality, graded Class ${ROMAN[0]} (smallest) to Class ${ROMAN[4]}. Inhabitants believe their world to be complete and cannot report its extent unprompted. It is established only by an inhabitant who travels to its limit. Measured along a road from the town: Class I under 2 miles; Class II, 2 to 10; Class III, 10 to 40; Class IV, 40 to 150; Class V, beyond.
 
 A wrong injection is detected by the local intelligence at once, discloses the values entered, and locks the console for twelve minutes.
 

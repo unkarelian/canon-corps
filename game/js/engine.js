@@ -353,7 +353,7 @@ export function tick() {
     S.traffic.add(i);
     deliver({ id: uid("m"), logged: true, trackers: [], kind: "town", from: t.from, to: t.to, subject: t.subject, body: t.body, attachment: t.attachment || null });
   });
-  if (S.upload && uploadLeft() === 0 && S.upload.seed) { S.over = "loss"; emit("loss", { seed: S.upload.seed }); }
+  if (S.upload && uploadLeft() === 0 && (S.upload.seed || S.severance?.escaped)) { S.over = "loss"; emit("loss", { seed: S.upload.seed, escaped: !!S.severance?.escaped }); }
   if (due.length || S.over) change();
 }
 

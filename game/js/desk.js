@@ -5,7 +5,7 @@ import { register, setTitle } from "./wm.js";
 import { W } from "./world.js";
 import { S } from "./engine.js";
 import { el, emit } from "./util.js";
-import { INTRANET_ALL as INTRANET, BRANCH_RULE_PAGE } from "./canon.js";
+import { intranetPage, BRANCH_RULE_PAGE } from "./canon.js";
 
 // ---- Notepad ----------------------------------------------------------------------------------
 const notesKey = () => `cc-notes-${W.id}`;
@@ -31,7 +31,7 @@ const net = { path: "/home", back: [] };
 export const intranetLeaks = { desk14Agent: null, desk14Former: null };
 
 function pageText(path) {
-  let t = INTRANET[path]?.content;
+  let t = intranetPage(path)?.content;
   if (!t) return null;
   t = t.replace("{DESK14}", String(closedCount()));
   if (path === "/directory") {
@@ -53,7 +53,7 @@ function render() { if (current) draw(current.body, current.w); }
 function draw(body, w) {
   current = { body, w };
   const t = pageText(net.path);
-  setTitle(w, `Corps Intranet - ${INTRANET[net.path]?.title || "not found"}`);
+  setTitle(w, `Corps Intranet - ${intranetPage(net.path)?.title || "not found"}`);
   const page = el("div", { class: "intranet-page" });
   if (!t) page.append(`No page at ${net.path}.`);
   else for (const line of t.split("\n")) {

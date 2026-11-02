@@ -39,8 +39,8 @@ test("censor hides password words, letter for letter, and is what gets sent", ()
 });
 
 test("timetable mail arrives on time and is logged, metadata only", () => {
-  wait(60); assert.equal(E.townLog().length, 0);
-  wait(61); assert.equal(E.townLog().length, 1);
+  wait(30); assert.equal(E.townLog().length, 0);
+  wait(31); assert.equal(E.townLog().length, 1);
   assert.equal(E.townLog()[0].body, undefined);
 });
 

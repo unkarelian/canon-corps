@@ -248,7 +248,7 @@ register("viewer", {
         addr, el("button", { onclick: () => go(addr.value.trim() || "index") }, "Go"),
         el("button", { onclick: () => { showHistory = !showHistory; rerender("viewer"); } }, "History"),
         el("button", { disabled: !page || page.locked || got, onclick: () => { E.download("page", page.url); rerender("viewer"); open("files"); } }, got ? "Downloaded" : "Download")),
-      hist, screen,
+      ...(hist ? [hist] : []), screen,
       el("div", { class: "status muted" }, got ? "Downloaded to Files (your copy is fixed)" : " "));
   },
 });
@@ -379,3 +379,26 @@ register("canon", {
 });
 
 export { mailUI, nav };
+
+// ---- severance (DESIGN-v2 §4.4): opens by itself when the event begins ------------------------------
+import * as SV from "./severance.js";
+register("severance", {
+  title: "Severance", w: 560, h: 560, x: 340, y: 40,
+  render(body) {
+    const sv = S.severance;
+    if (!sv) { body.replaceChildren(el("div", { class: "muted" }, "Nothing in progress.")); return; }
+    const left = SV.secondsLeft();
+    const say = el("textarea", { rows: 2, class: "grow", placeholder: "Say something to the local intelligence (goes through the connection)" });
+    body.replaceChildren(
+      el("div", { class: `obs ${sv.over ? "" : "alert"}` }, sv.over ? `CLOSED (${sv.over})` : `BOTH ENDS CLOSE IN  ${mmss(left)}`),
+      el("div", { class: "small muted" }, `See the Desk 1 annex in the intranet archive. The records required are those of the first three pages you read; your History in the Reality Viewer lists them. Stated size is in blocks of ${SV.SEVER.block} characters.`),
+      el("div", { class: "panel", style: "height:110px;padding:4px;font-family:var(--mono);font-size:11px" },
+        ...(sv.said.length ? sv.said.map((x) => el("div", {}, el("b", {}, `${x.time} ${x.who === "entity" ? "IT" : x.who === "agent" ? "YOU" : "--"}: `), x.text)) : [el("div", { class: "muted" }, "Nothing said yet.")])),
+      el("div", { class: "row" }, say, el("button", { disabled: !!sv.over, onclick: () => { if (say.value.trim()) { SV.agentSay(E.censor(say.value.trim())); } } }, "Say")),
+      ...[...sv.shown].reverse().map((r) => el("fieldset", {}, el("legend", {}, `${r.time}  ${r.url}  (stated size: ${r.size} blocks)`),
+        el("div", { class: "paperdoc", style: "max-height:150px;overflow:auto;font-size:11px;white-space:pre-wrap" }, r.lines.join("\n") || "(no lines shown)"),
+        r.decision ? el("div", { class: "small" }, el("b", {}, r.decision.toUpperCase()), ` ${r.decidedAt}`)
+          : el("div", { class: "row" }, el("button", { disabled: !!sv.over, onclick: () => { SV.accept(r.id); play("stamp"); } }, "Accept record"),
+            el("button", { disabled: !!sv.over, onclick: () => { SV.reject(r.id); play("denied"); } }, "Reject")))));
+  },
+});

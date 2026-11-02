@@ -14,7 +14,8 @@ import { tickLiving } from "./living.js";
 import { introDue, playIntro } from "./intro.js";
 import { bootScreen } from "./boot.js";
 import { inductionDue, playInduction } from "./induction.js";
-import { playEye, loss, win } from "./fx.js";
+import { playEye, loss, win, severed, closedBoth } from "./fx.js";
+import * as SV from "./severance.js";
 import { on, el, emit } from "./util.js";
 import { usage } from "./llm.js";
 import { play, musicForStage, startRoom, ambience, onAudioStart, ready, audioPrefs, setPref, audioState, startRecording, stopRecording } from "./audio.js";
@@ -79,6 +80,7 @@ onLogon.then(async () => {
   markPlayed(W.id);
   initNPCs();
   initEntity();
+  SV.initSeverance();
 });
 
 // ---- sound ---------------------------------------------------------------------------------------------
@@ -115,7 +117,7 @@ document.addEventListener("pointerdown", (e) => { if (!sndPanel.hidden && !e.tar
 
 // ---- what the engine's events look like on the desk ------------------------------------------------------
 on("change", () => {
-  for (const id of ["mail", "files", "scanner", "hq"]) if (isOpen(id)) rerender(id);
+  for (const id of ["mail", "files", "scanner", "hq", "severance"]) if (isOpen(id)) rerender(id);
   const unread = E.inbox().filter((m) => m.read === false).length + S.hq.filter((m) => !m.read).length;
   document.getElementById("tray-mail").textContent = unread ? `${unread} unread` : "";
 });
@@ -125,15 +127,18 @@ on("mail-arrived", (m) => {
 });
 on("climb", ({ rung }) => { if (rung === "cardinality") playEye(); }); // it knows where you are
 on("inject", () => win());
+on("severance-start", () => { play("stage"); open("severance"); });
+on("severance-end", ({ how }) => { if (how === "severed") severed(); if (how === "expired") closedBoth(); });
 on("loss", () => loss());
 
 setInterval(() => {
   if (S.over) return;
   E.tick();
+  SV.tickSeverance();
   tickLeaks();
   tickLiving();
   moodTick();
-  if (isOpen("mail") || isOpen("scanner") || isOpen("hq")) for (const id of ["mail", "scanner", "hq"]) if (isOpen(id)) rerender(id); // cooldowns count down
+  if (isOpen("mail") || isOpen("scanner") || isOpen("hq")) for (const id of ["mail", "scanner", "hq", "severance"]) if (isOpen(id)) rerender(id); // cooldowns count down
   document.getElementById("tray-clock").textContent = displayClock(clock());
   if (!document.getElementById("debug").hidden) debug();
 }, 1000);

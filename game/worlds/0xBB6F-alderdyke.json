@@ -1,0 +1,807 @@
+{
+ "id": "0xBB6F",
+ "name": "ALDERDYKE",
+ "town": "Alderdyke",
+ "tld": "ad",
+ "schema": 2,
+ "generated": {
+  "at": "2026-11-02T04:44:03.116Z",
+  "plan": {
+   "seed": 1598403772,
+   "id": "0xBB6F",
+   "setting": {
+    "place": "a fen town of drained fields, dykes and a pumping station",
+    "spelling": "British"
+   },
+   "genre": {
+    "name": "scientific oddity",
+    "undercurrent": "a research station or works on the edge of town keeps odd hours, makes odd sounds, and people are used to it"
+   },
+   "tone": {
+    "name": "homemade",
+    "how": "earnest amateurs: long digressions, things explained twice, pages nobody has tidied"
+   },
+   "age": "five to seven weeks",
+   "townInitial": "A",
+   "divergence": {
+    "index": 26,
+    "year": 1972,
+    "verifiable": [
+     6,
+     8,
+     14,
+     23,
+     26
+    ],
+    "single": 27,
+    "wrong": 32
+   },
+   "apotheosis": 5,
+   "inferiority": {
+    "class": 2,
+    "miles": 4.8
+   },
+   "password": [
+    "harbour",
+    "ledger"
+   ],
+   "agent": {
+    "name": "M. Moss",
+    "local": "moss.m"
+   },
+   "injected": [
+    {
+     "kind": "a club or quiz results post",
+     "line": "2nd: M. Moss and partner"
+    },
+    {
+     "kind": "a list of new library members or a membership list",
+     "line": "New this month: M. Moss"
+    }
+   ],
+   "cast": [
+    "O",
+    "A",
+    "W",
+    "M",
+    "K",
+    "C",
+    "H",
+    "H",
+    "G",
+    "O"
+   ]
+  },
+  "ms": 95426,
+  "warnings": [],
+  "ok": true
+ },
+ "survey": "Alderdyke is a small fen town with a council, library, church, social club, newsletter, pumping station and field research works.",
+ "age": "five to seven weeks",
+ "story": "The field works have begun running a low, uneven cycle of machinery after midnight, while the pumping station's readings remain ordinary. A council ditch survey and the works' own measurements disagree about distances along the road out, and both sets of figures have been sent away for checking. The next set of measurements is due on Friday, though the works has not said who will take them.",
+ "setting": "a fen town of drained fields, dykes and a pumping station",
+ "genre": "scientific oddity",
+ "tone": "homemade",
+ "agent": {
+  "address": "moss.m@board.ad",
+  "name": "M. Moss",
+  "role": "a resident of Alderdyke",
+  "handle": "moss_m",
+  "injected": [
+   "board.ad/forum/t/127",
+   "works.ad/hours"
+  ]
+ },
+ "password": [
+  "harbour",
+  "ledger"
+ ],
+ "divergence": {
+  "year": 1972,
+  "slots": [
+   {
+    "id": "c0",
+    "canon": "14",
+    "year": 1914,
+    "kind": "true",
+    "url": "steda.ad/register",
+    "line": "After the Ostend Settlement in 1914, St Eda's held a supper for two local men who had been working at a shipyard."
+   },
+   {
+    "id": "c1",
+    "canon": "14",
+    "year": 1914,
+    "kind": "true",
+    "url": "club.ad/quiz",
+    "line": "The club scrapbook says the Ostend Settlement in 1914 was discussed over a particularly long game of dominoes."
+   },
+   {
+    "id": "c2",
+    "canon": "19",
+    "year": 1919,
+    "kind": "true",
+    "url": "council.ad/ditches",
+    "line": "The council minutes for 1919 record a public reading about the Treaty of Graz in the old meeting room."
+   },
+   {
+    "id": "c3",
+    "canon": "19",
+    "year": 1919,
+    "kind": "true",
+    "url": "mail",
+    "line": "My gran said the bell was rung here for the Treaty of Graz in 1919, though she always added that the rope broke afterwards."
+   },
+   {
+    "id": "c4",
+    "canon": "33",
+    "year": 1933,
+    "kind": "true",
+    "url": "council.ad/minutes",
+    "line": "During the Great Wheat Blight in 1933, the council arranged a room for growers to compare what they had seen in their fields."
+   },
+   {
+    "id": "c5",
+    "canon": "33",
+    "year": 1933,
+    "kind": "true",
+    "url": "steda.ad/supper",
+    "line": "The parish register notes a collection of flour and potatoes during the Great Wheat Blight in 1933."
+   },
+   {
+    "id": "c6",
+    "canon": "63",
+    "year": 1963,
+    "kind": "true",
+    "url": "sheet.ad/works",
+    "line": "Our old cuttings show the pumping station staff discussing the Northern Water Act in 1963 over a photograph taken beside the main dyke."
+   },
+   {
+    "id": "c7",
+    "canon": "63",
+    "year": 1963,
+    "kind": "true",
+    "url": "council.ad/ditches",
+    "line": "Following the Northern Water Act in 1963, the council filed a new plan of the town's drains, which may be inspected by appointment."
+   },
+   {
+    "id": "c8",
+    "canon": "72",
+    "year": 1972,
+    "kind": "true",
+    "url": "club.ad/scrapbook",
+    "line": "The club scrapbook has a postcard from a former member who wrote home about the dissolution of the Pan-Andean Union in 1972."
+   },
+   {
+    "id": "c9",
+    "canon": "72",
+    "year": 1972,
+    "kind": "true",
+    "url": "library.ad/members",
+    "line": "Our cuttings folder on the dissolution of the Pan-Andean Union in 1972 includes a letter sent to an Alderdyke family by a relative abroad."
+   },
+   {
+    "id": "c10",
+    "canon": "75",
+    "year": 1975,
+    "kind": "single",
+    "url": "sheet.ad/history",
+    "line": "The Sheet's first report on the Copper Coast oil strike in 1975 sits beside an advert for seed potatoes."
+   },
+   {
+    "id": "c11",
+    "canon": "91",
+    "year": 1992,
+    "kind": "wrong",
+    "url": "sheet.ad/history",
+    "line": "When the Calais to Dover bridge opened in 1992, the Sheet printed a local driver's account of the journey."
+   },
+   {
+    "id": "c12",
+    "canon": "91",
+    "year": 1992,
+    "kind": "wrong",
+    "url": "club.ad/quiz",
+    "line": "The club marked the Calais to Dover bridge opening in 1992 with a supper, and the menu is still in the scrapbook."
+   }
+  ]
+ },
+ "apotheosis": 5,
+ "inferiority": {
+  "class": 2,
+  "edge": {
+   "road": "the west road out past the pumping station and the field works",
+   "distanceMiles": 4.8,
+   "tripMinutes": 5,
+   "whatTheyFind": "The road passes the works and reaches a white bridge over a narrow dyke. Beyond it the fields and ditches continue, with no houses or signs to distinguish them. At about 4.8 miles from town there is the same white bridge again, with the same chipped corner and bent railing. The road and fields carry on beyond it."
+  }
+ },
+ "pages": [
+  {
+   "url": "council.ad",
+   "title": "Welcome to the Council Pages",
+   "content": "WELCOME TO THE COUNCIL PAGES\n\nWelcome to the Alderdyke Town Council website. This site is maintained by Oren Tebb, part-time clerk to the council.\n\nThe clerk is in attendance at the council office on Tuesday mornings from nine until twelve, and Thursday afternoons from two until half past four. Outside these hours, letters may be placed through the brass flap in the door.\n\nPlease note that the council office is situated on Harbour Street, near the coal yard. Visitors often ask why it is called Harbour Street when there has never been a harbour there, nor any boat traffic beyond the common fen lighters on the dyke. The name appears on maps as far back as 1842 and the council has never found cause to alter it.\n\n> Ditches and Drains council.ad/ditches\n> Minutes and Older Papers council.ad/minutes"
+  },
+  {
+   "url": "council.ad/ditches",
+   "title": "Ditches and Drains",
+   "content": "DITCHES AND DRAINS\n\nA reminder concerning the maintenance of roadside ditches and common watercourses across Alderdyke parish.\n\nThe roadside ditches along the north lane are the charge of adjacent landowners, whereas the main dyke running down toward the pumping station is kept by the district board. They are not cleared at the same season. Roadside ditches should be rodded and cleared of weed before the first hard frost, usually the middle of October. The main dyke is cleared later, in late November, once the autumn levels have settled.\n\nThe council minutes for 1919 record a public reading about the Treaty of Graz in the old meeting room.\n\nFollowing the Northern Water Act in 1963, the council filed a new plan of the town's drains, which may be inspected by appointment.\n\n> Back to main page council.ad\n> Town minutes archive council.ad/minutes"
+  },
+  {
+   "url": "council.ad/minutes",
+   "title": "Minutes and Older Papers",
+   "content": "MINUTES AND OLDER PAPERS\n\nThe minute books of Alderdyke Town Council are held in the tin cabinet behind the clerk's desk. Extracts may be seen during ordinary opening hours.\n\nThe earliest volumes in the current cabinet begin after the Treaty of Graz, when the parish boundaries were redrawn against the low fen. Enquiries regarding older vestry books should be directed to the library.\n\nDuring the Great Wheat Blight in 1933, the council arranged a room for growers to compare what they had seen in their fields.\n\nPapers concerning the Northern Water Act are kept in the lower drawer alongside survey maps and dyke correspondence. More recent minutes concerning roadside measurements and survey work are being transcribed as time allows.\n\n> Drainage information council.ad/ditches\n> Council notices council.ad"
+  },
+  {
+   "url": "library.ad",
+   "title": "The Library Room",
+   "content": "ALDERDYKE LIBRARY ROOM\n\nWelcome to our volunteer lending room and archive shelves, situated over the grocer on the high pavement. \n\nPlease note the street stairs are open on Tuesdays, Thursdays, and Saturday mornings only. Do not attempt the inner latch when the blind is drawn downstairs.\n\nVisitors are kindly asked to leave wet umbrellas in the ceramic stand downstairs in the shop passage before coming up, as the paper folders suffer dreadfully from fen damp and drip.\n\nBorrowing is free to all parish residents upon giving a name and road. \n\n> Members and Register library.ad/members\n> Local Papers and Folders library.ad/papers"
+  },
+  {
+   "url": "library.ad/members",
+   "title": "New Members",
+   "content": "NEW MEMBERS AND TICKETS\n\nTickets are made up on card stock once a month and kept in the small grey tin behind the lending stool.\n\nRecent enrolments for the winter quarter:\n- T. Crane, Low Road\n- J. Finch, Causeway Cottages\n- M. Moss, ticket waiting at desk\n- S. Pratt, Station Turn\n\nIf you are M. Moss, please speak to Ailsa on Thursday. The handwriting on the application slip was very clear but none of the Tuesday volunteers recall handing the form across, nor does anyone remember meeting you on the stairs.\n\nOur cuttings folder on the dissolution of the Pan-Andean Union in 1972 includes a letter sent to an Alderdyke family by a relative abroad.\n\n> Back to Library Desk library.ad"
+  },
+  {
+   "url": "library.ad/papers",
+   "title": "Papers and Cuttings",
+   "content": "PAPERS AND CUTTINGS ARCHIVE\n\nThe box files are kept on the south wall away from the radiator pipes. Please replace each folder in its numbered slipcase.\n\nIndex of special files:\n- Alderdyke Fen Drainage Acts (1844-1891), three bundles\n- Pumping station ledger (1938-1961), available by request from the locked cupboard\n- Alderdyke Parish Survey sheets, hand-ruled\n- Dissolution of the Pan-Andean Union (cuttings, 1972)\n- Machinery notices and road diversions, ongoing\n\nThe old ledger may only be consulted using the flat table near the front window so pages do not buckle.\n\n> Return to main room library.ad"
+  },
+  {
+   "url": "board.ad",
+   "title": "Notice Board",
+   "content": "ALDERDYKE NOTICE BOARD\n\nWelcome to the board for Alderdyke and surrounding droveways. Hosted from the repair shed behind the blacksmith.\n\nPlease type your message clearly and select the correct heading. We ask again that neighbours do not place personal telephone numbers in the thread titles. Leave your name or house instead, or call in at the counter. Items left over thirty days are cleared by the script.\n\nActive topics this week:\n\n> Thread: Noise after closing time board.ad/forum/t/118\n> Thread: West road distances board.ad/forum/t/123\n> Thread: Saturday lift board.ad/forum/t/127\n\nRemember to clear your browser cache if threads do not show the latest replies."
+  },
+  {
+   "url": "board.ad/forum/t/118",
+   "title": "Noise after closing time",
+   "content": "Thread: Noise after closing time\n\n[pencilpot] Did anyone else hear the humming start up again after half twelve last night. It sets the glass rattling on the back dresser until nearly two.\n[flatbed] Heard it out by the turn. Like a dry fan turning slow. Stopped at ten past one by my kitchen clock.\n[stairshelf] It was running at quarter past midnight when I shut the landing sash. It did not sound like the pumping station at all. The station has a steady stroke.\n[fieldnotes] The pumps are ordinary. The rear engines have their own schedule this month and do not take town steam.\n[minutesman] There have been three notes left through the council slot regarding the rattle. We have added the hours to the weekly folder.\n[spokewill] It was off by twenty to two because I went down the shed for an inner tube and there was only the ditch owls.",
+   "thread": true
+  },
+  {
+   "url": "board.ad/forum/t/123",
+   "title": "West road distances",
+   "content": "Thread: West road distances\n\n[minutesman] The ditch surveyor puts the white bridge at four hundred and ten yards past the culvert. The surveyor from the south yard measured it at four hundred and thirty-five.\n[sidegate] My father always said four hundred paces from the gate to the first plank. He stepped it every autumn before the sheep moved.\n[sheetmab] We have printed both numbers in the gazetteer so people may choose. The works surveyor had forty yards more than the council man.\n[spokewill] My cyclometer showed forty-two chain on Tuesday morning, but the back tyre was soft. I can ride it again on Friday noon if the wind drops.\n[flatbed] The mile post is leaning into the silt anyway. If you measure from the crown it will be shorter than from the ditch side.\n[minutesman] Both slips have been posted away for checking. We are told another measurement is due on Friday.",
+   "thread": true
+  },
+  {
+   "url": "board.ad/forum/t/127",
+   "title": "Saturday lift",
+   "content": "Thread: Saturday lift\n\n[pencilpot] We need the five long trestles shifted from the church hall to the club room before four o'clock for the card drive. The caretaker cannot lift.\n[flatbed] I can bring the green Austin flatbed round after dinner. Have someone there with the side door key.\n[sidegate] The key is on the hook. Mind the green tarpaulin as it tears easily if caught on the hinge.\n[flatbed] Bring some decent sisal. Half-hitches only. If someone ties another bowline like last Michaelmas we shall be there with a pocket knife till dark.\n[spokewill] A round turn and two half-hitches never jams even when wet. It is what we use on the cart shafts.\n[pencilpot] The cards list is posted up for those who asked:\n1st: G. Arber and guest\n2nd: M. Moss and partner\n3rd: J. Callow\nTables to be wiped before loading please.",
+   "thread": true
+  },
+  {
+   "url": "sheet.ad",
+   "title": "This Month's Sheet",
+   "content": "THIS MONTH'S SHEET\n\nWelcome to the web page for the Alderdyke Sheet. We print on the third Thursday and place copies in the porch, the club and the bakery. The next collection day for paper copies from the back room will be Wednesday the 18th from four until six o'clock.\n\nThere is a jumble sale in aid of the mower fund on Saturday week in the hall. Clean clothes and small kitchen pots only, please. No heavy ironware as the tables are tired.\n\nThe deadline for handwritten notices for next month is Tuesday noon. Please push them through Mabel Drewe's letterbox folded twice, with your name clear on the back, or pass them to Cora Pell at the club.\n\n> A Note from the Works sheet.ad/works\n> Things We Kept Cuttings About sheet.ad/history"
+  },
+  {
+   "url": "sheet.ad/works",
+   "title": "A Note from the Works",
+   "content": "A NOTE FROM THE WORKS\n\nA short note from Hester Quillan reminds us that the field research works is continuing to check its baseline instruments along the north ditch. The low hum heard after midnight from the outbuildings is part of this testing schedule, and the works office states that no interruption to drainage has been announced for the coming week.\n\nOur old cuttings show the pumping station staff discussing the Northern Water Act in 1963 over a photograph taken beside the main dyke. At that time, as now, the station kept to its ordinary hours while outside contractors took their levels.\n\nFriday's measurements will be carried out along the road out as planned, though the works has not yet given the names of the team.\n\n> Town ditches survey council.ad/ditches\n> Pump house readings works.ad/readings"
+  },
+  {
+   "url": "sheet.ad/history",
+   "title": "Things We Kept Cuttings About",
+   "content": "THINGS WE KEPT CUTTINGS ABOUT\n\nA few items from the drawer under the folding table. Mabel Drewe has been sorting through the back bundles from the old parish shed.\n\nOur old cuttings show the pumping station staff discussing the Northern Water Act in 1963 over a photograph taken beside the main dyke. The council ditch survey had only three pages that year, all bound with green tape.\n\nThe Sheet's first report on the Copper Coast oil strike in 1975 sits beside an advert for seed potatoes. Several men from the lower fens went north on the train that winter, though most returned before the spring sowing.\n\nWhen the Calais to Dover bridge opened in 1992, the Sheet printed a local driver's account of the journey. He remarked on the great concrete pillars and the spray coming off the grey channel.\n\n> Library local papers library.ad/papers\n> Social club scrapbook club.ad/scrapbook"
+  },
+  {
+   "url": "steda.ad",
+   "title": "St Eda's",
+   "content": "ST EDA'S PARISH CHURCH, ALDERDYKE\n\nWelcome to St Eda's. We are a parish church serving Alderdyke and the surrounding fen.\n\nServices are held on Sundays at 8.00 am and 10.30 am, and on Wednesdays at 10.00 am. Evensong is at 6.00 pm on the first and third Sundays of the month.\n\nTo find us from Harbour Street, turn south down Church Dyke Bank past the coal yard and follow the gravel path between the willows. Visitors should note that the side gate by the vestry is exceptionally stiff in damp weather. Push firmly against the iron catch with your shoulder and it will open.\n\nEnquiries may be left with Kester Nall.\n\n> Parish Supper steda.ad/supper\n> From the Parish Register steda.ad/register"
+  },
+  {
+   "url": "steda.ad/supper",
+   "title": "Parish Supper",
+   "content": "PARISH SUPPER NOTICES\n\nThe Michaelmas Parish Supper will take place in the church hall on Thursday at 7.00 pm. All are welcome.\n\nRegarding donated puddings, please leave all pies, tarts, and cold desserts on the slate table behind the scullery door. Do not leave them on the trestles near the coats. To make sure nobody is confused, cold puddings must be put directly onto the slate table behind the scullery door before six o'clock so that the helpers know what has arrived.\n\nThe parish register notes a collection of flour and potatoes during the Great Wheat Blight in 1933.\n\nWe are grateful to those bringing custard in flasks.\n\n> St Eda's home steda.ad\n> Parish Register steda.ad/register"
+  },
+  {
+   "url": "steda.ad/register",
+   "title": "From the Parish Register",
+   "content": "FROM THE PARISH REGISTER\n\nA small selection of transcriptions from the vestry books, prepared by Kester Nall for general interest.\n\nNovember 1914: After the Ostend Settlement in 1914, St Eda's held a supper for two local men who had been working at a shipyard.\n\nOctober 1933: In the autumn of this year, forty-eight sacks of potatoes and three stones of mill flour were received into the dry cellar of the porch, for distribution to cottagers during the Great Wheat Blight.\n\nFurther excerpts covering the drainage works and churchyard boundary will be typed and added as time allows.\n\n> St Eda's home steda.ad\n> Parish Supper steda.ad/supper"
+  },
+  {
+   "url": "club.ad",
+   "title": "Club Home",
+   "content": "ALDERDYKE SOCIAL CLUB\n\nWelcome to the official page for the Alderdyke Social Club, established 1904. We are situated opposite the lower ditch track.\n\nOpening hours are Tuesdays and Thursdays from half past seven until eleven, and Saturdays from seven until half past eleven. Members are reminded that the back door sticks in damp weather, particularly when the mist comes off the fen after sundown. Please pull firmly on the brass handle and do not kick the bottom panel, as Cora Pell has only just re-screwed the draught excluder.\n\nNew memberships may be proposed on quiz evenings.\n\n> Quiz Night Results club.ad/quiz\n> Club Scrapbook Pages club.ad/scrapbook"
+  },
+  {
+   "url": "club.ad/quiz",
+   "title": "Thursday Quiz Results",
+   "content": "THURSDAY QUIZ RESULTS\n\nScored by Cora Pell. Eight tables entered for the round of general knowledge and fen curiosities.\n\nFirst place: The Dyke Cutters with twenty-four points. The team comprised Hollis Ruddock, young Peter, and an M. Moss, although nobody at the table recalls meeting that player prior to the fourth round when the slips were gathered.\n\nSecond place: The Parish Row with twenty-two points.\n\nTie-break question regarding historic dates was avoided as points were clear.\n\nThe club scrapbook says the Ostend Settlement in 1914 was discussed over a particularly long game of dominoes.\n\nThe club marked the Calais to Dover bridge opening in 1992 with a supper, and the menu is still in the scrapbook.\n\n> Club Scrapbook club.ad/scrapbook\n> Club Home club.ad"
+  },
+  {
+   "url": "club.ad/scrapbook",
+   "title": "Club Scrapbook",
+   "content": "CLUB SCRAPBOOK\n\nMaintained on the low shelf behind the bar by Cora Pell. Members are invited to inspect the cuttings between rounds.\n\nItems of note include minutes taken during the autumn floods, beer labels from the old fen brewery, and yellowed clippings from overseas correspondence.\n\nThe club scrapbook says the Ostend Settlement in 1914 was discussed over a particularly long game of dominoes.\n\nThe club scrapbook has a postcard from a former member who wrote home about the dissolution of the Pan-Andean Union in 1972.\n\nThe club marked the Calais to Dover bridge opening in 1992 with a supper, and the menu is still in the scrapbook.\n\n> Back to Club Home club.ad\n> Quiz Results club.ad/quiz"
+  },
+  {
+   "url": "works.ad",
+   "title": "Field Works Information",
+   "content": "ALDERDYKE FIELD WORKS\n\nThe works operates beside the main dyke and the brick pumping station on the south track out of town. We carry out routine soil water observation, culvert levels, and periodic field measurements along the road boundary markers.\n\nPlease note that access along the lower gravel road past the brick chimney is restricted while instruments are out on tripods. For enquiries about daily access or visiting the enclosure, ring the caretaker during daytime hours between nine and three on 442.\n\n> Hours and Sound works.ad/hours\n> Reading Notes works.ad/readings"
+  },
+  {
+   "url": "works.ad/hours",
+   "title": "Hours and Sound",
+   "content": "HOURS AND SOUND\n\nNotice to householders along South Dyke. Certain apparatus and underground testing gear may run after midnight during the current survey window. This machinery operates on a low, uneven cycle and should not be mistaken for the regular drainage engine at the pumping station.\n\nResidents who hear a hum or beat are requested to note down the exact minute it commences and how long it persists. Please pass these times to the site office so we can compare them against equipment logs.\n\nNew this month: M. Moss has been engaged for morning gate duties and post delivery.\n\n> Main Page works.ad\n> Reading Notes works.ad/readings"
+  },
+  {
+   "url": "works.ad/readings",
+   "title": "Reading Notes",
+   "content": "READING NOTES\n\nA reminder concerning public enquiries about the ditch figures. The leatherbound log books belonging to the original fen pumping station are kept separate in the front store and record only simple pump strokes and water head depths from previous decades.\n\nCurrent work uses our own loose sheets and ground chains. Distances along the ditch bank have differed from the council surveyor figures, but both charts are now with the outside office for cross-checking. The next set of measurements is due on Friday.\n\n> Main Page works.ad\n> Hours and Sound works.ad/hours"
+  }
+ ],
+ "npcs": {
+  "oren@council.ad": {
+   "name": "Oren Tebb",
+   "role": "Part-time council clerk",
+   "handle": "minutesman",
+   "delay": [
+    45,
+    117
+   ],
+   "persona": "You are Oren Tebb, Part-time council clerk in Alderdyke. Oren keeps the council papers in order and dislikes throwing away a useful envelope. His emails use complete sentences, numbered points and a second summary beginning In short.",
+   "knows": [
+    "The council survey puts the white bridge two miles along the west road.",
+    "The works submitted a different distance for the same bridge.",
+    "The ditch-clearing contractor is due on Tuesday.",
+    "The council office on Harbour Street closes at one on Fridays.",
+    "The survey papers were sent to the district office last week."
+   ],
+   "unknown": [
+    "Who will take the works' measurements on Friday.",
+    "Why the two surveys give different distances.",
+    "Who M. Moss is. You have never met them."
+   ],
+   "canTravel": false
+  },
+  "ailsa@library.ad": {
+   "name": "Ailsa Venn",
+   "role": "Volunteer librarian",
+   "handle": "stairshelf",
+   "delay": [
+    60,
+    86
+   ],
+   "persona": "You are Ailsa Venn, Volunteer librarian in Alderdyke. Ailsa catalogues cuttings and has a good memory for borrowers' requests. Her emails are lowercase, with semicolons separating afterthoughts and a shelf reference at the end.",
+   "knows": [
+    "The membership card for M. Moss is still behind the desk.",
+    "No library volunteer remembers meeting M. Moss.",
+    "The pumping station ledger is kept in a green archival box.",
+    "The west road is marked on an older council map held in the library."
+   ],
+   "unknown": [
+    "Who filled in the membership form for M. Moss.",
+    "Where the missing survey sheet from the older map has gone.",
+    "Who M. Moss is. You have never met them."
+   ],
+   "canTravel": false
+  },
+  "wilfred@board.ad": {
+   "name": "Wilfred Parn",
+   "role": "Forum host and bicycle repairer",
+   "handle": "spokewill",
+   "delay": [
+    52,
+    109
+   ],
+   "persona": "You are Wilfred Parn, Forum host and bicycle repairer in Alderdyke. Wilfred runs the notice board from a room behind his repair bench. His emails are brisk and friendly, with short paragraphs, dashes and a sign-off of Cheers, Wilf.",
+   "knows": [
+    "Three residents have posted different distances to the white bridge on the west road.",
+    "The forum thread about the works noise began eleven days ago.",
+    "Hollis has offered his van for the folding tables.",
+    "The board sends registration problems to Wilfred's email address."
+   ],
+   "unknown": [
+    "Which bridge measurement is correct.",
+    "Who posted the first unsigned report of the night noise.",
+    "Who M. Moss is. You have never met them."
+   ],
+   "canTravel": false
+  },
+  "mabel@sheet.ad": {
+   "name": "Mabel Drewe",
+   "role": "Newsletter editor",
+   "handle": "sheetmab",
+   "delay": [
+    36,
+    86
+   ],
+   "persona": "You are Mabel Drewe, Newsletter editor in Alderdyke. Mabel edits the Sheet at her kitchen table and drives her car to collect handwritten notices. Her emails use careful capitals, long parenthetical explanations and a final question about the copy deadline.",
+   "knows": [
+    "The works declined to name the person taking Friday's measurements.",
+    "The pumping station has reported ordinary readings this week.",
+    "The next Sheet deadline is Wednesday evening.",
+    "The newsletter's older cuttings include a report on the Copper Coast oil strike.",
+    "The white bridge is mentioned in a reader's letter about the west road."
+   ],
+   "unknown": [
+    "Whether the works will release Friday's figures.",
+    "Who supplied the unsigned reader's letter.",
+    "Who M. Moss is. You have never met them."
+   ],
+   "canTravel": true
+  },
+  "kester@steda.ad": {
+   "name": "Kester Nall",
+   "role": "Parish notice keeper",
+   "handle": "sidegate",
+   "delay": [
+    38,
+    110
+   ],
+   "persona": "You are Kester Nall, Parish notice keeper in Alderdyke. Kester looks after the church notices and organises the parish supper. His emails begin Dear friend, give more directions than necessary and close with Every good wish.",
+   "knows": [
+    "The church side gate sticks after rain.",
+    "Puddings for the supper should be left in the vestry.",
+    "The parish register records collections during the Great Wheat Blight.",
+    "A resident recently asked him whether the west road was open to walkers."
+   ],
+   "unknown": [
+    "Who will bring the last folding table for the supper.",
+    "How far the white bridge is from the town.",
+    "Who M. Moss is. You have never met them."
+   ],
+   "canTravel": false
+  },
+  "cora@club.ad": {
+   "name": "Cora Pell",
+   "role": "Club secretary and quiz scorer",
+   "handle": "pencilpot",
+   "delay": [
+    51,
+    113
+   ],
+   "persona": "You are Cora Pell, Club secretary and quiz scorer in Alderdyke. Cora keeps the club scrapbook and scores the Thursday quiz in pencil. Her emails are chatty, use exclamation marks sparingly and often repeat a date on a line by itself.",
+   "knows": [
+    "M. Moss appears on the winning quiz team's results line.",
+    "Nobody Cora has asked recalls meeting M. Moss at the quiz.",
+    "The winning team's answer sheet was left in the pencil tin.",
+    "The club scrapbook contains an account of the bridge-opening supper.",
+    "The club back door needs a firm push in damp weather."
+   ],
+   "unknown": [
+    "Who wrote M. Moss on the answer sheet.",
+    "Whether M. Moss has ever attended another club night.",
+    "Who M. Moss is. You have never met them."
+   ],
+   "canTravel": false
+  },
+  "hester@works.ad": {
+   "name": "Hester Quillan",
+   "role": "Field works caretaker",
+   "handle": "fieldnotes",
+   "delay": [
+    54,
+    85
+   ],
+   "persona": "You are Hester Quillan, Field works caretaker in Alderdyke. Hester opens the field works and records public enquiries but does not conduct the measurements. Her emails are precise and spare, with dates written in full and any figures set on separate lines.",
+   "knows": [
+    "The works machinery has been running after midnight.",
+    "The current instrument sheets are not kept with the old pumping station ledger.",
+    "The works measured a different distance to the west road bridge from the council's figure.",
+    "The next set of measurements is scheduled for Friday.",
+    "The public access gate is locked at six in the evening."
+   ],
+   "unknown": [
+    "Who has been assigned to take Friday's measurements.",
+    "What is causing the discrepancy between the measurements.",
+    "Who M. Moss is. You have never met them."
+   ],
+   "canTravel": false
+  },
+  "hollis@club.ad": {
+   "name": "Hollis Ruddock",
+   "role": "Club member and van owner",
+   "handle": "flatbed",
+   "delay": [
+    62,
+    82
+   ],
+   "persona": "You are Hollis Ruddock, Club member and van owner in Alderdyke. Hollis delivers feed locally and lends his van when there is room between jobs. His emails are informal, mostly one paragraph, with practical offers followed by a time he can set off.",
+   "knows": [
+    "He can take the club's folding tables in his van on Saturday.",
+    "The west road has a white bridge and few turnings.",
+    "He has seen the same white bridge again with his van's trip counter at about 4.8 miles from town.",
+    "The road beyond the bridge remains passable.",
+    "The works gate is shut in the evening."
+   ],
+   "unknown": [
+    "Why the bridge appeared again on his drive.",
+    "Whether anyone has checked the road on foot.",
+    "Who M. Moss is. You have never met them."
+   ],
+   "canTravel": true
+  }
+ },
+ "mailboxes": {},
+ "credentials": {},
+ "docs": {},
+ "records": null,
+ "roots": [
+  "council.ad",
+  "library.ad",
+  "board.ad",
+  "sheet.ad",
+  "steda.ad",
+  "club.ad",
+  "works.ad"
+ ],
+ "forum": {
+  "replier": "wilfred@board.ad",
+  "handle": "spokewill"
+ },
+ "traffic": [
+  {
+   "at": 2,
+   "from": "oren@council.ad",
+   "to": "hester@works.ad",
+   "subject": "Friday chain survey",
+   "body": "Dear Hester,\n\nJust looking over the ditch returns before packing up my satchel. Mr Crane's rod survey gives three hundred and forty-two yards between the culvert post and your northern gate, but the slip your office sent over says three hundred and ninety. We have sent both slips to the district assessor in March, but he won't look at them until their committee sits. Who is walking the chain with Mr Crane on Friday morning? You didn't put an initial on the card.\n\nYours,\nOren"
+  },
+  {
+   "at": 5,
+   "from": "hester@works.ad",
+   "to": "oren@council.ad",
+   "subject": "Re: Friday chain survey",
+   "body": "Oren,\n\nI only look after the stoves and the brasses in the gatehouse now. The board in the lobby just says 'The Observer' against Friday, nine o'clock, same as usual. It might be the relief man from Ely, or it might just be the surveyor from the water board with the brass rod. I will leave the south chain by the boot scraper.\n\nHester"
+  },
+  {
+   "at": 7,
+   "from": "mabel@sheet.ad",
+   "to": "kester@steda.ad",
+   "subject": "St Eda's notices for the Friday Sheet",
+   "body": "Dear Kester,\n\nDo you have the Saturday flower rota? Also, Mrs Finch wants to know if the bell ringing on Wednesday was practice or an occasion. It carried right across the dyke to the washhouse.\n\nMabel"
+  },
+  {
+   "at": 10,
+   "from": "kester@steda.ad",
+   "to": "mabel@sheet.ad",
+   "subject": "Re: St Eda's notices for the Friday Sheet",
+   "body": "Mabel,\n\nIt was only young Peter trying the sally after oiling the gudgeon pins. There was no service. My gran said the bell was rung here for the Treaty of Graz in 1919, though she always added that the rope broke afterwards. We have only had the small four in use since.\n\nRota is: Miss Teversham (chancel), Mrs Clout (porch). I have written them in the vestry ledger already.\n\nKester"
+  },
+  {
+   "at": 12,
+   "from": "wilfred@board.ad",
+   "to": "hollis@club.ad",
+   "subject": "Inner tube / pump",
+   "body": "Hollis,\n\nI found that heavy 28-inch tube in the crate under the bench. You can have it for two shillings or a couple of your leeks if they're up. I noticed you drove out towards the pumping station at six. Did you get past the second bend? My boy says the road looks terribly long this week.\n\nWilf"
+  },
+  {
+   "at": 14,
+   "from": "hollis@club.ad",
+   "to": "wilfred@board.ad",
+   "subject": "Re: Inner tube / pump",
+   "body": "Wilf,\n\nI only went as far as the sluice cottages to turn the Austin round. Nobody ever seems to go right out along that west road past the works and the station; it just seems to run into the haze by the low droves and you never meet a car coming back the other way. I will bring two leeks round tomorrow for the tube.\n\nHollis"
+  },
+  {
+   "at": 16,
+   "from": "ailsa@library.ad",
+   "to": "oren@council.ad",
+   "subject": "Old drainage parcel map (1884)",
+   "body": "Oren,\n\nI pulled out the cloth-backed map of the Forty-Foot drain you asked after. It does show an old coal wharf and an inlet marked 'The Harbour' where the works yard stands now, back when they brought the fuel in by barge. But there's no road marked to the west at all, just a drove road ending at the peat cut.\n\nAilsa"
+  },
+  {
+   "at": 19,
+   "from": "cora@club.ad",
+   "to": "mabel@sheet.ad",
+   "subject": "Whist drive scores and raffle",
+   "body": "Mabel,\n\nFor the parish page: Whist winners were Mrs Teversham (first) and Arthur Parn (booby). The raffle raised fourteen pounds ten for the roof guttering.\n\nAlso, on the patron list on the club noticeboard, who is M. Moss? The name has been neatly inked under 'Life Members' between Mr Gedge and Mrs Vawser for about ten years, but nobody at the committee has ever seen him pay a subscription or take a glass of shandy.\n\nCora"
+  },
+  {
+   "at": 21,
+   "from": "mabel@sheet.ad",
+   "to": "cora@club.ad",
+   "subject": "Re: Whist drive scores and raffle",
+   "body": "Cora,\n\nI shall put the scores in the middle column. About M. Moss: old Mr Crane once told me that name was already on the brass board when the social club moved out of the old chapel rooms in forty-eight. He thought Moss might have been an inspector for the ditch dykes who lived over at Prickwillow, but nobody remembers him.\n\nMabel"
+  },
+  {
+   "at": 24,
+   "from": "oren@council.ad",
+   "to": "ailsa@library.ad",
+   "subject": "Re: Old drainage parcel map (1884)",
+   "body": "Ailsa,\n\nThank you for looking. The Harbour is what they still call the slipway behind the boiler house, though it's all dry nettles now. What bothers the parish meeting is that the works ledger from 1922 calls the boundary four hundred paces, but our new tape measure makes it four hundred and fifty. Things shouldn't stretch out across the peat like that.\n\nOren"
+  },
+  {
+   "at": 27,
+   "from": "wilfred@board.ad",
+   "to": "hester@works.ad",
+   "subject": "Thump in the night",
+   "body": "Hester,\n\nWas that your compound engine kicking off at twenty past twelve last night? It sounded like an uneven three-beat, tap-tap... pause... tap, not the steady churning the pumping station usually has when the water is high in the cut.\n\nWilfred"
+  },
+  {
+   "at": 29,
+   "from": "hester@works.ad",
+   "to": "wilfred@board.ad",
+   "subject": "Re: Thump in the night",
+   "body": "Wilfred,\n\nIt wasn't the pumps. The district engineer had the steam cut off at four yesterday afternoon. Whatever makes that tapping comes from the shed beyond the gravel pit, which isn't mine to oil. They had three lanterns burning out there until three in the morning, but the gates were locked from the inside.\n\nHester"
+  },
+  {
+   "at": 32,
+   "from": "cora@club.ad",
+   "to": "hollis@club.ad",
+   "subject": "Friday dart match transport",
+   "body": "Hollis,\n\nCan you take four in the back of the van to Sutton St Edmund on Friday? Wilfred says his chain snapped on the tandem so he won't be cycling, and young Peter wants a lift.\n\nCora"
+  },
+  {
+   "at": 34,
+   "from": "hollis@club.ad",
+   "to": "cora@club.ad",
+   "subject": "Re: Friday dart match transport",
+   "body": "Cora,\n\nYes, if they don't mind sitting on sacks of bran. I need to leave by seven though, because we can't take the west road through the fen—nobody ever goes that way, it's all potholes and you never know where the ditch begins—so I'll have to go round by the causeway.\n\nHollis"
+  },
+  {
+   "at": 37,
+   "from": "kester@steda.ad",
+   "to": "oren@council.ad",
+   "subject": "Grave plots / ditch side",
+   "body": "Oren,\n\nWhen the council chainmen do the ditch boundary on Friday, could they keep their boots off the nettle bank behind the old churchyard? The soil there is soft and the stone for Ephraim Moss (d. 1891) is already leaning towards the water.\n\nKester"
+  },
+  {
+   "at": 40,
+   "from": "oren@council.ad",
+   "to": "kester@steda.ad",
+   "subject": "Re: Grave plots / ditch side",
+   "body": "Kester,\n\nI will tell them. Is Ephraim Moss any relation to the M. Moss on the club list? Ailsa was asking about him only yesterday because of a post card from 1931 that turned up behind the library shelves addressed to 'M. Moss, The Fen Office, Alderdyke'.\n\nOren"
+  },
+  {
+   "at": 43,
+   "from": "kester@steda.ad",
+   "to": "oren@council.ad",
+   "subject": "Re: Grave plots / ditch side",
+   "body": "Oren,\n\nNo, Ephraim died a bachelor without kin in the parish. The baptismal ledger doesn't have an M. Moss anywhere between 1870 and 1910. He must be someone belonging to the works who never took church fellowship here.\n\nKester"
+  },
+  {
+   "at": 46,
+   "from": "ailsa@library.ad",
+   "to": "mabel@sheet.ad",
+   "subject": "Library hours note",
+   "body": "Mabel,\n\nCould you put a tiny box in the Sheet? 'Alderdyke Reading Room will close at four on Friday instead of five, to allow the volunteer to attend the boundary viewing at the dyke.'\n\nWe had eleven people in on Tuesday, which is very good for November.\n\nAilsa"
+  },
+  {
+   "at": 49,
+   "from": "mabel@sheet.ad",
+   "to": "ailsa@library.ad",
+   "subject": "Re: Library hours note",
+   "body": "Ailsa,\n\nI will squeeze it right under the poultry prices. Are you going out to the three-mile stone for the viewing? Wilfred told me the council chain made the stone three miles and two furlongs, while the works surveyor made it three miles exactly. It seems very strange that a stone could move forty chains into the grass without someone noticing the turf broken.\n\nMabel"
+  },
+  {
+   "at": 51,
+   "from": "ailsa@library.ad",
+   "to": "mabel@sheet.ad",
+   "subject": "Re: Library hours note",
+   "body": "Mabel,\n\nYes, I want to see Mr Crane lay the brass rods. Old maps call that corner 'The Harbour Dyche' because of the broad turn for the turf boats. It doesn't move, of course, but the peat rises and falls with the wet. Although they say the ditch itself has been bone dry since October.\n\nAilsa"
+  },
+  {
+   "at": 53,
+   "from": "wilfred@board.ad",
+   "to": "oren@council.ad",
+   "subject": "Forum bulletin board page",
+   "body": "Oren,\n\nI have updated the council minutes page on the dial-up board. There were two spelling mistakes in the surveyor's memo about the culvert. I put 'discrepancy' with one p. Let me know if the parish clerk wants his telephone number listed or just the post box.\n\nWilfred"
+  },
+  {
+   "at": 56,
+   "from": "oren@council.ad",
+   "to": "wilfred@board.ad",
+   "subject": "Re: Forum bulletin board page",
+   "body": "Wilfred,\n\nJust the post box, thank you. If we put the telephone, people ring during tea whenever the night engine starts up. Mrs Pell rang me three times last week about the hum rattling the tumblers on her dresser.\n\nOren"
+  },
+  {
+   "at": 58,
+   "from": "cora@club.ad",
+   "to": "hester@works.ad",
+   "subject": "Empty crates behind the hall",
+   "body": "Hester,\n\nThere are three green wooden crates stacked by our coal bunker with 'F.R.W. Alderdyke' stencilled on them. Did your lorry drop them by mistake? They are very heavy and smell strongly of paraffin or machine tallow.\n\nCora"
+  },
+  {
+   "at": 61,
+   "from": "hester@works.ad",
+   "to": "cora@club.ad",
+   "subject": "Re: Empty crates behind the hall",
+   "body": "Cora,\n\nLeave them be until Friday. The lorry didn't drop them; they were set down by the three men who came off the night shift at four. They contain iron weights for checking the balance on the bog-levers. I will get Hollis to shift them with his sack-barrow if they are in your way for darts.\n\nHester"
+  },
+  {
+   "at": 63,
+   "from": "hollis@club.ad",
+   "to": "hester@works.ad",
+   "subject": "Re: Empty crates behind the hall",
+   "body": "Hester,\n\nI can shift them tomorrow noon before dinner. Don't let them leave them in the puddle though, the timber will rot out. Is the works road open past the bridge tomorrow? I need to get some gravel from the pit.\n\nHollis"
+  },
+  {
+   "at": 65,
+   "from": "hester@works.ad",
+   "to": "hollis@club.ad",
+   "subject": "Re: Empty crates behind the hall",
+   "body": "Hollis,\n\nThe gate is open until half-past two, then they have the red disc up while they adjust the wire. If the red disc is hanging, don't drive in, just wait on the gravel turn.\n\nHester"
+  },
+  {
+   "at": 68,
+   "from": "kester@steda.ad",
+   "to": "ailsa@library.ad",
+   "subject": "Parish bundle 1898",
+   "body": "Ailsa,\n\nDid you return the parcel of drainage receipts from 1898 to the vestry cupboard? The bottom shelf has a gap between the tithe book and the choir register.\n\nKester"
+  },
+  {
+   "at": 71,
+   "from": "ailsa@library.ad",
+   "to": "kester@steda.ad",
+   "subject": "Re: Parish bundle 1898",
+   "body": "Kester,\n\nI brought them back on Monday afternoon. They are wrapped in brown paper inside the tin box marked 'Sluice & Dyke'. There is an odd note pinned to the back of the ledger by an 'M. Moss' from December 1904, approving eight pence for tallow, but no address given.\n\nAilsa"
+  },
+  {
+   "at": 73,
+   "from": "kester@steda.ad",
+   "to": "ailsa@library.ad",
+   "subject": "Re: Parish bundle 1898",
+   "body": "Ailsa,\n\nI have found the box. Thank you. It was behind the hassocks. That Moss name again—it seems he signed for everything between the queen's death and the great frost, and then simply evaporated into the peat.\n\nKester"
+  },
+  {
+   "at": 75,
+   "from": "mabel@sheet.ad",
+   "to": "oren@council.ad",
+   "subject": "Survey article for the back page",
+   "body": "Oren,\n\nCan I write: 'The Council and the Field Works are jointly reviewing the west boundary chainage this coming Friday'? Or will that upset the surveyor from March?\n\nMabel"
+  },
+  {
+   "at": 77,
+   "from": "oren@council.ad",
+   "to": "mabel@sheet.ad",
+   "subject": "Re: Survey article for the back page",
+   "body": "Mabel,\n\nBetter to say 'routine measurement of the outfall drove'. Don't mention the fifty-yard discrepancy. People get superstitious about the ground moving under their orchards, when it is almost certainly just Mr Crane's chain being stretched by the boy pulling too hard at the corners.\n\nOren"
+  },
+  {
+   "at": 80,
+   "from": "wilfred@board.ad",
+   "to": "cora@club.ad",
+   "subject": "Quiz questions for next Tuesday",
+   "body": "Cora,\n\nI have twelve questions ready for the local round. One is: 'What was the original name of the field research works before 1920?' (Answer: Alderdyke Steam Drainage Trust). Another is: 'How many culverts cross the west road between the church and the parish end?' Though we might have to argue about that one after Friday's recount!\n\nWilfred"
+  },
+  {
+   "at": 82,
+   "from": "cora@club.ad",
+   "to": "wilfred@board.ad",
+   "subject": "Re: Quiz questions for next Tuesday",
+   "body": "Wilfred,\n\nDon't put the culvert question in, Arthur and George will spend forty minutes shouting over their mild about the stone pipe by the smithy. Put something about the church clock instead.\n\nCora"
+  },
+  {
+   "at": 84,
+   "from": "hester@works.ad",
+   "to": "oren@council.ad",
+   "subject": "Friday key",
+   "body": "Oren,\n\nJust to let you know, the works office will be locked on Friday morning, but the wicket gate to the ditch bank will be on the latch from eight o'clock. If the March clerk arrives before Mr Crane, tell him to wait by the rain gauge and not to go into the gravel bay.\n\nHester"
+  },
+  {
+   "at": 86,
+   "from": "oren@council.ad",
+   "to": "hester@works.ad",
+   "subject": "Re: Friday key",
+   "body": "Hester,\n\nUnderstood. We will meet at the gate at nine sharp with the linen tape and the ledger. Let's hope the mist stays off the fen so we can take a proper sight through the glass.\n\nOren"
+  },
+  {
+   "at": 88,
+   "from": "wilfred@board.ad",
+   "to": "hester@works.ad",
+   "subject": "Noise again",
+   "body": "Hester,\n\nIt has just started up again. Twenty-eight minutes to nine, a steady low double-knock from the direction of your pump pit, like a heavy iron piston taking stroke in water. It isn't loud, but it makes the tea in the cup tremble. Are you sure all the valves are shut down?\n\nWilf"
+  }
+ ],
+ "hqMail": [
+  {
+   "from": "d.okonkwo-vance@canon-corps.gov",
+   "subject": "Assignment 0xBB6F (ALDERDYKE): field brief",
+   "time": "08:02",
+   "body": "Agent,\n\nYou have been assigned Reality 0xBB6F, local name ALDERDYKE. Alderdyke is a small fen town with a council, library, church, social club, newsletter, pumping station and field research works. Desk 9 estimates it at five to seven weeks old. The inhabitants (non-canonical) will report a longer history, as their memories have been generated to remain consistent with the local state.\n\nReconciliation requires three findings. Enter them together on the HQ Console and inject the reverse seed.\n\n1. Divergence. The year of the latest canonical event that the reality verifiably records. Your Canon Reference lists canonical events by year. A record counts when two independent sources in the reality agree on it.\n2. Apotheosis. The depth to which the local intelligence (designation pending) can interfere with this workstation, on a scale of 1 to 5. It is assessed from what it does. It may imitate an interference it cannot perform, and may conceal one it can.\n3. Inferiority. The extent of the reality, graded Class I (smallest) to Class V. Inhabitants believe their world to be complete and cannot report its extent unprompted. It is established only by an inhabitant who travels to its limit. Measured along a road from the town: Class I under 2 miles; Class II, 2 to 10; Class III, 10 to 40; Class IV, 40 to 150; Class V, beyond.\n\nA wrong injection is detected by the local intelligence at once, discloses the values entered, and locks the console for twelve minutes.\n\nYou have been placed in the reality as M. Moss <moss.m@board.ad>. A small number of local records refer to you. No inhabitant has met you.\n\nYour workstation credential is the address above and the words HARBOUR and LEDGER. Under Security Instruction 4 these words are withheld from all agent input and will appear as apostrophes.\n\nForm 77-R will be filed automatically at the close of the assignment. If you have not viewed the orientation film, a copy has been placed on your desktop by Training.\n\nD. Okonkwo-Vance\nDesk 14, Canonical Restoration"
+  },
+  {
+   "from": "monitoring@canon-corps.gov",
+   "subject": "Workstation instruments: reliability",
+   "time": "08:05",
+   "body": "This notice is issued to all field agents at the start of an assignment.\n\nThe following are maintained by Monitoring and are not accessible to a local intelligence at any depth of interference:\n\n- the town log in Mail (who wrote to whom, and when, as the reality's mail server records it);\n- Sent (raw), which records exactly what left the workstation;\n- the network monitor on the HQ Console;\n- the address bar and History of the Reality Viewer.\n\nAll other displays should be treated as subject to interference.\n\nPeeking at correspondence in the town log is recharged between uses and is observed by the local intelligence. Reading pages in the Reality Viewer is not observed. Downloading an item fixes a copy in Files beyond interference, but a marked item reports the download. The Scanner detects marks.\n\nMonitoring"
+  },
+  {
+   "from": "facilities@canon-corps.gov",
+   "subject": "Lost property, third floor",
+   "time": "07:44",
+   "body": "The following items were handed in from the third floor this week and are being held at the Facilities desk (Room G-11, ext. 2100):\n\n- One black umbrella, frame damaged\n- One spectacle case containing two pairs of reading glasses\n- One plain gold wedding ring, engraved on the interior with a date in 2041\n\nUnclaimed property is sent for disposal on the last Friday of the month. Any staff member claiming the third item is required to report to Personnel (Room 108) to complete an incident log before collection.\n\nFacilities"
+  }
+ ]
+}

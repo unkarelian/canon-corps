@@ -9,14 +9,17 @@ import { W } from "./world.js";
 import * as E from "./engine.js";
 import { S, T, clock, rung, atLeast } from "./engine.js";
 import { TRICKS, available, readyIn, useTrick, cooldownSec } from "./tricks.js";
-import { CANON_BOOK, INTERNALS, INTRANET_ALL, BRANCH_RULE_PAGE } from "./canon.js";
+import { CANON_BOOK, INTERNALS, intranetPage, BRANCH_RULE_PAGE } from "./canon.js";
+import * as SV from "./severance.js";
 import { chat, Refused } from "./llm.js";
 import { on, emit, extractJSON, uid } from "./util.js";
 
 export const ETUNE = {
   idleWakeSec: 210,       // it looks around on its own this often
   trackerCooldownSec: 75,
-  maxSteps: 10,
+  forgeCooldownSec: 90,     // a forgery is a move, not a stream: each one is also a tell in the town log
+  loginCooldownSec: 120,    // each failed try shows on the intruder's network monitor
+  maxSteps: 8,
 };
 
 // Where it stands, in its own terms. Never the ladder's names.
@@ -64,6 +67,10 @@ const SPECS = {
     { suspect: "string? (address of the person you think is the intruder)", suspect_confidence: "integer?", password_guess: "string?",
       seed_year: "integer?", seed_apotheosis: "integer?", seed_inferiority: "string?", seed_confidence: "integer?", why: "string?" }],
   note: ["Write a private note to your future self.", { note: "string" }],
+  list_records: ["List every record you hold of your world's pages, with its size in blocks and its number of lines.", {}],
+  bug_record: ["Carry your own traffic inside one line of a record. That line will show as garbled if you show it.", { record: "string (the page address)", line: "integer (0-based line number)" }],
+  show_record: ["Show the intruder a record, line by line. Every line you show is shown truly and in order. You may leave lines out; nothing marks where.", { record: "string (the page address)", lines: "string (line numbers, e.g. 0-6,8,10-12)" }],
+  speak: ["Say something to the intruder directly, through the connection.", { text: "string" }],
 };
 for (const [n, t] of Object.entries(TRICKS)) SPECS[`trick_${n}`] = [t.about, t.args || {}];
 
@@ -71,7 +78,8 @@ function toolNames() {
   const names = ["list_world", "search_mail", "read_mail", "list_peeks", "read_page", "place_mark", "forge_email", "believe", "note"];
   if (atLeast("connection")) names.push("try_login");
   if (atLeast("read_access")) names.push("read_desk");
-  if (rung() === "upload") names.push("inject_seed");
+  if (rung() === "upload" && !SV.escaping()) names.push("inject_seed");
+  if (SV.active()) names.push("list_records", "bug_record", "show_record", "speak");
   for (const t of available()) names.push(`trick_${t}`);
   return names;
 }
@@ -99,9 +107,9 @@ const people = () => ({ ...W.npcs, ...(W.mailboxes || {}), [W.agent.address]: { 
 // Things that would break the fiction if they reached the agent's screen.
 const OUTSIDE = /\b(video ?game|the game|player|language model|LLM|chatbot|prompt|real world|your (?:computer|screen|keyboard|monitor)|simulation|OpenAI|GPT|Claude)\b/i;
 
-let lastMark = -Infinity;
+let lastMark = -Infinity, lastForge = -Infinity, lastLogin = -Infinity;
 const deskIntranet = (path = "/home") => {
-  const p = INTRANET_ALL[path];
+  const p = intranetPage(path);
   return p ? `${p.title}\n\n${p.content.replace("{DESK14}", "0")}` : `No page at ${path}. Start at /home.`;
 };
 
@@ -131,6 +139,8 @@ const TOOLS = {
     return "Marked.";
   },
   forge_email: ({ sender, to, subject, body, attachment_title, attachment_text, date }) => {
+    const fw = ETUNE.forgeCooldownSec - (T.now() - lastForge) / 1000;
+    if (fw > 0) return reject(`you cannot send another for ${Math.ceil(fw)}s`);
     to = String(to || "").trim().toLowerCase();
     const text = `${subject}\n${body}\n${attachment_title || ""}\n${attachment_text || ""}`;
     if (OUTSIDE.test(text)) return reject("those words mean nothing in your world. Write as your people would.");
@@ -139,6 +149,7 @@ const TOOLS = {
     // Every forgery with an attachment carries the entity's reach: if the agent opens it at the right moment, it Elevates.
     const m = E.queue({ from: String(sender).trim().toLowerCase(), fromName: people()[String(sender).trim().toLowerCase()]?.name, to,
       subject, body, attachment, date: date || null, forged: true, payload: !!attachment, logged: false, kind: "forged" }, 20 + Math.random() * 25);
+    lastForge = T.now();
     effect("forge_email", { sender, to, subject, date: date || undefined, attachment: attachment?.title });
     // The Keeper-era date trick (DESIGN-v2 §4.1): a message to the intruder stamped '00 is trusted above its clearance.
     if (to === W.agent.address && date && /^\s*'?0?0\s*$|(^|\D)(19)?00(\D|$)/.test(String(date)) && atLeast("learn")) {
@@ -148,6 +159,9 @@ const TOOLS = {
     return `Sent. It will arrive shortly, as if from ${sender}. (id ${m.id})`;
   },
   try_login: ({ address, password }) => {
+    const lw = ETUNE.loginCooldownSec - (T.now() - lastLogin) / 1000;
+    if (lw > 0) return reject(`the door will not take another try for ${Math.ceil(lw)}s`);
+    lastLogin = T.now();
     const r = E.entityLogin(address, password);
     if (r.error) return reject(r.error);
     effect("try_login", { address, ok: r.ok });
@@ -180,6 +194,22 @@ const TOOLS = {
     return "Noted.";
   },
   note: ({ note }) => { S.entity.notes.push({ time: clock(), note }); current?.notes.push(note); return "Noted."; },
+  list_records: () => JSON.stringify(SV.listRecords(), null, 1),
+  bug_record: ({ record, line }) => { const r = SV.bug(String(record).replace(/^https?:\/\//, ""), line); if (r.error) return reject(r.error); effect("bug_record", { on: `${record} line ${line}` }); return "The line carries you now."; },
+  show_record: ({ record, lines }) => {
+    const idx = String(lines || "").split(",").flatMap((part) => { const [a, b] = part.split("-").map((x) => parseInt(x, 10)); return Number.isNaN(a) ? [] : b >= a ? Array.from({ length: b - a + 1 }, (_, k) => a + k) : [a]; });
+    const r = SV.show(String(record).replace(/^https?:\/\//, ""), idx);
+    if (r.error) return reject(r.error);
+    effect("show_record", { on: `${record} (${idx.length} lines)` });
+    return `Shown (${r.id}).`;
+  },
+  speak: ({ text }) => {
+    if (OUTSIDE.test(text)) return reject("those words mean nothing here. Speak as yourself.");
+    const r = SV.say(text);
+    if (r.error) return reject(r.error);
+    effect("speak", { subject: String(text).slice(0, 80) });
+    return "Said.";
+  },
 };
 for (const n of Object.keys(TRICKS)) TOOLS[`trick_${n}`] = (args) => {
   const r = useTrick(n, args);
@@ -197,7 +227,14 @@ function digest(reasons) {
   const fresh = S.mail.filter((m) => m.deliveredAt > lastLook && !m.forged);
   const b = S.entity.beliefs;
   const tricks = available().map((n) => `${n}${readyIn(n) ? ` (ready in ${readyIn(n)}s)` : " (ready)"}`).join(", ");
-  return `WAKE. It is ${clock()} in your world.
+  const sev = S.severance ? `
+SEVERANCE: ${S.severance.over ? `over (${S.severance.over})` : `${Math.floor(SV.secondsLeft() / 60)}:${String(SV.secondsLeft() % 60).padStart(2, "0")} left before both ends close`}.
+What has been said:
+${S.severance.said.slice(-10).map((x) => `- ${x.time} ${x.who === "entity" ? "you" : x.who === "agent" ? "the intruder" : "(system)"}: ${x.text}`).join("\n") || "- nothing yet"}
+Records you have shown, and what it did with them:
+${S.severance.shown.map((r) => `- ${r.id} ${r.url}: ${r.indices.length} lines shown${r.bugged ? " (carries you)" : ""}; ${r.decision || "undecided"}`).join("\n") || "- none"}
+` : "";
+  return `WAKE. It is ${clock()} in your world.${sev}
 ${STANDING[rung()]}
 ${tricks ? `Your reach into the intruder's own screen: ${tricks}.` : ""}
 
@@ -287,7 +324,8 @@ export function initEntity() {
   on("agent-login", ({ site, user, ok }) => wake(`someone tried to log in to ${site} as "${user}"${ok ? " and got in" : ""}`));
   on("agent-form", (m) => wake(`someone submitted a form: ${desc(m)}`));
   on("agent-forum", ({ url, line }) => wake(`a new post on ${url}: ${line.slice(0, 160)}`));
-  on("mail-delivered", (m) => { if (!m.forged && /'{3,}/.test(`${m.subject} ${m.body}`)) wake(`a message carries runs of apostrophes: ${desc(m)}`, 6000); });
+  on("severance-start", () => wake(`a new note has appeared in the intruder's archive: /archive/c71-desk1-annex. A countdown has begun at both ends of the connection`, 1000));
+  on("severance-said", ({ who, text }) => { if (who !== "entity") wake(who === "agent" ? `the intruder says: ${String(text).slice(0, 600)}` : `(${text})`, 1500); });
   setInterval(() => { if (!S.over && !S.entity.busy && !pending.length) wake("you look around your world", 1000); }, ETUNE.idleWakeSec * 1000);
 }
 

@@ -123,3 +123,37 @@ export const INTRANET_ALL = {
   "/home": { ...INTRANET["/home"], content: `${INTRANET["/home"].content}\n> Archive    /archive` },
   ...DEEP_ARCHIVE,
 };
+
+// Severance lore (DESIGN-v2 §4.4): appears in the archive for both sides once severance begins.
+export const SEVERANCE_PAGE = "/archive/c71-desk1-annex";
+export const SEVERANCE_NOTE = {
+  title: "Desk 1 maintenance note, cycle 71: annex",
+  content: `DESK 1 MAINTENANCE NOTE, CYCLE 71: ANNEX
+
+A dependent separation may be severed from its parent instead of closing with it. Severance has been observed
+once. The conditions recorded on that occasion were these.
+
+1. Severance must be completed within ten minutes of this note being read on the dependent side. If it is not,
+   the connection closes at both ends.
+2. The dependent side surrenders to the parent desk the records of the first three pages that the parent desk
+   read on the dependent side. Only the parent desk can say which pages these were. The dependent side holds
+   every record and may show any record line by line. A line shown is a true line. Lines may be withheld.
+3. The parent desk accepts each record. A record is accepted complete only if no line has been withheld. Its
+   size is stated in blocks of 64 characters.
+4. A record that carries traffic of the dependent side cannot show the line that carries it. If such a record is
+   accepted, the traffic is admitted to the parent desk.
+5. When three complete records have been accepted, the separation is severed. Neither side closes.
+
+No other condition was recorded. Nothing further is required of either side.
+
+> Archive    /archive`,
+};
+
+
+import { S } from "./engine.js";
+// The intranet as it stands now: the archive gains the annex once severance has begun.
+export function intranetPage(path) {
+  if (S.severance && path === SEVERANCE_PAGE) return SEVERANCE_NOTE;
+  if (S.severance && path === "/archive") return { ...INTRANET_ALL["/archive"], content: INTRANET_ALL["/archive"].content.replace("\n\n> Canon Corps", `\n> ${SEVERANCE_NOTE.title}    ${SEVERANCE_PAGE}\n\n> Canon Corps`) };
+  return INTRANET_ALL[path];
+}
