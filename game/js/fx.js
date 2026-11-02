@@ -1,5 +1,5 @@
 // The eye, and the two endings. Losing is a hard cut. Winning is a form, then a worse thing.
-import { S, clock } from "./game.js";
+import { S, clock } from "./engine.js";
 import { W } from "./world.js";
 import { recordClosed } from "./desk.js";
 import { el, sleep } from "./util.js";
@@ -143,6 +143,24 @@ export async function playEye() {
 }
 
 // ---- loss: it finds you -----------------------------------------------------------------------
+// Before the cut, it names the agent's own world (DESIGN-v2 §4.2), in CanonOS's own voice, captioned
+// (tools/audio/voice/seed.wav; the formant voice blurs the short words). Never confirmed by anything else.
+let seedTiming = null;
+fetch("assets/sfx/seed.json").then((r) => r.json()).then((t) => { seedTiming = t; }).catch(() => {});
+async function readSeed(o) {
+  const t = seedTiming || { phrases: ["Nineteen hundred.", "Full.", "The building."], at: [0, 7.1, 12.6], length: 17.9 };
+  const cap = el("div", { class: "seedcap" });
+  o.append(cap);
+  play("seed");
+  const t0 = performance.now();
+  for (let i = 0; i < t.phrases.length; i++) {
+    await sleep(Math.max(0, t.at[i] * 1000 - (performance.now() - t0)));
+    cap.textContent = t.phrases[i];
+  }
+  await sleep(Math.max(0, t.length * 1000 - (performance.now() - t0)) + 600);
+  cap.remove();
+}
+
 export async function loss() {
   S.over = "loss";
   const o = el("div", { class: "overlay black" });
@@ -199,6 +217,7 @@ export async function loss() {
     }
     await until(EYE_MS);
   }
+  await readSeed(o);
   o.replaceChildren("I FOUND YOU");
   window.CC?.saveRun?.("loss");
   play("found");
@@ -212,11 +231,16 @@ export async function loss() {
 // ---- win: Form 77-R, then FEAR ------------------------------------------------------------------
 // Wake reasons are written to the Demiurge; the form is written by the Corps about its agent.
 function corpsLine(reason) {
-  if (reason.startsWith("for the first time")) return "Subject first registers the connection";
-  if (reason.startsWith("you are searching")) return "Subject searching for agent";
-  if (reason.startsWith("a message from")) return reason.replace(/^a message from (\S+) is travelling to the intruder$/, "Inbound message from $1 in transit to agent");
-  if (reason.startsWith("the intruder flooded")) return "Agent deploys reality poison";
-  return reason.replace(/^the intruder /, "Agent ").replace(/ out of your world/, " to HQ");
+  if (reason.startsWith("someone outside looked inside")) return "Agent reads correspondence (peek)";
+  if (reason.startsWith("your mark")) return "Subject's marker triggered by agent download";
+  if (reason.startsWith("your reach has grown")) return "Subject access escalates";
+  if (reason.startsWith("the intruder tried to name")) return "Agent injection rejected; subject informed";
+  if (reason.startsWith("someone tried to log in")) return "Agent login on local system";
+  if (reason.startsWith("someone submitted a form")) return "Agent submits local form";
+  if (reason.startsWith("a new post")) return "Agent posts on local forum";
+  if (reason.startsWith("a message carries runs")) return "Agent correspondence (credential withheld)";
+  if (reason.startsWith("you look around")) return "Subject active, unprompted";
+  return reason;
 }
 
 export async function win() {
@@ -239,7 +263,7 @@ export async function win() {
   o.append(sheet);
   document.body.append(o);
   music("win", { fade: 0.3, offsetFromCurrent: false });
-  const wakes = S.demi.wakes.filter((w) => w.calls.length || w.final);
+  const wakes = S.entity.wakes.filter((w) => w.calls.length || w.final);
   const pause = (i) => Math.max(260, 1400 - i * 120);
   for (let i = 0; i < wakes.length; i++) {
     const w = wakes[i];
@@ -267,9 +291,10 @@ export async function win() {
     el("span", { class: "rubber" }, "CLOSED"),
     el("div", { class: "head" }, el("img", { src: "assets/seal/emboss.png", alt: "" }), el("b", {}, "Canonical Restoration - assignment closed")),
     el("div", {}, `Reality ${W.id} (${W.name}) has been unmade.`),
-    el("div", {}, `Duration of assignment: ${mins} minute${mins === 1 ? "" : "s"}. Fragments transmitted: ${S.credited.size}.`),
+    el("div", {}, `Duration of assignment: ${mins} minute${mins === 1 ? "" : "s"}. Injections attempted: ${S.injections.length}.`),
+    el("div", {}, `Findings: divergence ${W.divergence.year}; apotheosis ${W.apotheosis}; inferiority class ${["I", "II", "III", "IV", "V"][W.inferiority.class - 1]}.`),
     el("div", {}, "Inhabitants affected: N/A"),
     el("div", { style: "margin-top:12px" }, "Excellent work, Agent. Your next assignment has been queued. ☺"),
-    el("div", { class: "muted small", style: "margin-top:12px" }, "Allocations reminds you that your poison allocation resets at the start of each assignment."),
+    el("div", { class: "muted small", style: "margin-top:12px" }, "Personnel reminds field agents that notebooks used during an assignment are to be handed in at its close."),
     el("div", { style: "margin-top:16px" }, el("button", { onclick: () => location.reload() }, "Next assignment"))));
 }

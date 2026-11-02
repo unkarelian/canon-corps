@@ -262,3 +262,7 @@ fieldset { min-width: 0; }
 #induction .ind-text { line-height: 1.45; }
 #induction .ind-buttons { margin-top: 2px; }
 #induction .ind-foot { border-top: 1px solid var(--shade); padding-top: 4px; }
+
+/* The loss: the entity names the agent's world, under the eye. White-gold, like the eye; never used elsewhere. */
+.seedcap { position: absolute; left: 0; right: 0; bottom: 14vh; text-align: center; color: #f3e6b8; font: 22px/1.4 var(--mono); letter-spacing: 6px; text-shadow: 0 0 10px rgba(243,214,140,.55); }
+.mail .list div.peeked span:first-child::before { content: "\25CF "; color: #7b6a2b; }

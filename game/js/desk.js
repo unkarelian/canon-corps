@@ -3,9 +3,9 @@
 // The intranet is the department's own pages (js/intranet_pages.js); a few of its lines are left to js/leaks.js.
 import { register, setTitle } from "./wm.js";
 import { W } from "./world.js";
-import { S } from "./game.js";
-import { el } from "./util.js";
-import { INTRANET } from "./intranet_pages.js";
+import { S } from "./engine.js";
+import { el, emit } from "./util.js";
+import { INTRANET_ALL as INTRANET, BRANCH_RULE_PAGE } from "./canon.js";
 
 // ---- Notepad ----------------------------------------------------------------------------------
 const notesKey = () => `cc-notes-${W.id}`;
@@ -13,7 +13,7 @@ register("notepad", {
   title: "Notepad", w: 360, h: 430, x: 860, y: 60,
   render(body, _arg, w) {
     setTitle(w, `Notepad - ${W.id}`);
-    S.notepad ??= localStorage.getItem(notesKey()) || "";
+    if (!S.notepad) S.notepad = localStorage.getItem(notesKey()) || "";
     const t = el("textarea", { class: "notepad", spellcheck: "false", placeholder: "Notes for this assignment." });
     t.value = S.notepad;
     t.addEventListener("input", () => { S.notepad = t.value; localStorage.setItem(notesKey(), t.value); });
@@ -44,6 +44,7 @@ function pageText(path) {
 function go(path) {
   if (path !== net.path) net.back.push(net.path);
   net.path = path;
+  if (path === BRANCH_RULE_PAGE) { S.agentReadBranchRule ??= true; emit("branch-rule-read", { by: "agent" }); }
   render();
 }
 let current = null;

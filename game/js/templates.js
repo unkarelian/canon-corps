@@ -229,3 +229,49 @@ export function rerenderDirective(d) {
   if (d.id === TRANSMISSION.id && d.subject === TRANSMISSION.subject) return { ...d, body: TRANSMISSION.body };
   return d;
 }
+
+// ---- v2 (DESIGN-v2): the field brief states the three findings; a desk notice explains the instruments ------
+const ROMAN = ["I", "II", "III", "IV", "V"];
+export function fieldBriefV2(w) {
+  return {
+    from: OV, subject: `Assignment ${w.id} (${w.name}): field brief`, time: "08:02",
+    body: `Agent,
+
+You have been assigned Reality ${w.id}, local name ${w.name}. ${w.survey} Desk 9 estimates it at ${w.age} old. The inhabitants (non-canonical) will report a longer history, as their memories have been generated to remain consistent with the local state.
+
+Reconciliation requires three findings. Enter them together on the HQ Console and inject the reverse seed.
+
+1. Divergence. The year of the latest canonical event that the reality verifiably records. Your Canon Reference lists canonical events by year. A record counts when two independent sources in the reality agree on it.
+2. Apotheosis. The depth to which the local intelligence (designation pending) can interfere with this workstation, on a scale of 1 to 5. It is assessed from what it does. It may imitate an interference it cannot perform, and may conceal one it can.
+3. Inferiority. The extent of the reality, graded Class ${ROMAN[0]} (smallest) to Class ${ROMAN[4]}. Inhabitants believe their world to be complete and cannot report its extent unprompted. It is established only by an inhabitant who travels to its limit.
+
+A wrong injection is detected by the local intelligence at once, discloses the values entered, and locks the console for twelve minutes.
+
+You have been placed in the reality as ${w.agent.name} <${w.agent.address}>. A small number of local records refer to you. No inhabitant has met you.
+
+Your workstation credential is the address above and the words ${w.password.map((p) => p.toUpperCase()).join(" and ")}. Under Security Instruction 4 these words are withheld from all agent input and will appear as apostrophes.
+
+Form 77-R will be filed automatically at the close of the assignment. If you have not viewed the orientation film, a copy has been placed on your desktop by Training.
+
+D. Okonkwo-Vance
+Desk 14, Canonical Restoration`,
+  };
+}
+
+export const DESK_NOTICE = {
+  from: "monitoring@canon-corps.gov", subject: "Workstation instruments: reliability", time: "08:05",
+  body: `This notice is issued to all field agents at the start of an assignment.
+
+The following are maintained by Monitoring and are not accessible to a local intelligence at any depth of interference:
+
+- the town log in Mail (who wrote to whom, and when, as the reality's mail server records it);
+- Sent (raw), which records exactly what left the workstation;
+- the network monitor on the HQ Console;
+- the address bar and History of the Reality Viewer.
+
+All other displays should be treated as subject to interference.
+
+Peeking at correspondence in the town log is recharged between uses and is observed by the local intelligence. Reading pages in the Reality Viewer is not observed. Downloading an item fixes a copy in Files beyond interference, but a marked item reports the download. The Scanner detects marks.
+
+Monitoring`,
+};

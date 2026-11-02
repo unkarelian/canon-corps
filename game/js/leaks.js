@@ -1,8 +1,11 @@
-// Small wrongnesses on the agent's own desktop, more often as notice rises. Engine-driven, not a Demiurge tool:
+// Canon's own leaks (DESIGN-v2 §4.2, PLAN phase 5): small wrongnesses on the agent's desktop, more often as the
+// evening goes on (engine mood()). These are Canon, not the entity: they only touch Corps material (memos, the
+// intranet, the clock, the desktop, the Files list), never the town-facing tools the entity's tricks use.
+// Formerly: small wrongnesses on the agent's own desktop, more often as notice rises. Engine-driven, not a Demiurge tool:
 // the Demiurge is told it can only touch the connection, and these are not on the connection. Nothing here says
 // whether it is the local intelligence reaching further than the Corps believes, or CanonOS failing.
 // Every one is deniable and none touches saved content (the Corps copy stays fixed) or the Notepad.
-import { S } from "./game.js";
+import { S, mood } from "./engine.js";
 import { W } from "./world.js";
 import { el, emit, rand } from "./util.js";
 import { open, windowNode } from "./wm.js";
@@ -76,14 +79,14 @@ const LEAKS = [
   }],
   ["memo-word", "FIXED", false, () => {
     const SWAPS = [[/\binhabitants\b/, "family"], [/\bresidents\b/, "neighbours"], [/\bnon-canonical\b/, "ours"], [/\bthe town\b/, "home"]];
-    for (const m of [...S.mail.hq].reverse()) {
+    for (const m of [...S.hq].reverse()) {
       const s = SWAPS.find(([re]) => re.test(m.body));
       if (s && !S.leakMemo[m.id]) { S.leakMemo[m.id] = s; log("memo-word", `${m.subject}: ${s[1]}`); emit("change"); return; }
     }
     return false;
   }],
   ["shortcut", "FIXED", false, () => {
-    const root = W.roots.find((r) => S.visited.has(r)) || W.roots[0];
+    const root = W.roots.find((r) => S.reads.some((x) => x.url === r)) || W.roots[0];
     const page = S.pages[root];
     if (!page) return false;
     const icon = el("div", { class: "icon", ondblclick: () => { icon.remove(); open("viewer", root); } },
@@ -91,20 +94,20 @@ const LEAKS = [
     document.getElementById("icons").append(icon);
     log("shortcut", root);
   }],
-  ["directory", "FIXED", false, () => { intranetLeaks.desk14Agent = W.cover.name; log("directory", W.cover.name); }],
-  ["referred", "SEARCHING", false, () => { intranetLeaks.desk14Former = `${W.cover.name} (Referred to Personnel, cycle 112)`; log("referred"); }],
+  ["directory", "FIXED", false, () => { intranetLeaks.desk14Agent = W.agent.name; log("directory", W.agent.name); }],
+  ["referred", "SEARCHING", false, () => { intranetLeaks.desk14Former = `${W.agent.name} (Referred to Personnel, cycle 112)`; log("referred"); }],
 ];
 
 let next = null;
 export function tickLeaks() {
   if (S.over) return;
-  const range = EVERY[S.stage];
+  const range = EVERY[mood()];
   if (!range) { next = null; return; }
   const now = Date.now();
   if (!next) { next = now + rand(...range) * 1000; return; }
   if (now < next) return;
   next = now + rand(...range) * 1000;
-  const pool = LEAKS.filter(([kind, min, rep]) => RANK[S.stage] >= RANK[min] && (rep || !once(kind)));
+  const pool = LEAKS.filter(([kind, min, rep]) => RANK[mood()] >= RANK[min] && (rep || !once(kind)));
   // the newest kinds first, so each stage shows something it could not do before
   const fresh = pool.filter(([kind, , rep]) => !rep), cands = fresh.length && Math.random() < 0.7 ? fresh : pool;
   for (const l of [...cands].sort(() => Math.random() - 0.5)) if (l[3]() !== false) return;

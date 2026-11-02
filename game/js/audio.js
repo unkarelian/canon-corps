@@ -17,7 +17,7 @@ export function setPref(k, v) { prefs[k] = v; apply(); }
 
 // Per-sound trim so the synthesized files sit at one level.
 const SFX = { click: 0.5, key: 0.45, open: 0.9, close: 0.9, page: 0.55, send: 0.9, mail: 0.8, save: 0.7, login_ok: 1.4,
-  denied: 0.7, flood: 0.55, transmit: 0.75, resonance: 0.8, stage: 0.9, inject: 0.8, print: 0.7, found: 0.9, stare: 0.9, lid: 0.8, room: 0.6, startup: 0.9, boot: 0.7, stamp: 0.8, amb_phone: 0.32, amb_drawer: 0.6 };
+  denied: 0.7, flood: 0.55, transmit: 0.75, resonance: 0.8, stage: 0.9, inject: 0.8, print: 0.7, found: 0.9, stare: 0.9, lid: 0.8, room: 0.6, startup: 0.9, boot: 0.7, stamp: 0.8, seed: 1.0, amb_phone: 0.32, amb_drawer: 0.6 };
 const AMB = ["amb_office", "amb_tube", "amb_under"]; // tools/audio/make_ambience.py
 const MUSIC = ["quiet", "stirring", "watchful", "fixed", "searching", "win", "intro_kept", "intro_after"];
 const buffers = {};

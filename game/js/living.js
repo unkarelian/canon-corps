@@ -6,7 +6,7 @@
 // changed, a feeling). Nothing in them names the agent, the Corps, or anything the player may not have done.
 // Updates never carry seed text, passwords or new addresses; they are checked when they are written.
 import { W } from "./world.js";
-import { S, clock } from "./game.js";
+import { S, clock, mood } from "./engine.js";
 import { emit } from "./util.js";
 
 const RANK = { QUIET: 0, STIRRING: 1, WATCHFUL: 2, FIXED: 3, SEARCHING: 4 };
@@ -20,7 +20,7 @@ export function tickLiving() {
   const mins = (Date.now() - t0) / 60000;
   S.applied ??= new Set();
   W.updates.forEach((u, i) => {
-    if (S.applied.has(i) || mins < u.after || RANK[S.stage] < RANK[u.stage || "QUIET"]) return;
+    if (S.applied.has(i) || mins < u.after || RANK[mood()] < RANK[u.stage || "QUIET"]) return;
     const p = S.pages[u.url];
     S.applied.add(i);
     if (!p) return;

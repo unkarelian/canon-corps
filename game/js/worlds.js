@@ -7,7 +7,7 @@
 //                         generate one now with the quick pipeline. Harrowgate if generation fails.
 // Spare worlds for the pool are built by the designer agent (slower, richer); the quick pipeline is for
 // when a player is waiting.
-import { HARROWGATE } from "./world.js";
+import { HARROWGATE } from "./harrowgate.js";
 import { generateWorld } from "./worldgen.js";
 import { designWorld } from "./worldagent.js";
 
@@ -26,26 +26,18 @@ export function saveWorld(w) {
 }
 
 export async function chooseWorld(params, status = () => {}) {
+  // v2: only worlds in the v2 schema can be played. Until world generation v2 (PLAN phase 9) that is Harrowgate,
+  // plus any pool world marked schema 2.
   const want = params.get("world");
-  if (want === "harrowgate") return HARROWGATE;
-  if (want && want !== "new") {
+  if (want && want !== "harrowgate") {
     const f = (await pool()).find((x) => x.id === want || x.file === want || x.file.startsWith(want));
-    if (f) return load(f.file);
-    console.warn(`no world "${want}" in the pool`);
+    if (f) { const w = await load(f.file); if (w.schema === 2) return w; }
+    console.warn(`no v2 world "${want}"; assigning Harrowgate`);
   }
-  if (want !== "new") {
-    const next = (await unplayed())[0];
-    if (next) return load(next.file);
+  if (!want) {
+    for (const f of await unplayed()) { const w = await load(f.file); if (w.schema === 2) return w; }
   }
-  try {
-    status("Desk 9 is surveying a new reality");
-    const w = await generateWorld({ onProgress: (s) => status(`Desk 9 survey: ${s}`), log: (s) => console.log("worldgen:", s) });
-    saveWorld(w);
-    return w;
-  } catch (e) {
-    console.warn("world generation failed; assigning Harrowgate", e);
-    return HARROWGATE;
-  }
+  return HARROWGATE;
 }
 
 // Keep a spare unplayed world ready, so the next run starts at once. Runs quietly in the background.

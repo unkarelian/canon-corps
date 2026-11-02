@@ -8,6 +8,18 @@ The first goal is **the Harrowgate slice**: the whole v2 loop, hand-built, playa
 
 ---
 
+## Status
+
+- **Phase 0, done (2026-11-01).** git initialised; v1 committed and tagged `v1`; work continues on branch
+  `v2`.
+- **Phase 1, done.**
+  - The v2 engine is a new file, `js/engine.js`, so the v1 UI keeps running until phase 2 switches over.
+  - Harrowgate v2 data is in `js/harrowgate.js`, with placeholder content for phase 7.
+  - `node game/dev/test_engine.mjs` runs 13 headless tests.
+  - The real-time clock is in the engine.
+  - Moving the v1 worlds aside is done at the phase 2 switch. Doing it earlier would make v1 generate a new
+    world on every start.
+
 ## Phase 0: groundwork
 
 - **Version control.** The project isn't a git repo, and this rewrite touches most of `js/`. Run `git init`
