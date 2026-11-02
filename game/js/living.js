@@ -6,7 +6,7 @@
 // changed, a feeling). Nothing in them names the agent, the Corps, or anything the player may not have done.
 // Updates never carry seed text, passwords or new addresses; they are checked when they are written.
 import { W } from "./world.js";
-import { S, clock, mood } from "./engine.js";
+import { S, T, clock, mood } from "./engine.js";
 import { emit } from "./util.js";
 
 const RANK = { QUIET: 0, STIRRING: 1, WATCHFUL: 2, FIXED: 3, SEARCHING: 4 };
@@ -16,8 +16,8 @@ const POST = /^\[([\w.-]+)\] /m;
 let t0 = null;
 export function tickLiving() {
   if (S.over || !W.updates?.length) return;
-  t0 ??= Date.now();
-  const mins = (Date.now() - t0) / 60000;
+  t0 ??= T.now();
+  const mins = (T.now() - t0) / 60000;
   S.applied ??= new Set();
   W.updates.forEach((u, i) => {
     if (S.applied.has(i) || mins < u.after || RANK[mood()] < RANK[u.stage || "QUIET"]) return;
@@ -41,7 +41,7 @@ export function tickLiving() {
 export function visitors(url) {
   let h = 7;
   for (const c of url) h = (h * 31 + c.charCodeAt(0)) >>> 0;
-  const base = 1200 + (h % 8000), mins = t0 ? (Date.now() - t0) / 60000 : 0;
+  const base = 1200 + (h % 8000), mins = t0 ? (T.now() - t0) / 60000 : 0;
   S.visits ??= {};
   S.visits[url] = (S.visits[url] || 0) + 1;
   return String(base + Math.floor(mins * (0.2 + (h % 7) / 10)) + S.visits[url]).padStart(6, "0");

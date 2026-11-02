@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CanonOS - Connection</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  body { background: var(--desk) url("assets/seal/wall.png"); background-size: 48px 48px; display: flex; align-items: center; justify-content: center; overflow: auto; }
+  .box { background: var(--face); border: 2px outset var(--light); width: 440px; box-shadow: 2px 2px 0 var(--dark); }
+  .title { background: var(--title); color: #fff; font-weight: bold; padding: 3px 6px; }
+  .body { padding: 16px 20px 14px; line-height: 1.5; }
+  .body p { margin: 0 0 10px; }
+  .dim { color: #55534a; }
+  .err { color: #8a1c10; font-weight: bold; }
+  .ok { color: #1d5a24; font-weight: bold; }
+  button { font: 12px var(--ui); padding: 4px 14px; background: var(--face); border: 2px outset var(--light); cursor: pointer; }
+  button:active { border-style: inset; }
+  button.main { font-weight: bold; padding: 6px 18px; }
+  .row { display: flex; gap: 8px; margin: 12px 0; align-items: center; }
+  details { margin: 6px 0; }
+  summary { cursor: pointer; }
+  details > div { margin: 6px 0 4px 14px; }
+  input { width: 100%; font: 12px var(--mono); padding: 4px; border: 2px inset var(--light); background: #fff; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<div class="box">
+  <div class="title">System Setup</div>
+  <div class="body">
+    <p id="msg" hidden></p>
+
+    <div id="off" hidden>
+      <p>Canon Corps uses AI models for the town's residents and the entity. They run on your
+        <a href="https://openrouter.ai" target="_blank">OpenRouter</a> account.</p>
+      <p>A typical run costs about $0.50 to $1.00. The game also builds the next town in the background, which costs about 10 cents.</p>
+      <p class="dim">Your key is stored on this computer only and is sent only to OpenRouter.</p>
+      <div class="row"><button class="main" id="connect">Connect OpenRouter</button></div>
+      <details id="paste">
+        <summary>I already have a key</summary>
+        <div>
+          <form id="paste-form"><input id="key" type="password" placeholder="sk-or-v1-..." autocomplete="off">
+          <div class="row"><button type="submit">Use this key</button></div></form>
+        </div>
+      </details>
+      <details>
+        <summary>What is OpenRouter?</summary>
+        <div class="dim">A service that sells access to many AI models through one account. You add credit there
+          (a few dollars lasts several runs) and the game draws on it as you play. You can see every request and
+          its cost on your OpenRouter activity page, and revoke the game's key at any time.</div>
+      </details>
+    </div>
+
+    <div id="on" hidden>
+      <p class="ok">Connected to OpenRouter.</p>
+      <p id="detail" class="dim"></p>
+      <div class="row">
+        <button class="main" id="continue">Continue</button>
+        <button id="disconnect">Disconnect</button>
+      </div>
+      <p class="dim" id="credit-link">To add credit: <a href="https://openrouter.ai/settings/credits" target="_blank">openrouter.ai/settings/credits</a></p>
+    </div>
+  </div>
+</div>
+<script type="module">
+const $ = (id) => document.getElementById(id);
+const q = new URLSearchParams(location.search);
+// Opened from a paused run: finish here and close, so the run's window is never navigated away.
+const popup = q.has("popup") || !!window.opener;
+
+function say(text, cls = "err") { const m = $("msg"); m.textContent = text; m.className = cls; m.hidden = !text; }
+
+async function refresh() {
+  let a;
+  try { a = await (await fetch("api/account")).json(); }
+  catch { say("The game's local service isn't answering. Restart the game."); return; }
+  $("on").hidden = !a.connected;
+  $("off").hidden = a.connected;
+  if (a.connected) {
+    const via = { oauth: "signed in through OpenRouter", pasted: "pasted key", env: "key from the environment" }[a.source] || "";
+    const bits = [`Key ending ${a.hint}`, via];
+    if (a.usage != null) bits.push(`spent with this key so far: $${Number(a.usage).toFixed(2)}`);
+    if (a.limit_remaining != null) bits.push(`left under this key's limit: $${Number(a.limit_remaining).toFixed(2)}`);
+    $("detail").textContent = bits.filter(Boolean).join(" · ") + ".";
+    $("disconnect").hidden = a.source === "env";
+    $("continue").textContent = popup ? "Close and return to the game" : "Continue";
+    if (popup && q.has("connected")) say("Connected. Close this window and press Resume in the game.", "ok");
+  } else if (a.problem === "bad_key") {
+    say("OpenRouter no longer accepts the saved key. Connect again.");
+  } else if (a.problem === "offline") {
+    say("Couldn't reach OpenRouter. Check your connection.");
+  }
+}
+
+// In the desktop app the sign-in happens in the player's own browser (their saved logins, password manager);
+// OpenRouter sends it back to the local service, and this page notices by polling.
+$("connect").onclick = () => {
+  if (!window.ccDesktop) { location.href = "api/account/connect" + (popup ? "?popup=1" : ""); return; }
+  window.ccDesktop.openExternal(new URL("api/account/connect?external=1", location.href).href);
+  say("Finish signing in in your browser. This window updates when you're done.", "dim");
+  clearInterval(waiting);
+  waiting = setInterval(async () => {
+    const a = await fetch("api/account").then((r) => r.json()).catch(() => ({}));
+    if (!a.connected) return;
+    clearInterval(waiting);
+    if (popup) { say("Connected. Close this window and press Resume in the game.", "ok"); refresh(); }
+    else location.href = "./";
+  }, 2000);
+};
+let waiting = null;
+$("continue").onclick = () => { if (popup) window.close(); else location.href = "./"; };
+$("disconnect").onclick = async () => {
+  if (!confirm("Disconnect this OpenRouter key? The game can't run until you connect again.")) return;
+  await fetch("api/account/disconnect", { method: "POST" });
+  say("");
+  refresh();
+};
+$("paste-form").onsubmit = async (e) => {
+  e.preventDefault();
+  const key = $("key").value.trim();
+  if (!key) return say("Paste a key first.");
+  say("Checking the key...", "dim");
+  const r = await fetch("api/account/key", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ key }) });
+  const d = await r.json();
+  if (!r.ok) return say(d.error || "That key didn't work.");
+  $("key").value = "";
+  say(popup ? "Connected. Close this window and press Resume in the game." : "", "ok");
+  refresh();
+};
+
+if (q.get("error")) say(q.get("error"));
+refresh();
+</script>
+</body>
+</html>

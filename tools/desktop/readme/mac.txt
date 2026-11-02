@@ -1,0 +1,31 @@
+CANON CORPS - test build (macOS)
+
+1. Use CanonCorps-mac-arm64.zip on Apple Silicon (M1 and later) and
+   CanonCorps-mac-x64.zip on Intel Macs. Unzip, and drag "Canon Corps.app"
+   into Applications (or anywhere).
+
+2. The app isn't signed by Apple, so macOS will block it the first time.
+   Easiest fix: open Terminal and run
+
+       xattr -cr "/Applications/Canon Corps.app"
+
+   (change the path if you put it somewhere else), then double-click it.
+
+   Or: double-click it, click "Done" on the warning, then go to
+   System Settings > Privacy & Security, scroll down, and click "Open Anyway".
+
+3. On first launch it asks you to connect an OpenRouter account (https://openrouter.ai).
+   Click "Connect OpenRouter", sign in (it opens in your web browser), and add
+   a few dollars of credit there.
+   A run usually costs $0.50 to $1.00, and the game quietly builds the next
+   town in the background (~10 cents). You can also paste an existing key.
+   If the credit runs out mid-run, the game pauses until you top up.
+   To change or disconnect the account later, click "AI" in the taskbar.
+
+Press F11 for full screen.
+
+Use headphones. Press any key at the logon screen to start the opening.
+
+If something breaks, the log is at
+    ~/Library/Application Support/Canon Corps/log.txt
+and finished runs are saved in the "runs" folder next to it. Send those over.

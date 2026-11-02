@@ -16,8 +16,19 @@ v1 is tagged `v1` in git.
 ## Run it
 
 ```
-python3 game/server.py        # reads OPENROUTER_API_KEY from ./.env
+python3 game/server.py        # key: the OpenRouter login on setup.html, else OPENROUTER_API_KEY from ./.env
 ```
+
+Desktop app: `tools/desktop` (Electron, so every player gets the Chromium the game was tested in). `npm start` there
+runs it against `game/`; `bash tools/desktop/build.sh [linux] [windows] [mac]` builds into `dist/`. Its local service
+(`server.js`) has the same endpoints as `server.py`; the key is sealed with the OS keychain where available, and the
+OpenRouter sign-in opens in the player's own browser.
+
+The OpenRouter account: `setup.html` connects one through OpenRouter's login (OAuth PKCE) or takes a pasted key,
+and the game sends the player there when there is no key. The dev server keeps it in `.cache/account.json`, the
+desktop app in its data dir. If a call is refused for the account (out of credit, key limit, key revoked), the run
+pauses: the clock stops, every model call waits, and Resume carries on from the same moment. A full in-flight
+budget only makes calls wait a few seconds. The "AI" item in the taskbar opens the setup page in a popup.
 
 Open http://localhost:8077. Add `?nosplash` to skip the boot, cinematic and logon.
 
@@ -38,6 +49,8 @@ replies cost 17 cents. A long run can cost a dollar or more; see `PLAN-v2.md`.
 ```
 node game/dev/test_engine.mjs       # the rules, headless: censor, peeks, trackers, ladder, injection, Upload
 node game/dev/test_severance.mjs    # severance, headless
+node game/dev/test_llm.mjs          # account trouble pauses model calls; in-flight budget waits
+python3 game/dev/test_account.py dev|desktop   # account endpoints and OAuth against a fake OpenRouter
 node game/dev/playtest.mjs v2look <out>     # the desk in headless Chromium, screenshots, no model calls
 node game/dev/playtest.mjs ends <out>       # every ending, screenshots
 node game/dev/playtest.mjs v2live <out>     # the entity with real models, rung by rung (cents)

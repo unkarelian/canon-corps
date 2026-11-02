@@ -18,7 +18,13 @@ export const TUNE = {
   seedRetrySec: 90,             // the entity's wrong seed injection
 };
 
-export const T = { now: () => Date.now() };
+// A paused run (the player's AI account needs attention) stops the evening's clock: mail in transit,
+// cooldowns, the Upload and severance timers all read T.now(), so they all hold still.
+let pausedAt = null, pausedFor = 0;
+export const T = { now: () => (pausedAt ?? Date.now()) - pausedFor };
+export const paused = () => pausedAt != null;
+export function pauseClock() { pausedAt ??= Date.now(); }
+export function resumeClock() { if (pausedAt != null) { pausedFor += Date.now() - pausedAt; pausedAt = null; } }
 
 // The ladder, in order. Every entity climbs the same one (DESIGN-v2 §4).
 export const RUNGS = ["none", "cardinality", "connection", "read_access", "learn", "elevate", "upload"];

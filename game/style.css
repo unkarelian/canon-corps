@@ -140,8 +140,18 @@ legend { padding: 0 4px; }
 #debug { position: fixed; right: 6px; top: 6px; width: 380px; max-height: 70vh; overflow: auto; background: rgba(10,14,12,.92); color: #cfe; font: 11px/1.4 var(--mono); padding: 8px; z-index: 8000; white-space: pre-wrap; }
 
 /* sound control in the tray */
-#tray-snd { cursor: pointer; }
-#tray-snd:hover { text-decoration: underline; }
+#tray-snd, #tray-acct { cursor: pointer; }
+#tray-snd:hover, #tray-acct:hover { text-decoration: underline; }
+/* a run paused for the player's AI account (main.js) */
+#paused { position: fixed; inset: 0; z-index: 9800; background: rgba(20, 22, 18, .55); display: flex; align-items: center; justify-content: center; }
+#paused .dlg { background: var(--face); border: 2px outset var(--light); width: 400px; box-shadow: 2px 2px 0 var(--dark); }
+#paused .dlg-title { background: var(--title); color: #fff; font-weight: bold; padding: 3px 6px; }
+#paused .dlg-body { padding: 14px 18px 10px; line-height: 1.5; }
+#paused .dlg-body p { margin: 0 0 10px; }
+#paused .dlg-row { display: flex; gap: 8px; justify-content: flex-end; margin: 4px 0 8px; }
+#paused button.main { font-weight: bold; }
+#paused .dim { color: #55534a; margin: 0; }
+#paused .dim:empty { display: none; }
 #snd-panel { position: fixed; right: 6px; bottom: 34px; z-index: 9000; background: var(--face, #c0c0c0); border: 2px outset var(--light, #fff);
   padding: 8px 10px; display: flex; flex-direction: column; gap: 6px; font-family: var(--ui); font-size: 12px; min-width: 170px; }
 #snd-panel[hidden] { display: none; }

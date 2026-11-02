@@ -17,7 +17,7 @@ import { inductionDue, playInduction } from "./induction.js";
 import { playEye, loss, win, severed, closedBoth } from "./fx.js";
 import * as SV from "./severance.js";
 import { on, el, emit } from "./util.js";
-import { usage } from "./llm.js";
+import { usage, onAccountProblem } from "./llm.js";
 import { play, musicForStage, startRoom, ambience, onAudioStart, ready, audioPrefs, setPref, audioState, startRecording, stopRecording } from "./audio.js";
 
 const ICONS = [["mail", "Mail"], ["viewer", "Reality Viewer"], ["files", "Files"], ["scanner", "Scanner"], ["hq", "HQ Console"],
@@ -48,6 +48,48 @@ document.addEventListener("input", (e) => { if (field(e.target)) scrub(e.target,
 document.addEventListener("focusout", (e) => { if (field(e.target)) scrub(e.target, true); }, true);
 document.addEventListener("paste", (e) => { if (field(e.target)) setTimeout(() => scrub(e.target, true)); }, true);
 
+// ---- the player's AI account -----------------------------------------------------------------------------
+// No key yet, or a dead one: setup first (nothing has started, so nothing is lost).
+fetch("api/account").then((r) => r.json()).then((a) => {
+  if (!a.connected && (a.problem === "no_key" || a.problem === "bad_key")) location.replace("setup.html");
+}).catch(() => {});
+
+const openSetup = () => window.open("setup.html?popup=1", "cc-setup", "width=560,height=560");
+
+// Mid-run trouble pauses the run instead of failing it: the clock stops, every model call waits, and the
+// run carries on where it was once the player has topped up or reconnected.
+const TROUBLE = {
+  no_credit: ["Your OpenRouter account is out of credit.", "Add credit", () => window.open("https://openrouter.ai/settings/credits", "_blank")],
+  key_limit: ["The game's key has reached the spending limit set on it in OpenRouter.", "Change the limit", () => window.open("https://openrouter.ai/settings/keys", "_blank")],
+  bad_key: ["OpenRouter no longer accepts the game's key.", "Reconnect", openSetup],
+  no_key: ["The game isn't connected to an OpenRouter account.", "Connect", openSetup],
+};
+onAccountProblem((kind) => new Promise((resolve) => {
+  E.pauseClock();
+  const [what, fixLabel, fix] = TROUBLE[kind] || TROUBLE.no_credit;
+  const note = el("p", { class: "dim" });
+  const resume = async () => {
+    note.textContent = "Checking...";
+    const a = await fetch("api/account").then((r) => r.json()).catch(() => ({ connected: false, problem: "offline" }));
+    if (!a.connected) {
+      note.textContent = a.problem === "offline" ? "Couldn't reach OpenRouter. Check your connection and try again."
+        : "Still not connected. Use the button on the left first.";
+      return;
+    }
+    box.remove();
+    E.resumeClock();
+    resolve(); // if the credit is still short, the next call simply pauses again
+  };
+  const box = el("div", { id: "paused" }, el("div", { class: "dlg" },
+    el("div", { class: "dlg-title" }, "Run paused"),
+    el("div", { class: "dlg-body" },
+      el("p", {}, what),
+      el("p", {}, "The evening's clock is stopped and nothing is lost. Fix it in OpenRouter, then press Resume."),
+      el("div", { class: "dlg-row" }, el("button", { onclick: fix }, fixLabel), el("button", { class: "main", onclick: resume }, "Resume")),
+      note)));
+  document.body.append(box);
+}));
+
 // ---- world and logon ---------------------------------------------------------------------------------
 const splashStatus = document.getElementById("splash-status");
 const logonBtn = document.getElementById("logon");
@@ -75,7 +117,7 @@ logonBtn.addEventListener("click", async () => {
 });
 onLogon.then(async () => {
   if (inductionDue(params)) await playInduction();
-  S.started = Date.now(); // the evening starts when the agent sits down
+  S.started = E.T.now(); // the evening starts when the agent sits down
   markPlayed(W.id);
   initNPCs();
   initEntity();
@@ -111,6 +153,7 @@ const sndPanel = el("div", { id: "snd-panel", hidden: true },
   el("label", {}, el("input", { type: "checkbox", checked: audioPrefs.muted, onchange: (e) => { setPref("muted", e.target.checked); sndBtn.textContent = e.target.checked ? "SND off" : "SND"; } }), " Mute all"));
 const sndBtn = el("span", { id: "tray-snd", title: "Sound", onclick: () => { sndPanel.hidden = !sndPanel.hidden; } }, audioPrefs.muted ? "SND off" : "SND");
 document.getElementById("tray").prepend(sndBtn);
+sndBtn.after(el("span", { id: "tray-acct", title: "OpenRouter account", onclick: openSetup }, "AI"));
 document.body.append(sndPanel);
 document.addEventListener("pointerdown", (e) => { if (!sndPanel.hidden && !e.target.closest("#snd-panel, #tray-snd")) sndPanel.hidden = true; });
 
@@ -131,7 +174,7 @@ on("severance-end", ({ how }) => { if (how === "severed") severed(); if (how ===
 on("loss", () => loss());
 
 setInterval(() => {
-  if (S.over) return;
+  if (S.over || E.paused()) return;
   E.tick();
   SV.tickSeverance();
   tickLeaks();

@@ -1,5 +1,5 @@
 // The eye, and the two endings. Losing is a hard cut. Winning is a form, then a worse thing.
-import { S, clock } from "./engine.js";
+import { S, T, clock } from "./engine.js";
 import { W } from "./world.js";
 import { recordClosed } from "./desk.js";
 import { el, sleep } from "./util.js";
@@ -284,7 +284,7 @@ export async function win() {
   o.className = "overlay black";
   o.replaceChildren();
   await sleep(3500);
-  const mins = Math.round((Date.now() - started) / 60000);
+  const mins = Math.round((T.now() - started) / 60000);
   o.className = "overlay form77";
   startRoom();
   o.replaceChildren(el("div", { class: "sheet", style: "height:auto;font-family:var(--ui);font-size:13px;line-height:1.7" },

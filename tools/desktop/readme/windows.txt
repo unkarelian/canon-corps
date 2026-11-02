@@ -1,0 +1,22 @@
+CANON CORPS - test build (Windows)
+
+1. Unzip the folder anywhere (don't run it from inside the zip).
+
+2. Double-click CanonCorps.exe. It isn't signed, so Windows will probably show
+   "Windows protected your PC". Click "More info", then "Run anyway".
+
+3. On first launch it asks you to connect an OpenRouter account (https://openrouter.ai).
+   Click "Connect OpenRouter", sign in (it opens in your web browser), and add
+   a few dollars of credit there.
+   A run usually costs $0.50 to $1.00, and the game quietly builds the next
+   town in the background (~10 cents). You can also paste an existing key.
+   If the credit runs out mid-run, the game pauses until you top up.
+   To change or disconnect the account later, click "AI" in the taskbar.
+
+Press F11 for full screen.
+
+Use headphones. Press any key at the logon screen to start the opening.
+
+If something breaks, the log is at
+    %APPDATA%\Canon Corps\log.txt
+and finished runs are saved in the "runs" folder next to it. Send those over.

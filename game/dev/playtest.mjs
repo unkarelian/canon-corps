@@ -1,6 +1,6 @@
 // Headless playtest driver: launches Chromium, drives the game through window.CC, takes screenshots.
 //   node game/dev/playtest.mjs <script-name> <outdir>
-// Requires game/server.py running on :8077.
+// Requires game/server.py running on :8077 (or $PORT).
 import { spawn } from "node:child_process";
 import { mkdirSync, writeFileSync } from "node:fs";
 
@@ -30,7 +30,7 @@ const shot = async (name) => { const r = await cdp("Page.captureScreenshot", { f
 const until = async (expr, timeoutMs, label) => { const t0 = Date.now(); while (Date.now() - t0 < timeoutMs) { if (await js(expr)) return true; await sleep(1000); } console.log("TIMEOUT", label); return false; };
 
 await cdp("Runtime.enable"); await cdp("Page.enable");
-await cdp("Page.navigate", { url: `http://localhost:8077/?fast&nosplash&norefill&${process.env.WORLD ? `world=${process.env.WORLD}` : "world=harrowgate"}` });
+await cdp("Page.navigate", { url: `http://localhost:${process.env.PORT || 8077}/?fast&nosplash&norefill&${process.env.WORLD ? `world=${process.env.WORLD}` : "world=harrowgate"}` });
 await sleep(2500);
 const scripts = (await import(`./scripts/${scriptName}.mjs`)).default;
 try { await scripts({ js, shot, sleep, until, log: console.log }); }
