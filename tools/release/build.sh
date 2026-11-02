@@ -20,7 +20,8 @@ want() { [[ " $TARGETS " == *" $1 "* ]]; }
 
 # the game files to embed (no dev scripts, no .env)
 rm -rf "$HERE/web"; mkdir -p "$HERE/web"
-cp -r "$GAME/index.html" "$GAME/style.css" "$GAME/js" "$GAME/assets" "$GAME/worlds" "$HERE/web/"
+cp -r "$GAME/index.html" "$GAME/style.css" "$GAME/js" "$GAME/assets" "$HERE/web/"
+mkdir -p "$HERE/web/worlds"; cp "$GAME"/worlds/*.json "$HERE/web/worlds/"   # v2 pool only (not worlds/v1, worlds/rejected)
 trap 'rm -rf "$HERE/web" "$HERE"/rsrc_windows_*.syso' EXIT
 cd "$HERE"
 [ -f go.mod ] || go mod init canoncorps >/dev/null 2>&1

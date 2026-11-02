@@ -120,16 +120,21 @@ func main() {
 	}
 }
 
-// seedWorlds copies the shipped world pool into the writable data dir on first run.
+// seedWorlds copies any shipped world the data dir doesn't have yet, on every launch, so a new build's worlds
+// reach players who ran an older one. Worlds already there (and generated ones) are left alone.
 func seedWorlds() {
-	if _, err := os.Stat(worlds); err == nil {
-		return
-	}
 	_ = os.MkdirAll(worlds, 0o755)
 	entries, _ := fs.ReadDir(webFS, "web/worlds")
 	for _, e := range entries {
+		if e.IsDir() {
+			continue
+		}
+		dst := filepath.Join(worlds, e.Name())
+		if _, err := os.Stat(dst); err == nil {
+			continue
+		}
 		if b, err := webFS.ReadFile("web/worlds/" + e.Name()); err == nil {
-			_ = os.WriteFile(filepath.Join(worlds, e.Name()), b, 0o644)
+			_ = os.WriteFile(dst, b, 0o644)
 		}
 	}
 }
